@@ -1,0 +1,4761 @@
+#nx {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 1px solid;
+}
+
+#nx * {
+	padding: 0;
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	/* Disable touch/hold text & image selection */
+	-webkit-touch-callout: none;
+	cursor: default;
+	-webkit-tap-highlight-color: RGBA(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+}
+
+@font-face {
+	font-family: 'SanchezRegular';
+	src: url('/fonts/sanchez_regular_macroman/Sanchezregular-webfont.eot');
+	src:
+		url('/fonts/sanchez_regular_macroman/Sanchezregular-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('/fonts/sanchez_regular_macroman/Sanchezregular-webfont.woff')
+		format('woff'),
+		url('/fonts/sanchez_regular_macroman/Sanchezregular-webfont.ttf')
+		format('truetype'),
+		url('/fonts/sanchez_regular_macroman/Sanchezregular-webfont.svg#SanchezRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KomikaTextBoldItalic';
+	src: url('/fonts/komika/KOMTXTBI-webfont.eot');
+	src: url('/fonts/komika/KOMTXTBI-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('/fonts/komika/KOMTXTBI-webfont.woff') format('woff'),
+		url('/fonts/komika/KOMTXTBI-webfont.ttf') format('truetype'),
+		url('/fonts/komika/KOMTXTBI-webfont.svg#KomikaTextBoldItalic')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#nx p,#nx div,#nx span,#nx td { /* This disables inputs and textarea */
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#nx code,#nx pre {
+	font-size: .9em;
+}
+
+#nx code,#nx pre,#nx pre *,#nx .code {
+	font-family: Menlo, Monaco, Courier, monospace;
+	-webkit-user-select: text;
+}
+
+#nx .navigationContent {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#nx .navigationContent {
+	background: #F9F5F5;
+}
+
+#nx .navigationBar {
+	width: 100%;
+	height: 100%;
+	background: #8195AF;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B0BCCD),
+		color-stop(0.5, #889BB3), color-stop(0.5, #8195AF), to(#6D84A2) );
+	border-top: 1px solid #CDD5DF;
+	border-bottom: 1px solid #2D3642;
+	z-index: 10;
+}
+
+/*
+#nxGameExitBtn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(/images/gameExitBtn.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 42px;
+	height: 42px;
+	background-size: 42px;
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+#nxGameExitBtn.RETINA {
+	background-image: url(/images/gameExitBtn_2.png);
+}
+*/
+#nx .scrollPanel {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+#nx .transformPanel {
+	position: relative;
+}
+
+#dbg {
+	z-index: 100;
+	background: RGBA(255, 10, 100, .5);
+	padding: 10px;
+}
+
+/************************************
+ *
+ * ###### NEXT widgets CSS ##########
+ *
+ ************************************/
+/*****************************
+ * xswitch
+ *****************************/
+#nx .xswitch {
+	background-image: url(images/next/xswitch.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	width: 94px;
+	height: 27px;
+	-webkit-transition-property: background-position;
+	-webkit-transition-duration: 300ms;
+	-webkit-transition-timing-function: ease-in-out;
+	border-radius: 4px;
+}
+
+#nx .xswitch.off {
+	background-position: -53px 0;
+}
+
+/*****************************
+ * xslider
+ *****************************/
+#nx .xslider {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+
+#nx .xslider .label {
+	min-width: 2em;
+	display: -webkit-box;
+	-webkit-box-align: center;
+}
+
+#nx .xslider .bar {
+	position: relative;
+	height: 1.2em;
+	min-width: 7em;
+	margin: 0 .5em 0 .5em;
+	display: -webkit-box;
+	-webkit-box-flex: 1;
+}
+
+#nx .xslider .bar .right {
+	position: absolute;
+	top: .4em;
+	width: 100%;
+	border-radius: .3em;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA),
+		to(#fff) );
+	border: 1px solid #B3B3B3;
+	height: .5em;
+	-webkit-background-clip: content !important;
+}
+
+#nx .xslider .bar .left {
+	position: relative;
+	top: .4em;
+	border-top-left-radius: .3em;
+	border-bottom-left-radius: .3em;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA),
+		to(#63A1F3) );
+	float: left;
+	border: 1px solid #366094;
+	height: .5em;
+	-webkit-background-clip: content !important;
+}
+
+#nx .xslider .thumb {
+	position: relative;
+	margin: -8px 0 0 -18px;
+	width: 36px;
+	height: 36px;
+	background-image: url(/images/next/ios.png);
+	background-position: 0 -898px;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+/*****************************
+ * xlabel
+ *****************************/
+#nx .xlabel.Header {
+	color: #4D546E;
+	text-shadow: RGBA(255, 255, 255, .7) 0 1px;
+	margin: 14px 0 14px 0px;
+	/* padding-left: 13px; */
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#nx .xlabel.Text {
+	color: #444;
+	/*
+	margin: 7px 0 7px 0px;
+	padding-left: 13px;
+	*/
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+/*****************************
+ * Form CSS
+ *****************************/
+#nx input,#nx textarea,#nx select {
+	padding: 0;
+	margin: 0;
+	border: none;
+	appearance: none;
+	-webkit-appearance: none;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#nx h2,#nx p,#nx a,#nx input,#nx textarea,#nx select {
+	outline: none;
+}
+
+#nx input,#nx input[type="password"],#nx input[type="search"],#nx isindex
+	{
+	-webkit-appearance: textfield;
+	padding: 1px;
+	background-color: #FFF;
+	border: 2px inset;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	cursor: auto;
+}
+
+#nx input,#nx textarea,#nx keygen,#nx select,#nx button,#nx isindex,#nx datagrid
+	{
+	margin: 0em;
+	font: -webkit-small-control;
+	color: initial;
+	letter-spacing: normal;
+	word-spacing: normal;
+	line-height: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: -webkit-auto;
+}
+
+#nx input::-webkit-input-placeholder,#nx isindex::-webkit-input-placeholder,#nx textarea::-webkit-input-placeholder
+	{
+	color: darkGray;
+}
+
+#nx input::-webkit-input-speech-button {
+	-webkit-appearance: -webkit-input-speech-button;
+	display: inline-block;
+}
+
+#nx input::-webkit-inner-spin-button {
+	-webkit-appearance: inner-spin-button;
+	display: inline-block;
+	position: relative;
+	cursor: default;
+	-webkit-user-select: none;
+}
+
+#nx input::-webkit-outer-spin-button {
+	-webkit-appearance: outer-spin-button;
+	display: inline-block;
+	position: relative;
+	cursor: default;
+	margin-left: 2px;
+	-webkit-user-select: none;
+}
+
+/*****************************
+ * xprogress
+ *****************************/
+#nx .xprogress {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+
+#nx .xprogress .label {
+	min-width: 2em;
+	display: -webkit-box;
+	-webkit-box-align: center;
+}
+
+#nx .xprogress .bar {
+	position: relative;
+	height: 1.2em;
+	min-width: 10em;
+	margin: 0 .5em 0 .5em;
+	display: -webkit-box;
+	-webkit-box-flex: 1;
+}
+
+#nx .xprogress .bar .right {
+	position: absolute;
+	top: .4em;
+	width: 100%;
+	border-radius: .3em;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA),
+		to(#fff) );
+	border: 1px solid #B3B3B3;
+	height: .5em;
+	-webkit-background-clip: content !important;
+}
+
+#nx .xprogress .bar .left {
+	position: relative;
+	top: .4em;
+	border-radius: .3em;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ADC7EB),
+		to(#2676D6) );
+	/*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA),
+		to(#63A1F3) ); */
+	float: left;
+	border: 1px solid #4570AA;
+	height: .5em;
+	-webkit-background-clip: content !important;
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 500ms;
+	-webkit-transition-timing-function: ease-out;
+}
+
+/*****************************
+ * xpicker
+ *****************************/
+#nx .min-width-480px .xpicker {
+	width: 60%;
+	display: inline-block;
+}
+
+#nx .xpicker {
+	display: block;
+	position: relative;
+}
+
+#nx .xbtn {
+	display: block;
+	position: relative;
+	margin: .5em 5px;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #CCC;
+	background: #EEE;
+	font-weight: bold;
+	color: #444;
+	text-shadow: 0 1px 1px #F6F6F6;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD),
+		color-stop(1, #EEE) );
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+#nx .xbtn .body {
+	padding: .6em 45px .6em 25px;
+	display: block;
+	height: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	border-top: 1px solid #FFF;
+	border-color: rgba(255, 255, 255, .3);
+}
+
+#nx .xpicker .xbtn select {
+	cursor: pointer;
+	-webkit-appearance: button;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+#nx .xbtn .icon {
+	background: #A5B3C6;
+	background-image: url(/images/next/ios.png);
+	background-position: 0 -798px;
+	background-repeat: no-repeat;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -9px;
+	margin-right: 12px;
+}
+
+/*****************************
+ * xcheckbox, xradioButton
+ *****************************/
+#nx .xcheckboxGroup,#nx .xradioButtonGroup {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	width: 100%;
+}
+
+#nx .xcheckboxGroup>span,.xradioButtonGroup>span {
+	-webkit-box-flex: 1;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	padding: .5em .1em;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#FCFCFC),
+		to(#C8C8C8) );
+	text-shadow: #fff 0px 1px 1px;
+	color: #7F7F7F;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-left: 1px solid #B8B8B8;
+	border-right: 1px solid #B8B8B8;
+	border-top: 1px solid #A8A8A8;
+	border-bottom: 1px solid #999;
+}
+
+#nx .xcheckboxGroup.horizontal>span.selected,.xradioButtonGroup.horizontal>span.selected
+	{
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2655A6),
+		color-stop(0.08, #336FD4), color-stop(0.08, #3571D9),
+		color-stop(0.5, #3D81E9), color-stop(0.5, #498AEB), to(#6EA9FB) );
+	border-top-color: #073E7D;
+	border-left-color: #3871B2;
+	border-right-color: #4082CB;
+	border-bottom-color: #5077A2;
+	color: #fff;
+	text-shadow: #14519B 0px -1px 1px;
+}
+
+#nx .xcheckboxGroup.horizontal>span>input,#nx .xcheckboxGroup.horizontal>span>div,#nx .xradioButtonGroup.horizontal>span>input,#nx .xradioButtonGroup.horizontal>span>div
+	{
+	display: none;
+}
+
+#nx .xcheckboxGroup>span:first-child,#nx .xradioButtonGroup>span:first-child
+	{
+	border-bottom-left-radius: 0.6em 0.6em;
+	border-top-left-radius: 0.6em 0.6em;
+	border-right: 0px;
+	border-top: 1px solid #A8A8A8;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #B8B8B8;
+}
+
+#nx .xcheckboxGroup>span:last-child,#nx .xradioButtonGroup>span:last-child
+	{
+	border-bottom-right-radius: 0.6em 0.6em;
+	border-top-right-radius: 0.6em 0.6em;
+	border-left: 0px;
+	border-top: 1px solid #A8A8A8;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #B8B8B8;
+}
+
+#nx .xcheckboxGroup>span:first-child.selected,#nx .xradioButtonGroup>span:first-child.selected
+	{
+	border-right: 0px;
+	border-top-color: #073E7D;
+	border-bottom-color: #5077A2;
+	border-left-color: #2F6FB8;
+}
+
+#nx .xcheckboxGroup>span:last-child.selected,#nx .xradioButtonGroup>span:last-child.selected
+	{
+	border-left: 0px;
+	border-top-color: #073E7D;
+	border-bottom-color: #5077A2;
+	border-right-color: #4082CB;
+}
+
+/***** vertical *****/
+#nx .xcheckboxGroup.vertical,#nx .xradioButtonGroup.vertical {
+	-webkit-box-orient: vertical;
+}
+
+#nx .xcheckboxGroup.vertical>span,#nx .xradioButtonGroup.vertical>span {
+	-webkit-box-flex: 1;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	padding: .5em;
+	background: #fff;
+	text-shadow: none;
+	color: black;
+	white-space: nowrap;
+	font-weight: bold;
+	font-size: 1.2em;
+	-webkit-box-pack: start;
+	border-left: 1px solid #A8A8A8;
+	border-right: 1px solid #A8A8A8;
+	border-top: 1px solid #A8A8A8;
+	border-bottom: 0;
+}
+
+#nx .xcheckboxGroup.vertical>span>input,#nx .xradioButtonGroup.vertical>span>input
+	{
+	display: none;
+}
+
+#nx .xcheckboxGroup.vertical>span {
+	background-image: url(images/next/xcheckbox.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding-right: 10px;
+}
+
+#nx .xradioButtonGroup.vertical>span {
+	background-image: url(images/next/xradiobutton.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding-right: 10px;
+}
+
+#nx .xcheckboxGroup.vertical>span.selected {
+	background-color: #f0f0f0;
+	background-image: url(images/next/xcheckbox-selected.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding-right: 10px;
+}
+
+#nx .xradioButtonGroup.vertical>span.selected {
+	background-color: #f0f0f0;
+	background-image: url(images/next/xradiobutton-selected.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding-right: 10px;
+}
+
+#nx .xcheckboxGroup.vertical>span:first-child,#nx .xradioButtonGroup.vertical>span:first-child
+	{
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0.6em 0.6em;
+}
+
+#nx .xcheckboxGroup.vertical>span:last-child,#nx .xradioButtonGroup.vertical>span:last-child
+	{
+	border-bottom-left-radius: 0.6em 0.6em;
+	border-top-right-radius: 0;
+}
+
+#nx .xcheckboxGroup.vertical>span:first-child.selected,.xradioButtonGroup.vertical>span:first-child.selected
+	{
+	border-bottom: 0;
+	border-top: 1px solid #A8A8A8;
+	border-left: 1px solid #A8A8A8;
+	border-right: 1px solid #A8A8A8;
+}
+
+#nx .xcheckboxGroup.vertical>span:last-child,#nx .xradioButtonGroup.vertical>span:last-child
+	{
+	border-top: 1px solid #A8A8A8;
+	border-bottom: 1px solid #A8A8A8;
+	border-left: 1px solid #A8A8A8;
+	border-right: 1px solid #A8A8A8;
+}
+
+#nx .xcheckboxGroup.vertical>span:last-child.selected,#nx .xradioButtonGroup.vertical>span:last-child.selected
+	{
+	border-color: #A8A8A8;
+}
+
+/*****************************
+ * xpopup
+ *****************************/
+#nx .xpopupOverlay {
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	/* -webkit-transition: 0.25s opacity; */
+	background: RGBA(0, 0, 0, .4);
+	background-image: -webkit-radial-gradient(rgba(127, 127, 127, 0.5),
+		rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7) );
+	bottom: 0;
+	display: -webkit-box;
+	left: 0;
+	padding: 20px;
+	padding-bottom: 130px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 30;
+}
+
+#nx .xpopup {
+	position: absolute;
+	/* border: .3em solid #2D3642; */
+	-webkit-border-radius: 0.3em;
+	border-radius: 4px;
+	background-color: #fff;
+	z-index: 100;
+	-webkit-box-shadow: RGBA(0, 0, 0, 0.8) 0 0.2em 0.6em;
+	box-shadow: RGBA(0, 0, 0, 0.8) 0 0.2em 0.6em;
+}
+
+/*
+ ************************************************
+ AIRGAMES CSS
+ ************************************************
+ */
+#nx .PanelMenu {
+	background: #2e2e33 url(images/bgDark2.png);
+}
+
+/*
+#nx .PanelMenu .cellContainer {
+	width: 150px;
+}
+*/
+#nx .PanelMenu .cell {
+	color: #FFF;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black;
+	padding-left: 60px;
+	padding-top: 17px;
+	padding-bottom: 10px;
+	border-top: 1px solid RGBA(100, 100, 100, .3);
+	border-bottom: 1px solid RGBA(0, 0, 0, .3);
+	background-repeat: no-repeat;
+	background-size: 54px 630px;
+	height: 25px;
+}
+
+#nx .PanelMenu .cell.activity {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -64px;
+}
+
+#nx .PanelMenu .cell.account {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -54px;
+}
+
+#nx .PanelMenu .cell.buddies {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -192px;
+}
+
+#nx .PanelMenu .cell.games {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -448px;
+}
+
+#nx .PanelMenu .cell.chats {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -320px;
+}
+
+#nx .PanelMenu .cell.profile {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -576px;
+}
+
+#nx .PanelMenu .cell.activity.pressed {
+	background-image: url(images/_menu4.png);
+	background-position: 0 0;
+}
+
+#nx .PanelMenu .cell.account.pressed {
+	background-image: url(images/_menu4.png);
+	background-position: 0 0;
+}
+
+#nx .PanelMenu .cell.profile.pressed {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -512px;
+}
+
+#nx .PanelMenu .cell.chats.pressed {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -256px;
+}
+
+#nx .PanelMenu .cell.games.pressed {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -384px;
+}
+
+#nx .PanelMenu .cell.buddies.pressed {
+	background-image: url(images/_menu4.png);
+	background-position: 0 -128px;
+}
+
+#nx .PanelMenu .menuGame {
+	color: #858183;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black;
+	padding-left: 60px;
+	padding-top: 17px;
+	padding-bottom: 10px;
+	border-top: 1px solid RGBA(100, 100, 100, .3);
+	border-bottom: 1px solid RGBA(0, 0, 0, .3);
+	height: 25px;
+	background-position: 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#nx.RETINA .PanelMenu .cell.activity {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.account {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.buddies {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.games {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.chats {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.profile {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.activity.pressed {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.account.pressed {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.profile.pressed {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.chats.pressed {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.games.pressed {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx.RETINA .PanelMenu .cell.buddies.pressed {
+	background-image: url(images/_menu4_2.png);
+}
+
+#nx .PanelMenu .cell.pressed { /*
+	color: #fff;
+	border-top: 1px solid RGBA(100, 100, 100, 0);
+	border-bottom: 1px solid RGBA(0, 0, 0, 0);
+	background-color: RGBA(0, 0, 0, .5);
+	*/
+	color: #06BEDE;
+	text-shadow: 0px -1px 1px RGBA(0, 0, 0, .8);
+}
+
+#nx .PanelMenu .menuBorder {
+	border-left: 1px solid RGBA(0, 0, 0, .3);
+	border-right: 1px solid RGBA(255, 255, 255, .1);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 150px;
+	width: 0;
+}
+
+#nx .PanelList {
+	background-color: #E9E9E9;
+	margin-left: 10px;
+	-webkit-box-shadow: -5px 10px 10px #222;
+	border-radius: 6px;
+}
+
+#nx.ANDROID .PanelList {
+	-webkit-box-shadow: none;
+	background-image: none;
+}
+
+#nx #nxContentView {
+	background: RGBA(200, 100, 100, 0);
+}
+
+#nx #nxContentView2 {
+	background: RGBA(100, 200, 100, 0);
+}
+
+#nx .PanelContent {
+	background: #E9E9E9;
+	border-left: 1px solid #f0f0f0;
+	border-right: 1px solid #f0f0f0;
+	margin-left: 8px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 0 10px #333;
+	border-right: 1px solid RGBA(0, 0, 0, .3);
+}
+
+#nx.ANDROID .PanelContent {
+	-webkit-box-shadow: 0 0 2px #333;
+}
+
+#nx .rows .row {
+	border-top: 1px solid #DFDFDF;
+	width: 100%;
+	position: relative;
+	height: 70px;
+	background-color: #FFF;
+	background-image: url(/images/_icons-right.png);
+	background-repeat: no-repeat;
+	background-size: 20px 470px;
+	background-position-x: 100%;
+	background-position-y: -125px;
+}
+
+#nx.RETINA .rows .row {
+	background-image: url(/images/_icons-right_2.png);
+}
+
+#nx .rows .row.pressed {
+	width: 100%;
+	position: relative;
+	height: 70px;
+	border-top: 1px solid #A6E3ED;
+	border-bottom: 0 solid #A6E3ED;
+	color: #333;
+	background-color: #E2FAFE;
+	background-repeat: no-repeat;
+	background-image: url(/images/_icons-right.png);
+	background-position-y: -25px;
+}
+
+#nx.RETINA .rows .row.pressed {
+	background-image: url(/images/_icons-right_2.png);
+}
+
+#nx .rows .row .ximage {
+	margin: 8px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 2px RGBA(0, 0, 0, .8);
+	background-color: #FFF;
+}
+
+#nx .rows .row.pressed .ximage {
+	-webkit-box-shadow: 0px 0px 2px #fff;
+}
+
+#nx .rows .row .title {
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+	position: absolute;
+	top: 12px;
+	left: 70px;
+	color: #3A3A3A;
+	max-width: 180px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#nx .rows .row .descr {
+	color: #4F5459;
+	font-size: .8em;
+	text-shadow: 0 1px 1px #FFF;
+	position: absolute;
+	bottom: 5px;
+	left: 70px;
+	top: 37px;
+	right: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #888;
+}
+
+#nx .rows .row.pressed .title {
+	text-shadow: none;
+}
+
+#nx .rows .row.pressed .descr {
+	text-shadow: none;
+}
+
+#nx .rows .row.noarrow {
+	background-image: none;
+}
+
+#nx .rows .row.noarrow .btnTxt {
+	position: absolute;
+	top: 13px;
+	right: 0;
+	width: 78px;
+}
+
+#nx .rows .row.noarrow .rightText {
+	position: absolute;
+	top: 23px;
+	right: 10px;
+	width: 78px;
+	color: #858183;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#nx .rows .xradioButtonGroup {
+	padding: 0 10px 10px 10px;
+	width: auto;
+}
+
+#nx .rows .xradioButtonGroup>span {
+	padding: .5em .2em;
+	font-size: .7em;
+}
+
+#nx .rows .empty {
+	color: #858183;
+	font-size: 14px;
+	padding: 20px;
+	border-bottom: 1px solid #DCDCDC;
+	background-color: #FFF;
+}
+/*
+#nx .rows .row:first-child {
+	border-top-left-radius: 7px 7px;
+	border-top-right-radius: 7px 7px;
+	border-top-color: #fff;
+	-webkit-box-shadow: 0px 10px 10px #aaa;
+}
+*/
+#nx .rows .row:last-child { /*-webkit-box-shadow: 0px 10px 10px #ddd; */
+	border-bottom: 1px solid #DFDFDF;
+}
+
+#nx .GameListView.rows .row .ximage {
+	-webkit-box-shadow: 0 0 0 RGBA(0, 0, 0, 0);
+}
+
+#nx .FriendList {
+	display: block;
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#nx .FriendList .hookt.rows .row {
+	
+}
+
+#nx .blueHeader .hooktHeader {
+	background-color: #333;
+	height: 47px;
+	background-image: url(/images/header-bg-hookt.png);
+	background-size: 50px 50px;
+	border-bottom: 1px solid #111;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: relative;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+#nx .blueHeader .hooktHeader .title {
+	color: #06BEDE;
+	text-shadow: 0 -1px 1px #000;
+	background-image: url(/images/_icons40.png);
+	background-repeat: no-repeat;
+	background-size: 40px 804px;
+	background-position: 10px -196px;
+	padding-left: 60px;
+}
+
+#nx.RETINA .blueHeader .hooktHeader {
+	background-image: url(/images/header-bg-hookt_2.png);
+}
+
+#nx.RETINA .blueHeader .hooktHeader .title {
+	background-image: url(/images/_icons40_2.png);
+}
+
+#nx .FriendList.FriendHooktView .rows .row .title {
+	background-image: url(/images/_icons40.png);
+	background-size: 40px 804px;
+	background-position: 0 -275px;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+}
+
+#nx.RETINA .FriendList.FriendHooktView .rows .row .title {
+	background-image: url(/images/_icons40_2.png);
+}
+
+#nx .GamesPanelList .listHeaderShadow {
+	-webkit-box-shadow: none;
+}
+
+#nx .blueHeader .btnTxt {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 120px;
+}
+
+#nx .blueHeader .btnTxt {
+	width: 90px;
+}
+
+#nx .FriendList .search {
+	height: 46px;
+	position: relative;
+	background-size: 4px 4px;
+	background-repeat: repeat;
+}
+
+#nx .FriendList .search .left {
+	border: 0px solid;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	bottom: 5px;
+	width: 20px;
+	background-image: url(/images/_inputSearch.png);
+	background-position: 0 0;
+	background-size: 50px 215px;
+	background-repeat: no-repeat;
+}
+
+#nx .FriendList .search .center {
+	border: 0px solid;
+	position: absolute;
+	top: 5px;
+	left: 25px;
+	bottom: 5px;
+	right: 45px;
+	background-image: url(/images/_inputSearch.png);
+	background-position: 0 -45px;
+	background-size: 50px 215px;
+	background-repeat: repeat-x;
+}
+
+#nx .FriendList .search .right {
+	border: 0px solid;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	width: 40px;
+	background-image: url(/images/_inputSearch.png);
+	background-position: 0 -90px;
+	background-size: 50px 215px;
+	background-repeat: no-repeat;
+}
+
+#nx.RETINA .FriendList .search .left {
+	background-image: url(/images/_inputSearch_2.png);
+}
+
+#nx.RETINA .FriendList .search .center {
+	background-image: url(/images/_inputSearch_2.png);
+}
+
+#nx.RETINA .FriendList .search .right {
+	background-image: url(/images/_inputSearch_2.png);
+}
+
+#nx .FriendList .search .center input {
+	width: 100%;
+	height: 26px;
+	border: 0 solid;
+	margin: 3px 0 0 0;
+	font-size: 16px;
+	background: RGBA(0, 0, 0, 0);
+	-webkit-appearance: none;
+}
+
+#nx .FriendList .search .right.activated {
+	background-position: 0 -135px;
+}
+
+/*
+#nx .FriendList .rows .row:first-child {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	-webkit-box-shadow: 0 0 0;
+}
+
+#nx .FriendList .rows .row:last-child {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	-webkit-box-shadow: 0 0 0;
+}
+*/
+#nx .FriendList.FriendChangeView .rows .row {
+	background-position-x: 96%;
+	background-position-y: -373px;
+}
+
+#nx .FriendList.FriendChangeView .rows .row.pressed {
+	background-position-y: -423px;
+}
+
+#nx .FriendList.FriendChangeView .rows .row .title {
+	top: 10px;
+	left: 54px;
+	font-weight: normal;
+	color: #111;
+	font-size: 16px;
+	max-width: 230px;
+}
+
+#nx .FriendList.FriendChangeView .rows .row .ximage {
+	margin: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0px 1px 2px RGBA(0, 0, 0, 0);
+	background-color: RGBA(0, 0, 0, 0);
+}
+
+#nx .FriendList .rows .row .title {
+	top: 10px;
+	white-space: nowrap; 
+}
+
+#nx .FriendList .rows .row .descr {
+	top: 30px;
+	font-size: 12px;
+}
+
+#nx .FriendList .rows .row .lastLogin {
+	top: 45px;
+	font-size: 11px;
+	position: absolute;
+	left: 70px;
+	right: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #888;
+}
+
+#nx .FriendList.FriendBlockView .rows .row .title {
+	top: 22px;
+	color: #F3274C;
+}
+
+#nx .FriendList .info {
+	margin: 30px 10px 5px 10px;
+	color: #666;
+	text-shadow: 0 1px 0px RGBA(255, 255, 255, .6);
+}
+
+#nx .FriendList .budsPanel.rows .row:last-child {
+	border-bottom-left-radius: 7px 7px;
+	border-bottom-right-radius: 7px 7px;
+}
+
+#nx .FriendList .cellsPanel .info {
+	margin: 20px 10px 20px 10px;
+}
+
+#nx .chats {
+	position: relative;
+}
+
+/*
+#nx .chats .row {
+	border-top: 1px solid #DFDFDF;
+	width: 100%;
+	position: relative;
+	height: 70px;
+	background-color: #FFF;
+	color: #333;
+}
+*/
+#nx .chats .row:last-child {
+	border-bottom: 1px solid #DFDFDF;
+}
+
+#nx .chats .row.pressed {
+	border-top: 1px solid #A6E3ED;
+	border-bottom: 1px solid #A6E3ED;
+	color: #333;
+	background-color: #E2FAFE;
+}
+
+#nx .chats .row .imgBox {
+	margin: 10px;
+	border-radius: 0;
+	-webkit-box-shadow: 0px 1px 2px #222;
+	background-color: #FFF;
+	width: 48px;
+	height: 46px;
+}
+
+#nx .chats .row .imgBox .ximage {
+	margin: 1px 2px;
+	width: 44px;
+	height: 40px;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	background-size: 100%;
+}
+
+#nx.ANDROID .row .ximage {
+	-webkit-box-shadow: 0px 0px 1px #222;
+}
+
+#nx .chats .row .title {
+	font-weight: bold;
+	font-size: 14px;
+	text-shadow: 0 1px 1px #FFF;
+	position: absolute;
+	top: 12px;
+	left: 70px;
+	white-space: nowrap;
+}
+
+#nx .chats .row.blank .title {
+	top: 22px;
+}
+
+#nx .chats .nochat .row .title {
+	top: 23px;
+	left: 20px;
+}
+
+#nx .chats .row .descr {
+	color: #444;
+	font-size: 11px;
+	text-shadow: 0 1px 1px #FFF;
+	font-weight: normal;
+	position: absolute;
+	left: 65px;
+	top: 30px;
+	right: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: none;
+	padding: 5px;
+	border-radius: 5px;
+	border-top-left-radius: 0;
+}
+
+#nx .chats .row .date {
+	color: #999;
+	font-size: .7em;
+	text-shadow: 0 1px 1px #FFF;
+	font-weight: normal;
+	position: absolute;
+	top: 12px;
+	right: 30px;
+}
+
+#nx .chats .row.blank .descr {
+	background: RGBA(255, 255, 255, 0);
+}
+
+#nx .chats .row .descr:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 8px;
+	left: -8px;
+	right: none;
+	background-color: RGBA(0, 0, 0, 0);
+	border-width: 5px 8px 5px 0;
+	border-style: solid;
+	border-color: transparent RGBA(255, 255, 255, .5);
+}
+
+#nx .grayHeader {
+	background-color: #F1F1F1;
+	height: 47px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBFBFB),
+		to(#E9E9E9) );
+	border-bottom: 1px solid #8F877D;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: relative;
+	text-shadow: 0 1px 0px RGBA(255, 255, 255, 1);
+}
+
+#nx .grayHeader .ximage {
+	float: left;
+	border-right: 1px solid #D0D0D0;
+	padding: 14px;
+}
+
+#nx .grayHeader .title {
+	float: left;
+	font-family: "SanchezRegular";
+	padding: 13px;
+	color: #3A3A3A;
+}
+
+#nx .grayHeader.back .title {
+	border-left: 1px solid #FFF;
+}
+
+#nx .blueHeader {
+	background-color: #29A9C2;
+	height: 47px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#68E8FF),
+		to(#01C0E3) );
+	border-bottom: 1px solid #19B2CF;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: relative;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+#nx .blueHeader .title {
+	float: left;
+	font-family: "SanchezRegular";
+	padding: 13px;
+	color: #016D8C;
+}
+
+#nx .listHeader.arrow {
+	height: 40px;
+	border-bottom: 1px solid RGBA(0, 0, 0, .2);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: relative;
+	padding: 0;
+}
+
+#nx .listHeader.arrow .title {
+	float: left;
+	font-family: "SanchezRegular";
+	padding: 10px 0 10px 30px;
+	color: #3A3A3A;
+	background-image: url(/images/_icons20.png);
+	background-repeat: no-repeat;
+	background-position: 10px 15px;
+	background-size: 20px 670px;
+}
+
+#nx.RETINA .listHeader.arrow .title {
+	background-image: url(/images/_icons20_2.png);
+}
+
+#nx .listHeader.arrow .ximage {
+	float: right;
+	border-left: 1px solid #D0D0D0;
+	padding: 14px;
+}
+
+/** 
+ * btnTxt
+ */
+#nx .btnTxt {
+	display: table;
+	/* padding: 5px 0 0 0; */
+	white-space: nowrap;
+	width: 100%;
+	padding: 5px 0 0 0;
+}
+
+#nx .btnTxt div:first-child {
+	display: table-cell;
+	width: 17px;
+	height: 35px;
+	background-size: 17px 457px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: url(/images/_btn-b.png);
+}
+
+#nx .btnTxt div.txt,#nx .btnTxt a.txt {
+	display: table-cell;
+	height: 35px;
+	background-image: url(/images/_btn-b.png);
+	background-size: 17px 457px;
+	background-repeat: repeat-x;
+	background-position: 0 -55px;
+	color: #FFF;
+	text-shadow: 0 -1px 0px RGBA(6, 121, 154, .6);
+	padding: 7px 0 0 0;
+	font-size: 14px;
+	font-weight: bold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+}
+
+#nx .btnTxt div:last-child {
+	display: table-cell;
+	width: 17px;
+	height: 35px;
+	background-image: url(/images/_btn-b.png);
+	background-size: 17px 457px;
+	background-repeat: no-repeat;
+	background-position: 0 -110px;
+}
+
+/** 
+ * btnTxt gray
+ */
+#nx .btnTxt.gray div:first-child {
+	background-position: 0 -312px;
+}
+
+#nx .btnTxt.gray div.txt {
+	background-position: 0 -367px;
+	color: #707070;
+	text-shadow: 0 1px 0px RGBA(255, 255, 255, .5);
+}
+
+#nx .btnTxt.gray div:last-child {
+	background-position: 0 -422px;
+}
+
+/** 
+ * btnTxt small
+ */
+#nx .btnTxt.small {
+	display: table;
+	padding: 8px 5px 4px 5px;
+}
+
+#nx .btnTxt.small div:first-child {
+	width: 15px;
+	height: 29px;
+	float: left;
+	background-size: 17px 457px;
+	background-repeat: no-repeat;
+	background-position: 0 -165px;
+	background-image: url(/images/_btn-b.png);
+}
+
+#nx .btnTxt.small div.txt {
+	float: left;
+	height: 30px;
+	background-image: url(/images/_btn-b.png);
+	background-size: 17px 457px;
+	background-repeat: repeat-x;
+	background-position: 0 -214px;
+	color: #FFF;
+	text-shadow: 0 -1px 1px RGBA(50, 50, 50, .4);
+	padding: 5px 5px 0 5px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#nx .btnTxt.small div:last-child {
+	width: 15px;
+	height: 30px;
+	float: left;
+	background-image: url(/images/_btn-b.png);
+	background-size: 17px 457px;
+	background-repeat: no-repeat;
+	background-position: 0 -263px;
+}
+
+#nx.RETINA .btnTxt div:first-child,#nx.RETINA .btnTxt div.txt,#nx.RETINA .btnTxt div:last-child,#nx.RETINA .btnTxt.small div:first-child,#nx.RETINA .btnTxt.small div.txt,#nx.RETINA .btnTxt.small div:last-child
+	{
+	background-image: url(/images/_btn-b_2.png);
+}
+
+#nx .ChatFriendsView .blueHeader .btnTxt.small {
+	float: right;
+}
+
+#nx .blueHeader .circleBtn {
+	float: right;
+}
+
+#nx .ChatListView .blueHeader {
+	padding-right: 5px;
+}
+
+#nx .ChatListView .rows .row .title {
+	max-width: 125px;
+}
+
+#nx .circleBtn {
+	background-image: url(/images/_btn-circle.png);
+	background-size: 220px 778px;
+	background-repeat: no-repeat;
+	width: 37px;
+	height: 37px;
+	padding: 5px 2px;
+}
+
+#nx.RETINA .circleBtn {
+	background-image: url(/images/_btn-circle_2.png);
+}
+
+#nx .GameView {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-color: #fff;
+}
+
+#nx .GameView .icon {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	/*-webkit-box-shadow: inset 0 -2px 4px RGBA(50, 50, 50, .4);*/
+}
+
+#nx .GameView .gameTitle {
+	white-space: nowrap;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 15px 20px 5px 20px;
+	color: #3A3A3A;
+}
+
+#nx .GameView .author {
+	white-space: nowrap;
+	font-size: 12px;
+	text-shadow: 0 1px 1px #FFF;
+	padding: 0 20px 0 20px;
+	color: #858183;
+}
+
+#nx .GameView .descr {
+	font-size: 12px;
+	padding: 10px;
+	right: 10px;
+	border-radius: 4px;
+	line-height: 150%;
+	padding: 10px 20px 0 20px;
+	color: #3A3A3A;
+}
+
+#nx .GameView .btnTxt {
+	padding: 20px 60px;
+}
+
+#nx .GameView .rows .row .title {
+	top: 22px;
+}
+
+#nx .GameView .listHeader {
+	border-top: 1px solid #DCDCDC;
+}
+
+/*
+#nx .GameView .roundedTable .left {
+	color: #747E94;
+	font-size: .8em;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+	padding: 5px;
+}
+
+#nx .GameView .roundedTable .right {
+	color: #333;
+	padding: 10px 10px 10px 0;
+	font-size: .9em;
+}
+
+#nx .GameView .roundedTable .borderTop {
+	border-top: 1px solid #fff;
+}
+
+#nx .GameView .roundedTable .borderBottom {
+	border-bottom: 1px solid #D8D8D8;
+	white-space: nowrap;
+}
+
+#nx .GameView .roundedTable .avatar {
+	text-align: center;
+	padding: 10px;
+}
+
+#nx .GameView .roundedTable .avatar .ximage {
+	width: 150px;
+	height: 150px;
+	border-radius: 4px;
+}
+
+#nx .GameView .list .ximage {
+	float: left;
+	margin: 5px;
+	border-radius: 4px;
+}
+
+#nx .GameView .roundedTable .title {
+	font-weight: bold;
+	margin-top: 10px;
+	text-shadow: 0 1px 1px #fff;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+#nx .GameView .roundedTable .avatar.borderTop,.profile .roundedTable .title.borderTop
+	{
+	border-top: 0;
+}
+
+#nx .GameView .roundedTable .avatar.borderBottom,.profile .roundedTable .title.borderBottom
+	{
+	border-bottom: 0;
+}
+
+#nx .GameView .budsPanel {
+	display: table;
+	width: 100%;
+}
+*/
+#nx .spacer {
+	width: 100%;
+	height: 20px;
+}
+
+#nx .info {
+	color: #999;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px RGBA(255, 255, 255, .8);
+	margin-bottom: 5px;
+}
+
+/*
+#nx .GameView .budsPanel .avatarBox {
+	margin: 5px;
+}
+
+#nx .GameView .budsPanel .info {
+	margin: 20px 0;
+	width: 100%;
+	text-align: center;
+}
+*/
+#nx .frame {
+	width: 100%;
+	border: 0;
+	background-color: #e6e6e6;
+	height: 100%;
+	overflow: auto;
+}
+
+#nx .closeOverlay {
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+}
+/*
+#nx .LobbyView {
+	position: relative;
+	background-color: #EDEDED;
+}
+
+#nx .LobbyView .frame {
+	position: absolute;
+	left: 0px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#nx .LobbyView .hideOverlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	display: none;
+}
+
+#nx .LobbyView .options {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 300ms;
+}
+
+#nx .LobbyView .btnExit {
+	background-repeat: no-repeat no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border: 0px solid;
+}
+
+#nx .LobbyView .btnOptions {
+	background-repeat: no-repeat no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	border: 0px solid;
+	display: none;
+}
+
+#nx .LobbyView .cell {
+	background-position: left middle;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 50px;
+}
+*/
+#nx .ChatView {
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	position: relative;
+}
+
+#nx .ChatView .scrollPanel.lobbyScroll {
+	height: 74px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: #76A6B2;
+	border-bottom: 1px solid #FFF;
+	background-repeat: repeat-x;
+}
+
+#nx .ChatView .scrollPanel.lobbyScroll .lobby {
+	padding: 5px 0 0 0;
+}
+
+#nx .ChatView .background {
+	position: absolute;
+	top: 46px;
+	bottom: 45px;
+	left: 0px;
+	right: 0px;
+}
+
+#nx .ChatView .background .hello {
+	position: absolute;
+	top: 50%;
+	margin-top: -47px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#nx .avatarBox {
+	float: left;
+}
+
+#nx .avatarBox .ximage {
+	margin: 5px 7px 0 7px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
+	background: #fff;
+}
+
+#nx .avatarBox .name {
+	font-size: 10px;
+	font-weight: bold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 65px;
+	display: block;
+	text-align: center;
+}
+
+#nx .ChatView .scrollPanel.lobbyScroll .avatarBox .name {
+	text-shadow: 0 1px RGBA(255, 255, 255, .3);
+}
+
+#nx .ChatView .scrollPanel.lobbyScroll .btnsPanel {
+	float: right;
+}
+
+#nx .ChatView .scrollPanel.lobbyScroll .btnsPanel div {
+	float: left;
+}
+
+#nx .ChatView .msgScroll .avatarBox .name {
+	width: 50px;
+}
+
+#nx .ChatView .msgScroll .avatarBox .ximage {
+	margin: 5px 0 0 0;
+}
+
+/*
+#nx .ChatView .msgScroll {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	padding: 10px;
+	background-image: url(images/bg-shadow.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	border-top: 1px solid RGBA(255, 255, 255, .1);
+}
+*/
+#nx .ChatView .msgScroll .me {
+	width: 100%;
+	display: table;
+	border: 0px solid #999;
+}
+
+#nx .ChatView .msgScroll .picture {
+	margin-top: 10px;
+}
+
+#nx .ChatView .msgScroll .bellowPicture {
+	
+}
+
+#nx .ChatView .msgScroll .notme {
+	width: 100%;
+	display: table;
+	border: 0px solid #999;
+}
+
+#nx .ChatView .msgScroll .me .text {
+	float: right;
+	border-radius: 6px;
+	background-color: #BEDAFF;
+	padding: 5px;
+	-webkit-box-shadow: 0 2px 1px RGBA(100, 100, 100, .5);
+	margin-top: 5px;
+	margin-right: 60px;
+	border-top: 1px solid #fff;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E4F0FF),
+		to(#B7D7FF) );
+	color: #444;
+	text-shadow: 0 1px #fff;
+	font-size: .8em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-top-right-radius: 0;
+	text-align: right;
+	min-width: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#nx .ChatView .msgScroll .notme .text {
+	float: left;
+	border-radius: 6px;
+	background-color: #fff;
+	padding: 5px;
+	-webkit-box-shadow: 0 2px 1px RGBA(100, 100, 100, .5);
+	margin-top: 5px;
+	margin-left: 60px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF),
+		to(#EEE) );
+	color: #444;
+	text-shadow: 0 1px #fff;
+	font-size: .8em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-top-left-radius: 0;
+	min-width: 40px;
+}
+
+#nx .ChatView .msgScroll .me.picture .text {
+	margin-right: 10px;
+}
+
+#nx .ChatView .msgScroll .notme.picture .text {
+	margin-left: 10px;
+}
+
+#nx .ChatView .msgScroll .me .avatarBox {
+	float: right;
+}
+
+#nx .ChatView .msgScroll .notme .avatarBox {
+	float: left;
+}
+
+#nx .ChatView .msgScroll .msgPanel {
+	padding-bottom: 10px;
+}
+
+#nx .ChatView .background {
+	position: absolute;
+	top: 46px;
+	bottom: 45px;
+	left: 0px;
+	right: 0px;
+}
+
+#nx .ChatView .background .ximage {
+	position: relative;
+	margin-left: -44px;
+	padding: 10px;
+	left: 50%;
+}
+
+#nx .ChatView .background .hello {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+}
+
+#nx .avatarBox {
+	float: left;
+}
+
+#nx .avatarBox .ximage {
+	margin: 5px 7px 0 7px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
+	background: #fff;
+}
+
+#nx .avatarBox .name {
+	font-size: 10px;
+	font-weight: bold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 65px;
+	display: block;
+	text-align: center;
+}
+
+/*
+#nx .options .wrapper {
+	backgrocssund-color: #DDD;
+	margin: 20px 10px 20px 20px;
+	border-radius: 6px;
+	border: 1px solid #CCC;
+	padding: 0 20px;
+}
+
+#nx .options .xbutton.Shadow {
+	width: 100%;
+	margin: 20px 0;
+}
+
+#nx .options .boxLbl {
+	border: 1px solid #BBB;
+	padding: 8px;
+	border-radius: 2px;
+	background: #F0F0F0;
+	margin: -10px 0 30px 0;
+	font-weight: bold;
+	color: #111;
+	overflow: auto;
+	text-align: left;
+}
+*/
+/*
+#nx.ANDROID .ChatView .inputPanel {
+	bottom: auto;
+}
+*/
+#nx.ANDROID .LobbyView .ChatView .inputPanel {
+	top: 74px;
+	bottom: auto;
+}
+
+#nx.ANDROID .LobbyView .ChatView .scrollPanel.msgScroll {
+	top: 119px;
+}
+
+#nx .options .boxText {
+	margin: -10px 0 30px 0;
+	font-weight: bold;
+	color: #111;
+}
+
+#nx .options .boxText.link {
+	font-size: 14px;
+}
+
+#nx .LobbyInviteExternalView  .xlabel.Header {
+	font-size: 15px;
+}
+
+#nx .ProfileView {
+	background-color: #EBEBEB;
+}
+
+#nx .ProfileView .listHeader {
+	font-weight: normal;
+}
+
+#nx .ProfileView .btnTxt {
+	padding: 5px 40px;
+}
+
+#nx .ProfileView .avatarPanel {
+	position: relative;
+}
+
+#nx .ProfileView .avatarPanel .ximage.bg {
+	box-shadow: inset 0 1px 4px RGBA(100, 100, 100, .5);
+	-webkit-box-shadow: inset 0 1px 4px RGBA(100, 100, 100, .5);
+}
+
+#nx .ProfileView .avatarPanel .ximage.avatar {
+	margin: -140px 0 0 30px;
+}
+
+#nx .ProfileView .avatarPanel .header {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+	color: #000;
+	padding: 25px 0 0 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#nx .ProfileView .avatarPanel .circleBtn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#nx .ProfileView .avatarPanel .view {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: white;
+	font-size: 14px
+}
+
+#nx .ProfileView .profileField {
+	display: inline-block;
+	font-size: 11px;
+	color: #666;
+	padding: 1em;
+	margin: 1em;
+	border-radius: 30px;
+	box-shadow: inset 0 1px 3px #BBB;
+	-webkit-box-shadow: inset 0 1px 3px #BBB;
+	background-color: #FFF;
+	min-height: 1em;
+}
+
+#nx .ProfileView .profileField.notSet {
+	background-image: url(/images/_icons40.png);
+	background-repeat: no-repeat;
+	background-size: 40px 804px;
+}
+
+#nx.RETINA .ProfileView .profileField.notSet {
+	background-image: url(/images/_icons40_2.png);
+}
+
+#nx .ProfileView .profileField span {
+	font-weight: bold;
+	font-size: 12px;
+	color: #000;
+}
+
+#nx .ProfileView .profileField.namePanel {
+	display: block;
+	text-align: center;
+	font-size: 11px;
+	margin: 20px auto 0;
+	max-width: 15em;
+	padding: 0.5em 1em;
+}
+
+#nx .ProfileView .profileField.namePanel span {
+	font-size: 20px;
+	font-family: "KomikaTextBoldItalic";
+	color: #000;
+}
+
+#nx .ProfileView .profileField.namePanel.notSet {
+	background-position: 56% -344px;
+	padding: 1em;
+}
+
+#nx .ProfileView .profileField.agePanel {
+	margin-right: 0.5em;
+	min-width: 6em;
+}
+
+#nx .ProfileView .profileField.agePanel.notSet {
+	background-position: 60% 10px;
+}
+
+#nx .ProfileView .profileField.sexPanel {
+	margin-left: 0;
+	position: relative;
+	top: 10px;
+	min-width: 5em;
+}
+
+#nx .ProfileView .profileField.sexPanel.notSet {
+	background-position: 60% -58px;
+}
+
+#nx .ProfileView .profileField.locPanel {
+	margin: 0.5em 1em 0.5em 3em;
+	min-width: 180px;
+}
+
+#nx .ProfileView .profileField.locPanel.notSet {
+	background-position: 55% -130px;
+}
+
+#nx .ProfileView .profileField.statusPanel {
+	font-size: 12px;
+	line-height: 17px;
+	padding: 15px 15px 10px;
+	margin: 6px 36px 12px 12px;
+	display: block;
+	min-height: 65px;
+}
+
+#nx .ProfileView .lastLogin {
+	margin-left: 15px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #888;
+}
+
+#nx .ProfileView .profileField.statusPanel.notSet {
+	background-image: url(/images/_icons80.png);
+	background-repeat: no-repeat;
+	background-position: 63% 45px;
+	background-size: 80px 650px;
+}
+
+#nx.RETINA .ProfileView .profileField.statusPanel.notSet {
+	background-image: url(/images/_icons80_2.png);
+}
+
+#nx .ProfileView .xlabel.Header {
+	margin: 14px 0 4px 0px;
+}
+
+#nx .ProfileView .accountPanel {
+	background-color: #D7B58E;
+	background-image: url(images/texture-wood-mahogany.jpg);
+	background-size: 420px 1050px;
+}
+
+#nx .ProfileView .profilePanel {
+	margin-bottom: 10px;
+}
+
+#nx .ProfileView .accountField {
+	margin: 11px;
+	padding: 10px;
+	background: #A4643F;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+	border: 2px solid #A65D33;
+	border-radius: 6px;
+	color: white;
+	font-size: 12px;
+	background-image: url(/images/_icons-right.png);
+	background-repeat: no-repeat;
+	background-position: 98% -190px;
+	background-size: 20px 470px;
+}
+
+#nx.RETINA .ProfileView .accountField {
+	background-image: url(/images/_icons-right_2.png);
+}
+
+#nx .ProfileView .accountField.notSet {
+	font-style: oblique;
+}
+
+#nx .ProfileUpdateWrapper {
+	background-color: #D7B58E;
+	background-image: url(/images/texture-wood-oak.jpg);
+	background-size: 400px 600px;
+}
+
+#nx.RETINA .ProfileUpdateWrapper {
+	background-image: url(/images/texture-wood-oak_2.jpg);
+}
+
+#nx .ProfileUpdateWrapper.accountField {
+	background-color: #A65D33;
+	background-image: url(/images/texture-wood-mahogany.jpg);
+	background-size: 400px 600px;
+}
+
+#nx.RETINA .ProfileUpdateWrapper.accountField {
+	background-image: url(/images/texture-wood-mahogany_2.jpg);
+}
+
+#nx .ProfileUpdateView .titleBar .title {
+	font-family: "SanchezRegular";
+	font-size: 14px;
+	padding: 10px;
+	color: #3A3A3A;
+}
+
+#nx .ProfileUpdateWrapper.accountField .titleBar .title {
+	color: #FFFFFF;
+}
+
+#nx .ProfileUpdateView .btnTxt {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#nx .ProfileUpdateView .btnTxt div.txt {
+	font-size: 13px;
+	padding: 8px 0 0 0;
+	text-shadow: 0 -1px 2px RGBA(0, 0, 0, .5);
+	height: 30px;
+}
+
+#nx .ProfileUpdateView .btnTxt.gray div.txt {
+	color: #707070;
+	text-shadow: 0 1px 0px RGBA(255, 255, 255, .5);
+}
+
+#nx .ProfileUpdateView .mobileInput {
+	width: 80%;
+	height: 30px;
+	padding: 5px 10px;
+	margin: 0px 10px;
+	border: 2px solid #C5976B;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 16px;
+	color: #000;
+	-webkit-box-shadow: inset 0 2px 4px #aaa;
+}
+
+#nx .ProfileUpdateWrapper.accountField .mobileInput {
+	width: 80%;
+	height: 30px;
+	padding: 3px 10px;
+	margin: 0px 10px;
+	border: 2px solid #9B552C;
+	border-radius: 8px;
+	font-style: oblique;
+	font-size: 14px;
+	text-align: center;
+	color: #000;
+	-webkit-box-shadow: inset 0 2px 4px #aaa;
+}
+
+#nx .ProfileUpdateWrapper .display .mobileInput {
+	font-size: 20px;
+	font-family: "KomikaTextBoldItalic";
+	text-align: center;
+	margin-top: 85px;
+	margin-bottom: 70px;
+}
+
+#nx .ProfileUpdateWrapper .display .circleBtn {
+	display: inline-block;
+	position: relative;
+	top: 18px;
+}
+
+/*************************************/
+#nx .ProfileUpdateWrapper .gwt-DatePicker {
+	background: #fff;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	overflow: hidden;
+	margin: 0 auto 10px;
+}
+
+#nx .ProfileUpdateWrapper .datePickerMonthSelector {
+	width: 100%;
+	height: 40px;
+	background: #E5E5E5;
+	box-shadow: 0 1px 5px #888;
+}
+
+#nx .ProfileUpdateWrapper .datePickerMonthSelector .gwt-ListBox {
+	margin-left: 15px;
+}
+
+#nx .ProfileUpdateWrapper .datePickerDays {
+	border-collapse: collapse;
+}
+
+#nx .ProfileUpdateWrapper .datePickerWeekdayLabel {
+	font-size: 10px;
+	text-align: center;
+	color: #888;
+	height: 20px;
+}
+
+#nx .ProfileUpdateWrapper .datePickerWeekendLabel {
+	font-size: 10px;
+	text-align: center;
+	color: #888;
+}
+
+#nx .ProfileUpdateWrapper .datePickerDay.datePickerDayIsFiller {
+	background: #E5E5E5;
+	color: #BBB;
+}
+
+#nx .ProfileUpdateWrapper .datePickerDay {
+	width: 34px;
+	height: 34px;
+	text-align: center;
+	border: 1px solid #E5E5E5;
+	color: #888;
+	font-family: "SanchezRegular";
+}
+
+#nx .ProfileUpdateWrapper .datePickerDayIsValue {
+	background-color: #FF4884;
+	background-image: url(/images/_icons40.png);
+	background-size: 40px 804px;
+	background-repeat: no-repeat;
+	background-position: 0 -490px;
+	color: #FFF;
+	font-weight: bold;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#nx.Retina .ProfileUpdateWrapper .datePickerDayIsValue {
+	background-image: url(/images/_icons40_2.png);
+}
+
+#nx .ProfileUpdateWrapper .gwt-ListBox {
+	font-weight: bold;
+	color: #888;
+	font-family: "SanchezRegular";
+	background: #E5E5E5;
+}
+
+/*************************************/
+#nx .ProfileUpdateWrapper.accountField .mobileInput {
+	text-align: left;
+	font-style: normal;
+	margin-top: 80px;
+	margin-left: 25px;
+	font-size: 12px;
+}
+
+#nx .ProfileUpdateWrapper.accountField .label {
+	width: 90%;
+	margin: 15px 5% 20px 5%;
+	font-size: 11px;
+	color: #fff;
+	text-shadow: 0 1px 1px #888;
+	text-align: center;
+	line-height: 20px;
+}
+
+#nx .ProfileUpdateWrapper.accountField .mobileInput.newPass {
+	margin-top: 60px;
+}
+
+#nx .ProfileUpdateWrapper.accountField .mobileInput.confirmPass {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+#nx .ProfileUpdateView .sexButtonBar {
+	height: 90px;
+	padding-left: 4px;
+	margin-top: 70px;
+	margin-bottom: 60px;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button {
+	background-image: url(/images/_icons80.png);
+	background-size: 80px 650px;
+	background-repeat: no-repeat;
+	height: 87px;
+	width: 84px;
+	display: inline-block;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button.active {
+	background-image: url(/images/_icons120.png);
+	background-size: 104px 472px;
+	background-repeat: no-repeat;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button.male {
+	background-position: 4px -568px;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button.female {
+	background-position: 4px -348px;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button.incognito {
+	background-position: 4px -458px;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button.male.active {
+	background-position: -1px -244px;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button.female.active {
+	background-position: -1px 0;
+}
+
+#nx .ProfileUpdateView .sexButtonBar .button.incognito.active {
+	background-position: -1px -122px;
+}
+
+#nx .ProfileUpdateView .statusField .mobileInput {
+	margin: 40px 15px 5px;
+	padding-top: 28px;
+	height: 117px;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 25px;
+	border: none;
+	-webkit-box-shadow: 0 2px 4px #444;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3),
+		color-stop(4%, #fff) ) 0 0;
+	background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 20%) 0 0;
+	background: linear-gradient(top, #d9eaf3 0%, #fff 20%) 0 0;
+	-webkit-background-size: 100% 25px;
+	background-size: 100% 25px;
+}
+
+#nx .ProfileUpdateView .statusField .label {
+	color: #633B0F;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+#nx .ProfileUpdateView {
+	
+}
+
+#nx .ProfileAvatarView {
+	width: 100%;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff),
+		color-stop(0.3, #ddd), color-stop(0.4, #ddd), to(#e6e6e6) );
+}
+
+#nx .ProfileAvatarView .blueHeader .rightWidget {
+	float: right;
+}
+
+#nx .ProfileAvatarView .blueHeader .xswitch {
+	background-image: url(images/switch-sex.png);
+	height: 36px;
+	width: 90px;
+	background-position: -8px 0;
+	margin: 0 0 0 6px;
+	background-size: 166px 36px;
+}
+
+#nx .ProfileAvatarView .blueHeader .agswitch {
+	position: absolute;
+	right: 0;
+	background-image: url(images/switch-bg.png);
+	height: 36px;
+	width: 103px;
+	background-size: 103px 36px;
+	margin: 5px 10px 0 10px;
+}
+
+#nx.RETINA .ProfileAvatarView .blueHeader .xswitch {
+	background-image: url(images/switch-sex_2.png);
+}
+
+#nx.RETINA .ProfileAvatarView .blueHeader .agswitch {
+	background-image: url(images/switch-bg_2.png);
+}
+
+#nx .ProfileAvatarView .blueHeader .xswitch.off {
+	background-position: -68px 0;
+}
+
+#nx .ProfileAvatarView .ximage.avatar {
+	border: 3px solid #FFF;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px RGBA(0, 0, 0, .3);
+	-webkit-box-shadow: 0 2px 2px RGBA(0, 0, 0, .3);
+	margin: 20px auto 20px auto;
+}
+
+#nx .ProfileAvatarView .faces .fc {
+	float: left;
+	background-color: #FFF;
+	margin: 3px;
+	box-shadow: 0 2px 5px RGBA(150, 150, 150, .4);
+	-webkit-box-shadow: 0 2px 5px RGBA(150, 150, 150, .4);
+	padding: 4px;
+	position: relative;
+	width: 70px;
+	height: 72px;
+}
+
+#nx .ProfileAvatarView .female.faces .fc .face {
+	background-image: url(/images/_avatars/faces-f.png);
+}
+
+#nx .ProfileAvatarView .male.faces .fc .face {
+	background-image: url(/images/_avatars/faces-m.png);
+}
+
+#nx.RETINA .ProfileAvatarView .female.faces .fc .face {
+	background-image: url(/images/_avatars/faces-f_2.png);
+}
+
+#nx.RETINA .ProfileAvatarView .male.faces .fc .face {
+	background-image: url(/images/_avatars/faces-m_2.png);
+}
+
+#nx .ProfileAvatarView .faces .fc .face {
+	background-color: #E9E9E9;
+	background-size: 70px 622px;
+	width: 70px;
+	height: 62px;
+}
+
+#nx .ProfileAvatarView .faces .fc.nice .face {
+	background-position: 0 0;
+}
+
+#nx .ProfileAvatarView .faces .fc.punk .face {
+	background-position: 0 -70px;
+}
+
+#nx .ProfileAvatarView .faces .fc.nerd .face {
+	background-position: 0 -140px;
+}
+
+#nx .ProfileAvatarView .faces .fc.smooth .face {
+	background-position: 0 -210px;
+}
+
+#nx .ProfileAvatarView .faces .fc.rough .face {
+	background-position: 0 -280px;
+}
+
+#nx .ProfileAvatarView .faces .fc.evil .face {
+	background-position: 0 -350px;
+}
+
+#nx .ProfileAvatarView .faces .fc .name {
+	text-transform: capitalize;
+	font-size: 10px;
+	padding: 3px 0 3px 0;
+	font-weight: bold;
+	color: #3A3A3A;
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+	right: 0;
+	background-color: #FFF;
+}
+
+#nx .ProfileAvatarView .colors {
+	height: 100px;
+	padding: 0 3px;
+}
+
+#nx .ProfileAvatarView .colors .clr {
+	float: left;
+	margin: 8px;
+	width: 25px;
+	height: 25px;
+	border-radius: 5px;
+	box-shadow: 2px 6px 2px RGBA(0, 0, 0, .3);
+	-webkit-box-shadow: 2px 6px 2px RGBA(0, 0, 0, .3);
+}
+
+#nx .ProfileAvatarView .colors .clr div {
+	width: 30px;
+	height: 30px;
+	border: 2px solid #FFF;
+	border-radius: 5px;
+	box-shadow: inset 0 2px 2px RGBA(0, 0, 0, .3);
+	-webkit-box-shadow: inset 0 2px 2px RGBA(0, 0, 0, .3);
+}
+
+#nx .ProfileAvatarView .colors .clr div.checked {
+	background-image: url(/images/_icons20.png);
+	background-size: 20px 670px;
+	background-repeat: no-repeat;
+	background-position: 6px -245px;
+	border: 3px solid #0BC4E6;
+}
+
+#nx.RETINA .ProfileAvatarView .colors .clr div.checked {
+	background-image: url(/images/_icons20_2.png);
+}
+
+#nx .warning .xlabel.Header {
+	color: #4D546E;
+	text-shadow: white 0 1px;
+	margin: 14px 0 14px 0px;
+	font-size: 17px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-left: 20px;
+	margin-right: 20px;
+	line-height: 30px;
+}
+
+#nx .warning .contentPanel {
+	padding: 20px;
+}
+
+#nx .warning.stack .xlabel.Header {
+	font-size: 10px;
+	margin: 0;
+	width: 20px;
+	line-height: 10px;
+}
+
+#nx .warning.stack .contentPanel {
+	padding: 3px;
+}
+
+#nx .warning .btnTxt {
+	width: 100%;
+	margin: 20px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#nx .warning .xpopup {
+	background-color: #DDD;
+}
+
+#nx .FriendWrapper {
+	background-color: #FFF;
+}
+
+#nx .FriendView {
+	height: 100%;
+}
+
+#nx .FriendView .ximage.bg {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+#nx .FriendView .ximage.avatar {
+	margin: -140px 0 0 30px;
+}
+
+#nx .FriendView .bodyPanel {
+	color: #2C2C2C;
+	white-space: nowrap;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 15px;
+	border-bottom: 1px solid #D4D4D4;
+}
+
+#nx .FriendView .display { /*
+	color: #2C2C2C;
+	white-space: nowrap;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 15px;
+	border-bottom: 1px solid #D4D4D4;
+*/
+	
+}
+
+#nx .FriendView .avatarPanel {
+	position: relative;
+}
+
+#nx .FriendView .avatarPanel .circleBtn.chat {
+	position: absolute;
+	bottom: 50px;
+	right: 10px;
+}
+
+#nx .FriendView .avatarPanel .circleBtn.addblock {
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+}
+
+#nx .FriendView .btnTxt {
+	padding: 30px 60px;
+}
+
+#nx .FriendView .asl {
+	font-size: 11px;
+	font-weight: normal;
+	color: #888;
+	margin-bottom: 10px;
+}
+
+#nx .FriendView .status {
+	font-size: 12px;
+	font-weight: normal;
+	color: #444;
+	margin-bottom: 10px;
+	white-space: normal;
+}
+
+#nx .FriendView .lastLogin {
+	font-size: 11px;
+	font-weight: normal;
+	color: #888;
+	margin-bottom: 10px;
+}
+
+
+/*
+#nx .FriendWrapper {
+	background-color: #CCC;
+}
+
+#nx .FriendView .addFriend {
+	padding: 15px 15px 15px 15px;
+}
+
+#nx .FriendView .btnTxt {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#nx .FriendView .avatarPanel {
+	height: 100px;
+	border: 0px solid;
+	padding: 10px;
+}
+
+#nx .FriendView .avatarPanel img,.FriendView .avatarPanel div {
+	float: left;
+}
+
+#nx .FriendView .avatarPanel img {
+	margin: 5px 7px 0 7px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
+	float: left;
+	background: #fff;
+}
+
+#nx .FriendView .avatarPanel .header {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #FFF;
+	color: black;
+	padding: 35px 0 0 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#nx .FriendView .bodyPanel {
+	background-image: url(images/white-bg.png);
+	background-repeat: repeat-x;
+	margin-top: -25px;
+}
+
+#nx .FriendView .bodyPanel .firstRow {
+	width: 100px;
+	height: 24px;
+	background-image: url(images/white-corner.png);
+	background-repeat: no-repeat;
+	background-position: 33px 0;
+}
+
+#nx .FriendView .bodyPanel .lastRow {
+	width: 100%;
+	height: 30px;
+	background-image: url(images/white-bg-bottom.png);
+	background-repeat: repeat-x;
+}
+
+#nx .FriendView .bodyPanel .tablePanel {
+	background-color: #fff;
+	width: 100%;
+}
+
+#nx .FriendView .tablePanel {
+	width: 100%;
+	border: 1px solid #fff;
+	background: #f0f0f0;
+	display: table;
+	margin: 0px 0 0 0;
+}
+
+#nx .FriendView .tablePanel .KeyValueRow {
+	display: table-row;
+}
+
+#nx .FriendView .tablePanel .keyLabel {
+	display: table-cell;
+	width: 30%;
+	padding: 5px;
+	border-bottom: 1px solid #F0F0F0;
+	text-align: right;
+	color: #747E94;
+	font-size: .85em;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+}
+
+#nx .FriendView .tablePanel .valueLabel {
+	padding: 15px 25px 15px 5px;
+	border-bottom: 1px solid #F0F0F0;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+	background-repeat: no-repeat;
+	background-position: center right;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#nx .FriendView .bodyPanel .gameWrapper {
+	background: #fff;
+	padding: 30px 10px 20px;
+}
+
+#nx .FriendView .bodyPanel .gamePanel {
+	border: 1px solid #BBB;
+	background: #F4F4F4;
+	border-radius: 4px;
+	display: table;
+	-webkit-box-shadow: inset 0px 1px 2px rgba(150, 150, 150, 0.2);
+	width: 100%;
+	padding: 10px;
+}
+
+#nx .FriendView .buttonsPanel {
+	padding: 0px 15px 30px 15px;
+}
+
+#nx .FriendAddView {
+	background-color: #D0D0D0;
+}
+
+#nx .FriendAddView .btnTxt {
+	padding: 8px 10px 0 10px;
+	width: 120px;
+}
+
+#nx .FriendAddView .bodyPanel {
+	background: #FFF;
+	-webkit-box-shadow: 0 0px 15px #999;
+	width: 100%;
+	position: absolute;
+	display: table;
+	height: 300px;
+}
+
+#nx .FriendAddView .bodyPanel .titleLabel {
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+#nx .FriendAddView .bodyPanel .xinput {
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #AAA;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px #aaa;
+	font-size: 16px;
+	left: 20px;
+	right: 20px;
+	position: absolute;
+	top: 60px;
+}
+
+#nx .FriendAddView .bodyPanel .xinput.default {
+	font-style: oblique;
+	color: #CCC;
+}
+
+#nx .FriendAddView .bodyPanel.found .xinput {
+	-webkit-box-shadow: inset 0 0px 0px #fff;
+	border: 1px solid #ddd;
+}
+
+#nx .FriendAddView .bodyPanel .linklabel {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: right;
+	background-image: url(images/arrow-right.png);
+	background-size: 11px 8px;
+	background-repeat: no-repeat;
+	background-position: center right;
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+	height: 40px;
+	padding: 18px 30px 0 0;
+	color: #999;
+	text-decoration: underline;
+}
+
+#nx.RETINA .FriendAddView .bodyPanel .linklabel {
+	background-image: url(images/arrow-right_2.png);
+}
+
+#nx .FriendAddView .bodyPanel .btnFind {
+	right: 20px;
+	position: absolute;
+	top: -10px;
+}
+
+#nx .FriendAddView .btnFind.add {
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#70D83A),
+		color-stop(0.5, #4BAF66), color-stop(0.5, #43A35F), to(#399356) );
+	border-top: 1px solid #27653B;
+	border-bottom: 1px solid #62DC82;
+}
+
+#nx .FriendAddView .bodyPanel .friendFoundPanel {
+	top: 120px;
+	border: 1px solid #DDD;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	height: 70px;
+	border-radius: 4px;
+	background-color: #F0F0F0;
+	padding: 5px 5px 0 5px;
+}
+
+#nx .FriendAddView .bodyPanel .friendFoundPanel .info {
+	padding: 25px;
+	text-shadow: 0 1px 1px RGBA(255, 255, 255, .8);
+}
+
+#nx .FriendAddView .bodyPanel .friendFoundPanel .ximage {
+	margin: 5px 7px 0 7px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
+	background: #FFF;
+}
+
+#nx .FriendAddView .bodyPanel .friendFoundPanel .name {
+	font-weight: bold;
+	padding-left: 10px;
+	text-shadow: 0 1px 1px #fff;
+}
+
+#nx .FriendAddView .bodyPanel .friendFoundPanel .more {
+	font-size: .9em;
+	color: #666;
+	padding-left: 20px;
+	padding-top: 3px;
+	text-shadow: 0 1px 1px #fff;
+}
+*/
+#nx .FriendFindWrapper .sherlock {
+	background-image: url(/images/art-search.jpg);
+	width: 100%;
+	height: 130px;
+	background-size: 400px 130px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#nx.RETINA .FriendFindWrapper .sherlock {
+	background-image: url(/images/art-search_2.jpg);
+}
+
+#nx .FriendFindView {
+	background-color: #E9E9E9;
+	height: 400px;
+}
+
+#nx .FriendFindView .btnTxt {
+	padding: 25px 60px 0 60px;
+}
+
+#nx .FriendFindView .mobileInput {
+	width: 90%;
+	padding: 10px;
+	margin: 0 0 4px;
+	border-radius: 6px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #3A3A3A;
+	border: 1px solid #A4A4A4;
+	-webkit-box-shadow: inset 0 2px 2px #aaa;
+	background-image: url(/images/_icons-right.png);
+	background-size: 20px 470px;
+	background-position: 98% -290px;
+	background-repeat: no-repeat;
+}
+
+#nx.RETINA .FriendFindView .mobileInput {
+	background-image: url(/images/_icons-right_2.png);
+}
+
+#nx .FriendFindView .formPanel td.inputRow {
+	padding: 0 25px;
+}
+
+#nx .FriendFindView .formPanel td.buttonRow { /* padding: 0 40px; */
+	
+}
+
+#nx .FriendFindView .found {
+	background-image: url(/images/fantastico.png);
+	background-size: 358px 235px;
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+	background-position-y: -40px;
+	height: 300px;
+	padding: 170px 0 0 0;
+}
+
+#nx.RETINA .FriendFindView .found {
+	background-image: url(/images/fantastico_2.png);
+}
+
+#nx .FriendFindView .found .mascot {
+	
+}
+
+#nx .FriendFindView .not.found {
+	background-image: url(/images/wizForgotNotsent.jpg);
+}
+
+#nx.RETINA .FriendFindView .not.found {
+	background-image: url(/images/wizForgotNotsent_2.jpg);
+}
+
+#nx .FriendFindView .not.found .btnTxt {
+	padding: 5px 60px 0 60px;
+}
+
+#nx .FriendFindView .rows .row .title {
+	top: 22px;
+}
+
+#nx .HomeView {
+	background-color: #E9E9E9;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#nx .blueHeader .ximage.logo {
+	margin: 8px 0 0 -55px;
+	left: 50%;
+	position: absolute;
+}
+
+#nx .TidbitListWrapper {
+	background-color: #D7B58E;
+	background-image: url(/images/texture-wood-oak.jpg);
+	background-size: 420px 1050px;
+}
+
+#nx.RETINA .TidbitListWrapper {
+	background-image: url(/images/texture-wood-oak_2.jpg);
+}
+
+#nx .TidbitListWrapper.xx {
+	background-image: url(/images/trans.png);
+}
+
+#nx .HomeView .tidbit,#nx .TidbitListView .tidbit {
+	position: relative;
+	background-image: url(/images/_tidbit.png);
+	background-size: 265px 630px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 265px;
+	height: 150px;
+	margin-left: -132px;
+	left: 50%;
+}
+
+#nx.RETINA .HomeView .tidbit,#nx.RETINA .TidbitListView .tidbit {
+	background-image: url(/images/_tidbit_2.png);
+}
+
+#nx .TidbitListView.xx .tidbit {
+	background-image: url(/images/_tidbit_2xx.png);
+}
+
+#nx .TidbitListView.xx.yy .tidbit {
+	background-image: url(/images/trans.png);
+}
+
+#nx .tidbit.peeled {
+	background-position: 0 -160px;;
+}
+
+#nx .tidbit.single {
+	background-position: 0 -320px;
+}
+
+#nx .tidbit.single.peeled {
+	background-position: 0 -480px;
+}
+
+#nx .tidbit .title {
+	font-family: "SanchezRegular";
+	font-weight: normal;
+	font-size: 14px;
+	color: #918D8D;
+	padding: 24px 15px 9px 50px;
+	position: relative;
+	background-image: url(/images/_icons20.png);
+	background-size: 20px 670px;
+	background-position: 30px -323px;
+	background-repeat: no-repeat;
+}
+
+#nx.RETINA .tidbit .title {
+	background-image: url(/images/_icons20_2.png);
+}
+
+#nx .tidbit .ximage {
+	padding: 4px 2px;
+	background-color: #FFF;
+	left: 25px;
+	top: 55px;
+	position: absolute;
+	-webkit-box-shadow: 0 2px 3px RGBA(0, 0, 0, .2);
+}
+
+#nx .tidbit .name {
+	position: absolute;
+	left: 92px;
+	right: 0;
+	color: #06BEDE;
+	font-weight: bold;
+	top: 55px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 162px;
+}
+
+#nx .tidbit .msg {
+	color: #3A3A3A;
+	font-size: 13px;
+}
+
+#nx .tidbit .msg2 {
+	color: #858183;
+	font-size: 13px;
+	margin-top: 3px;
+}
+
+#nx .tidbit .text {
+	position: absolute;
+	left: 92px;
+	right: 16px;
+	top: 77px;
+}
+
+#nx .tidbit a {
+	color: #06BEDE;
+}
+
+#nx .mascot.help {
+	display: table;
+	padding: 15px 10px;
+}
+
+#nx .mascot.help .ximage {
+	display: table-cell;
+}
+
+#nx .mascot.help .msg {
+	padding: 10px 0 0 0;
+	color: #3A3A3A;
+	font-size: 14px;
+	display: table-cell;
+	vertical-align: top;
+	font-family: "SanchezRegular";
+}
+
+/*#nx .HomeView .titlePanel, #nx .chats .titlePanel */
+#nx .listHeader {
+	font-family: "SanchezRegular";
+	font-size: 14px;
+	text-shadow: 0 -1px 1px RGBA(255, 255, 255, .8);
+	padding: 10px;
+	color: #3A3A3A;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBFBFB),
+		to(#E9E9E9) );
+	-webkit-box-shadow: 0 1px 2px RGBA(0, 0, 0, .3);
+}
+
+#nx .listHeaderShadow {
+	-webkit-box-shadow: inset 0 2px 2px RGBA(0, 0, 0, .2);
+}
+
+#nx .atitle {
+	font-size: 14px;
+	text-shadow: 0 -1px 1px RGBA(255, 255, 255, .8);
+	font-weight: bold;
+	margin: 20px 16px 10px 16px;
+	color: #3A3A3A;
+}
+
+#nx .gameFeat {
+	background-color: #FFF;
+	padding: 16px;
+}
+
+#nx .gameFeat.pressed {
+	background-color: #E2FAFE;
+}
+
+#nx .gameFeat.pressed .ximage {
+	-webkit-box-shadow: 0 1px 10px RGBA(0, 0, 0, 1);
+}
+
+#nx .gameFeat.pressed .atitle {
+	text-shadow: none;
+}
+
+#nx .gameFeat.pressed .company {
+	text-shadow: none;
+	/*color: RGBA(255, 255, 255, 1);*/
+}
+
+#nx .gameFeat.pressed .descr {
+	text-shadow: none;
+}
+
+#nx .gameFeat.even {
+	border-top: 1px solid #E9E9E9;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+#nx .gameFeat .ximage {
+	margin: 0;
+	padding: 6px;
+	background-color: #FFF;
+	-webkit-box-shadow: 0 1px 10px RGBA(0, 0, 0, .4);
+}
+
+#nx .gameFeat .atitle {
+	margin: 15px 0 0px 0;
+}
+
+#nx .gameFeat .company {
+	margin: 5px 0;
+	color: #858183;
+	text-shadow: 0 1px 1px RGBA(255, 255, 255, .8);
+	font-size: 13px;
+}
+
+#nx .gameFeat .descr {
+	clear: both;
+	margin: 0;
+	color: #3A3A3A;
+	text-shadow: 0 1px 1px RGBA(255, 255, 255, .8);
+	font-size: 13px;
+}
+
+#nx .HomeView .btnTxt {
+	padding: 5px 50px 0 50px;
+}
+
+#nx .HomeView .news {
+	padding: 10px 0 0 0;
+}
+
+#nx .news .rows .row {
+	height: 85px;
+	background-image: none;
+}
+
+#nx .news .rows .row .title {
+	font-weight: normal;
+	font-size: 13px;
+}
+
+#nx .news .rows .row .titleText {
+	min-height: 23px;
+	max-height: 33px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#nx .news .rows .row a {
+	color: #06BEDE;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#nx .news .rows .row .btnTxt {
+	padding: 4px;
+}
+
+/*
+#nx .HomeView .rows .row:first-child,#nx .HomeView .rows .row.pressed:first-child
+	{
+	border-top-left-radius: 0 0;
+	border-top-right-radius: 0 0;
+	-webkit-box-shadow: 0px 0 0 #aaa;
+}
+
+#nx .HomeView .rows .row:last-child,#nx .HomeView .rows .row.pressed:last-child
+	{
+	border-bottom-left-radius: 0 0;
+	border-bottom-right-radius: 0 0;
+	-webkit-box-shadow: 0px 0 0 #aaa;
+}
+
+#nx .HomeView .rows .row:first-child,#nx .HomeView .rows .row.pressed:first-child
+	{
+	border-top-left-radius: 0 0;
+	border-top-right-radius: 0 0;
+	-webkit-box-shadow: 0px 0 0 #aaa;
+}
+
+#nx .chats .rows .row:first-child,#nx .chats .rows .row.pressed:first-child
+	{
+	border-top-left-radius: 0 0;
+	border-top-right-radius: 0 0;
+	-webkit-box-shadow: 0px 0 0 #aaa;
+}
+
+#nx .chats .rows .row:last-child,#nx .chats .rows .row.pressed:last-child
+	{
+	border-bottom-left-radius: 0 0;
+	border-bottom-right-radius: 0 0;
+	-webkit-box-shadow: 0px 0 0 #aaa;
+}
+*/
+/*
+#nx .xpopupOverlay.IntroView {
+	z-index: 1;
+}
+
+#nx .xpopupOverlay.IntroView .xpopup {
+	background-color: #FFF;
+}
+
+#nx .xpopupOverlay.IntroView .header {
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#68E8FF),
+		to(#01C0E3) );
+	position: relative;
+}
+
+#nx .xpopupOverlay.IntroView .lblGames {
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#nx .xpopupOverlay.IntroView .lblCommunity {
+	color: #FFF;
+	font-weight: bold;
+	margin: 20px 0 5px 10px;
+}
+
+#nx .xpopupOverlay.IntroView .header .ximage {
+	margin: -14px 0 0 20px;
+	top: 50%;
+	position: absolute;
+}
+
+#nx .xpopupOverlay.IntroView .header .startBtn {
+	top: 50%;
+	right: 0;
+	color: #FFF;
+	font-weight: bold;
+	padding: 3px 10px 5px 10px;
+	font-size: 16px;
+	width: 80px;
+	text-align: center;
+	position: absolute;
+	margin: -20px 20px 0 0;
+	text-shadow: 0 1px 1px RGBA(0, 0, 0, .4);
+	background-color: #00A0BF;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#07CDF1),
+		to(#00A0BF) );
+	border-top: 1px solid #36689E;
+	border-bottom: 1px solid RGBA(255, 255, 255, .5);
+	border-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+#nx .xpopupOverlay.IntroView  .gamesView {
+	bottom: auto;
+	height: 160px;
+	top: 75px;
+	border: 0px solid;
+}
+
+#nx .xpopupOverlay.IntroView .gamesPanel {
+	background-color: #fff;
+	padding: 10px;
+	border: 0px solid;
+	height: 160px;
+}
+
+#nx .xpopupOverlay.IntroView .tabs {
+	position: absolute;
+	top: 230px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#nx .xpopupOverlay.IntroView .gamesView .cell {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+#nx .xpopupOverlay.IntroView .gamesView .cell .ximage {
+	border: 1px solid lightgray;
+	width: 190px;
+	height: 90px;
+}
+
+#nx .xpopupOverlay.IntroView .gamesView .cell .title {
+	font-weight: bold;
+}
+
+#nx .xpopupOverlay.IntroView .gamesView .cell .descr {
+	font-size: .8em;
+	color: #999;
+	width: 190px;
+}
+
+#nx .xpopupOverlay.IntroView .greenPanel {
+	margin: 0;
+	position: relative;
+	background-image: url(images/landing0.jpg);
+	background-repeat: no-repeat;
+}
+
+#nx .xpopupOverlay.IntroView .grayPanel {
+	margin: 3px 0 0 0;
+	position: relative;
+	background-image: url(images/landing1.jpg);
+	background-repeat: no-repeat;
+}
+
+#nx .xpopupOverlay.IntroView .orangePanel {
+	margin: 3px 0 3px 0;
+	position: relative;
+	background-image: url(images/landing2.jpg);
+	background-repeat: no-repeat;
+}
+
+#nx.RETINA .xpopupOverlay.IntroView .greenPanel {
+	background-image: url(images/landing0_2.jpg);
+}
+
+#nx.RETINA .xpopupOverlay.IntroView .grayPanel {
+	background-image: url(images/landing1_2.jpg);
+}
+
+#nx.RETINA .xpopupOverlay.IntroView .orangePanel {
+	background-image: url(images/landing2_2.jpg);
+}
+
+#nx.RETINA.ANDROID .xpopupOverlay.IntroView .greenPanel {
+	background-image: url(images/landing0a.jpg);
+}
+
+#nx.RETINA.ANDROID .xpopupOverlay.IntroView .grayPanel {
+	background-image: url(images/landing1a.jpg);
+}
+
+#nx.RETINA.ANDROID .xpopupOverlay.IntroView .orangePanel {
+	background-image: url(images/landing2a.jpg);
+}
+
+#nx .xpopupOverlay.IntroView .selectionPanel {
+	background-color: #35D4F1;
+}
+
+#nx .xpopupOverlay.IntroView .selectionPanel {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#nx .xpopupOverlay.IntroView .selectionPanel .selectionInner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#nx .xpopupOverlay.IntroView .selectionPanel.green .selectionInner .innerTitle
+	{
+	background-image: url(images/introLeftGames.png);
+}
+
+#nx .xpopupOverlay.IntroView .selectionPanel.gray .selectionInner .innerTitle
+	{
+	background-image: url(images/introLeftCommunity.png);
+}
+
+#nx .xpopupOverlay.IntroView .selectionPanel.orange .selectionInner .innerTitle
+	{
+	background-image: url(images/introLeftFriends.png);
+}
+
+#nx .xpopupOverlay.IntroView .selectionPanel .selectionInner .innerTitle
+	{
+	background-color: #29A9C2;
+	background-size: 40px 200px;
+}
+
+#nx.RETINA .xpopupOverlay.IntroView .selectionPanel.green .selectionInner .innerTitle
+	{
+	background-image: url(images/introLeftGames_2.png);
+}
+
+#nx.RETINA .xpopupOverlay.IntroView .selectionPanel.gray .selectionInner .innerTitle
+	{
+	background-image: url(images/introLeftCommunity_2.png);
+}
+
+#nx.RETINA .xpopupOverlay.IntroView .selectionPanel.orange .selectionInner .innerTitle
+	{
+	background-image: url(images/introLeftFriends_2.png);
+}
+
+#nx .xpopupOverlay.IntroView .selectionInner .innerTitle {
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 100%;
+	float: left;
+}
+
+#nx .xpopupOverlay.IntroView .selectionInner .innerContent {
+	top: 10px;
+	right: 0;
+	bottom: 0;
+	left: 40px;
+	background-color: #FFF;
+	position: absolute;
+}
+
+#nx .xpopupOverlay.IntroView .scrollPanel .rows {
+}
+
+#nx .xpopupOverlay.IntroView .scrollPanel {
+	background-color: #F0F0F0;
+}
+
+#nx .xpopupOverlay.IntroView .scrollPanel .gameContent {
+	padding: 20px;
+}
+
+#nx .xpopupOverlay.IntroView .scrollPanel .gameContent .ximage {
+	width: 200px;
+	height: 120px;
+	margin-left: 10px;
+}
+
+#nx .xpopupOverlay.IntroView .scrollPanel .gameContent .title {
+	white-space: nowrap;
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #FFF;
+	margin: 20px 0 0 0;
+}
+
+#nx .xpopupOverlay.IntroView .scrollPanel .gameContent .descr {
+	font-size: 12px;
+	text-shadow: 0 1px 1px #FFF;
+	color: #4F5459;
+	background: RGBA(100, 100, 100, .1);
+	padding: 10px;
+	right: 10px;
+	border-radius: 4px;
+	line-height: 150%;
+	border: 1px solid RGBA(100, 100, 100, .2);
+	margin: 20px 0;
+}
+
+#nx .IntroView .scrollPanel .cell {
+	float: left;
+	width: 115px;
+	height: 130px;
+	text-align: center;
+}
+
+#nx .IntroView .scrollPanel .cell.pressed {
+	border-top: 0 solid #1991EF;
+	border-bottom: 0 solid #004AB5;
+	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#0087ef),
+		to(#005de2) );
+	color: #FFF;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#nx .IntroView .scrollPanel .cell .ximage {
+	-webkit-box-shadow: 0 1px 2px #222;
+	width: 100px;
+	height: 100px;
+	margin: 10px 0 0 10px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #FFF;
+}
+
+#nx .IntroView .scrollPanel .cell .name {
+	width: 90px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	text-align: center;
+	font-size: .8em;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #FFF;
+}
+*/
+#nx .optionPopup {
+	background: RGBA(0, 0, 0, 0);
+}
+
+#nx .optionPopup .xpopup {
+	background: RGBA(0, 0, 0, 0);
+}
+
+#nx .optionPopup .xpopup .btns {
+	position: absolute;
+	width: 187px;
+	height: 89px;
+	background-image: url(/images/friend-options.png);
+	border-radius: 4px;
+	background-repeat: no-repeat;
+	background-size: 187px 89px;
+}
+
+#nx.RETINA .optionPopup .xpopup .btns {
+	background-image: url(/images/friend-options_2.png);
+}
+
+#nx .optionPopup .xpopup .btns .optionText {
+	position: relative;
+	text-shadow: 0 -1px 0 RGBA(0, 149, 175, .9);
+	color: white;
+	font-weight: bold;
+	white-space: nowrap;
+	font-size: 13px;
+	width: 76px;
+	height: 74px;
+	margin: 5px 0 0 6px;
+	background-image: url(/images/_icons80.png);
+	background-repeat: no-repeat;
+	background-size: 80px 650px;
+}
+
+#nx.RETINA .optionPopup .xpopup .btns .optionText {
+	background-image: url(/images/_icons80_2.png);
+}
+
+#nx.RETINA .optionPopup .xpopup .btns .optionText.pressed {
+	
+}
+
+#nx .optionPopup .xpopup .btns .optionText.btnFriend {
+	float: left;
+	background-position: 10px -35px;
+}
+
+#nx .optionPopup .xpopup .btns .optionText.btnUnfriend {
+	float: left;
+	background-position: 10px -157px;
+}
+
+#nx .optionPopup .xpopup .btns .optionText.btnBlock {
+	float: right;
+	margin: 5px 18px 0 5px;
+	background-position: 16px -97px;
+}
+
+#nx .optionPopup .xpopup .btns .optionText .text {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	text-align: center;
+}
+
+#nx .blackPopup {
+	background: RGBA(0, 0, 0, 0);
+}
+
+#nx .blackPopup .xpopup .circleBtn {
+	position: absolute;
+	right: 25px;
+}
+
+#nx .blackPopup .xpopup {
+	padding: 20px;
+	background-color: RGBA(0, 0, 0, .8);
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: RGBA(0, 0, 0, 0) 0 0 0;
+	box-shadow: RGBA(0, 0, 0, 0) 0 0 0;
+}
+
+#nx_notification {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+#nx_notification .notifTable {
+	position: relative;
+}
+
+#nx_notification .title {
+	position: absolute;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DBF8FF),
+		color-stop(0.5, #C4F4FE), color-stop(0.5, #AAEFFE), to(#98ECFE) );
+	height: 38px;
+	width: 100%;
+	border-bottom: 2px solid #20ACCC;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-box-shadow: 0 1px 2px RGBA(0, 0, 0, .4);
+}
+
+#nx_notification .title .titleText {
+	font-family: "SanchezRegular";
+	font-size: 14px;
+	padding: 3px 0 0 65px;
+	color: #3A3A3A;
+	text-shadow: 1px 1px RGBA(255, 255, 255, 1);
+}
+
+#nx_notification .ximage {
+	position: absolute;
+	-webkit-border-radius: 5em;
+	border: 3px solid white;
+	-webkit-box-shadow: -5px 2px 2px RGBA(32, 172, 204, .4);
+	margin: -10px 0 0 5px;
+}
+
+#nx .build {
+	font-family: "SanchezRegular";
+	font-size: 12px;
+	padding: 10px;
+	color: #DDD;
+}
+
+#nx .blackPopup .label {
+	color: #FFF;
+	text-shadow: RGBA(0, 0, 0, 1) 0 2px;
+	font-family: "SanchezRegular";
+	font-weight: normal;
+	font-size: 18px;
+	margin: 30px;
+	position: absolute;
+	top: 60px;
+	text-align: center;
+}
+
+#nx .blackPopup .label .code {
+	font-size: 12px;
+}
+
+#nx .blackPopup .label .code .small {
+	font-size: 10px;
+}
+
+#nx .blackPopup.dbg .warning .contentPanel {
+	padding: 0;
+}
+
+#nx .blackPopup.dbg .label {
+	font-size: 12px;
+	margin: 0;
+	top: 10px;
+	text-align: left;
+}
+
+#nx .blackPopup.dbg .xpopup .circleBtn {
+	display: none;
+}
+
+#nx .blackPopup.console .label {
+	font-size: 12px;
+	margin: 0;
+	top: 10px;
+	text-align: left;
+	position: static;
+}
+
+#nx .blackPopup.console .btnTxt {
+	padding: 10px 50px;
+}
+
+#nx .anchor {
+	text-decoration: none;
+}
+
+#nx .SignView {
+	background-color: #E9E9E9;
+	z-index: 22222;
+}
+
+#nx .SignView .scrollPanel {
+	top: 47px;
+	z-index: -1;
+}
+
+#nx.ANDROID .SignView .scrollPanel { /*
+	top: -20px;	
+	position: relative;
+	*/
+	top: 85px;
+}
+
+#nx .SignView .forgotpass {
+	width: 80%;
+	padding: 20px 0;
+	margin-left: 7%;
+	text-align: left;
+}
+
+#nx .SignView .forgotpass a {
+	font-weight: bold;
+	color: #4C536D;
+	text-shadow: 0 1px 0px RGBA(255, 255, 255, .5);
+	text-decoration: underline;
+}
+
+#nx .SignView .header {
+	height: 47px;
+	background-color: #01C0E3;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#68E8FF),
+		to(#01C0E3) );
+	position: relative;
+	-webkit-box-shadow: 0 1px 2px RGBA(0, 0, 0, .4);
+}
+
+#nx .SignView .header .ximage {
+	float: left;
+	margin: 8px 0 0 0;
+}
+
+#nx .SignView .header .ximage.logo {
+	margin: 11px 0 0 10px;
+}
+
+#nx .SignView .header .title {
+	float: left;
+	font-family: "SanchezRegular";
+	padding: 13px;
+	color: #016D8C;
+}
+
+#nx .SignView.ForgotPassword .header .title {
+	background-image: url(/images/_icons20.png);
+	background-size: 20px 670px;
+	background-position: 0 -35px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	margin-left: 10px;
+}
+
+#nx.RETINA .SignView.ForgotPassword .header .title {
+	background-image: url(/images/_icons20_2.png);
+}
+
+#nx .SignView .header .rightWidget {
+	float: right;
+}
+
+#nx .SignView .header .circleBtn {
+	margin-left: 10px;
+}
+
+#nx .SignView .footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	background-color: #E9E9E9;
+	padding-top: 2px;
+}
+
+#nx.ANDROID .SignView .footer {
+	position: relative;
+}
+
+#nx.LANDSCAPE .SignView .footer {
+	display: none;
+}
+
+#nx .SignView .footer .circleBtn {
+	position: absolute;
+	color: #3A3A3A;
+	white-space: nowrap;
+	font-size: 12px;
+	font-weight: bold;
+	color: #858183;
+}
+
+#nx .SignView .footer .circleBtn.pass {
+	left: 40px;
+}
+
+#nx .SignView .footer .circleBtn.contact {
+	left: 50%;
+	margin-left: -6px;
+}
+
+#nx .SignView .footer .circleBtn.terms {
+	right: 10px;
+}
+
+#nx .SignView .footer .circleBtn.pass div {
+	margin: 30px 0 0 -35px;
+}
+
+#nx .SignView .footer .circleBtn.contact div {
+	margin: 30px 0 0 -15px;
+}
+
+#nx .SignView .footer .circleBtn.terms div {
+	margin: 30px 0 0 -3px;
+}
+
+#nx .SignView .loading {
+	background-color: RGBA(190, 190, 190, .3);
+}
+
+#nx .SignView .loading .mobileInput,#nx .SignView .loading .mobileInput.ok
+	{
+	background-image: url(/images/loading3.gif);
+	background-size: 23px 16px;
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+#nx .SignView .formPanel {
+	text-align: left;
+	padding: 0 0;
+}
+
+#nx .SignView .formPanel td.inputRow {
+	padding: 0 50px;
+}
+
+#nx .SignView.NewDisplay .formPanel td.inputRow {
+	padding: 0 0;
+}
+
+#nx .SignView .formPanel td.buttonRow {
+	padding: 0 80px;
+}
+
+#nx .SignView.NewPassword .formPanel td.buttonRow {
+	padding: 0 70px;
+}
+
+#nx .SignView .lblPanel {
+	height: 40px;
+}
+
+#nx .SignView .lblPanel .mascot {
+	margin: 2px 0 0 -33px
+}
+
+#nx .SignView .lbl {
+	margin: 10px 0 10px 5px;
+	font-family: "SanchezRegular";
+	color: #3A3A3A;
+	text-align: left;
+	text-shadow: 0 1px 0 RGBA(255, 255, 255, .8);
+	font-size: 14px;
+	float: left;
+}
+
+#nx .SignView .lbl .small {
+	font-family: "SanchezRegular";
+	color: #3A3A3A;
+	font-size: 12px;
+	margin: 10px 0 0 0;
+	text-shadow: 0 1px 0 RGBA(255, 255, 255, .8);
+}
+
+#nx .SignView.SignViewTerms .scrollPanel {
+	
+}
+
+#nx .SignView.SignViewTerms .lbl {
+	margin: 0;
+}
+
+#nx .SignViewTerms .lbl div {
+	font-family: serif;
+}
+
+#nx .SignViewTerms .lbl span.hh {
+	font-weight: bold;
+	line-height: 30px;
+}
+
+#nx .SignViewTerms .lbl span.h {
+	font-weight: bold;
+	line-height: 30px;
+}
+
+#nx .smallLabel {
+	color: #858183;
+	font-size: 12px;
+	text-shadow: 0 1px 0 RGBA(255, 255, 255, .8);
+	margin: 10px;
+}
+
+#nx .smallLabel.dark {
+	color: #474747;
+}
+
+#nx .smallLabel .strong {
+	color: #3A3A3A;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+#nx .smallLabel .red {
+	color: #F32A4E;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+#nx .SignView .lbl .red {
+	color: #F3274C;
+	font-weight: bold;
+}
+
+#nx .SignView .lbl .title {
+	color: #3A3A3A;
+	display: inline;
+	font-weight: bold;
+}
+
+#nx .SignView .lblPanel .ximage {
+	float: left;
+}
+
+#nx .SignView.NewAvatar .lbl {
+	width: 100%;
+	text-align: center;
+	margin: 19px 0 14px 0;
+}
+
+#nx .SignView.NewAvatar .faces {
+	display: table;
+	padding: 0 0 0 13px;
+}
+
+#nx .SignView.NewAvatar .faces .fc {
+	float: left;
+	background-color: #FFF;
+	margin: 3px;
+	-webkit-box-shadow: 0 2px 5px RGBA(150, 150, 150, .4);
+	padding: 4px;
+	position: relative;
+	width: 84px;
+	height: 87px;
+}
+
+#nx .SignView.NewAvatar .female.faces .fc .face {
+	background-image: url(/images/_avatars/faces-f.png);
+}
+
+#nx .SignView.NewAvatar .male.faces .fc .face {
+	background-image: url(/images/_avatars/faces-m.png);
+}
+
+#nx.RETINA .SignView.NewAvatar .female.faces .fc .face {
+	background-image: url(/images/_avatars/faces-f_2.png);
+}
+
+#nx.RETINA .SignView.NewAvatar .male.faces .fc .face {
+	background-image: url(/images/_avatars/faces-m_2.png);
+}
+
+#nx .SignView.NewAvatar .faces .fc .face {
+	background-color: #E9E9E9;
+	background-size: 84px 746px;
+	width: 84px;
+	height: 74px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.nice .face {
+	background-position: 0 0;
+}
+
+#nx .SignView.NewAvatar .faces .fc.punk .face {
+	background-position: 0 -84px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.nerd .face {
+	background-position: 0 -168px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.smooth .face {
+	background-position: 0 -252px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.rough .face {
+	background-position: 0 -336px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.evil .face {
+	background-position: 0 -420px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.manic .face {
+	background-position: 0 -504px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.sleepy .face {
+	background-position: 0 -588px;
+}
+
+#nx .SignView.NewAvatar .faces .fc.phat .face {
+	background-position: 0 -672px;
+}
+
+#nx .SignView.NewAvatar .faces .fc .name {
+	text-transform: capitalize;
+	font-size: 12px;
+	padding: 3px 0 0 0;
+	font-weight: bold;
+	color: #3A3A3A;
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+	right: 0;
+	background-color: #FFF;
+}
+
+#nx .SignView.NewAvatarColor .btnTxt.btnSubmit {
+	padding: 8px 30px;
+}
+
+#nx .SignView.NewAvatarColor .lbl {
+	width: 100%;
+	text-align: center;
+	margin: 19px 0 14px 0;
+}
+
+#nx .SignView.NewAvatarColor .colors {
+	height: 100px;
+	padding: 0 25px;
+	margin-top: 150px;
+}
+
+#nx .SignView.NewAvatarColor .colors .clr {
+	float: left;
+	margin: 7px;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	-webkit-box-shadow: 2px 6px 2px RGBA(0, 0, 0, .3);
+}
+
+#nx .SignView.NewAvatarColor .colors .clr div {
+	width: 30px;
+	height: 30px;
+	border: 2px solid #FFF;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 2px 2px RGBA(0, 0, 0, .3);
+}
+
+#nx .SignView.NewAvatarColor .colors .clr div.checked {
+	background-image: url(/images/_icons20.png);
+	background-size: 20px 670px;
+	background-repeat: no-repeat;
+	background-position: 6px -245px;
+	border: 3px solid #0BC4E6;
+}
+
+#nx.RETINA .SignView.NewAvatarColor .colors .clr div.checked {
+	background-image: url(/images/_icons20_2.png);
+}
+
+#nx .SignView.NewAvatarColor .ximage.avatar {
+	border: 3px solid #FFF;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 2px 2px RGBA(0, 0, 0, .3);
+	left: 50%;
+	position: absolute;
+	margin-left: -65px;
+	top: 50px;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 300ms;
+}
+
+#nx .SignView.Landing .body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#nx .SignView.Landing .bg {
+	background-image: url(/images/_landing/landing-bg.jpg);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-color: #CB9765;
+	background-size: 1250px 700px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#nx.RETINA .SignView.Landing .bg {
+	background-image: url(/images/_landing/landing-bg_2.jpg);
+}
+
+#nx .SignView.Landing .btnTxt {
+	padding: 8px 100px 0 100px;
+	margin-top: 310px;
+	z-index: 3;
+	position: absolute;
+	bottom: 10%;
+}
+
+#nx .SignView.Landing .balloons {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+
+#nx .SignView.Landing .sky {
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+
+#nx .SignView .btnTxt {
+	text-align: center;
+	padding: 8px 4px 0 4px;
+}
+
+#nx .SignView .btnTxt.gray {
+	margin-left: 15px;
+}
+
+#nx .SignView .mobileInput.defaultText {
+	color: #AAA;
+	font-style: oblique;
+	font-weight: normal;
+}
+
+#nx .SignView .btnTxt.btnSubmit {
+	margin-top: 0;
+}
+
+#nx .SignView .mobileInput {
+	width: 90%;
+	padding: 10px;
+	margin: 0 0 4px;
+	border-radius: 6px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #3A3A3A;
+	border: 1px solid #A4A4A4;
+	-webkit-box-shadow: inset 0 2px 2px #aaa;
+}
+
+#nx .SignView .mobileInput.ok {
+	background-color: #E2FEE7;
+	background-image: url(/images/_icons-right.png);
+	background-repeat: no-repeat;
+	background-position: 98% -236px;
+	background-size: 20px 470px;
+}
+
+#nx.RETINA .SignView .mobileInput.ok {
+	background-image: url(/images/_icons-right_2.png);
+}
+
+#nx .SignView .mobileInput.error {
+	background-color: #FFE3EA;
+}
+
+#nx .SignView .avatarWrapper {
+	position: relative;
+	height: 200px;
+	margin: 20px 0;
+	background-color: #FAFAFA;
+	border-radius: 4px;
+}
+
+#nx .SignView .avatarWrapper .imagesPanel {
+	height: 700px;
+	background-color: #FFF;
+	border-radius: 4px;
+}
+
+#nx .SignView .imagesPanel .ximage {
+	float: left;
+	margin: 8px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 0px 2px #666;
+	background: #FFF;
+}
+
+#nx .SignView .signPanel {
+	position: absolute;
+	right: 35px;
+}
+
+#nx .SignView.signin .signPanel {
+	position: absolute;
+	left: 50px;
+}
+
+#nx .SignView .signPanel div:first-child {
+	float: left;
+	color: #4D546E;
+	text-shadow: RGBA(255, 255, 255, .5) 0 1px;
+	margin: 7px 10px 14px 0px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#nx .SignView .signPanel div:last-child {
+	float: left;
+	padding: 5px 5px 7px 5px;
+	font-size: 16px;
+}
+
+#nx .SignView.NewDisplay .mobileInput {
+	color: #3A3A3A;
+	font-style: oblique;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	border: 0;
+	border-bottom: 1px dashed #00C0E0;
+	font-weight: bold;
+	background-color: #E1FAFE;
+	font-size: 18px;
+	float: left;
+}
+
+#nx .SignView .header .xswitch {
+	background-image: url(images/switch-sex.png);
+	height: 36px;
+	width: 90px;
+	background-position: -8px 0;
+	margin: 0 0 0 6px;
+	background-size: 166px 36px;
+}
+
+#nx .SignView .header .agswitch {
+	background-image: url(images/switch-bg.png);
+	height: 36px;
+	width: 103px;
+	background-size: 103px 36px;
+}
+
+#nx.RETINA .SignView .header .xswitch {
+	background-image: url(images/switch-sex_2.png);
+}
+
+#nx.RETINA .SignView .header .agswitch {
+	background-image: url(images/switch-bg_2.png);
+}
+
+#nx .SignView .header .xswitch.off {
+	background-position: -68px 0;
+}
+
+#nx .SignView .header .agswitch {
+	margin: 5px 10px 0 10px;
+}
+
+#nx .SignView.NewDisplay .inputPanel div {
+	float: left;
+	margin: 0 0 0 5px;
+}
+
+/*
+#nx .NotificationView {
+	background-color: RGBA(20, 20, 20, .9);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top: 1px solid RGBA(0, 0, 0, 1);
+	border-left: 1px solid RGBA(100, 100, 100, .2);
+	border-right: 1px solid RGBA(100, 100, 100, .2);
+}
+
+#nx .NotificationView .msg {
+	color: #AAA;
+	border-bottom: 1px solid RGBA(100, 100, 100, .2);
+	padding: 5px 5px;
+	font-size: 12px;
+}
+
+#nx .NotificationView .msg:first-child {
+	background-image: url(images/notif-close.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+	padding-right: 25px;
+}
+
+#nx .NotificationView .msg img {
+	float: left;
+	margin: 0 10px 0 0;
+}
+*/
+#nx .ChatViewParent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #EEE;
+	background-image: url(images/bg-Marble.png);
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 300ms;
+}
+
+#nx .ChatViewParent .DragPanel {
+	padding-bottom: 46px;
+}
+
+/*
+#nx .ChatViewParent .ChatView .scrollPanel.msgScroll {
+	top: 46px;
+}
+
+#nx.ANDROID .ChatViewParent .ChatView .scrollPanel.msgScroll {
+	top: 46px;
+}
+*/
+/*************************************************/
+/*************************************************/
+/*************************************************/
+/*************************************************/
+#nx .ChatViewParent .header .chatHeader {
+	position: relative;
+	height: 45px;
+	border-top-left-radius: 5px;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+#nx .ChatViewParent .header .quit {
+	top: 50%;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 17px;
+	padding-right: 17px;
+	border-right: 1px solid #d0d0d0;
+}
+
+#nx .ChatViewParent .header .avatar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 8px;
+	margin-top: 2px;
+}
+
+#nx .ChatViewParent .background .hello .system {
+	display: inline;
+	text-align: center;
+	font-family: "SanchezRegular";
+}
+
+#nx .ChatViewParent .background .hello .standard {
+	display: inline-block;
+	font-family: arial;
+	font-weight: bold;
+	text-align: center;
+}
+
+#nx .ChatViewParent .header .speech {
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	marign-top: 45px;
+}
+
+#nx .ChatViewParent .header .navBarItem {
+	margin: 7px 0 0 2px;
+}
+
+#nx .ChatViewParent .header .title {
+	position: absolute;
+	top: 16px;
+	color: #FFF;
+	font-family: "SanchezRegular";
+	font-size: 13px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	left: 60px;
+	right: 60px;
+}
+
+#nx .ChatViewParent .header .title .system {
+	display: inline;
+	text-align: center;
+	font-family: "SanchezRegular";
+}
+
+#nx .ChatViewParent .header .title .standard {
+	display: inline-block;
+	font-family: arial;
+	font-weight: bold;
+	text-align: center;
+}
+
+#nx .ChatViewParent .footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+#nx .ChatViewParent .inputPanel {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-image: url(/images/tile-bg-light.gif);
+	background-size: 4px 4px;
+	background-repeat: repeat;
+	height: 46px;
+	background-color: #717171;
+}
+
+#nx .ChatViewParent .inputPanel .left {
+	border: 0px solid;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	bottom: 5px;
+	width: 20px;
+	background-image: url(/images/_inputSearch.png);
+	background-position: 0 0;
+	background-size: 50px 215px;
+	background-repeat: no-repeat;
+}
+
+#nx .ChatViewParent .inputPanel .right {
+	border: 0px solid;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	width: 40px;
+	background-image: url(/images/_inputSearch.png);
+	background-position: 0 -180px;
+	background-size: 50px 215px;
+	background-repeat: no-repeat;
+}
+
+#nx .ChatViewParent .inputPanel .center {
+	border: 0px solid;
+	position: absolute;
+	top: 5px;
+	left: 25px;
+	bottom: 5px;
+	right: 45px;
+	background-image: url(/images/_inputSearch.png);
+	background-position: 0 -45px;
+	background-size: 50px 215px;
+	background-repeat: repeat-x;
+}
+
+#nx .ChatViewParent .inputPanel .center input {
+	width: 100%;
+	height: 26px;
+	border: 0px solid;
+	margin: 3px 0 0 0;
+	font-size: 16px;
+	background-color: RGBA(0, 0, 0, 0);
+	-webkit-appearance: none;
+}
+
+/*************************************************/
+/*************************************************/
+/*************************************************/
+/*************************************************/
+#nx .Anime {
+	background-color: #36A1E8;
+}
+
+#nx .Anime .logo {
+	position: absolute;
+	top: 10%;
+	left: 40%;
+	margin-left: -60px;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .aMiddle {
+	position: absolute;
+	top: 65%;
+	right: 0;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .aBottom {
+	position: absolute;
+	bottom: 0;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .lblSkip {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 2px 10px 4px;
+	background-color: RGBA(12, 49, 75, .2);
+	border-radius: 6px;
+	color: RGBA(255, 255, 255, .5);
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#nx .Anime .aBG {
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .b1b {
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .b1a {
+	position: absolute;
+	top: 60%;
+	left: 0%;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .b1d {
+	position: absolute;
+	top: 80%;
+	left: 10%;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .b1g {
+	position: absolute;
+	top: 65%;
+	right: 10%;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .clogo {
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .Anime .c2 {
+	position: absolute;
+	top: 65%;
+	left: 10%;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .logoC0 {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+}
+
+#nx .logoC1 {
+	position: absolute;
+	top: 50%;
+	left: 65px;
+}
+
+#nx .Anime .cow {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	-webkit-transition-timing-function: linear;
+}
+
+#nx .hide {
+	visibility: hidden;
+}
+
+#nx .show {
+	visibility: visible;
+}
+
+#nx .FeedbackView textarea {
+	width: 90%;
+	height: 200px;
+	border: 3px solid #BCAA6F;
+	padding: 5px;
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-color: #FFFBE8;
+	margin: 0 0 0 10px;
+	font-size: 16px;
+	color: #3A3A3A;
+}
+
+#nx .FeedbackView .btnTxt {
+	padding: 10px 30px 10px 30px;
+}
