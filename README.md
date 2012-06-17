@@ -1,6 +1,4 @@
 closure-mobile
 ==============
 
-An MVP scaffolding for mobile closure apps
-
-touch support
+An MVP scaffolding for mobile/touch closure apps

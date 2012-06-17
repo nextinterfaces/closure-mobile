@@ -65,11 +65,11 @@ goog.exportSymbol('nx.EventBus', nx.EventBus);
 ///////////////////
 /*
  var pubsub = new goog.pubsub.PubSub();
- log('AG.Main::pubsub ' + pubsub.getCount('foo'));
+ log('nx.Main::pubsub ' + pubsub.getCount('foo'));
 
  var foo1 = function(a, b, fn){
  log('published ' + a + '-' + b + '-' + fn);
- if(AG.Util.isFunc(fn)){
+ if(nx.Util.isFunc(fn)){
  fn.call();
 
  } else {
@@ -79,10 +79,10 @@ goog.exportSymbol('nx.EventBus', nx.EventBus);
  pubsub.subscribe('foo', foo1);
  pubsub.subscribe('boo', foo1);
  //pubsub.subscribe('foo', foo1);
- //log('AG.Main::pubsub ' + pubsub.getCount('foo'));
+ //log('nx.Main::pubsub ' + pubsub.getCount('foo'));
  //pubsub.unsubscribe('foo', foo1);
 
- log('AG.Main::pubsub ' + pubsub.getCount('foo'));
+ log('nx.Main::pubsub ' + pubsub.getCount('foo'));
 
 
  setTimeout(function(){
@@ -90,7 +90,7 @@ goog.exportSymbol('nx.EventBus', nx.EventBus);
  pubsub.publish('foo', 'x', 'y', function(){
  log('a publish func');
 
- log('AG.Main::pubsub ' + AG.Util.startsWith('foo  444', 'fooe'));
+ log('nx.Main::pubsub ' + nx.Util.startsWith('foo  444', 'fooe'));
  });
  log('---------2---------');
  pubsub.publish('foo', 'x', 'y','z');
