@@ -25,7 +25,13 @@ nx.DragController = function (sourceEle) {
      * @private
      */
     this.dragEventHandlers_ = [];
-//    private List<SwipeEventsHandler> _swipeEventHandlers = new ArrayList<SwipeEventsHandler>();
+
+    /**
+     * @type {Array<nx.SwipeEventsHandler>}
+     * @private
+     */
+    this.swipeEventHandlers_ = [];
+
     /**
      *
      * @type {nx.DragEventsHandler}
@@ -197,43 +203,6 @@ nx.DragController.prototype.onMove = function (e, p) {
 };
 
 /**
- * @param {nx.DragEvent} e
- */
-nx.DragController.prototype.fireDragEvent = function (e) {
-//    log('::::::: fireDragEvent %o', e);
-    if (this.capturingDragEventsHandler_ != null) {
-        e.dispatch(this.capturingDragEventsHandler_);
-        return;
-    }
-    var target = e.getNativeEvent().target;
-//    log('::::::: fireDragEvent target %o', target);
-    if (nx.isNodeElement(target)) {
-        var node = nx.getNodeParentElement(target); // Text node this.parentNode
-//        log('::::::: fireDragEvent parent node %o', node);
-    }
-    if (nx.isNodeElement(target)) {
-        var ele = target;
-        var count = 0;
-        while (ele != null) {
-            for (var i = 0; i < this.dragEventHandlers_.length; i++) {
-                var handler = this.dragEventHandlers_[i];
-                if (ele === handler.getElement()) {
-                    e.dispatch(handler);
-                    count++;
-//                    log('::::::: fireDragEvent rrrrrrr handler %o', handler);
-                    if (e.getStopPropagation() || count == this.dragEventHandlers_.length) {
-                        return;
-                    }
-                }
-            }
-//            log('::::::: fireDragEvent while 1 %o', ele);
-            ele = nx.getNodeParentElement(ele);
-//            log('::::::: fireDragEvent while 2 %o', ele);
-        }
-    }
-}
-
-/**
  * @param {Event} e
  * @param {nx.Point} p
  */
@@ -276,7 +245,83 @@ nx.DragController.prototype.onEnd = function (e, p) {
         if (Math.abs(speed) > 0.2) {
             log("onEnd, before swipeEvent .... speed is " + speed);
             var swipeEvent = new nx.SwipeEvent(e, swipeType, speed);
-//            this.fireSwipeEvent(swipeEvent);
+            this.fireSwipeEvent(swipeEvent);
+        }
+    }
+};
+
+/**
+ * @param {nx.DragEvent} e
+ */
+nx.DragController.prototype.fireDragEvent = function (e) {
+//    log('::::::: fireDragEvent %o', e);
+    if (this.capturingDragEventsHandler_ != null) {
+        e.dispatch(this.capturingDragEventsHandler_);
+        return;
+    }
+    var target = e.getNativeEvent().target;
+//    log('::::::: fireDragEvent target %o', target);
+    var node = target;
+    if (nx.isNodeElement(target)) {
+        node = nx.getNodeParentElement(target); // Text node this.parentNode
+//        log('::::::: fireDragEvent parent node %o', node);
+    }
+    if (nx.isNodeElement(node)) {
+        var ele = target;
+        var count = 0;
+        while (ele != null) {
+            for (var i = 0; i < this.dragEventHandlers_.length; i++) {
+                var handler = this.dragEventHandlers_[i];
+                if (ele === handler.getElement()) {
+                    e.dispatch(handler);
+                    count++;
+//                    log('::::::: fireDragEvent rrrrrrr handler %o', handler);
+                    if (e.getStopPropagation() || count == this.dragEventHandlers_.length) {
+                        return;
+                    }
+                }
+            }
+//            log('::::::: fireDragEvent while 1 %o', ele);
+            ele = nx.getNodeParentElement(ele);
+//            log('::::::: fireDragEvent while 2 %o', ele);
+        }
+    }
+};
+
+
+/**
+ * @param {nx.SwipeEvent} e
+ */
+nx.SwipeEvent.prototype.fireSwipeEvent = function (e) {
+    if (this.capturingSwipeEventsHandler_ != null) {
+        e.dispatch(this.capturingSwipeEventsHandler_);
+        return;
+    }
+    if (this.capturingDragEventsHandler_ != null) {
+        return;
+    }
+    var target = e.getNativeEvent().target;
+    var node = target;
+//    Node node = Node.as(target);
+    if (!nx.isNodeElement(node)) {
+        // Text node
+        node = nx.getNodeParentElement(node);
+    }
+    if (nx.isNode(node)) {
+        var ele = target;//Element.as(target);
+        var count = 0;
+        while (ele != null) {
+            for (var i = 0; this.swipeEventHandlers_.length; i++) {
+                var handler = this.swipeEventHandlers_[i];
+                if (ele.equals === handler.getElement()) {
+                    e.dispatch(handler);
+                    count++;
+                    if (e.getStopPropagation() || count == this.swipeEventHandlers_.length) {
+                        return;
+                    }
+                }
+            }
+            ele = nx.getNodeParentElement(ele);
         }
     }
 };

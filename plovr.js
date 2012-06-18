@@ -8,6 +8,7 @@
         "web/touch/DragEvent.js",
         "web/touch/SwipeEvent.js",
         "web/touch/DragEventsHandler.js",
+        "web/touch/SwipeEventsHandler.js",
         "web/touch/Point.js",
         "web/model/House.js",
         "web/model/User.js",
