@@ -18,7 +18,12 @@ nx.DragController = function (sourceEle) {
      * @private
      */
     this.sourceEle_ = sourceEle;
-//    private List<DragEventsHandler> _dragEventHandlers = new ArrayList<DragEventsHandler>();
+
+    /**
+     * @type {Array<nx.DragEventsHandler>}
+     * @private
+     */
+    this.dragEventHandlers_ = [];
 //    private List<SwipeEventsHandler> _swipeEventHandlers = new ArrayList<SwipeEventsHandler>();
     /**
      *
@@ -73,7 +78,7 @@ nx.DragController = function (sourceEle) {
      * @type {nx.DragEvent.Type}
      * @private
      */
-    this.movedirection = null;
+    this.movedirection_ = null;
 
     /**
      * @type {number}
@@ -137,8 +142,8 @@ nx.DragController.prototype.onStart = function (e, p) {
     this.startDragPos_.clone(p);
 
     var dragEvent = new nx.DragEvent(e, nx.DragEvent.Type.START, p.X(), p.Y(),
-            p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
-//    fireDragEvent(dragEvent);
+        p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
+    this.fireDragEvent(dragEvent);
 };
 
 /**
@@ -147,7 +152,85 @@ nx.DragController.prototype.onStart = function (e, p) {
  */
 nx.DragController.prototype.onMove = function (e, p) {
 //    log('::::::: onMove %o, %o, %o', e, p);
+
+    if (this.isDown_) {
+        if (p.equals(this.currDragPos_)) {
+            // log("NO movement onMove");
+            return;
+        }
+        this.suppressNextClick_ = true;
+
+        if (this.movedirection_ == null && this.movecounter_ > 0) {
+            var vertDelta = Math.abs(this.startDragPos_.Y() - p.Y());
+            var horizDelta = Math.abs(this.startDragPos_.X() - p.X());
+
+            if (vertDelta > horizDelta) {
+                this.movedirection_ = nx.DragEvent.Type.MOVE_VERTICAL;
+            } else {
+                this.movedirection_ = nx.DragEvent.Type.MOVE_HORIZONTAL;
+            }
+        }
+
+        if (this.movedirection_ == null) {
+            this.movecounter_++;
+        } else {
+            var dragEvent = new nx.DragEvent(e, this.movedirection_, p.X(), p.Y(),
+                p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
+            this.fireDragEvent(dragEvent);
+            // log("this.movedirection_ !!!! " + this.movedirection_ + " vertDelta=" + vertDelta + " horizDelta=" +horizDelta);
+        }
+
+        // XLog.info("onMove _lastDragPos=" + (int) _lastDragPos.X() + " : " +
+        // (int) _lastDragPos.Y() + " curr="
+        // + (int) p.X() + " : " + (int) p.Y());
+
+        var dragEvent = new nx.DragEvent(e, nx.DragEvent.Type.MOVE, p.X(), p.Y(),
+            p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
+        this.fireDragEvent(dragEvent);
+        this.lastDragPos_.clone(this.currDragPos_);
+        this.lastDragTimeStamp_ = this.currDragTimeStamp_;
+        this.currDragPos_.clone(p);
+        var currentDateTime = new Date();
+        this.currDragTimeStamp_ = currentDateTime.getTime();
+    }
 };
+
+/**
+ * @param {nx.DragEvent} e
+ */
+nx.DragController.prototype.fireDragEvent = function (e) {
+    log('::::::: fireDragEvent %o', e);
+    if (this.capturingDragEventsHandler_ != null) {
+        e.dispatch(this.capturingDragEventsHandler_);
+        return;
+    }
+    var target = e.getNativeEvent().target;
+    log('::::::: fireDragEvent target %o', target);
+    if (nx.isNodeElement(target)) {
+        var node = nx.getNodeParentElement(target); // Text node this.parentNode
+        log('::::::: fireDragEvent parent node %o', node);
+    }
+    if (nx.isNodeElement(target)) {
+        var ele = target;
+        var count = 0;
+        while (ele != null) {
+            for (var i = 0; i < this.dragEventHandlers_.length; i++) {
+                var handler = this.dragEventHandlers_[i];
+                if (ele === handler.getElement()) {
+                    e.dispatch(handler);
+                    count++;
+                    log('::::::: fireDragEvent rrrrrrr handler %o', handler);
+                    if (e.getStopPropagation() || count == this.dragEventHandlers_.length) {
+                        return;
+                    }
+                }
+            }
+            log('::::::: fireDragEvent while 1 %o', ele);
+            ele = nx.getNodeParentElement(ele);
+            log('::::::: fireDragEvent while 2 %o', ele);
+        }
+    }
+}
 
 /**
  * @param {Event} e

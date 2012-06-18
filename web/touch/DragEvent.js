@@ -29,7 +29,9 @@ nx.DragEvent = function (nativeEvent, type, x, y, offsetX, offsetY) {
 nx.DragEvent.Type = {
     START:'0',
     MOVE:'1',
-    END:'2'
+    MOVE_HORIZONTAL:'2',
+    MOVE_VERTICAL:'3',
+    END:'4'
 };
 
 
@@ -43,11 +45,11 @@ nx.DragEvent.prototype.dispatch = function (handler) {
     } else if (this.type_ == nx.DragEvent.Type.MOVE) {
         handler.onDragMove(this);
 
-//    } else if (_type == Type.MoveHorizontal) {
-//        handler.onDragMoveHorizontal(this);
-//
-//    } else if (_type == Type.MoveVertical) {
-//        handler.onDragMoveVertical(this);
+    } else if (this.type_ == nx.DragEvent.Type.MOVE_HORIZONTAL) {
+        handler.onDragMoveHorizontal(this);
+
+    } else if (this.type_ == nx.DragEvent.Type.MOVE_VERTICAL) {
+        handler.onDragMoveVertical(this);
 
     } else if (this.type_ == nx.DragEvent.Type.END) {
         handler.onDragEnd(this);
