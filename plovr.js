@@ -1,11 +1,12 @@
 {
     // The id is used as a query parameter in the src of the <script> tag.
-    "id": "plovr",
+    "id": "next",
     "paths": ["web/touch", "web"],
     "inputs": [
         "web/touch/DragController.js",
         "web/touch/DragMouseController.js",
         "web/touch/DragEvent.js",
+        "web/touch/SwipeEvent.js",
         "web/touch/DragEventsHandler.js",
         "web/touch/Point.js",
         "web/model/House.js",

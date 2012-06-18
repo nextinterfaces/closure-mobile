@@ -6,6 +6,7 @@ goog.require('nx.Point');
 goog.require('nx.DragTouchController');
 goog.require('nx.DragMouseController');
 goog.require('nx.DragEvent');
+goog.require('nx.SwipeEvent');
 
 /**
  * @param {element} sourceEle
@@ -199,16 +200,16 @@ nx.DragController.prototype.onMove = function (e, p) {
  * @param {nx.DragEvent} e
  */
 nx.DragController.prototype.fireDragEvent = function (e) {
-    log('::::::: fireDragEvent %o', e);
+//    log('::::::: fireDragEvent %o', e);
     if (this.capturingDragEventsHandler_ != null) {
         e.dispatch(this.capturingDragEventsHandler_);
         return;
     }
     var target = e.getNativeEvent().target;
-    log('::::::: fireDragEvent target %o', target);
+//    log('::::::: fireDragEvent target %o', target);
     if (nx.isNodeElement(target)) {
         var node = nx.getNodeParentElement(target); // Text node this.parentNode
-        log('::::::: fireDragEvent parent node %o', node);
+//        log('::::::: fireDragEvent parent node %o', node);
     }
     if (nx.isNodeElement(target)) {
         var ele = target;
@@ -219,15 +220,15 @@ nx.DragController.prototype.fireDragEvent = function (e) {
                 if (ele === handler.getElement()) {
                     e.dispatch(handler);
                     count++;
-                    log('::::::: fireDragEvent rrrrrrr handler %o', handler);
+//                    log('::::::: fireDragEvent rrrrrrr handler %o', handler);
                     if (e.getStopPropagation() || count == this.dragEventHandlers_.length) {
                         return;
                     }
                 }
             }
-            log('::::::: fireDragEvent while 1 %o', ele);
+//            log('::::::: fireDragEvent while 1 %o', ele);
             ele = nx.getNodeParentElement(ele);
-            log('::::::: fireDragEvent while 2 %o', ele);
+//            log('::::::: fireDragEvent while 2 %o', ele);
         }
     }
 }
@@ -238,6 +239,46 @@ nx.DragController.prototype.fireDragEvent = function (e) {
  */
 nx.DragController.prototype.onEnd = function (e, p) {
     log('::::::: onEnd %o, %o, %o', e, p);
+
+    this.movedirection_ = null;
+    this.movecounter_ = 0;
+
+    if (this.isDown_) {
+        this.isDown_ = false;
+//			XLog.info("onEnd, p.X($1) p.Y($2) p.X()-_currDragPos.X() $3 p.Y()-_currDragPos.Y() $4 _currDragPos.X($5) _currDragPos.Y($6)" ,
+//					p.X(), p.Y(),
+//					p.X()-_currDragPos.X(), p.Y()-_currDragPos.Y(),
+//					_currDragPos.X(), _currDragPos.Y());
+        var dragEvent = new nx.DragEvent(e, nx.DragEvent.Type.END, p.X(), p.Y(),
+            p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
+        this.fireDragEvent(dragEvent);
+        var distanceX = p.X() - this.lastDragPos_.X();
+        var distanceY = p.Y() - this.lastDragPos_.Y();
+        var distance;
+        var swipeType;
+        if (Math.abs(distanceX) > Math.abs(distanceY)) {
+            distance = distanceX;
+            swipeType = distance > 0 ? nx.SwipeEvent.Type.HorizontalLeftRight : nx.SwipeEvent.Type.HorizontalRightLeft;
+        } else {
+            distance = distanceY;
+            swipeType = distance > 0 ? nx.SwipeEvent.Type.VerticalTopBottom : nx.SwipeEvent.Type.VerticalBottomTop;
+        }
+        var currentDateTime = new Date();
+        var time = currentDateTime.getTime() - this.lastDragTimeStamp_;
+        var speed = distance / time;
+        if (speed > 4) {
+            speed = 4;
+        } else if (speed < -4) {
+            speed = -4;
+        }
+        log("onEnd, speed is " + speed);
+
+        if (Math.abs(speed) > 0.2) {
+            log("onEnd, before swipeEvent .... speed is " + speed);
+            var swipeEvent = new nx.SwipeEvent(e, swipeType, speed);
+//            this.fireSwipeEvent(swipeEvent);
+        }
+    }
 };
 
 goog.exportSymbol('nx.DragController', nx.DragController);
