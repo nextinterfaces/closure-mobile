@@ -1,6 +1,7 @@
 goog.provide('nx.DragTouchController');
 
 goog.require('nx.Event');
+goog.require('nx.Point');
 
 /**
  * @param {nx.DragController} sourceEle
@@ -53,6 +54,24 @@ nx.DragTouchController.prototype.unregisterEvents = function () {
 
 nx.DragTouchController.prototype.onDownFn = function (e) {
     log('::::::: onDownFn ', e);
+
+//    var target = e.target;
+////    boolean preventDefault = true;
+////    if (Element.is(target)) {
+////        Element ele = Element.as(target);
+////        // INPUT element will not get focus if default action is prevented.
+////        if (Utils.isHtmlFormControl(ele)) {
+////            ele.focus();
+////            preventDefault = false;
+////        }
+////    }
+////    if (preventDefault) {
+//    e.preventDefault(); // prevent default action of selecting text
+//    e.stopPropagation();
+//    log('::::::: onDownFn ', nx.Ctx.getInstance());
+//    nx.DragController.prototype.onStart(e, new nx.Point(e.clientX, e.clientY));
+////    }
+    log(nx.DragTouchController.prototype.dragController_.onStart);
     nx.DragTouchController.prototype.dragController_.onStart(e, new nx.Point(e.clientX, e.clientY));
 };
 

@@ -1,6 +1,7 @@
 goog.provide('nx.DragMouseController');
 
 goog.require('nx.Event');
+goog.require('nx.Point');
 
 /**
  * @param {nx.DragController} sourceEle
@@ -75,6 +76,7 @@ nx.DragMouseController.prototype.onDownFn = function (e) {
 //    log('::::::: onDownFn ', nx.Ctx.getInstance());
 //    nx.DragController.prototype.onStart(e, new nx.Point(e.clientX, e.clientY));
 ////    }
+    log(nx.DragMouseController.prototype.dragController_.onStart);
     nx.DragMouseController.prototype.dragController_.onStart(e, new nx.Point(e.clientX, e.clientY));
 };
 
