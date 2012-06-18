@@ -24,7 +24,7 @@ echo "---------Compilation starts ---------"
   --namespace="nx.Main" \
   --output_mode=compiled \
   --compiler_jar=./compiler.jar \
-  --compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS" \
+  --compiler_flags="--compilation_level=SIMPLE_OPTIMIZATIONS" \
   > next.min.js
   
   

@@ -1,9 +1,9 @@
 goog.provide('nx.DragController');
 
-goog.require('goog.pubsub.PubSub');
 goog.require('nx.Event');
 goog.require('nx.HousePresenter');
 goog.require('nx.UserPresenter');
+goog.require('nx.Point');
 
 /**
  * @constructor

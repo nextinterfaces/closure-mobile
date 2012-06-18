@@ -6,6 +6,7 @@ goog.require('nx.HouseView');
 goog.require('nx.HousePresenter');
 goog.require('nx.UserView');
 goog.require('nx.DragController');
+goog.require('nx.Util');
 
 /**
  * @constructor
@@ -24,6 +25,7 @@ nx.Ctx = function(){
      */
     this.dragController_ = new nx.DragController(this);
 
+    nx.isTouch();
 
     /**
      * @type {nx.HouseView}

@@ -9,7 +9,7 @@ goog.require('nx.HousePresenter');
 nx.Main = function(){
 
     // create log() utility instead of console.log
-    window.log = console.log.bind(console);
+    window.log = function(){};//console.log.bind(console);
 
     // instantiate ctx
     var ctx = nx.Ctx.getInstance();
