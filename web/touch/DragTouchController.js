@@ -3,19 +3,67 @@ goog.provide('nx.DragTouchController');
 goog.require('nx.Event');
 
 /**
+ * @param {nx.DragController} sourceEle
+ * @param {element} sourceEle
  * @constructor
- * @extends {nx.DragTouchController}
  */
-nx.DragTouchController = function(ctx){
-    log('nx.DragTouchController::constructor ...', ctx);
-    nx.DragTouchController.call(this, ctx);
+nx.DragTouchController = function (sourceEle, dragController) {
+    log('nx.DragTouchController::constructor ...', sourceEle, dragController);
+    /**
+     * @type {element}
+     * @private
+     */
+    this.sourceEle_ = sourceEle;
+    /**
+     * @type {nx.DragController}
+     * @private
+     */
+    nx.DragTouchController.prototype.dragController_ = dragController;
 };
-goog.inherits(nx.DragTouchController, nx.DragTouchController);
 
 /**
  */
-nx.DragTouchController.prototype.init = function(ctx){
-    //...
+nx.DragTouchController.prototype.dragController_ = undefined;
+
+
+/**
+ */
+nx.DragTouchController.prototype.registerEvents = function () {
+    if (!goog.isDef(this.onDownKey_)) {
+        log('nx.DragTouchController::registerEvents');
+        this.onDownKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.TOUCHSTART, this.onDownFn, true);
+        this.onMoveKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.TOUCHMOVE, this.onMoveFn, true);
+        this.onUpKey__ = goog.events.listen(this.sourceEle_, goog.events.EventType.TOUCHEND, this.onUpFn, true);
+    }
+};
+
+
+/**
+ */
+nx.DragTouchController.prototype.unregisterEvents = function () {
+    log('nx.DragTouchController::unregisterEvents Mouse keys are ', this.onDownKey_, this.onMoveKey_, this.onUpKey__);
+    if (goog.isDef(this.onDownKey_)) {
+        goog.events.unlistenByKey(this.onDownKey_);
+        goog.events.unlistenByKey(this.onMoveKey_);
+        goog.events.unlistenByKey(this.onUpKey__);
+        this.onDownKey_ = this.onMoveKey_ = this.onUpKey__ = undefined;
+    }
+    log('nx.DragTouchController::unregisterEvents Mouse keys are ', this.onDownKey_, this.onMoveKey_, this.onUpKey__);
+};
+
+nx.DragTouchController.prototype.onDownFn = function (e) {
+    log('::::::: onDownFn ', e);
+    nx.DragTouchController.prototype.dragController_.onStart(e, new nx.Point(e.clientX, e.clientY));
+};
+
+nx.DragTouchController.prototype.onMoveFn = function (e) {
+//    log('::::::: onMoveFn ', e);
+//    nx.DragTouchController.prototype.dragController_.onMove(e, new nx.Point(e.clientX, e.clientY));
+};
+
+nx.DragTouchController.prototype.onUpFn = function (e) {
+    log('::::::: onUpFn ', e);
+    nx.DragTouchController.prototype.dragController_.onEnd(e, new nx.Point(e.clientX, e.clientY));
 };
 
 goog.exportSymbol('nx.DragTouchController', nx.DragTouchController);

@@ -11,7 +11,7 @@ goog.require('nx.Util');
 /**
  * @constructor
  */
-nx.Ctx = function(){
+nx.Ctx = function () {
 
     /**
      * @type {nx.EventBus}
@@ -19,13 +19,12 @@ nx.Ctx = function(){
      */
     this.eventBus_ = new nx.EventBus(this);
 
+    log('nx.Ctx::constructor 1 ...');
     /**
      * @type {nx.DragController}
      * @private
      */
     this.dragController_ = new nx.DragController(this);
-
-    nx.isTouch();
 
     /**
      * @type {nx.HouseView}
@@ -47,15 +46,15 @@ goog.addSingletonGetter(nx.Ctx);
 /**
  * @return {nx.EventBus}
  */
-nx.Ctx.prototype.getEventBus = function(){
+nx.Ctx.prototype.getEventBus = function () {
     return this.eventBus_;
 };
 
 /**
  * @return {nx.HouseView}
  */
-nx.Ctx.prototype.getHouseView = function(){
-    if(!goog.isDef(this.houseView_)){
+nx.Ctx.prototype.getHouseView = function () {
+    if (!goog.isDef(this.houseView_)) {
         this.houseView_ = new nx.HouseView();
     }
     return this.houseView_;
@@ -64,8 +63,8 @@ nx.Ctx.prototype.getHouseView = function(){
 /**
  * @return {nx.UserView}
  */
-nx.Ctx.prototype.getUserView = function(){
-    if(!goog.isDef(this.userView_)){
+nx.Ctx.prototype.getUserView = function () {
+    if (!goog.isDef(this.userView_)) {
         this.userView_ = new nx.UserView();
     }
     return this.userView_;
@@ -74,9 +73,9 @@ nx.Ctx.prototype.getUserView = function(){
 /**
  * @return {Element}
  */
-nx.Ctx.prototype.getRoot = function(){
-    if(!goog.isDef(this.root_)){
-        this.root_ = goog.dom.createDom('div', {'id': 'nx'});
+nx.Ctx.prototype.getRoot = function () {
+    if (!goog.isDef(this.root_)) {
+        this.root_ = goog.dom.createDom('div', {'id':'nx'});
         goog.dom.appendChild(document.body, this.root_);
     }
     return this.root_;
@@ -86,7 +85,7 @@ nx.Ctx.prototype.getRoot = function(){
 /**
  * @return {nx.DragController}
  */
-nx.Ctx.prototype.getDragController = function(){
+nx.Ctx.prototype.getDragController = function () {
     return this.dragController_;
 };
 

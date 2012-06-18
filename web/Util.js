@@ -39,7 +39,6 @@ nx.stackTrace = function() {
  */
 nx.isTouch = function() {
     var ua = navigator.userAgent.toLowerCase();
-    //alert("ua is " + ua);
     if ( (ua.indexOf("webkit") != -1 && ua.indexOf("mobile") != -1)
         || ua.indexOf("playbook") != -1
         || ua.indexOf("rim") != -1
@@ -52,10 +51,10 @@ nx.isTouch = function() {
         || ua.indexOf("ipad") != -1
         || ua.indexOf("ipod") != -1
         || ua.indexOf("meego") != -1) {
-        alert('this is a mobile device');
+        //alert('this is a mobile device');
         return true;
     }
-    alert('this is NOT a mobile device!');
+    //alert('this is NOT a mobile device!');
     return false;
 };
 
