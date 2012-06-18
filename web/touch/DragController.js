@@ -88,20 +88,42 @@ nx.DragController.prototype.onMouseDown = function(e){
     e.preventDefault(); // prevent default action of selecting text
     e.stopPropagation();
     log('::::::: onMouseDown ', nx.Ctx.getInstance());
-    nx.DragController.prototype.onStart(e);//, new Point(e.getClientX(), e.getClientY()));
+    nx.DragController.prototype.onStart(e, new nx.Point(e.clientX, e.clientY));
 //    }
-};
-
-nx.DragController.prototype.onStart = function(e){
-    log('::::::: onStart ', e, this);
 };
 
 nx.DragController.prototype.onMouseMove = function(e){
 //    log('::::::: onMouseMove ', e);
+//    nx.DragController.prototype.onMove(e, new nx.Point(e.clientX, e.clientY));
 };
 
 nx.DragController.prototype.onMouseUp = function(e){
     log('::::::: onMouseUp ', e);
+    nx.DragController.prototype.onEnd(e, new nx.Point(e.clientX, e.clientY));
+};
+
+/**
+ * @param {Event} e
+ * @param {nx.Point} point
+ */
+nx.DragController.prototype.onStart = function(e, point){
+    log('::::::: onStart %o, %o, %o', e, point, this);
+};
+
+/**
+ * @param {Event} e
+ * @param {nx.Point} point
+ */
+nx.DragController.prototype.onMove = function(e, point){
+    log('::::::: onMove %o, %o, %o', e, point, this);
+};
+
+/**
+ * @param {Event} e
+ * @param {nx.Point} point
+ */
+nx.DragController.prototype.onEnd = function(e, point){
+    log('::::::: onEnd %o, %o, %o', e, point, this);
 };
 
 /**

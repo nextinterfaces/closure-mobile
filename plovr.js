@@ -4,7 +4,8 @@
     "paths": ["web/touch", "web"],
     "inputs": [
         "web/touch/DragController.js",
-        "web/touch/DragEventHandler.js",
+        "web/touch/DragEvent.js",
+        "web/touch/DragEventsHandler.js",
         "web/touch/Point.js",
         "web/model/House.js",
         "web/model/User.js",
