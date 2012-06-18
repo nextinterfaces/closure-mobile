@@ -25,7 +25,7 @@ echo "---------Compilation starts ---------"
   --output_mode=compiled \
   --compiler_jar=./compiler.jar \
   --compiler_flags="--compilation_level=SIMPLE_OPTIMIZATIONS" \
-  > ___next.min.js
+  > z___next.min.js
   
   
 echo

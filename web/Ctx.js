@@ -24,7 +24,7 @@ nx.Ctx = function () {
      * @type {nx.DragController}
      * @private
      */
-    this.dragController_ = new nx.DragController(this);
+    this.dragController_ = new nx.DragController(this.getRoot());
 
     /**
      * @type {nx.HouseView}
@@ -40,6 +40,7 @@ nx.Ctx = function () {
 
     log('nx.Ctx::constructor END...');
 };
+
 // make singleton
 goog.addSingletonGetter(nx.Ctx);
 

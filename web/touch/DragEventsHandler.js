@@ -1,26 +1,26 @@
-goog.provide('nx.DragEventHandler');
+goog.provide('nx.DragEventsHandler');
 
 /**
  * @interface
  */
-nx.DragEventHandler = function(){};
+nx.DragEventsHandler = function(){};
 
 /**
  * @param {nx.DragEvent} e
  */
-nx.DragEventHandler.prototype.onDragStart = function(e){};
+nx.DragEventsHandler.prototype.onDragStart = function(e){};
 
 /**
  * @param {nx.DragEvent} e
  */
-nx.DragEventHandler.prototype.onDragMove = function(e){};
+nx.DragEventsHandler.prototype.onDragMove = function(e){};
 
 /**
  * @param {nx.DragEvent} e
  */
-nx.DragEventHandler.prototype.onDragEnd = function(e){};
+nx.DragEventsHandler.prototype.onDragEnd = function(e){};
 
 /**
  * @param {Element} container
  */
-nx.DragEventHandler.prototype.getElement = function(){};
+nx.DragEventsHandler.prototype.getElement = function(){};

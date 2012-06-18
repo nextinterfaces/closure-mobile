@@ -1,5 +1,6 @@
 goog.provide('nx.DragEvent');
 
+
 /**
  * @param {Event} nativeEvent Browser event object.
  * @param {nx.DragEvent.Type} type
@@ -22,7 +23,6 @@ nx.DragEvent = function (nativeEvent, type, x, y, offsetX, offsetY) {
     this.stopPropagation_ = false;
 };
 
-
 /**
  * @enum {string}
  */
@@ -31,6 +31,7 @@ nx.DragEvent.Type = {
     MOVE:'1',
     END:'2'
 };
+
 
 /**
  * @param {nx.DragEventsHandler} handler

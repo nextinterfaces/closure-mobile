@@ -57,7 +57,3 @@ nx.isTouch = function() {
     //alert('this is NOT a mobile device!');
     return false;
 };
-
-
-
-

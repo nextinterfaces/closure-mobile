@@ -30,14 +30,14 @@ nx.Point.prototype.clone = function(point){
 /**
  * @return {number}
  */
-nx.Point.prototype.getX = function(){
+nx.Point.prototype.X = function(){
     return this.x_;
 };
 
 /**
  * @return {number}
  */
-nx.Point.prototype.getY = function(){
+nx.Point.prototype.Y = function(){
     return this.y_;
 };
 
