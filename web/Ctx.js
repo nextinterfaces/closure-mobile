@@ -5,7 +5,6 @@ goog.require('nx.House');
 goog.require('nx.HouseView');
 goog.require('nx.HousePresenter');
 goog.require('nx.UserView');
-goog.require('nx.DragController');
 goog.require('nx.Util');
 goog.require('nx.Id');
 

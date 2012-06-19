@@ -108,6 +108,8 @@
 	right: 0px;
 	bottom: 0px;
 	overflow: hidden;
+
+    border: 2px solid #20b2aa;
 }
 
 #NX .transformPanel {

@@ -3,6 +3,7 @@ goog.provide('nx.HouseView');
 goog.require('goog.dom');
 goog.require('goog.ui.CustomButton');
 goog.require('nx.DragButton');
+goog.require('nx.VerticalScrollView');
 
 /**
  * @constructor
@@ -18,10 +19,17 @@ nx.HouseView = function(){
     var wrapperDiv = goog.dom.createDom('div', {'id': this.getName()});
 
     var dragBtn = new nx.DragButton();
+    /////
+    var scrollView = new nx.VerticalScrollView();
+    var textDiv = goog.dom.createDom('div', {'id': 'textDiv'});
+    textDiv.innerHTML = 'aaaa<br>bbbb<br>ccccc';
+    scrollView.add(textDiv);
+    /////
 
     wrapperDiv.appendChild(headerDiv);
     wrapperDiv.appendChild(listDiv);
     wrapperDiv.appendChild(dragBtn.getElement());
+    wrapperDiv.appendChild(scrollView.getElement());
     wrapperDiv.appendChild(btnsDiv);
 
     this.wrapperDiv_ = wrapperDiv;

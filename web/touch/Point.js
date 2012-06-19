@@ -1,7 +1,6 @@
 goog.provide('nx.Point');
 
 /**
- *
  * @param {number} x
  * @param {number} y
  * @constructor
