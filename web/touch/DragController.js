@@ -108,8 +108,11 @@ nx.DragController = function () {
 goog.addSingletonGetter(nx.DragController);
 
 
-/**
- */
+
+nx.DragController.prototype.suppressNextClick = function () {
+    this.suppressNextClick_ = true;
+};
+
 nx.DragController.prototype.registerEvents = function () {
     if (!goog.isDef(this.clickKey_)) {
         log('nx.DragController::registerEvents');
@@ -363,5 +366,7 @@ nx.DragController.prototype.removeDragEventsHandler = function (h) {
 nx.DragController.prototype.removeSwipeEventHandler = function (h) {
     goog.array.remove(this.swipeEventHandlers_, h);
 };
+
+
 
 goog.exportSymbol('nx.DragController', nx.DragController);

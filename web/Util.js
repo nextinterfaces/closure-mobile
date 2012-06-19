@@ -10,7 +10,7 @@ goog.provide('nx.Util');
  * @param {string} prefix A string to look for at the start of {@code str}.
  * @return {boolean} True if {@code str} begins with {@code prefix}.
  */
-nx.Util.startsWith = function(str, prefix) {
+nx.Util.startsWith = function (str, prefix) {
     return str.lastIndexOf(prefix, 0) == 0;
 };
 
@@ -18,14 +18,14 @@ nx.Util.startsWith = function(str, prefix) {
  * @param {function} func
  * @return {boolean} True if {@code func} is a {@code function}.
  */
-nx.Util.isFunc = function(func) {
+nx.Util.isFunc = function (func) {
     return (func && typeof (func) === "function");
 };
 
 /**
  * @return {string}
  */
-nx.stackTrace = function() {
+nx.stackTrace = function () {
     try {
         x++; // This creates an error we can trace
     } catch (e) {
@@ -37,9 +37,9 @@ nx.stackTrace = function() {
 /**
  * @return {boolean}
  */
-nx.isTouch = function() {
+nx.isTouch = function () {
     var ua = navigator.userAgent.toLowerCase();
-    if ( (ua.indexOf("webkit") != -1 && ua.indexOf("mobile") != -1)
+    if ((ua.indexOf("webkit") != -1 && ua.indexOf("mobile") != -1)
         || ua.indexOf("playbook") != -1
         || ua.indexOf("rim") != -1
         || ua.indexOf("blackberry") != -1
@@ -56,4 +56,13 @@ nx.isTouch = function() {
     }
     //alert('this is NOT a mobile device!');
     return false;
+};
+
+/**
+ *
+ * @param {Element} ele
+ * @return {number}
+ */
+nx.getOffsetHeight = function (ele) {
+    return this.offsetHeight || 0;
 };

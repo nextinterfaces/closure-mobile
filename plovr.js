@@ -23,6 +23,7 @@
         "web/Event.js",
         "web/EventBus.js",
         "web/Id.js",
+        "web/Fx.js",
         "web/Ctx.js",
         "web/Main.js"
     ],

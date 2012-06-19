@@ -13,10 +13,10 @@ nx.DragEvent = function (nativeEvent, type, x, y, offsetX, offsetY) {
 //    log('new nx.DragEvent(%o,%o,%o,%o,%o,%o)', nativeEvent, type, x,y,offsetX,offsetY);
     this.nativeEvent_ = nativeEvent;
     this.type_ = type;
-    this.x_ = x;
-    this.y_ = y;
-    this.offsetX_ = offsetX;
-    this.offsetY_ = offsetY;
+    this.X = x;
+    this.Y = y;
+    this.OffsetX = offsetX;
+    this.OffsetY = offsetY;
     //
     this.stopPropagation_ = false;
 };
