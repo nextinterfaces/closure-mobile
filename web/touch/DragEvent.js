@@ -11,8 +11,7 @@ goog.provide('nx.DragEvent');
  * @constructor
  */
 nx.DragEvent = function (nativeEvent, type, x, y, offsetX, offsetY) {
-    log('nx.DragEvent::constructor ...');
-
+//    log('new nx.DragEvent(%o,%o,%o,%o,%o,%o)', nativeEvent, type, x,y,offsetX,offsetY);
     this.nativeEvent_ = nativeEvent;
     this.type_ = type;
     this.x_ = x;
@@ -27,11 +26,11 @@ nx.DragEvent = function (nativeEvent, type, x, y, offsetX, offsetY) {
  * @enum {string}
  */
 nx.DragEvent.Type = {
-    START:'0',
-    MOVE:'1',
-    MOVE_HORIZONTAL:'2',
-    MOVE_VERTICAL:'3',
-    END:'4'
+    START:'start',
+    MOVE:'mv',
+    MOVE_HORIZONTAL:'mvHor',
+    MOVE_VERTICAL:'mvVert',
+    END:'end'
 };
 
 

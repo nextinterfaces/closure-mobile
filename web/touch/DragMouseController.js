@@ -21,22 +21,24 @@ nx.DragMouseController = function (sourceEle, dragController) {
      * @type {nx.DragController}
      * @private
      */
-    nx.DragMouseController.prototype.dragController_ = dragController;
+    this.dragController_ = dragController;
 };
-
-/**
- */
-nx.DragMouseController.prototype.dragController_ = undefined;
-
 
 /**
  */
 nx.DragMouseController.prototype.registerEvents = function () {
     if (!goog.isDef(this.onDownKey_)) {
         log('nx.DragMouseController::registerEvents');
-        this.onDownKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEDOWN, this.onDownFn, true);
-        this.onMoveKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEMOVE, this.onMoveFn, true);
-        this.onUpKey__ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEUP, this.onUpFn, true);
+        var $this = this;
+        this.onDownKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEDOWN, function(e){
+            $this.onDownFn(e);
+        }, true);
+        this.onMoveKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEMOVE, function(e){
+            $this.onMoveFn(e);
+        }, true);
+        this.onUpKey__ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEUP, function(e){
+            $this.onUpFn(e);
+        },  true);
 
 //        var callBack = function(e) {
 //            //listener.@com.google.gwt.user.client.EventListener::onBrowserEvent(Lcom/google/gwt/user/client/Event;)(e);
@@ -60,17 +62,14 @@ nx.DragMouseController.prototype.unregisterEvents = function () {
 };
 
 nx.DragMouseController.prototype.onDownFn = function (e) {
-    log('::::::: onDownFn ', e);
-
+//    log('::::::: onDownFn ', e);
     var target = e.target;
-    log('::::::: onDownFn target %o', target);
     var preventDefault = true;
 
     var isElement = new nx.isNodeElement(target);
-    log('::::::: onDownFn isElement %o', isElement);
+//    log('::::::: onDownFn isElement %o', isElement);
 
     if (isElement) {
-        log('::::::: onDownFn target %o', target);
 //        // INPUT element will not get focus if default action is prevented.
         if (nx.isHtmlFormControl(target)) {
             target.focus();
@@ -80,8 +79,8 @@ nx.DragMouseController.prototype.onDownFn = function (e) {
     if (preventDefault) {
         e.preventDefault(); // prevent default action of selecting text
         e.stopPropagation();
-        log(nx.DragMouseController.prototype.dragController_.onStart);
-        nx.DragMouseController.prototype.dragController_.onStart(e, new nx.Point(e.clientX, e.clientY));
+//        log('::::::: onDownFn THIS %o', this);
+        this.dragController_.onStart(e, new nx.Point(e.clientX, e.clientY));
     }
 };
 
@@ -90,14 +89,14 @@ nx.DragMouseController.prototype.onMoveFn = function (e) {
 //    log('::::::: onMoveFn ', e);
     e.preventDefault();
     e.stopPropagation();
-    nx.DragMouseController.prototype.dragController_.onMove(e, new nx.Point(e.clientX, e.clientY));
+    this.dragController_.onMove(e, new nx.Point(e.clientX, e.clientY));
 };
 
 nx.DragMouseController.prototype.onUpFn = function (e) {
-    log('::::::: onUpFn ', e);
+//    log('::::::: onUpFn ', e);
     e.preventDefault();
     e.stopPropagation();
-    nx.DragMouseController.prototype.dragController_.onEnd(e, new nx.Point(e.clientX, e.clientY));
+    this.dragController_.onEnd(e, new nx.Point(e.clientX, e.clientY));
 };
 
 goog.exportSymbol('nx.DragMouseController', nx.DragMouseController);

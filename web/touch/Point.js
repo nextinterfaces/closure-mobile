@@ -22,9 +22,9 @@ nx.Point = function(x, y){
 /**
  * @param {nx.Point} point
  */
-nx.Point.prototype.clone = function(point){
-    this.x_ = point.x;
-    this.y_ = point.y;
+nx.Point.prototype.cloneIt = function(point){
+    this.x_ = point.X();
+    this.y_ = point.Y();
 };
 
 /**

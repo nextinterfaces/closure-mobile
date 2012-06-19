@@ -107,12 +107,18 @@ nx.DragController = function (sourceEle) {
 //    }, 5000);
 };
 
+
+//nx.DragController.prototype.testY = undefined;
+
 /**
  */
 nx.DragController.prototype.registerEvents = function () {
     if (!goog.isDef(this.clickKey_)) {
         log('nx.DragController::registerEvents');
-        this.clickKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.CLICK, this.onClick, true);
+        var $this = this;
+        this.clickKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.CLICK, function(e){
+            $this.onClick(e);
+        }, true);
         this.implController_.registerEvents();
     }
 };
@@ -128,8 +134,18 @@ nx.DragController.prototype.unregisterEvents = function () {
     }
 };
 
+/**
+ *
+ * @param {Event} e
+ * @param {nx.DragController} $this
+ */
 nx.DragController.prototype.onClick = function (e) {
     log('::::::: onClick ', e);
+    if (this.suppressNextClick_) {
+        e.stopPropagation();
+        this.suppressNextClick_ = false;
+        log("click suppressed");
+    }
 };
 
 /**
@@ -137,16 +153,16 @@ nx.DragController.prototype.onClick = function (e) {
  * @param {nx.Point} p
  */
 nx.DragController.prototype.onStart = function (e, p) {
-    log('::::::: onStart %o, %o, %o', e, p);
+//    log('::::::: onStart %o, %o, %o', e, p);
 
     this.isDown_ = true;
     this.suppressNextClick_ = false;
     var currentDateTime = new Date();
     this.lastDragTimeStamp_ = currentDateTime.getTime();
     this.currDragTimeStamp_ = this.lastDragTimeStamp_;
-    this.lastDragPos_.clone(p);
-    this.currDragPos_.clone(p);
-    this.startDragPos_.clone(p);
+    this.lastDragPos_.cloneIt(p);
+    this.currDragPos_.cloneIt(p);
+    this.startDragPos_.cloneIt(p);
 
     var dragEvent = new nx.DragEvent(e, nx.DragEvent.Type.START, p.X(), p.Y(),
         p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
@@ -194,9 +210,9 @@ nx.DragController.prototype.onMove = function (e, p) {
         var dragEvent = new nx.DragEvent(e, nx.DragEvent.Type.MOVE, p.X(), p.Y(),
             p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
         this.fireDragEvent(dragEvent);
-        this.lastDragPos_.clone(this.currDragPos_);
+        this.lastDragPos_.cloneIt(this.currDragPos_);
         this.lastDragTimeStamp_ = this.currDragTimeStamp_;
-        this.currDragPos_.clone(p);
+        this.currDragPos_.cloneIt(p);
         var currentDateTime = new Date();
         this.currDragTimeStamp_ = currentDateTime.getTime();
     }
@@ -207,7 +223,7 @@ nx.DragController.prototype.onMove = function (e, p) {
  * @param {nx.Point} p
  */
 nx.DragController.prototype.onEnd = function (e, p) {
-    log('::::::: onEnd %o, %o, %o', e, p);
+//    log('::::::: onEnd %o, %o, %o', e, p);
 
     this.movedirection_ = null;
     this.movecounter_ = 0;
@@ -260,11 +276,9 @@ nx.DragController.prototype.fireDragEvent = function (e) {
         return;
     }
     var target = e.getNativeEvent().target;
-//    log('::::::: fireDragEvent target %o', target);
     var node = target;
     if (nx.isNodeElement(target)) {
         node = nx.getNodeParentElement(target); // Text node this.parentNode
-//        log('::::::: fireDragEvent parent node %o', node);
     }
     if (nx.isNodeElement(node)) {
         var ele = target;
@@ -275,15 +289,12 @@ nx.DragController.prototype.fireDragEvent = function (e) {
                 if (ele === handler.getElement()) {
                     e.dispatch(handler);
                     count++;
-//                    log('::::::: fireDragEvent rrrrrrr handler %o', handler);
                     if (e.getStopPropagation() || count == this.dragEventHandlers_.length) {
                         return;
                     }
                 }
             }
-//            log('::::::: fireDragEvent while 1 %o', ele);
             ele = nx.getNodeParentElement(ele);
-//            log('::::::: fireDragEvent while 2 %o', ele);
         }
     }
 };
@@ -292,7 +303,7 @@ nx.DragController.prototype.fireDragEvent = function (e) {
 /**
  * @param {nx.SwipeEvent} e
  */
-nx.SwipeEvent.prototype.fireSwipeEvent = function (e) {
+nx.DragController.prototype.fireSwipeEvent = function (e) {
     if (this.capturingSwipeEventsHandler_ != null) {
         e.dispatch(this.capturingSwipeEventsHandler_);
         return;
