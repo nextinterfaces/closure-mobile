@@ -1,6 +1,5 @@
 goog.provide('nx.DragEvent');
 
-
 /**
  * @param {Event} nativeEvent Browser event object.
  * @param {nx.DragEvent.Type} type

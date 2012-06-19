@@ -1,3 +1,18 @@
+/**
+ * Copyright 2012 http://www.nextinterfaces.com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
 goog.provide('nx.Main');
 
 goog.require('nx.Ctx');
@@ -9,9 +24,6 @@ goog.require('nx.HousePresenter');
 nx.Main = function(){
 
     // create log() utility instead of console.log
-//    window.log = console.log.bind(console);
-//    window.log = function(txt,a,b,c){console.log(txt)};//console.log.bind(console);
-
     if (nx.isTouch()) {
         window.log = function(txt,a,b,c){console.log(txt,a,b,c)};
     } else {
@@ -20,14 +32,12 @@ nx.Main = function(){
 
     // instantiate ctx
     var ctx = nx.Ctx.getInstance();
-    log('nx.Main::constructor 2...');
 
-    // run the presenter
+    // run the sample presenter
     new nx.HousePresenter(ctx.getHouseView(), ctx)
         .init()
         .render(ctx.getRoot());
 
-    log('nx.Main::constructor...');
 };
 
 goog.exportSymbol('nx.Main', nx.Main);

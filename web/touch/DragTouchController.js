@@ -9,7 +9,7 @@ goog.require('nx.Point');
  * @constructor
  */
 nx.DragTouchController = function (sourceEle, dragController) {
-    log('nx.DragTouchController::constructor ...', sourceEle, dragController);
+    log('nx.DragTouchController::constructor', sourceEle, dragController);
     /**
      * @type {element}
      * @private

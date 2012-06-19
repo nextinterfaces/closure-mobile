@@ -7,6 +7,7 @@ goog.require('nx.HousePresenter');
 goog.require('nx.UserView');
 goog.require('nx.DragController');
 goog.require('nx.Util');
+goog.require('nx.Id');
 
 /**
  * @constructor
@@ -18,13 +19,6 @@ nx.Ctx = function () {
      * @private
      */
     this.eventBus_ = new nx.EventBus(this);
-
-//    log('nx.Ctx::constructor 1 ...');
-//    /**
-//     * @type {nx.DragController}
-//     * @private
-//     */
-//    this.dragController_ = new nx.DragController(this.getRoot());
 
     /**
      * @type {nx.HouseView}
@@ -38,11 +32,11 @@ nx.Ctx = function () {
      */
     this.userView_;
 
+    // Instantiate master root div
     this.getRoot();
 
-    log('nx.Ctx::constructor END...');
+    log('nx.Ctx::constructor');
 };
-
 // make singleton
 goog.addSingletonGetter(nx.Ctx);
 
@@ -78,19 +72,11 @@ nx.Ctx.prototype.getUserView = function () {
  */
 nx.Ctx.prototype.getRoot = function () {
     if (!goog.isDef(this.root_)) {
-        this.root_ = goog.dom.createDom('div', {'id':'nx'});
+        this.root_ = goog.dom.createDom('div', {'id':nx.Id.ROOT});
         goog.dom.appendChild(document.body, this.root_);
     }
     return this.root_;
 };
-
-
-///**
-// * @return {nx.DragController}
-// */
-//nx.Ctx.prototype.getDragController = function () {
-//    return this.dragController_;
-//};
 
 goog.exportSymbol('nx.Ctx', nx.Ctx);
 

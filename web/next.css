@@ -1,4 +1,4 @@
-#nx {
+#NX {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -7,7 +7,7 @@
 	border: 1px solid;
 }
 
-#nx * {
+#NX * {
 	padding: 0;
 	margin: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -47,31 +47,31 @@
 	font-style: normal;
 }
 
-#nx p,#nx div,#nx span,#nx td { /* This disables inputs and textarea */
+#NX p,#NX div,#NX span,#NX td { /* This disables inputs and textarea */
 	-webkit-user-select: none;
 	user-select: none;
 }
 
-#nx code,#nx pre {
+#NX code,#NX pre {
 	font-size: .9em;
 }
 
-#nx code,#nx pre,#nx pre *,#nx .code {
+#NX code,#NX pre,#NX pre *,#NX .code {
 	font-family: Menlo, Monaco, Courier, monospace;
 	-webkit-user-select: text;
 }
 
-#nx .navigationContent {
+#NX .navigationContent {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-#nx .navigationContent {
+#NX .navigationContent {
 	background: #F9F5F5;
 }
 
-#nx .navigationBar {
+#NX .navigationBar {
 	width: 100%;
 	height: 100%;
 	background: #8195AF;
@@ -83,7 +83,7 @@
 }
 
 /*
-#nxGameExitBtn {
+#NXGameExitBtn {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -97,11 +97,11 @@
 	border-bottom: 0;
 }
 
-#nxGameExitBtn.RETINA {
+#NXGameExitBtn.RETINA {
 	background-image: url(/images/gameExitBtn_2.png);
 }
 */
-#nx .scrollPanel {
+#NX .scrollPanel {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -110,7 +110,7 @@
 	overflow: hidden;
 }
 
-#nx .transformPanel {
+#NX .transformPanel {
 	position: relative;
 }
 
@@ -128,7 +128,7 @@
 /*****************************
  * xswitch
  *****************************/
-#nx .xswitch {
+#NX .xswitch {
 	background-image: url(images/next/xswitch.png);
 	background-position: 0 0;
 	background-repeat: no-repeat;
@@ -140,25 +140,25 @@
 	border-radius: 4px;
 }
 
-#nx .xswitch.off {
+#NX .xswitch.off {
 	background-position: -53px 0;
 }
 
 /*****************************
  * xslider
  *****************************/
-#nx .xslider {
+#NX .xslider {
 	display: -webkit-box;
 	-webkit-box-orient: horizontal;
 }
 
-#nx .xslider .label {
+#NX .xslider .label {
 	min-width: 2em;
 	display: -webkit-box;
 	-webkit-box-align: center;
 }
 
-#nx .xslider .bar {
+#NX .xslider .bar {
 	position: relative;
 	height: 1.2em;
 	min-width: 7em;
@@ -167,7 +167,7 @@
 	-webkit-box-flex: 1;
 }
 
-#nx .xslider .bar .right {
+#NX .xslider .bar .right {
 	position: absolute;
 	top: .4em;
 	width: 100%;
@@ -179,7 +179,7 @@
 	-webkit-background-clip: content !important;
 }
 
-#nx .xslider .bar .left {
+#NX .xslider .bar .left {
 	position: relative;
 	top: .4em;
 	border-top-left-radius: .3em;
@@ -192,7 +192,7 @@
 	-webkit-background-clip: content !important;
 }
 
-#nx .xslider .thumb {
+#NX .xslider .thumb {
 	position: relative;
 	margin: -8px 0 0 -18px;
 	width: 36px;
@@ -206,7 +206,7 @@
 /*****************************
  * xlabel
  *****************************/
-#nx .xlabel.Header {
+#NX .xlabel.Header {
 	color: #4D546E;
 	text-shadow: RGBA(255, 255, 255, .7) 0 1px;
 	margin: 14px 0 14px 0px;
@@ -215,7 +215,7 @@
 	font-weight: bold;
 }
 
-#nx .xlabel.Text {
+#NX .xlabel.Text {
 	color: #444;
 	/*
 	margin: 7px 0 7px 0px;
@@ -228,7 +228,7 @@
 /*****************************
  * Form CSS
  *****************************/
-#nx input,#nx textarea,#nx select {
+#NX input,#NX textarea,#NX select {
 	padding: 0;
 	margin: 0;
 	border: none;
@@ -238,11 +238,11 @@
 	font-weight: bold;
 }
 
-#nx h2,#nx p,#nx a,#nx input,#nx textarea,#nx select {
+#NX h2,#NX p,#NX a,#NX input,#NX textarea,#NX select {
 	outline: none;
 }
 
-#nx input,#nx input[type="password"],#nx input[type="search"],#nx isindex
+#NX input,#NX input[type="password"],#NX input[type="search"],#NX isindex
 	{
 	-webkit-appearance: textfield;
 	padding: 1px;
@@ -253,7 +253,7 @@
 	cursor: auto;
 }
 
-#nx input,#nx textarea,#nx keygen,#nx select,#nx button,#nx isindex,#nx datagrid
+#NX input,#NX textarea,#NX keygen,#NX select,#NX button,#NX isindex,#NX datagrid
 	{
 	margin: 0em;
 	font: -webkit-small-control;
@@ -268,17 +268,17 @@
 	text-align: -webkit-auto;
 }
 
-#nx input::-webkit-input-placeholder,#nx isindex::-webkit-input-placeholder,#nx textarea::-webkit-input-placeholder
+#NX input::-webkit-input-placeholder,#NX isindex::-webkit-input-placeholder,#NX textarea::-webkit-input-placeholder
 	{
 	color: darkGray;
 }
 
-#nx input::-webkit-input-speech-button {
+#NX input::-webkit-input-speech-button {
 	-webkit-appearance: -webkit-input-speech-button;
 	display: inline-block;
 }
 
-#nx input::-webkit-inner-spin-button {
+#NX input::-webkit-inner-spin-button {
 	-webkit-appearance: inner-spin-button;
 	display: inline-block;
 	position: relative;
@@ -286,7 +286,7 @@
 	-webkit-user-select: none;
 }
 
-#nx input::-webkit-outer-spin-button {
+#NX input::-webkit-outer-spin-button {
 	-webkit-appearance: outer-spin-button;
 	display: inline-block;
 	position: relative;
@@ -298,18 +298,18 @@
 /*****************************
  * xprogress
  *****************************/
-#nx .xprogress {
+#NX .xprogress {
 	display: -webkit-box;
 	-webkit-box-orient: horizontal;
 }
 
-#nx .xprogress .label {
+#NX .xprogress .label {
 	min-width: 2em;
 	display: -webkit-box;
 	-webkit-box-align: center;
 }
 
-#nx .xprogress .bar {
+#NX .xprogress .bar {
 	position: relative;
 	height: 1.2em;
 	min-width: 10em;
@@ -318,7 +318,7 @@
 	-webkit-box-flex: 1;
 }
 
-#nx .xprogress .bar .right {
+#NX .xprogress .bar .right {
 	position: absolute;
 	top: .4em;
 	width: 100%;
@@ -330,7 +330,7 @@
 	-webkit-background-clip: content !important;
 }
 
-#nx .xprogress .bar .left {
+#NX .xprogress .bar .left {
 	position: relative;
 	top: .4em;
 	border-radius: .3em;
@@ -350,17 +350,17 @@
 /*****************************
  * xpicker
  *****************************/
-#nx .min-width-480px .xpicker {
+#NX .min-width-480px .xpicker {
 	width: 60%;
 	display: inline-block;
 }
 
-#nx .xpicker {
+#NX .xpicker {
 	display: block;
 	position: relative;
 }
 
-#nx .xbtn {
+#NX .xbtn {
 	display: block;
 	position: relative;
 	margin: .5em 5px;
@@ -383,7 +383,7 @@
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
-#nx .xbtn .body {
+#NX .xbtn .body {
 	padding: .6em 45px .6em 25px;
 	display: block;
 	height: 100%;
@@ -395,7 +395,7 @@
 	border-color: rgba(255, 255, 255, .3);
 }
 
-#nx .xpicker .xbtn select {
+#NX .xpicker .xbtn select {
 	cursor: pointer;
 	-webkit-appearance: button;
 	position: absolute;
@@ -406,7 +406,7 @@
 	opacity: 0;
 }
 
-#nx .xbtn .icon {
+#NX .xbtn .icon {
 	background: #A5B3C6;
 	background-image: url(/images/next/ios.png);
 	background-position: 0 -798px;
@@ -426,13 +426,13 @@
 /*****************************
  * xcheckbox, xradioButton
  *****************************/
-#nx .xcheckboxGroup,#nx .xradioButtonGroup {
+#NX .xcheckboxGroup,#NX .xradioButtonGroup {
 	display: -webkit-box;
 	-webkit-box-orient: horizontal;
 	width: 100%;
 }
 
-#nx .xcheckboxGroup>span,.xradioButtonGroup>span {
+#NX .xcheckboxGroup>span,.xradioButtonGroup>span {
 	-webkit-box-flex: 1;
 	display: -webkit-box;
 	-webkit-box-align: center;
@@ -450,7 +450,7 @@
 	border-bottom: 1px solid #999;
 }
 
-#nx .xcheckboxGroup.horizontal>span.selected,.xradioButtonGroup.horizontal>span.selected
+#NX .xcheckboxGroup.horizontal>span.selected,.xradioButtonGroup.horizontal>span.selected
 	{
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2655A6),
 		color-stop(0.08, #336FD4), color-stop(0.08, #3571D9),
@@ -463,12 +463,12 @@
 	text-shadow: #14519B 0px -1px 1px;
 }
 
-#nx .xcheckboxGroup.horizontal>span>input,#nx .xcheckboxGroup.horizontal>span>div,#nx .xradioButtonGroup.horizontal>span>input,#nx .xradioButtonGroup.horizontal>span>div
+#NX .xcheckboxGroup.horizontal>span>input,#NX .xcheckboxGroup.horizontal>span>div,#NX .xradioButtonGroup.horizontal>span>input,#NX .xradioButtonGroup.horizontal>span>div
 	{
 	display: none;
 }
 
-#nx .xcheckboxGroup>span:first-child,#nx .xradioButtonGroup>span:first-child
+#NX .xcheckboxGroup>span:first-child,#NX .xradioButtonGroup>span:first-child
 	{
 	border-bottom-left-radius: 0.6em 0.6em;
 	border-top-left-radius: 0.6em 0.6em;
@@ -478,7 +478,7 @@
 	border-left: 1px solid #B8B8B8;
 }
 
-#nx .xcheckboxGroup>span:last-child,#nx .xradioButtonGroup>span:last-child
+#NX .xcheckboxGroup>span:last-child,#NX .xradioButtonGroup>span:last-child
 	{
 	border-bottom-right-radius: 0.6em 0.6em;
 	border-top-right-radius: 0.6em 0.6em;
@@ -488,7 +488,7 @@
 	border-right: 1px solid #B8B8B8;
 }
 
-#nx .xcheckboxGroup>span:first-child.selected,#nx .xradioButtonGroup>span:first-child.selected
+#NX .xcheckboxGroup>span:first-child.selected,#NX .xradioButtonGroup>span:first-child.selected
 	{
 	border-right: 0px;
 	border-top-color: #073E7D;
@@ -496,7 +496,7 @@
 	border-left-color: #2F6FB8;
 }
 
-#nx .xcheckboxGroup>span:last-child.selected,#nx .xradioButtonGroup>span:last-child.selected
+#NX .xcheckboxGroup>span:last-child.selected,#NX .xradioButtonGroup>span:last-child.selected
 	{
 	border-left: 0px;
 	border-top-color: #073E7D;
@@ -505,11 +505,11 @@
 }
 
 /***** vertical *****/
-#nx .xcheckboxGroup.vertical,#nx .xradioButtonGroup.vertical {
+#NX .xcheckboxGroup.vertical,#NX .xradioButtonGroup.vertical {
 	-webkit-box-orient: vertical;
 }
 
-#nx .xcheckboxGroup.vertical>span,#nx .xradioButtonGroup.vertical>span {
+#NX .xcheckboxGroup.vertical>span,#NX .xradioButtonGroup.vertical>span {
 	-webkit-box-flex: 1;
 	display: -webkit-box;
 	-webkit-box-align: center;
@@ -528,26 +528,26 @@
 	border-bottom: 0;
 }
 
-#nx .xcheckboxGroup.vertical>span>input,#nx .xradioButtonGroup.vertical>span>input
+#NX .xcheckboxGroup.vertical>span>input,#NX .xradioButtonGroup.vertical>span>input
 	{
 	display: none;
 }
 
-#nx .xcheckboxGroup.vertical>span {
+#NX .xcheckboxGroup.vertical>span {
 	background-image: url(images/next/xcheckbox.png);
 	background-position: center right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
 }
 
-#nx .xradioButtonGroup.vertical>span {
+#NX .xradioButtonGroup.vertical>span {
 	background-image: url(images/next/xradiobutton.png);
 	background-position: center right;
 	background-repeat: no-repeat;
 	padding-right: 10px;
 }
 
-#nx .xcheckboxGroup.vertical>span.selected {
+#NX .xcheckboxGroup.vertical>span.selected {
 	background-color: #f0f0f0;
 	background-image: url(images/next/xcheckbox-selected.png);
 	background-position: center right;
@@ -555,7 +555,7 @@
 	padding-right: 10px;
 }
 
-#nx .xradioButtonGroup.vertical>span.selected {
+#NX .xradioButtonGroup.vertical>span.selected {
 	background-color: #f0f0f0;
 	background-image: url(images/next/xradiobutton-selected.png);
 	background-position: center right;
@@ -563,19 +563,19 @@
 	padding-right: 10px;
 }
 
-#nx .xcheckboxGroup.vertical>span:first-child,#nx .xradioButtonGroup.vertical>span:first-child
+#NX .xcheckboxGroup.vertical>span:first-child,#NX .xradioButtonGroup.vertical>span:first-child
 	{
 	border-bottom-left-radius: 0;
 	border-top-right-radius: 0.6em 0.6em;
 }
 
-#nx .xcheckboxGroup.vertical>span:last-child,#nx .xradioButtonGroup.vertical>span:last-child
+#NX .xcheckboxGroup.vertical>span:last-child,#NX .xradioButtonGroup.vertical>span:last-child
 	{
 	border-bottom-left-radius: 0.6em 0.6em;
 	border-top-right-radius: 0;
 }
 
-#nx .xcheckboxGroup.vertical>span:first-child.selected,.xradioButtonGroup.vertical>span:first-child.selected
+#NX .xcheckboxGroup.vertical>span:first-child.selected,.xradioButtonGroup.vertical>span:first-child.selected
 	{
 	border-bottom: 0;
 	border-top: 1px solid #A8A8A8;
@@ -583,7 +583,7 @@
 	border-right: 1px solid #A8A8A8;
 }
 
-#nx .xcheckboxGroup.vertical>span:last-child,#nx .xradioButtonGroup.vertical>span:last-child
+#NX .xcheckboxGroup.vertical>span:last-child,#NX .xradioButtonGroup.vertical>span:last-child
 	{
 	border-top: 1px solid #A8A8A8;
 	border-bottom: 1px solid #A8A8A8;
@@ -591,7 +591,7 @@
 	border-right: 1px solid #A8A8A8;
 }
 
-#nx .xcheckboxGroup.vertical>span:last-child.selected,#nx .xradioButtonGroup.vertical>span:last-child.selected
+#NX .xcheckboxGroup.vertical>span:last-child.selected,#NX .xradioButtonGroup.vertical>span:last-child.selected
 	{
 	border-color: #A8A8A8;
 }
@@ -599,7 +599,7 @@
 /*****************************
  * xpopup
  *****************************/
-#nx .xpopupOverlay {
+#NX .xpopupOverlay {
 	-webkit-box-align: center;
 	-webkit-box-pack: center;
 	/* -webkit-transition: 0.25s opacity; */
@@ -617,7 +617,7 @@
 	z-index: 30;
 }
 
-#nx .xpopup {
+#NX .xpopup {
 	position: absolute;
 	/* border: .3em solid #2D3642; */
 	-webkit-border-radius: 0.3em;
@@ -633,16 +633,16 @@
  AIRGAMES CSS
  ************************************************
  */
-#nx .PanelMenu {
+#NX .PanelMenu {
 	background: #2e2e33 url(images/bgDark2.png);
 }
 
 /*
-#nx .PanelMenu .cellContainer {
+#NX .PanelMenu .cellContainer {
 	width: 150px;
 }
 */
-#nx .PanelMenu .cell {
+#NX .PanelMenu .cell {
 	color: #FFF;
 	font-weight: bold;
 	text-shadow: 1px 1px 2px black;
@@ -656,67 +656,67 @@
 	height: 25px;
 }
 
-#nx .PanelMenu .cell.activity {
+#NX .PanelMenu .cell.activity {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -64px;
 }
 
-#nx .PanelMenu .cell.account {
+#NX .PanelMenu .cell.account {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -54px;
 }
 
-#nx .PanelMenu .cell.buddies {
+#NX .PanelMenu .cell.buddies {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -192px;
 }
 
-#nx .PanelMenu .cell.games {
+#NX .PanelMenu .cell.games {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -448px;
 }
 
-#nx .PanelMenu .cell.chats {
+#NX .PanelMenu .cell.chats {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -320px;
 }
 
-#nx .PanelMenu .cell.profile {
+#NX .PanelMenu .cell.profile {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -576px;
 }
 
-#nx .PanelMenu .cell.activity.pressed {
+#NX .PanelMenu .cell.activity.pressed {
 	background-image: url(images/_menu4.png);
 	background-position: 0 0;
 }
 
-#nx .PanelMenu .cell.account.pressed {
+#NX .PanelMenu .cell.account.pressed {
 	background-image: url(images/_menu4.png);
 	background-position: 0 0;
 }
 
-#nx .PanelMenu .cell.profile.pressed {
+#NX .PanelMenu .cell.profile.pressed {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -512px;
 }
 
-#nx .PanelMenu .cell.chats.pressed {
+#NX .PanelMenu .cell.chats.pressed {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -256px;
 }
 
-#nx .PanelMenu .cell.games.pressed {
+#NX .PanelMenu .cell.games.pressed {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -384px;
 }
 
-#nx .PanelMenu .cell.buddies.pressed {
+#NX .PanelMenu .cell.buddies.pressed {
 	background-image: url(images/_menu4.png);
 	background-position: 0 -128px;
 }
 
-#nx .PanelMenu .menuGame {
+#NX .PanelMenu .menuGame {
 	color: #858183;
 	font-weight: bold;
 	text-shadow: 1px 1px 2px black;
@@ -732,55 +732,55 @@
 	overflow: hidden;
 }
 
-#nx.RETINA .PanelMenu .cell.activity {
+#NX.RETINA .PanelMenu .cell.activity {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.account {
+#NX.RETINA .PanelMenu .cell.account {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.buddies {
+#NX.RETINA .PanelMenu .cell.buddies {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.games {
+#NX.RETINA .PanelMenu .cell.games {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.chats {
+#NX.RETINA .PanelMenu .cell.chats {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.profile {
+#NX.RETINA .PanelMenu .cell.profile {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.activity.pressed {
+#NX.RETINA .PanelMenu .cell.activity.pressed {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.account.pressed {
+#NX.RETINA .PanelMenu .cell.account.pressed {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.profile.pressed {
+#NX.RETINA .PanelMenu .cell.profile.pressed {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.chats.pressed {
+#NX.RETINA .PanelMenu .cell.chats.pressed {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.games.pressed {
+#NX.RETINA .PanelMenu .cell.games.pressed {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx.RETINA .PanelMenu .cell.buddies.pressed {
+#NX.RETINA .PanelMenu .cell.buddies.pressed {
 	background-image: url(images/_menu4_2.png);
 }
 
-#nx .PanelMenu .cell.pressed { /*
+#NX .PanelMenu .cell.pressed { /*
 	color: #fff;
 	border-top: 1px solid RGBA(100, 100, 100, 0);
 	border-bottom: 1px solid RGBA(0, 0, 0, 0);
@@ -790,7 +790,7 @@
 	text-shadow: 0px -1px 1px RGBA(0, 0, 0, .8);
 }
 
-#nx .PanelMenu .menuBorder {
+#NX .PanelMenu .menuBorder {
 	border-left: 1px solid RGBA(0, 0, 0, .3);
 	border-right: 1px solid RGBA(255, 255, 255, .1);
 	position: absolute;
@@ -800,27 +800,27 @@
 	width: 0;
 }
 
-#nx .PanelList {
+#NX .PanelList {
 	background-color: #E9E9E9;
 	margin-left: 10px;
 	-webkit-box-shadow: -5px 10px 10px #222;
 	border-radius: 6px;
 }
 
-#nx.ANDROID .PanelList {
+#NX.ANDROID .PanelList {
 	-webkit-box-shadow: none;
 	background-image: none;
 }
 
-#nx #nxContentView {
+#NX #NXContentView {
 	background: RGBA(200, 100, 100, 0);
 }
 
-#nx #nxContentView2 {
+#NX #NXContentView2 {
 	background: RGBA(100, 200, 100, 0);
 }
 
-#nx .PanelContent {
+#NX .PanelContent {
 	background: #E9E9E9;
 	border-left: 1px solid #f0f0f0;
 	border-right: 1px solid #f0f0f0;
@@ -830,11 +830,11 @@
 	border-right: 1px solid RGBA(0, 0, 0, .3);
 }
 
-#nx.ANDROID .PanelContent {
+#NX.ANDROID .PanelContent {
 	-webkit-box-shadow: 0 0 2px #333;
 }
 
-#nx .rows .row {
+#NX .rows .row {
 	border-top: 1px solid #DFDFDF;
 	width: 100%;
 	position: relative;
@@ -847,11 +847,11 @@
 	background-position-y: -125px;
 }
 
-#nx.RETINA .rows .row {
+#NX.RETINA .rows .row {
 	background-image: url(/images/_icons-right_2.png);
 }
 
-#nx .rows .row.pressed {
+#NX .rows .row.pressed {
 	width: 100%;
 	position: relative;
 	height: 70px;
@@ -864,22 +864,22 @@
 	background-position-y: -25px;
 }
 
-#nx.RETINA .rows .row.pressed {
+#NX.RETINA .rows .row.pressed {
 	background-image: url(/images/_icons-right_2.png);
 }
 
-#nx .rows .row .ximage {
+#NX .rows .row .ximage {
 	margin: 8px;
 	border-radius: 2px;
 	-webkit-box-shadow: 0px 1px 2px RGBA(0, 0, 0, .8);
 	background-color: #FFF;
 }
 
-#nx .rows .row.pressed .ximage {
+#NX .rows .row.pressed .ximage {
 	-webkit-box-shadow: 0px 0px 2px #fff;
 }
 
-#nx .rows .row .title {
+#NX .rows .row .title {
 	font-weight: bold;
 	text-shadow: 0 1px 1px #fff;
 	position: absolute;
@@ -891,7 +891,7 @@
 	text-overflow: ellipsis;
 }
 
-#nx .rows .row .descr {
+#NX .rows .row .descr {
 	color: #4F5459;
 	font-size: .8em;
 	text-shadow: 0 1px 1px #FFF;
@@ -906,26 +906,26 @@
 	color: #888;
 }
 
-#nx .rows .row.pressed .title {
+#NX .rows .row.pressed .title {
 	text-shadow: none;
 }
 
-#nx .rows .row.pressed .descr {
+#NX .rows .row.pressed .descr {
 	text-shadow: none;
 }
 
-#nx .rows .row.noarrow {
+#NX .rows .row.noarrow {
 	background-image: none;
 }
 
-#nx .rows .row.noarrow .btnTxt {
+#NX .rows .row.noarrow .btnTxt {
 	position: absolute;
 	top: 13px;
 	right: 0;
 	width: 78px;
 }
 
-#nx .rows .row.noarrow .rightText {
+#NX .rows .row.noarrow .rightText {
 	position: absolute;
 	top: 23px;
 	right: 10px;
@@ -935,17 +935,17 @@
 	font-weight: bold;
 }
 
-#nx .rows .xradioButtonGroup {
+#NX .rows .xradioButtonGroup {
 	padding: 0 10px 10px 10px;
 	width: auto;
 }
 
-#nx .rows .xradioButtonGroup>span {
+#NX .rows .xradioButtonGroup>span {
 	padding: .5em .2em;
 	font-size: .7em;
 }
 
-#nx .rows .empty {
+#NX .rows .empty {
 	color: #858183;
 	font-size: 14px;
 	padding: 20px;
@@ -953,22 +953,22 @@
 	background-color: #FFF;
 }
 /*
-#nx .rows .row:first-child {
+#NX .rows .row:first-child {
 	border-top-left-radius: 7px 7px;
 	border-top-right-radius: 7px 7px;
 	border-top-color: #fff;
 	-webkit-box-shadow: 0px 10px 10px #aaa;
 }
 */
-#nx .rows .row:last-child { /*-webkit-box-shadow: 0px 10px 10px #ddd; */
+#NX .rows .row:last-child { /*-webkit-box-shadow: 0px 10px 10px #ddd; */
 	border-bottom: 1px solid #DFDFDF;
 }
 
-#nx .GameListView.rows .row .ximage {
+#NX .GameListView.rows .row .ximage {
 	-webkit-box-shadow: 0 0 0 RGBA(0, 0, 0, 0);
 }
 
-#nx .FriendList {
+#NX .FriendList {
 	display: block;
 	/* position: absolute; */
 	top: 0;
@@ -977,11 +977,11 @@
 	right: 0;
 }
 
-#nx .FriendList .hookt.rows .row {
+#NX .FriendList .hookt.rows .row {
 	
 }
 
-#nx .blueHeader .hooktHeader {
+#NX .blueHeader .hooktHeader {
 	background-color: #333;
 	height: 47px;
 	background-image: url(/images/header-bg-hookt.png);
@@ -993,7 +993,7 @@
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
-#nx .blueHeader .hooktHeader .title {
+#NX .blueHeader .hooktHeader .title {
 	color: #06BEDE;
 	text-shadow: 0 -1px 1px #000;
 	background-image: url(/images/_icons40.png);
@@ -1003,15 +1003,15 @@
 	padding-left: 60px;
 }
 
-#nx.RETINA .blueHeader .hooktHeader {
+#NX.RETINA .blueHeader .hooktHeader {
 	background-image: url(/images/header-bg-hookt_2.png);
 }
 
-#nx.RETINA .blueHeader .hooktHeader .title {
+#NX.RETINA .blueHeader .hooktHeader .title {
 	background-image: url(/images/_icons40_2.png);
 }
 
-#nx .FriendList.FriendHooktView .rows .row .title {
+#NX .FriendList.FriendHooktView .rows .row .title {
 	background-image: url(/images/_icons40.png);
 	background-size: 40px 804px;
 	background-position: 0 -275px;
@@ -1019,33 +1019,33 @@
 	padding-left: 30px;
 }
 
-#nx.RETINA .FriendList.FriendHooktView .rows .row .title {
+#NX.RETINA .FriendList.FriendHooktView .rows .row .title {
 	background-image: url(/images/_icons40_2.png);
 }
 
-#nx .GamesPanelList .listHeaderShadow {
+#NX .GamesPanelList .listHeaderShadow {
 	-webkit-box-shadow: none;
 }
 
-#nx .blueHeader .btnTxt {
+#NX .blueHeader .btnTxt {
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 120px;
 }
 
-#nx .blueHeader .btnTxt {
+#NX .blueHeader .btnTxt {
 	width: 90px;
 }
 
-#nx .FriendList .search {
+#NX .FriendList .search {
 	height: 46px;
 	position: relative;
 	background-size: 4px 4px;
 	background-repeat: repeat;
 }
 
-#nx .FriendList .search .left {
+#NX .FriendList .search .left {
 	border: 0px solid;
 	position: absolute;
 	top: 5px;
@@ -1058,7 +1058,7 @@
 	background-repeat: no-repeat;
 }
 
-#nx .FriendList .search .center {
+#NX .FriendList .search .center {
 	border: 0px solid;
 	position: absolute;
 	top: 5px;
@@ -1071,7 +1071,7 @@
 	background-repeat: repeat-x;
 }
 
-#nx .FriendList .search .right {
+#NX .FriendList .search .right {
 	border: 0px solid;
 	position: absolute;
 	top: 5px;
@@ -1084,19 +1084,19 @@
 	background-repeat: no-repeat;
 }
 
-#nx.RETINA .FriendList .search .left {
+#NX.RETINA .FriendList .search .left {
 	background-image: url(/images/_inputSearch_2.png);
 }
 
-#nx.RETINA .FriendList .search .center {
+#NX.RETINA .FriendList .search .center {
 	background-image: url(/images/_inputSearch_2.png);
 }
 
-#nx.RETINA .FriendList .search .right {
+#NX.RETINA .FriendList .search .right {
 	background-image: url(/images/_inputSearch_2.png);
 }
 
-#nx .FriendList .search .center input {
+#NX .FriendList .search .center input {
 	width: 100%;
 	height: 26px;
 	border: 0 solid;
@@ -1106,33 +1106,33 @@
 	-webkit-appearance: none;
 }
 
-#nx .FriendList .search .right.activated {
+#NX .FriendList .search .right.activated {
 	background-position: 0 -135px;
 }
 
 /*
-#nx .FriendList .rows .row:first-child {
+#NX .FriendList .rows .row:first-child {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	-webkit-box-shadow: 0 0 0;
 }
 
-#nx .FriendList .rows .row:last-child {
+#NX .FriendList .rows .row:last-child {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	-webkit-box-shadow: 0 0 0;
 }
 */
-#nx .FriendList.FriendChangeView .rows .row {
+#NX .FriendList.FriendChangeView .rows .row {
 	background-position-x: 96%;
 	background-position-y: -373px;
 }
 
-#nx .FriendList.FriendChangeView .rows .row.pressed {
+#NX .FriendList.FriendChangeView .rows .row.pressed {
 	background-position-y: -423px;
 }
 
-#nx .FriendList.FriendChangeView .rows .row .title {
+#NX .FriendList.FriendChangeView .rows .row .title {
 	top: 10px;
 	left: 54px;
 	font-weight: normal;
@@ -1141,24 +1141,24 @@
 	max-width: 230px;
 }
 
-#nx .FriendList.FriendChangeView .rows .row .ximage {
+#NX .FriendList.FriendChangeView .rows .row .ximage {
 	margin: 0;
 	border-radius: 0;
 	-webkit-box-shadow: 0px 1px 2px RGBA(0, 0, 0, 0);
 	background-color: RGBA(0, 0, 0, 0);
 }
 
-#nx .FriendList .rows .row .title {
+#NX .FriendList .rows .row .title {
 	top: 10px;
 	white-space: nowrap; 
 }
 
-#nx .FriendList .rows .row .descr {
+#NX .FriendList .rows .row .descr {
 	top: 30px;
 	font-size: 12px;
 }
 
-#nx .FriendList .rows .row .lastLogin {
+#NX .FriendList .rows .row .lastLogin {
 	top: 45px;
 	font-size: 11px;
 	position: absolute;
@@ -1170,32 +1170,32 @@
 	color: #888;
 }
 
-#nx .FriendList.FriendBlockView .rows .row .title {
+#NX .FriendList.FriendBlockView .rows .row .title {
 	top: 22px;
 	color: #F3274C;
 }
 
-#nx .FriendList .info {
+#NX .FriendList .info {
 	margin: 30px 10px 5px 10px;
 	color: #666;
 	text-shadow: 0 1px 0px RGBA(255, 255, 255, .6);
 }
 
-#nx .FriendList .budsPanel.rows .row:last-child {
+#NX .FriendList .budsPanel.rows .row:last-child {
 	border-bottom-left-radius: 7px 7px;
 	border-bottom-right-radius: 7px 7px;
 }
 
-#nx .FriendList .cellsPanel .info {
+#NX .FriendList .cellsPanel .info {
 	margin: 20px 10px 20px 10px;
 }
 
-#nx .chats {
+#NX .chats {
 	position: relative;
 }
 
 /*
-#nx .chats .row {
+#NX .chats .row {
 	border-top: 1px solid #DFDFDF;
 	width: 100%;
 	position: relative;
@@ -1204,18 +1204,18 @@
 	color: #333;
 }
 */
-#nx .chats .row:last-child {
+#NX .chats .row:last-child {
 	border-bottom: 1px solid #DFDFDF;
 }
 
-#nx .chats .row.pressed {
+#NX .chats .row.pressed {
 	border-top: 1px solid #A6E3ED;
 	border-bottom: 1px solid #A6E3ED;
 	color: #333;
 	background-color: #E2FAFE;
 }
 
-#nx .chats .row .imgBox {
+#NX .chats .row .imgBox {
 	margin: 10px;
 	border-radius: 0;
 	-webkit-box-shadow: 0px 1px 2px #222;
@@ -1224,7 +1224,7 @@
 	height: 46px;
 }
 
-#nx .chats .row .imgBox .ximage {
+#NX .chats .row .imgBox .ximage {
 	margin: 1px 2px;
 	width: 44px;
 	height: 40px;
@@ -1233,11 +1233,11 @@
 	background-size: 100%;
 }
 
-#nx.ANDROID .row .ximage {
+#NX.ANDROID .row .ximage {
 	-webkit-box-shadow: 0px 0px 1px #222;
 }
 
-#nx .chats .row .title {
+#NX .chats .row .title {
 	font-weight: bold;
 	font-size: 14px;
 	text-shadow: 0 1px 1px #FFF;
@@ -1247,16 +1247,16 @@
 	white-space: nowrap;
 }
 
-#nx .chats .row.blank .title {
+#NX .chats .row.blank .title {
 	top: 22px;
 }
 
-#nx .chats .nochat .row .title {
+#NX .chats .nochat .row .title {
 	top: 23px;
 	left: 20px;
 }
 
-#nx .chats .row .descr {
+#NX .chats .row .descr {
 	color: #444;
 	font-size: 11px;
 	text-shadow: 0 1px 1px #FFF;
@@ -1274,7 +1274,7 @@
 	border-top-left-radius: 0;
 }
 
-#nx .chats .row .date {
+#NX .chats .row .date {
 	color: #999;
 	font-size: .7em;
 	text-shadow: 0 1px 1px #FFF;
@@ -1284,11 +1284,11 @@
 	right: 30px;
 }
 
-#nx .chats .row.blank .descr {
+#NX .chats .row.blank .descr {
 	background: RGBA(255, 255, 255, 0);
 }
 
-#nx .chats .row .descr:after {
+#NX .chats .row .descr:after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -1303,7 +1303,7 @@
 	border-color: transparent RGBA(255, 255, 255, .5);
 }
 
-#nx .grayHeader {
+#NX .grayHeader {
 	background-color: #F1F1F1;
 	height: 47px;
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FBFBFB),
@@ -1315,24 +1315,24 @@
 	text-shadow: 0 1px 0px RGBA(255, 255, 255, 1);
 }
 
-#nx .grayHeader .ximage {
+#NX .grayHeader .ximage {
 	float: left;
 	border-right: 1px solid #D0D0D0;
 	padding: 14px;
 }
 
-#nx .grayHeader .title {
+#NX .grayHeader .title {
 	float: left;
 	font-family: "SanchezRegular";
 	padding: 13px;
 	color: #3A3A3A;
 }
 
-#nx .grayHeader.back .title {
+#NX .grayHeader.back .title {
 	border-left: 1px solid #FFF;
 }
 
-#nx .blueHeader {
+#NX .blueHeader {
 	background-color: #29A9C2;
 	height: 47px;
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#68E8FF),
@@ -1344,14 +1344,14 @@
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
-#nx .blueHeader .title {
+#NX .blueHeader .title {
 	float: left;
 	font-family: "SanchezRegular";
 	padding: 13px;
 	color: #016D8C;
 }
 
-#nx .listHeader.arrow {
+#NX .listHeader.arrow {
 	height: 40px;
 	border-bottom: 1px solid RGBA(0, 0, 0, .2);
 	border-top-left-radius: 5px;
@@ -1360,7 +1360,7 @@
 	padding: 0;
 }
 
-#nx .listHeader.arrow .title {
+#NX .listHeader.arrow .title {
 	float: left;
 	font-family: "SanchezRegular";
 	padding: 10px 0 10px 30px;
@@ -1371,11 +1371,11 @@
 	background-size: 20px 670px;
 }
 
-#nx.RETINA .listHeader.arrow .title {
+#NX.RETINA .listHeader.arrow .title {
 	background-image: url(/images/_icons20_2.png);
 }
 
-#nx .listHeader.arrow .ximage {
+#NX .listHeader.arrow .ximage {
 	float: right;
 	border-left: 1px solid #D0D0D0;
 	padding: 14px;
@@ -1384,7 +1384,7 @@
 /** 
  * btnTxt
  */
-#nx .btnTxt {
+#NX .btnTxt {
 	display: table;
 	/* padding: 5px 0 0 0; */
 	white-space: nowrap;
@@ -1392,7 +1392,7 @@
 	padding: 5px 0 0 0;
 }
 
-#nx .btnTxt div:first-child {
+#NX .btnTxt div:first-child {
 	display: table-cell;
 	width: 17px;
 	height: 35px;
@@ -1402,7 +1402,7 @@
 	background-image: url(/images/_btn-b.png);
 }
 
-#nx .btnTxt div.txt,#nx .btnTxt a.txt {
+#NX .btnTxt div.txt,#NX .btnTxt a.txt {
 	display: table-cell;
 	height: 35px;
 	background-image: url(/images/_btn-b.png);
@@ -1421,7 +1421,7 @@
 	text-decoration: none;
 }
 
-#nx .btnTxt div:last-child {
+#NX .btnTxt div:last-child {
 	display: table-cell;
 	width: 17px;
 	height: 35px;
@@ -1434,29 +1434,29 @@
 /** 
  * btnTxt gray
  */
-#nx .btnTxt.gray div:first-child {
+#NX .btnTxt.gray div:first-child {
 	background-position: 0 -312px;
 }
 
-#nx .btnTxt.gray div.txt {
+#NX .btnTxt.gray div.txt {
 	background-position: 0 -367px;
 	color: #707070;
 	text-shadow: 0 1px 0px RGBA(255, 255, 255, .5);
 }
 
-#nx .btnTxt.gray div:last-child {
+#NX .btnTxt.gray div:last-child {
 	background-position: 0 -422px;
 }
 
 /** 
  * btnTxt small
  */
-#nx .btnTxt.small {
+#NX .btnTxt.small {
 	display: table;
 	padding: 8px 5px 4px 5px;
 }
 
-#nx .btnTxt.small div:first-child {
+#NX .btnTxt.small div:first-child {
 	width: 15px;
 	height: 29px;
 	float: left;
@@ -1466,7 +1466,7 @@
 	background-image: url(/images/_btn-b.png);
 }
 
-#nx .btnTxt.small div.txt {
+#NX .btnTxt.small div.txt {
 	float: left;
 	height: 30px;
 	background-image: url(/images/_btn-b.png);
@@ -1480,7 +1480,7 @@
 	font-weight: bold;
 }
 
-#nx .btnTxt.small div:last-child {
+#NX .btnTxt.small div:last-child {
 	width: 15px;
 	height: 30px;
 	float: left;
@@ -1490,28 +1490,28 @@
 	background-position: 0 -263px;
 }
 
-#nx.RETINA .btnTxt div:first-child,#nx.RETINA .btnTxt div.txt,#nx.RETINA .btnTxt div:last-child,#nx.RETINA .btnTxt.small div:first-child,#nx.RETINA .btnTxt.small div.txt,#nx.RETINA .btnTxt.small div:last-child
+#NX.RETINA .btnTxt div:first-child,#NX.RETINA .btnTxt div.txt,#NX.RETINA .btnTxt div:last-child,#NX.RETINA .btnTxt.small div:first-child,#NX.RETINA .btnTxt.small div.txt,#NX.RETINA .btnTxt.small div:last-child
 	{
 	background-image: url(/images/_btn-b_2.png);
 }
 
-#nx .ChatFriendsView .blueHeader .btnTxt.small {
+#NX .ChatFriendsView .blueHeader .btnTxt.small {
 	float: right;
 }
 
-#nx .blueHeader .circleBtn {
+#NX .blueHeader .circleBtn {
 	float: right;
 }
 
-#nx .ChatListView .blueHeader {
+#NX .ChatListView .blueHeader {
 	padding-right: 5px;
 }
 
-#nx .ChatListView .rows .row .title {
+#NX .ChatListView .rows .row .title {
 	max-width: 125px;
 }
 
-#nx .circleBtn {
+#NX .circleBtn {
 	background-image: url(/images/_btn-circle.png);
 	background-size: 220px 778px;
 	background-repeat: no-repeat;
@@ -1520,23 +1520,23 @@
 	padding: 5px 2px;
 }
 
-#nx.RETINA .circleBtn {
+#NX.RETINA .circleBtn {
 	background-image: url(/images/_btn-circle_2.png);
 }
 
-#nx .GameView {
+#NX .GameView {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	background-color: #fff;
 }
 
-#nx .GameView .icon {
+#NX .GameView .icon {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	/*-webkit-box-shadow: inset 0 -2px 4px RGBA(50, 50, 50, .4);*/
 }
 
-#nx .GameView .gameTitle {
+#NX .GameView .gameTitle {
 	white-space: nowrap;
 	font-size: 20px;
 	font-weight: bold;
@@ -1544,7 +1544,7 @@
 	color: #3A3A3A;
 }
 
-#nx .GameView .author {
+#NX .GameView .author {
 	white-space: nowrap;
 	font-size: 12px;
 	text-shadow: 0 1px 1px #FFF;
@@ -1552,7 +1552,7 @@
 	color: #858183;
 }
 
-#nx .GameView .descr {
+#NX .GameView .descr {
 	font-size: 12px;
 	padding: 10px;
 	right: 10px;
@@ -1562,20 +1562,20 @@
 	color: #3A3A3A;
 }
 
-#nx .GameView .btnTxt {
+#NX .GameView .btnTxt {
 	padding: 20px 60px;
 }
 
-#nx .GameView .rows .row .title {
+#NX .GameView .rows .row .title {
 	top: 22px;
 }
 
-#nx .GameView .listHeader {
+#NX .GameView .listHeader {
 	border-top: 1px solid #DCDCDC;
 }
 
 /*
-#nx .GameView .roundedTable .left {
+#NX .GameView .roundedTable .left {
 	color: #747E94;
 	font-size: .8em;
 	font-weight: bold;
@@ -1583,39 +1583,39 @@
 	padding: 5px;
 }
 
-#nx .GameView .roundedTable .right {
+#NX .GameView .roundedTable .right {
 	color: #333;
 	padding: 10px 10px 10px 0;
 	font-size: .9em;
 }
 
-#nx .GameView .roundedTable .borderTop {
+#NX .GameView .roundedTable .borderTop {
 	border-top: 1px solid #fff;
 }
 
-#nx .GameView .roundedTable .borderBottom {
+#NX .GameView .roundedTable .borderBottom {
 	border-bottom: 1px solid #D8D8D8;
 	white-space: nowrap;
 }
 
-#nx .GameView .roundedTable .avatar {
+#NX .GameView .roundedTable .avatar {
 	text-align: center;
 	padding: 10px;
 }
 
-#nx .GameView .roundedTable .avatar .ximage {
+#NX .GameView .roundedTable .avatar .ximage {
 	width: 150px;
 	height: 150px;
 	border-radius: 4px;
 }
 
-#nx .GameView .list .ximage {
+#NX .GameView .list .ximage {
 	float: left;
 	margin: 5px;
 	border-radius: 4px;
 }
 
-#nx .GameView .roundedTable .title {
+#NX .GameView .roundedTable .title {
 	font-weight: bold;
 	margin-top: 10px;
 	text-shadow: 0 1px 1px #fff;
@@ -1623,27 +1623,27 @@
 	text-align: center;
 }
 
-#nx .GameView .roundedTable .avatar.borderTop,.profile .roundedTable .title.borderTop
+#NX .GameView .roundedTable .avatar.borderTop,.profile .roundedTable .title.borderTop
 	{
 	border-top: 0;
 }
 
-#nx .GameView .roundedTable .avatar.borderBottom,.profile .roundedTable .title.borderBottom
+#NX .GameView .roundedTable .avatar.borderBottom,.profile .roundedTable .title.borderBottom
 	{
 	border-bottom: 0;
 }
 
-#nx .GameView .budsPanel {
+#NX .GameView .budsPanel {
 	display: table;
 	width: 100%;
 }
 */
-#nx .spacer {
+#NX .spacer {
 	width: 100%;
 	height: 20px;
 }
 
-#nx .info {
+#NX .info {
 	color: #999;
 	font-size: 14px;
 	font-weight: bold;
@@ -1652,17 +1652,17 @@
 }
 
 /*
-#nx .GameView .budsPanel .avatarBox {
+#NX .GameView .budsPanel .avatarBox {
 	margin: 5px;
 }
 
-#nx .GameView .budsPanel .info {
+#NX .GameView .budsPanel .info {
 	margin: 20px 0;
 	width: 100%;
 	text-align: center;
 }
 */
-#nx .frame {
+#NX .frame {
 	width: 100%;
 	border: 0;
 	background-color: #e6e6e6;
@@ -1670,18 +1670,18 @@
 	overflow: auto;
 }
 
-#nx .closeOverlay {
+#NX .closeOverlay {
 	z-index: 9;
 	width: 100%;
 	height: 100%;
 }
 /*
-#nx .LobbyView {
+#NX .LobbyView {
 	position: relative;
 	background-color: #EDEDED;
 }
 
-#nx .LobbyView .frame {
+#NX .LobbyView .frame {
 	position: absolute;
 	left: 0px;
 	top: 0;
@@ -1689,7 +1689,7 @@
 	right: 0;
 }
 
-#nx .LobbyView .hideOverlay {
+#NX .LobbyView .hideOverlay {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -1698,7 +1698,7 @@
 	display: none;
 }
 
-#nx .LobbyView .options {
+#NX .LobbyView .options {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1708,7 +1708,7 @@
 	-webkit-transition-duration: 300ms;
 }
 
-#nx .LobbyView .btnExit {
+#NX .LobbyView .btnExit {
 	background-repeat: no-repeat no-repeat;
 	position: absolute;
 	top: 0;
@@ -1717,7 +1717,7 @@
 	border: 0px solid;
 }
 
-#nx .LobbyView .btnOptions {
+#NX .LobbyView .btnOptions {
 	background-repeat: no-repeat no-repeat;
 	position: absolute;
 	top: 0;
@@ -1727,21 +1727,21 @@
 	display: none;
 }
 
-#nx .LobbyView .cell {
+#NX .LobbyView .cell {
 	background-position: left middle;
 	background-repeat: no-repeat;
 	width: 40px;
 	height: 50px;
 }
 */
-#nx .ChatView {
+#NX .ChatView {
 	width: 100%;
 	height: 100%;
 	background: #ffffff;
 	position: relative;
 }
 
-#nx .ChatView .scrollPanel.lobbyScroll {
+#NX .ChatView .scrollPanel.lobbyScroll {
 	height: 74px;
 	position: absolute;
 	top: 0;
@@ -1752,11 +1752,11 @@
 	background-repeat: repeat-x;
 }
 
-#nx .ChatView .scrollPanel.lobbyScroll .lobby {
+#NX .ChatView .scrollPanel.lobbyScroll .lobby {
 	padding: 5px 0 0 0;
 }
 
-#nx .ChatView .background {
+#NX .ChatView .background {
 	position: absolute;
 	top: 46px;
 	bottom: 45px;
@@ -1764,7 +1764,7 @@
 	right: 0px;
 }
 
-#nx .ChatView .background .hello {
+#NX .ChatView .background .hello {
 	position: absolute;
 	top: 50%;
 	margin-top: -47px;
@@ -1772,18 +1772,18 @@
 	margin-right: auto;
 }
 
-#nx .avatarBox {
+#NX .avatarBox {
 	float: left;
 }
 
-#nx .avatarBox .ximage {
+#NX .avatarBox .ximage {
 	margin: 5px 7px 0 7px;
 	border-radius: 3px;
 	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
 	background: #fff;
 }
 
-#nx .avatarBox .name {
+#NX .avatarBox .name {
 	font-size: 10px;
 	font-weight: bold;
 	white-space: nowrap;
@@ -1794,28 +1794,28 @@
 	text-align: center;
 }
 
-#nx .ChatView .scrollPanel.lobbyScroll .avatarBox .name {
+#NX .ChatView .scrollPanel.lobbyScroll .avatarBox .name {
 	text-shadow: 0 1px RGBA(255, 255, 255, .3);
 }
 
-#nx .ChatView .scrollPanel.lobbyScroll .btnsPanel {
+#NX .ChatView .scrollPanel.lobbyScroll .btnsPanel {
 	float: right;
 }
 
-#nx .ChatView .scrollPanel.lobbyScroll .btnsPanel div {
+#NX .ChatView .scrollPanel.lobbyScroll .btnsPanel div {
 	float: left;
 }
 
-#nx .ChatView .msgScroll .avatarBox .name {
+#NX .ChatView .msgScroll .avatarBox .name {
 	width: 50px;
 }
 
-#nx .ChatView .msgScroll .avatarBox .ximage {
+#NX .ChatView .msgScroll .avatarBox .ximage {
 	margin: 5px 0 0 0;
 }
 
 /*
-#nx .ChatView .msgScroll {
+#NX .ChatView .msgScroll {
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -1826,27 +1826,27 @@
 	border-top: 1px solid RGBA(255, 255, 255, .1);
 }
 */
-#nx .ChatView .msgScroll .me {
+#NX .ChatView .msgScroll .me {
 	width: 100%;
 	display: table;
 	border: 0px solid #999;
 }
 
-#nx .ChatView .msgScroll .picture {
+#NX .ChatView .msgScroll .picture {
 	margin-top: 10px;
 }
 
-#nx .ChatView .msgScroll .bellowPicture {
+#NX .ChatView .msgScroll .bellowPicture {
 	
 }
 
-#nx .ChatView .msgScroll .notme {
+#NX .ChatView .msgScroll .notme {
 	width: 100%;
 	display: table;
 	border: 0px solid #999;
 }
 
-#nx .ChatView .msgScroll .me .text {
+#NX .ChatView .msgScroll .me .text {
 	float: right;
 	border-radius: 6px;
 	background-color: #BEDAFF;
@@ -1869,7 +1869,7 @@
 	text-overflow: ellipsis;
 }
 
-#nx .ChatView .msgScroll .notme .text {
+#NX .ChatView .msgScroll .notme .text {
 	float: left;
 	border-radius: 6px;
 	background-color: #fff;
@@ -1888,27 +1888,27 @@
 	min-width: 40px;
 }
 
-#nx .ChatView .msgScroll .me.picture .text {
+#NX .ChatView .msgScroll .me.picture .text {
 	margin-right: 10px;
 }
 
-#nx .ChatView .msgScroll .notme.picture .text {
+#NX .ChatView .msgScroll .notme.picture .text {
 	margin-left: 10px;
 }
 
-#nx .ChatView .msgScroll .me .avatarBox {
+#NX .ChatView .msgScroll .me .avatarBox {
 	float: right;
 }
 
-#nx .ChatView .msgScroll .notme .avatarBox {
+#NX .ChatView .msgScroll .notme .avatarBox {
 	float: left;
 }
 
-#nx .ChatView .msgScroll .msgPanel {
+#NX .ChatView .msgScroll .msgPanel {
 	padding-bottom: 10px;
 }
 
-#nx .ChatView .background {
+#NX .ChatView .background {
 	position: absolute;
 	top: 46px;
 	bottom: 45px;
@@ -1916,32 +1916,32 @@
 	right: 0px;
 }
 
-#nx .ChatView .background .ximage {
+#NX .ChatView .background .ximage {
 	position: relative;
 	margin-left: -44px;
 	padding: 10px;
 	left: 50%;
 }
 
-#nx .ChatView .background .hello {
+#NX .ChatView .background .hello {
 	position: absolute;
 	top: 40%;
 	width: 100%;
 	text-align: center;
 }
 
-#nx .avatarBox {
+#NX .avatarBox {
 	float: left;
 }
 
-#nx .avatarBox .ximage {
+#NX .avatarBox .ximage {
 	margin: 5px 7px 0 7px;
 	border-radius: 3px;
 	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
 	background: #fff;
 }
 
-#nx .avatarBox .name {
+#NX .avatarBox .name {
 	font-size: 10px;
 	font-weight: bold;
 	white-space: nowrap;
@@ -1953,7 +1953,7 @@
 }
 
 /*
-#nx .options .wrapper {
+#NX .options .wrapper {
 	backgrocssund-color: #DDD;
 	margin: 20px 10px 20px 20px;
 	border-radius: 6px;
@@ -1961,12 +1961,12 @@
 	padding: 0 20px;
 }
 
-#nx .options .xbutton.Shadow {
+#NX .options .xbutton.Shadow {
 	width: 100%;
 	margin: 20px 0;
 }
 
-#nx .options .boxLbl {
+#NX .options .boxLbl {
 	border: 1px solid #BBB;
 	padding: 8px;
 	border-radius: 2px;
@@ -1979,59 +1979,59 @@
 }
 */
 /*
-#nx.ANDROID .ChatView .inputPanel {
+#NX.ANDROID .ChatView .inputPanel {
 	bottom: auto;
 }
 */
-#nx.ANDROID .LobbyView .ChatView .inputPanel {
+#NX.ANDROID .LobbyView .ChatView .inputPanel {
 	top: 74px;
 	bottom: auto;
 }
 
-#nx.ANDROID .LobbyView .ChatView .scrollPanel.msgScroll {
+#NX.ANDROID .LobbyView .ChatView .scrollPanel.msgScroll {
 	top: 119px;
 }
 
-#nx .options .boxText {
+#NX .options .boxText {
 	margin: -10px 0 30px 0;
 	font-weight: bold;
 	color: #111;
 }
 
-#nx .options .boxText.link {
+#NX .options .boxText.link {
 	font-size: 14px;
 }
 
-#nx .LobbyInviteExternalView  .xlabel.Header {
+#NX .LobbyInviteExternalView  .xlabel.Header {
 	font-size: 15px;
 }
 
-#nx .ProfileView {
+#NX .ProfileView {
 	background-color: #EBEBEB;
 }
 
-#nx .ProfileView .listHeader {
+#NX .ProfileView .listHeader {
 	font-weight: normal;
 }
 
-#nx .ProfileView .btnTxt {
+#NX .ProfileView .btnTxt {
 	padding: 5px 40px;
 }
 
-#nx .ProfileView .avatarPanel {
+#NX .ProfileView .avatarPanel {
 	position: relative;
 }
 
-#nx .ProfileView .avatarPanel .ximage.bg {
+#NX .ProfileView .avatarPanel .ximage.bg {
 	box-shadow: inset 0 1px 4px RGBA(100, 100, 100, .5);
 	-webkit-box-shadow: inset 0 1px 4px RGBA(100, 100, 100, .5);
 }
 
-#nx .ProfileView .avatarPanel .ximage.avatar {
+#NX .ProfileView .avatarPanel .ximage.avatar {
 	margin: -140px 0 0 30px;
 }
 
-#nx .ProfileView .avatarPanel .header {
+#NX .ProfileView .avatarPanel .header {
 	font-size: 1.2em;
 	font-weight: bold;
 	text-shadow: 0 1px 1px #fff;
@@ -2042,13 +2042,13 @@
 	overflow: hidden;
 }
 
-#nx .ProfileView .avatarPanel .circleBtn {
+#NX .ProfileView .avatarPanel .circleBtn {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 }
 
-#nx .ProfileView .avatarPanel .view {
+#NX .ProfileView .avatarPanel .view {
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
@@ -2056,7 +2056,7 @@
 	font-size: 14px
 }
 
-#nx .ProfileView .profileField {
+#NX .ProfileView .profileField {
 	display: inline-block;
 	font-size: 11px;
 	color: #666;
@@ -2069,23 +2069,23 @@
 	min-height: 1em;
 }
 
-#nx .ProfileView .profileField.notSet {
+#NX .ProfileView .profileField.notSet {
 	background-image: url(/images/_icons40.png);
 	background-repeat: no-repeat;
 	background-size: 40px 804px;
 }
 
-#nx.RETINA .ProfileView .profileField.notSet {
+#NX.RETINA .ProfileView .profileField.notSet {
 	background-image: url(/images/_icons40_2.png);
 }
 
-#nx .ProfileView .profileField span {
+#NX .ProfileView .profileField span {
 	font-weight: bold;
 	font-size: 12px;
 	color: #000;
 }
 
-#nx .ProfileView .profileField.namePanel {
+#NX .ProfileView .profileField.namePanel {
 	display: block;
 	text-align: center;
 	font-size: 11px;
@@ -2094,47 +2094,47 @@
 	padding: 0.5em 1em;
 }
 
-#nx .ProfileView .profileField.namePanel span {
+#NX .ProfileView .profileField.namePanel span {
 	font-size: 20px;
 	font-family: "KomikaTextBoldItalic";
 	color: #000;
 }
 
-#nx .ProfileView .profileField.namePanel.notSet {
+#NX .ProfileView .profileField.namePanel.notSet {
 	background-position: 56% -344px;
 	padding: 1em;
 }
 
-#nx .ProfileView .profileField.agePanel {
+#NX .ProfileView .profileField.agePanel {
 	margin-right: 0.5em;
 	min-width: 6em;
 }
 
-#nx .ProfileView .profileField.agePanel.notSet {
+#NX .ProfileView .profileField.agePanel.notSet {
 	background-position: 60% 10px;
 }
 
-#nx .ProfileView .profileField.sexPanel {
+#NX .ProfileView .profileField.sexPanel {
 	margin-left: 0;
 	position: relative;
 	top: 10px;
 	min-width: 5em;
 }
 
-#nx .ProfileView .profileField.sexPanel.notSet {
+#NX .ProfileView .profileField.sexPanel.notSet {
 	background-position: 60% -58px;
 }
 
-#nx .ProfileView .profileField.locPanel {
+#NX .ProfileView .profileField.locPanel {
 	margin: 0.5em 1em 0.5em 3em;
 	min-width: 180px;
 }
 
-#nx .ProfileView .profileField.locPanel.notSet {
+#NX .ProfileView .profileField.locPanel.notSet {
 	background-position: 55% -130px;
 }
 
-#nx .ProfileView .profileField.statusPanel {
+#NX .ProfileView .profileField.statusPanel {
 	font-size: 12px;
 	line-height: 17px;
 	padding: 15px 15px 10px;
@@ -2143,39 +2143,39 @@
 	min-height: 65px;
 }
 
-#nx .ProfileView .lastLogin {
+#NX .ProfileView .lastLogin {
 	margin-left: 15px;
 	font-size: 11px;
 	font-weight: bold;
 	color: #888;
 }
 
-#nx .ProfileView .profileField.statusPanel.notSet {
+#NX .ProfileView .profileField.statusPanel.notSet {
 	background-image: url(/images/_icons80.png);
 	background-repeat: no-repeat;
 	background-position: 63% 45px;
 	background-size: 80px 650px;
 }
 
-#nx.RETINA .ProfileView .profileField.statusPanel.notSet {
+#NX.RETINA .ProfileView .profileField.statusPanel.notSet {
 	background-image: url(/images/_icons80_2.png);
 }
 
-#nx .ProfileView .xlabel.Header {
+#NX .ProfileView .xlabel.Header {
 	margin: 14px 0 4px 0px;
 }
 
-#nx .ProfileView .accountPanel {
+#NX .ProfileView .accountPanel {
 	background-color: #D7B58E;
 	background-image: url(images/texture-wood-mahogany.jpg);
 	background-size: 420px 1050px;
 }
 
-#nx .ProfileView .profilePanel {
+#NX .ProfileView .profilePanel {
 	margin-bottom: 10px;
 }
 
-#nx .ProfileView .accountField {
+#NX .ProfileView .accountField {
 	margin: 11px;
 	padding: 10px;
 	background: #A4643F;
@@ -2191,63 +2191,63 @@
 	background-size: 20px 470px;
 }
 
-#nx.RETINA .ProfileView .accountField {
+#NX.RETINA .ProfileView .accountField {
 	background-image: url(/images/_icons-right_2.png);
 }
 
-#nx .ProfileView .accountField.notSet {
+#NX .ProfileView .accountField.notSet {
 	font-style: oblique;
 }
 
-#nx .ProfileUpdateWrapper {
+#NX .ProfileUpdateWrapper {
 	background-color: #D7B58E;
 	background-image: url(/images/texture-wood-oak.jpg);
 	background-size: 400px 600px;
 }
 
-#nx.RETINA .ProfileUpdateWrapper {
+#NX.RETINA .ProfileUpdateWrapper {
 	background-image: url(/images/texture-wood-oak_2.jpg);
 }
 
-#nx .ProfileUpdateWrapper.accountField {
+#NX .ProfileUpdateWrapper.accountField {
 	background-color: #A65D33;
 	background-image: url(/images/texture-wood-mahogany.jpg);
 	background-size: 400px 600px;
 }
 
-#nx.RETINA .ProfileUpdateWrapper.accountField {
+#NX.RETINA .ProfileUpdateWrapper.accountField {
 	background-image: url(/images/texture-wood-mahogany_2.jpg);
 }
 
-#nx .ProfileUpdateView .titleBar .title {
+#NX .ProfileUpdateView .titleBar .title {
 	font-family: "SanchezRegular";
 	font-size: 14px;
 	padding: 10px;
 	color: #3A3A3A;
 }
 
-#nx .ProfileUpdateWrapper.accountField .titleBar .title {
+#NX .ProfileUpdateWrapper.accountField .titleBar .title {
 	color: #FFFFFF;
 }
 
-#nx .ProfileUpdateView .btnTxt {
+#NX .ProfileUpdateView .btnTxt {
 	width: 160px;
 	margin: 0 auto;
 }
 
-#nx .ProfileUpdateView .btnTxt div.txt {
+#NX .ProfileUpdateView .btnTxt div.txt {
 	font-size: 13px;
 	padding: 8px 0 0 0;
 	text-shadow: 0 -1px 2px RGBA(0, 0, 0, .5);
 	height: 30px;
 }
 
-#nx .ProfileUpdateView .btnTxt.gray div.txt {
+#NX .ProfileUpdateView .btnTxt.gray div.txt {
 	color: #707070;
 	text-shadow: 0 1px 0px RGBA(255, 255, 255, .5);
 }
 
-#nx .ProfileUpdateView .mobileInput {
+#NX .ProfileUpdateView .mobileInput {
 	width: 80%;
 	height: 30px;
 	padding: 5px 10px;
@@ -2260,7 +2260,7 @@
 	-webkit-box-shadow: inset 0 2px 4px #aaa;
 }
 
-#nx .ProfileUpdateWrapper.accountField .mobileInput {
+#NX .ProfileUpdateWrapper.accountField .mobileInput {
 	width: 80%;
 	height: 30px;
 	padding: 3px 10px;
@@ -2274,7 +2274,7 @@
 	-webkit-box-shadow: inset 0 2px 4px #aaa;
 }
 
-#nx .ProfileUpdateWrapper .display .mobileInput {
+#NX .ProfileUpdateWrapper .display .mobileInput {
 	font-size: 20px;
 	font-family: "KomikaTextBoldItalic";
 	text-align: center;
@@ -2282,14 +2282,14 @@
 	margin-bottom: 70px;
 }
 
-#nx .ProfileUpdateWrapper .display .circleBtn {
+#NX .ProfileUpdateWrapper .display .circleBtn {
 	display: inline-block;
 	position: relative;
 	top: 18px;
 }
 
 /*************************************/
-#nx .ProfileUpdateWrapper .gwt-DatePicker {
+#NX .ProfileUpdateWrapper .gwt-DatePicker {
 	background: #fff;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
@@ -2297,40 +2297,40 @@
 	margin: 0 auto 10px;
 }
 
-#nx .ProfileUpdateWrapper .datePickerMonthSelector {
+#NX .ProfileUpdateWrapper .datePickerMonthSelector {
 	width: 100%;
 	height: 40px;
 	background: #E5E5E5;
 	box-shadow: 0 1px 5px #888;
 }
 
-#nx .ProfileUpdateWrapper .datePickerMonthSelector .gwt-ListBox {
+#NX .ProfileUpdateWrapper .datePickerMonthSelector .gwt-ListBox {
 	margin-left: 15px;
 }
 
-#nx .ProfileUpdateWrapper .datePickerDays {
+#NX .ProfileUpdateWrapper .datePickerDays {
 	border-collapse: collapse;
 }
 
-#nx .ProfileUpdateWrapper .datePickerWeekdayLabel {
+#NX .ProfileUpdateWrapper .datePickerWeekdayLabel {
 	font-size: 10px;
 	text-align: center;
 	color: #888;
 	height: 20px;
 }
 
-#nx .ProfileUpdateWrapper .datePickerWeekendLabel {
+#NX .ProfileUpdateWrapper .datePickerWeekendLabel {
 	font-size: 10px;
 	text-align: center;
 	color: #888;
 }
 
-#nx .ProfileUpdateWrapper .datePickerDay.datePickerDayIsFiller {
+#NX .ProfileUpdateWrapper .datePickerDay.datePickerDayIsFiller {
 	background: #E5E5E5;
 	color: #BBB;
 }
 
-#nx .ProfileUpdateWrapper .datePickerDay {
+#NX .ProfileUpdateWrapper .datePickerDay {
 	width: 34px;
 	height: 34px;
 	text-align: center;
@@ -2339,7 +2339,7 @@
 	font-family: "SanchezRegular";
 }
 
-#nx .ProfileUpdateWrapper .datePickerDayIsValue {
+#NX .ProfileUpdateWrapper .datePickerDayIsValue {
 	background-color: #FF4884;
 	background-image: url(/images/_icons40.png);
 	background-size: 40px 804px;
@@ -2350,11 +2350,11 @@
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-#nx.Retina .ProfileUpdateWrapper .datePickerDayIsValue {
+#NX.Retina .ProfileUpdateWrapper .datePickerDayIsValue {
 	background-image: url(/images/_icons40_2.png);
 }
 
-#nx .ProfileUpdateWrapper .gwt-ListBox {
+#NX .ProfileUpdateWrapper .gwt-ListBox {
 	font-weight: bold;
 	color: #888;
 	font-family: "SanchezRegular";
@@ -2362,7 +2362,7 @@
 }
 
 /*************************************/
-#nx .ProfileUpdateWrapper.accountField .mobileInput {
+#NX .ProfileUpdateWrapper.accountField .mobileInput {
 	text-align: left;
 	font-style: normal;
 	margin-top: 80px;
@@ -2370,7 +2370,7 @@
 	font-size: 12px;
 }
 
-#nx .ProfileUpdateWrapper.accountField .label {
+#NX .ProfileUpdateWrapper.accountField .label {
 	width: 90%;
 	margin: 15px 5% 20px 5%;
 	font-size: 11px;
@@ -2380,23 +2380,23 @@
 	line-height: 20px;
 }
 
-#nx .ProfileUpdateWrapper.accountField .mobileInput.newPass {
+#NX .ProfileUpdateWrapper.accountField .mobileInput.newPass {
 	margin-top: 60px;
 }
 
-#nx .ProfileUpdateWrapper.accountField .mobileInput.confirmPass {
+#NX .ProfileUpdateWrapper.accountField .mobileInput.confirmPass {
 	margin-top: 10px;
 	margin-bottom: 50px;
 }
 
-#nx .ProfileUpdateView .sexButtonBar {
+#NX .ProfileUpdateView .sexButtonBar {
 	height: 90px;
 	padding-left: 4px;
 	margin-top: 70px;
 	margin-bottom: 60px;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button {
+#NX .ProfileUpdateView .sexButtonBar .button {
 	background-image: url(/images/_icons80.png);
 	background-size: 80px 650px;
 	background-repeat: no-repeat;
@@ -2405,37 +2405,37 @@
 	display: inline-block;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button.active {
+#NX .ProfileUpdateView .sexButtonBar .button.active {
 	background-image: url(/images/_icons120.png);
 	background-size: 104px 472px;
 	background-repeat: no-repeat;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button.male {
+#NX .ProfileUpdateView .sexButtonBar .button.male {
 	background-position: 4px -568px;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button.female {
+#NX .ProfileUpdateView .sexButtonBar .button.female {
 	background-position: 4px -348px;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button.incognito {
+#NX .ProfileUpdateView .sexButtonBar .button.incognito {
 	background-position: 4px -458px;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button.male.active {
+#NX .ProfileUpdateView .sexButtonBar .button.male.active {
 	background-position: -1px -244px;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button.female.active {
+#NX .ProfileUpdateView .sexButtonBar .button.female.active {
 	background-position: -1px 0;
 }
 
-#nx .ProfileUpdateView .sexButtonBar .button.incognito.active {
+#NX .ProfileUpdateView .sexButtonBar .button.incognito.active {
 	background-position: -1px -122px;
 }
 
-#nx .ProfileUpdateView .statusField .mobileInput {
+#NX .ProfileUpdateView .statusField .mobileInput {
 	margin: 40px 15px 5px;
 	padding-top: 28px;
 	height: 117px;
@@ -2452,7 +2452,7 @@
 	background-size: 100% 25px;
 }
 
-#nx .ProfileUpdateView .statusField .label {
+#NX .ProfileUpdateView .statusField .label {
 	color: #633B0F;
 	font-size: 13px;
 	font-weight: bold;
@@ -2462,21 +2462,21 @@
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-#nx .ProfileUpdateView {
+#NX .ProfileUpdateView {
 	
 }
 
-#nx .ProfileAvatarView {
+#NX .ProfileAvatarView {
 	width: 100%;
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff),
 		color-stop(0.3, #ddd), color-stop(0.4, #ddd), to(#e6e6e6) );
 }
 
-#nx .ProfileAvatarView .blueHeader .rightWidget {
+#NX .ProfileAvatarView .blueHeader .rightWidget {
 	float: right;
 }
 
-#nx .ProfileAvatarView .blueHeader .xswitch {
+#NX .ProfileAvatarView .blueHeader .xswitch {
 	background-image: url(images/switch-sex.png);
 	height: 36px;
 	width: 90px;
@@ -2485,7 +2485,7 @@
 	background-size: 166px 36px;
 }
 
-#nx .ProfileAvatarView .blueHeader .agswitch {
+#NX .ProfileAvatarView .blueHeader .agswitch {
 	position: absolute;
 	right: 0;
 	background-image: url(images/switch-bg.png);
@@ -2495,19 +2495,19 @@
 	margin: 5px 10px 0 10px;
 }
 
-#nx.RETINA .ProfileAvatarView .blueHeader .xswitch {
+#NX.RETINA .ProfileAvatarView .blueHeader .xswitch {
 	background-image: url(images/switch-sex_2.png);
 }
 
-#nx.RETINA .ProfileAvatarView .blueHeader .agswitch {
+#NX.RETINA .ProfileAvatarView .blueHeader .agswitch {
 	background-image: url(images/switch-bg_2.png);
 }
 
-#nx .ProfileAvatarView .blueHeader .xswitch.off {
+#NX .ProfileAvatarView .blueHeader .xswitch.off {
 	background-position: -68px 0;
 }
 
-#nx .ProfileAvatarView .ximage.avatar {
+#NX .ProfileAvatarView .ximage.avatar {
 	border: 3px solid #FFF;
 	border-radius: 5px;
 	box-shadow: 0 2px 2px RGBA(0, 0, 0, .3);
@@ -2515,7 +2515,7 @@
 	margin: 20px auto 20px auto;
 }
 
-#nx .ProfileAvatarView .faces .fc {
+#NX .ProfileAvatarView .faces .fc {
 	float: left;
 	background-color: #FFF;
 	margin: 3px;
@@ -2527,54 +2527,54 @@
 	height: 72px;
 }
 
-#nx .ProfileAvatarView .female.faces .fc .face {
+#NX .ProfileAvatarView .female.faces .fc .face {
 	background-image: url(/images/_avatars/faces-f.png);
 }
 
-#nx .ProfileAvatarView .male.faces .fc .face {
+#NX .ProfileAvatarView .male.faces .fc .face {
 	background-image: url(/images/_avatars/faces-m.png);
 }
 
-#nx.RETINA .ProfileAvatarView .female.faces .fc .face {
+#NX.RETINA .ProfileAvatarView .female.faces .fc .face {
 	background-image: url(/images/_avatars/faces-f_2.png);
 }
 
-#nx.RETINA .ProfileAvatarView .male.faces .fc .face {
+#NX.RETINA .ProfileAvatarView .male.faces .fc .face {
 	background-image: url(/images/_avatars/faces-m_2.png);
 }
 
-#nx .ProfileAvatarView .faces .fc .face {
+#NX .ProfileAvatarView .faces .fc .face {
 	background-color: #E9E9E9;
 	background-size: 70px 622px;
 	width: 70px;
 	height: 62px;
 }
 
-#nx .ProfileAvatarView .faces .fc.nice .face {
+#NX .ProfileAvatarView .faces .fc.nice .face {
 	background-position: 0 0;
 }
 
-#nx .ProfileAvatarView .faces .fc.punk .face {
+#NX .ProfileAvatarView .faces .fc.punk .face {
 	background-position: 0 -70px;
 }
 
-#nx .ProfileAvatarView .faces .fc.nerd .face {
+#NX .ProfileAvatarView .faces .fc.nerd .face {
 	background-position: 0 -140px;
 }
 
-#nx .ProfileAvatarView .faces .fc.smooth .face {
+#NX .ProfileAvatarView .faces .fc.smooth .face {
 	background-position: 0 -210px;
 }
 
-#nx .ProfileAvatarView .faces .fc.rough .face {
+#NX .ProfileAvatarView .faces .fc.rough .face {
 	background-position: 0 -280px;
 }
 
-#nx .ProfileAvatarView .faces .fc.evil .face {
+#NX .ProfileAvatarView .faces .fc.evil .face {
 	background-position: 0 -350px;
 }
 
-#nx .ProfileAvatarView .faces .fc .name {
+#NX .ProfileAvatarView .faces .fc .name {
 	text-transform: capitalize;
 	font-size: 10px;
 	padding: 3px 0 3px 0;
@@ -2587,12 +2587,12 @@
 	background-color: #FFF;
 }
 
-#nx .ProfileAvatarView .colors {
+#NX .ProfileAvatarView .colors {
 	height: 100px;
 	padding: 0 3px;
 }
 
-#nx .ProfileAvatarView .colors .clr {
+#NX .ProfileAvatarView .colors .clr {
 	float: left;
 	margin: 8px;
 	width: 25px;
@@ -2602,7 +2602,7 @@
 	-webkit-box-shadow: 2px 6px 2px RGBA(0, 0, 0, .3);
 }
 
-#nx .ProfileAvatarView .colors .clr div {
+#NX .ProfileAvatarView .colors .clr div {
 	width: 30px;
 	height: 30px;
 	border: 2px solid #FFF;
@@ -2611,7 +2611,7 @@
 	-webkit-box-shadow: inset 0 2px 2px RGBA(0, 0, 0, .3);
 }
 
-#nx .ProfileAvatarView .colors .clr div.checked {
+#NX .ProfileAvatarView .colors .clr div.checked {
 	background-image: url(/images/_icons20.png);
 	background-size: 20px 670px;
 	background-repeat: no-repeat;
@@ -2619,11 +2619,11 @@
 	border: 3px solid #0BC4E6;
 }
 
-#nx.RETINA .ProfileAvatarView .colors .clr div.checked {
+#NX.RETINA .ProfileAvatarView .colors .clr div.checked {
 	background-image: url(/images/_icons20_2.png);
 }
 
-#nx .warning .xlabel.Header {
+#NX .warning .xlabel.Header {
 	color: #4D546E;
 	text-shadow: white 0 1px;
 	margin: 14px 0 14px 0px;
@@ -2635,22 +2635,22 @@
 	line-height: 30px;
 }
 
-#nx .warning .contentPanel {
+#NX .warning .contentPanel {
 	padding: 20px;
 }
 
-#nx .warning.stack .xlabel.Header {
+#NX .warning.stack .xlabel.Header {
 	font-size: 10px;
 	margin: 0;
 	width: 20px;
 	line-height: 10px;
 }
 
-#nx .warning.stack .contentPanel {
+#NX .warning.stack .contentPanel {
 	padding: 3px;
 }
 
-#nx .warning .btnTxt {
+#NX .warning .btnTxt {
 	width: 100%;
 	margin: 20px 0;
 	-webkit-box-sizing: border-box;
@@ -2658,28 +2658,28 @@
 	box-sizing: border-box;
 }
 
-#nx .warning .xpopup {
+#NX .warning .xpopup {
 	background-color: #DDD;
 }
 
-#nx .FriendWrapper {
+#NX .FriendWrapper {
 	background-color: #FFF;
 }
 
-#nx .FriendView {
+#NX .FriendView {
 	height: 100%;
 }
 
-#nx .FriendView .ximage.bg {
+#NX .FriendView .ximage.bg {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
 
-#nx .FriendView .ximage.avatar {
+#NX .FriendView .ximage.avatar {
 	margin: -140px 0 0 30px;
 }
 
-#nx .FriendView .bodyPanel {
+#NX .FriendView .bodyPanel {
 	color: #2C2C2C;
 	white-space: nowrap;
 	font-weight: bold;
@@ -2688,7 +2688,7 @@
 	border-bottom: 1px solid #D4D4D4;
 }
 
-#nx .FriendView .display { /*
+#NX .FriendView .display { /*
 	color: #2C2C2C;
 	white-space: nowrap;
 	font-weight: bold;
@@ -2699,34 +2699,34 @@
 	
 }
 
-#nx .FriendView .avatarPanel {
+#NX .FriendView .avatarPanel {
 	position: relative;
 }
 
-#nx .FriendView .avatarPanel .circleBtn.chat {
+#NX .FriendView .avatarPanel .circleBtn.chat {
 	position: absolute;
 	bottom: 50px;
 	right: 10px;
 }
 
-#nx .FriendView .avatarPanel .circleBtn.addblock {
+#NX .FriendView .avatarPanel .circleBtn.addblock {
 	position: absolute;
 	right: 10px;
 	bottom: 0px;
 }
 
-#nx .FriendView .btnTxt {
+#NX .FriendView .btnTxt {
 	padding: 30px 60px;
 }
 
-#nx .FriendView .asl {
+#NX .FriendView .asl {
 	font-size: 11px;
 	font-weight: normal;
 	color: #888;
 	margin-bottom: 10px;
 }
 
-#nx .FriendView .status {
+#NX .FriendView .status {
 	font-size: 12px;
 	font-weight: normal;
 	color: #444;
@@ -2734,7 +2734,7 @@
 	white-space: normal;
 }
 
-#nx .FriendView .lastLogin {
+#NX .FriendView .lastLogin {
 	font-size: 11px;
 	font-weight: normal;
 	color: #888;
@@ -2743,31 +2743,31 @@
 
 
 /*
-#nx .FriendWrapper {
+#NX .FriendWrapper {
 	background-color: #CCC;
 }
 
-#nx .FriendView .addFriend {
+#NX .FriendView .addFriend {
 	padding: 15px 15px 15px 15px;
 }
 
-#nx .FriendView .btnTxt {
+#NX .FriendView .btnTxt {
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-#nx .FriendView .avatarPanel {
+#NX .FriendView .avatarPanel {
 	height: 100px;
 	border: 0px solid;
 	padding: 10px;
 }
 
-#nx .FriendView .avatarPanel img,.FriendView .avatarPanel div {
+#NX .FriendView .avatarPanel img,.FriendView .avatarPanel div {
 	float: left;
 }
 
-#nx .FriendView .avatarPanel img {
+#NX .FriendView .avatarPanel img {
 	margin: 5px 7px 0 7px;
 	border-radius: 3px;
 	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
@@ -2775,7 +2775,7 @@
 	background: #fff;
 }
 
-#nx .FriendView .avatarPanel .header {
+#NX .FriendView .avatarPanel .header {
 	font-size: 1.2em;
 	font-weight: bold;
 	text-shadow: 0 1px 1px #FFF;
@@ -2786,13 +2786,13 @@
 	overflow: hidden;
 }
 
-#nx .FriendView .bodyPanel {
+#NX .FriendView .bodyPanel {
 	background-image: url(images/white-bg.png);
 	background-repeat: repeat-x;
 	margin-top: -25px;
 }
 
-#nx .FriendView .bodyPanel .firstRow {
+#NX .FriendView .bodyPanel .firstRow {
 	width: 100px;
 	height: 24px;
 	background-image: url(images/white-corner.png);
@@ -2800,19 +2800,19 @@
 	background-position: 33px 0;
 }
 
-#nx .FriendView .bodyPanel .lastRow {
+#NX .FriendView .bodyPanel .lastRow {
 	width: 100%;
 	height: 30px;
 	background-image: url(images/white-bg-bottom.png);
 	background-repeat: repeat-x;
 }
 
-#nx .FriendView .bodyPanel .tablePanel {
+#NX .FriendView .bodyPanel .tablePanel {
 	background-color: #fff;
 	width: 100%;
 }
 
-#nx .FriendView .tablePanel {
+#NX .FriendView .tablePanel {
 	width: 100%;
 	border: 1px solid #fff;
 	background: #f0f0f0;
@@ -2820,11 +2820,11 @@
 	margin: 0px 0 0 0;
 }
 
-#nx .FriendView .tablePanel .KeyValueRow {
+#NX .FriendView .tablePanel .KeyValueRow {
 	display: table-row;
 }
 
-#nx .FriendView .tablePanel .keyLabel {
+#NX .FriendView .tablePanel .keyLabel {
 	display: table-cell;
 	width: 30%;
 	padding: 5px;
@@ -2836,7 +2836,7 @@
 	text-shadow: 0 1px 1px #fff;
 }
 
-#nx .FriendView .tablePanel .valueLabel {
+#NX .FriendView .tablePanel .valueLabel {
 	padding: 15px 25px 15px 5px;
 	border-bottom: 1px solid #F0F0F0;
 	font-weight: bold;
@@ -2848,12 +2848,12 @@
 	overflow: hidden;
 }
 
-#nx .FriendView .bodyPanel .gameWrapper {
+#NX .FriendView .bodyPanel .gameWrapper {
 	background: #fff;
 	padding: 30px 10px 20px;
 }
 
-#nx .FriendView .bodyPanel .gamePanel {
+#NX .FriendView .bodyPanel .gamePanel {
 	border: 1px solid #BBB;
 	background: #F4F4F4;
 	border-radius: 4px;
@@ -2863,20 +2863,20 @@
 	padding: 10px;
 }
 
-#nx .FriendView .buttonsPanel {
+#NX .FriendView .buttonsPanel {
 	padding: 0px 15px 30px 15px;
 }
 
-#nx .FriendAddView {
+#NX .FriendAddView {
 	background-color: #D0D0D0;
 }
 
-#nx .FriendAddView .btnTxt {
+#NX .FriendAddView .btnTxt {
 	padding: 8px 10px 0 10px;
 	width: 120px;
 }
 
-#nx .FriendAddView .bodyPanel {
+#NX .FriendAddView .bodyPanel {
 	background: #FFF;
 	-webkit-box-shadow: 0 0px 15px #999;
 	width: 100%;
@@ -2885,7 +2885,7 @@
 	height: 300px;
 }
 
-#nx .FriendAddView .bodyPanel .titleLabel {
+#NX .FriendAddView .bodyPanel .titleLabel {
 	font-size: 20px;
 	font-weight: bold;
 	position: absolute;
@@ -2893,7 +2893,7 @@
 	top: 20px;
 }
 
-#nx .FriendAddView .bodyPanel .xinput {
+#NX .FriendAddView .bodyPanel .xinput {
 	padding: 10px;
 	box-sizing: border-box;
 	border: 1px solid #AAA;
@@ -2906,17 +2906,17 @@
 	top: 60px;
 }
 
-#nx .FriendAddView .bodyPanel .xinput.default {
+#NX .FriendAddView .bodyPanel .xinput.default {
 	font-style: oblique;
 	color: #CCC;
 }
 
-#nx .FriendAddView .bodyPanel.found .xinput {
+#NX .FriendAddView .bodyPanel.found .xinput {
 	-webkit-box-shadow: inset 0 0px 0px #fff;
 	border: 1px solid #ddd;
 }
 
-#nx .FriendAddView .bodyPanel .linklabel {
+#NX .FriendAddView .bodyPanel .linklabel {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: right;
@@ -2933,24 +2933,24 @@
 	text-decoration: underline;
 }
 
-#nx.RETINA .FriendAddView .bodyPanel .linklabel {
+#NX.RETINA .FriendAddView .bodyPanel .linklabel {
 	background-image: url(images/arrow-right_2.png);
 }
 
-#nx .FriendAddView .bodyPanel .btnFind {
+#NX .FriendAddView .bodyPanel .btnFind {
 	right: 20px;
 	position: absolute;
 	top: -10px;
 }
 
-#nx .FriendAddView .btnFind.add {
+#NX .FriendAddView .btnFind.add {
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#70D83A),
 		color-stop(0.5, #4BAF66), color-stop(0.5, #43A35F), to(#399356) );
 	border-top: 1px solid #27653B;
 	border-bottom: 1px solid #62DC82;
 }
 
-#nx .FriendAddView .bodyPanel .friendFoundPanel {
+#NX .FriendAddView .bodyPanel .friendFoundPanel {
 	top: 120px;
 	border: 1px solid #DDD;
 	position: absolute;
@@ -2962,25 +2962,25 @@
 	padding: 5px 5px 0 5px;
 }
 
-#nx .FriendAddView .bodyPanel .friendFoundPanel .info {
+#NX .FriendAddView .bodyPanel .friendFoundPanel .info {
 	padding: 25px;
 	text-shadow: 0 1px 1px RGBA(255, 255, 255, .8);
 }
 
-#nx .FriendAddView .bodyPanel .friendFoundPanel .ximage {
+#NX .FriendAddView .bodyPanel .friendFoundPanel .ximage {
 	margin: 5px 7px 0 7px;
 	border-radius: 3px;
 	-webkit-box-shadow: 0px 1px 3px RGBA(50, 50, 50, .9);
 	background: #FFF;
 }
 
-#nx .FriendAddView .bodyPanel .friendFoundPanel .name {
+#NX .FriendAddView .bodyPanel .friendFoundPanel .name {
 	font-weight: bold;
 	padding-left: 10px;
 	text-shadow: 0 1px 1px #fff;
 }
 
-#nx .FriendAddView .bodyPanel .friendFoundPanel .more {
+#NX .FriendAddView .bodyPanel .friendFoundPanel .more {
 	font-size: .9em;
 	color: #666;
 	padding-left: 20px;
@@ -2988,7 +2988,7 @@
 	text-shadow: 0 1px 1px #fff;
 }
 */
-#nx .FriendFindWrapper .sherlock {
+#NX .FriendFindWrapper .sherlock {
 	background-image: url(/images/art-search.jpg);
 	width: 100%;
 	height: 130px;
@@ -2997,20 +2997,20 @@
 	border-top-right-radius: 5px;
 }
 
-#nx.RETINA .FriendFindWrapper .sherlock {
+#NX.RETINA .FriendFindWrapper .sherlock {
 	background-image: url(/images/art-search_2.jpg);
 }
 
-#nx .FriendFindView {
+#NX .FriendFindView {
 	background-color: #E9E9E9;
 	height: 400px;
 }
 
-#nx .FriendFindView .btnTxt {
+#NX .FriendFindView .btnTxt {
 	padding: 25px 60px 0 60px;
 }
 
-#nx .FriendFindView .mobileInput {
+#NX .FriendFindView .mobileInput {
 	width: 90%;
 	padding: 10px;
 	margin: 0 0 4px;
@@ -3026,19 +3026,19 @@
 	background-repeat: no-repeat;
 }
 
-#nx.RETINA .FriendFindView .mobileInput {
+#NX.RETINA .FriendFindView .mobileInput {
 	background-image: url(/images/_icons-right_2.png);
 }
 
-#nx .FriendFindView .formPanel td.inputRow {
+#NX .FriendFindView .formPanel td.inputRow {
 	padding: 0 25px;
 }
 
-#nx .FriendFindView .formPanel td.buttonRow { /* padding: 0 40px; */
+#NX .FriendFindView .formPanel td.buttonRow { /* padding: 0 40px; */
 	
 }
 
-#nx .FriendFindView .found {
+#NX .FriendFindView .found {
 	background-image: url(/images/fantastico.png);
 	background-size: 358px 235px;
 	background-repeat: no-repeat;
@@ -3048,31 +3048,31 @@
 	padding: 170px 0 0 0;
 }
 
-#nx.RETINA .FriendFindView .found {
+#NX.RETINA .FriendFindView .found {
 	background-image: url(/images/fantastico_2.png);
 }
 
-#nx .FriendFindView .found .mascot {
+#NX .FriendFindView .found .mascot {
 	
 }
 
-#nx .FriendFindView .not.found {
+#NX .FriendFindView .not.found {
 	background-image: url(/images/wizForgotNotsent.jpg);
 }
 
-#nx.RETINA .FriendFindView .not.found {
+#NX.RETINA .FriendFindView .not.found {
 	background-image: url(/images/wizForgotNotsent_2.jpg);
 }
 
-#nx .FriendFindView .not.found .btnTxt {
+#NX .FriendFindView .not.found .btnTxt {
 	padding: 5px 60px 0 60px;
 }
 
-#nx .FriendFindView .rows .row .title {
+#NX .FriendFindView .rows .row .title {
 	top: 22px;
 }
 
-#nx .HomeView {
+#NX .HomeView {
 	background-color: #E9E9E9;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -3080,27 +3080,27 @@
 	border-bottom-right-radius: 5px;
 }
 
-#nx .blueHeader .ximage.logo {
+#NX .blueHeader .ximage.logo {
 	margin: 8px 0 0 -55px;
 	left: 50%;
 	position: absolute;
 }
 
-#nx .TidbitListWrapper {
+#NX .TidbitListWrapper {
 	background-color: #D7B58E;
 	background-image: url(/images/texture-wood-oak.jpg);
 	background-size: 420px 1050px;
 }
 
-#nx.RETINA .TidbitListWrapper {
+#NX.RETINA .TidbitListWrapper {
 	background-image: url(/images/texture-wood-oak_2.jpg);
 }
 
-#nx .TidbitListWrapper.xx {
+#NX .TidbitListWrapper.xx {
 	background-image: url(/images/trans.png);
 }
 
-#nx .HomeView .tidbit,#nx .TidbitListView .tidbit {
+#NX .HomeView .tidbit,#NX .TidbitListView .tidbit {
 	position: relative;
 	background-image: url(/images/_tidbit.png);
 	background-size: 265px 630px;
@@ -3112,31 +3112,31 @@
 	left: 50%;
 }
 
-#nx.RETINA .HomeView .tidbit,#nx.RETINA .TidbitListView .tidbit {
+#NX.RETINA .HomeView .tidbit,#NX.RETINA .TidbitListView .tidbit {
 	background-image: url(/images/_tidbit_2.png);
 }
 
-#nx .TidbitListView.xx .tidbit {
+#NX .TidbitListView.xx .tidbit {
 	background-image: url(/images/_tidbit_2xx.png);
 }
 
-#nx .TidbitListView.xx.yy .tidbit {
+#NX .TidbitListView.xx.yy .tidbit {
 	background-image: url(/images/trans.png);
 }
 
-#nx .tidbit.peeled {
+#NX .tidbit.peeled {
 	background-position: 0 -160px;;
 }
 
-#nx .tidbit.single {
+#NX .tidbit.single {
 	background-position: 0 -320px;
 }
 
-#nx .tidbit.single.peeled {
+#NX .tidbit.single.peeled {
 	background-position: 0 -480px;
 }
 
-#nx .tidbit .title {
+#NX .tidbit .title {
 	font-family: "SanchezRegular";
 	font-weight: normal;
 	font-size: 14px;
@@ -3149,11 +3149,11 @@
 	background-repeat: no-repeat;
 }
 
-#nx.RETINA .tidbit .title {
+#NX.RETINA .tidbit .title {
 	background-image: url(/images/_icons20_2.png);
 }
 
-#nx .tidbit .ximage {
+#NX .tidbit .ximage {
 	padding: 4px 2px;
 	background-color: #FFF;
 	left: 25px;
@@ -3162,7 +3162,7 @@
 	-webkit-box-shadow: 0 2px 3px RGBA(0, 0, 0, .2);
 }
 
-#nx .tidbit .name {
+#NX .tidbit .name {
 	position: absolute;
 	left: 92px;
 	right: 0;
@@ -3174,38 +3174,38 @@
 	width: 162px;
 }
 
-#nx .tidbit .msg {
+#NX .tidbit .msg {
 	color: #3A3A3A;
 	font-size: 13px;
 }
 
-#nx .tidbit .msg2 {
+#NX .tidbit .msg2 {
 	color: #858183;
 	font-size: 13px;
 	margin-top: 3px;
 }
 
-#nx .tidbit .text {
+#NX .tidbit .text {
 	position: absolute;
 	left: 92px;
 	right: 16px;
 	top: 77px;
 }
 
-#nx .tidbit a {
+#NX .tidbit a {
 	color: #06BEDE;
 }
 
-#nx .mascot.help {
+#NX .mascot.help {
 	display: table;
 	padding: 15px 10px;
 }
 
-#nx .mascot.help .ximage {
+#NX .mascot.help .ximage {
 	display: table-cell;
 }
 
-#nx .mascot.help .msg {
+#NX .mascot.help .msg {
 	padding: 10px 0 0 0;
 	color: #3A3A3A;
 	font-size: 14px;
@@ -3214,8 +3214,8 @@
 	font-family: "SanchezRegular";
 }
 
-/*#nx .HomeView .titlePanel, #nx .chats .titlePanel */
-#nx .listHeader {
+/*#NX .HomeView .titlePanel, #NX .chats .titlePanel */
+#NX .listHeader {
 	font-family: "SanchezRegular";
 	font-size: 14px;
 	text-shadow: 0 -1px 1px RGBA(255, 255, 255, .8);
@@ -3226,11 +3226,11 @@
 	-webkit-box-shadow: 0 1px 2px RGBA(0, 0, 0, .3);
 }
 
-#nx .listHeaderShadow {
+#NX .listHeaderShadow {
 	-webkit-box-shadow: inset 0 2px 2px RGBA(0, 0, 0, .2);
 }
 
-#nx .atitle {
+#NX .atitle {
 	font-size: 14px;
 	text-shadow: 0 -1px 1px RGBA(255, 255, 255, .8);
 	font-weight: bold;
@@ -3238,56 +3238,56 @@
 	color: #3A3A3A;
 }
 
-#nx .gameFeat {
+#NX .gameFeat {
 	background-color: #FFF;
 	padding: 16px;
 }
 
-#nx .gameFeat.pressed {
+#NX .gameFeat.pressed {
 	background-color: #E2FAFE;
 }
 
-#nx .gameFeat.pressed .ximage {
+#NX .gameFeat.pressed .ximage {
 	-webkit-box-shadow: 0 1px 10px RGBA(0, 0, 0, 1);
 }
 
-#nx .gameFeat.pressed .atitle {
+#NX .gameFeat.pressed .atitle {
 	text-shadow: none;
 }
 
-#nx .gameFeat.pressed .company {
+#NX .gameFeat.pressed .company {
 	text-shadow: none;
 	/*color: RGBA(255, 255, 255, 1);*/
 }
 
-#nx .gameFeat.pressed .descr {
+#NX .gameFeat.pressed .descr {
 	text-shadow: none;
 }
 
-#nx .gameFeat.even {
+#NX .gameFeat.even {
 	border-top: 1px solid #E9E9E9;
 	border-bottom: 1px solid #DFDFDF;
 }
 
-#nx .gameFeat .ximage {
+#NX .gameFeat .ximage {
 	margin: 0;
 	padding: 6px;
 	background-color: #FFF;
 	-webkit-box-shadow: 0 1px 10px RGBA(0, 0, 0, .4);
 }
 
-#nx .gameFeat .atitle {
+#NX .gameFeat .atitle {
 	margin: 15px 0 0px 0;
 }
 
-#nx .gameFeat .company {
+#NX .gameFeat .company {
 	margin: 5px 0;
 	color: #858183;
 	text-shadow: 0 1px 1px RGBA(255, 255, 255, .8);
 	font-size: 13px;
 }
 
-#nx .gameFeat .descr {
+#NX .gameFeat .descr {
 	clear: both;
 	margin: 0;
 	color: #3A3A3A;
@@ -3295,71 +3295,71 @@
 	font-size: 13px;
 }
 
-#nx .HomeView .btnTxt {
+#NX .HomeView .btnTxt {
 	padding: 5px 50px 0 50px;
 }
 
-#nx .HomeView .news {
+#NX .HomeView .news {
 	padding: 10px 0 0 0;
 }
 
-#nx .news .rows .row {
+#NX .news .rows .row {
 	height: 85px;
 	background-image: none;
 }
 
-#nx .news .rows .row .title {
+#NX .news .rows .row .title {
 	font-weight: normal;
 	font-size: 13px;
 }
 
-#nx .news .rows .row .titleText {
+#NX .news .rows .row .titleText {
 	min-height: 23px;
 	max-height: 33px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
-#nx .news .rows .row a {
+#NX .news .rows .row a {
 	color: #06BEDE;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-#nx .news .rows .row .btnTxt {
+#NX .news .rows .row .btnTxt {
 	padding: 4px;
 }
 
 /*
-#nx .HomeView .rows .row:first-child,#nx .HomeView .rows .row.pressed:first-child
+#NX .HomeView .rows .row:first-child,#NX .HomeView .rows .row.pressed:first-child
 	{
 	border-top-left-radius: 0 0;
 	border-top-right-radius: 0 0;
 	-webkit-box-shadow: 0px 0 0 #aaa;
 }
 
-#nx .HomeView .rows .row:last-child,#nx .HomeView .rows .row.pressed:last-child
+#NX .HomeView .rows .row:last-child,#NX .HomeView .rows .row.pressed:last-child
 	{
 	border-bottom-left-radius: 0 0;
 	border-bottom-right-radius: 0 0;
 	-webkit-box-shadow: 0px 0 0 #aaa;
 }
 
-#nx .HomeView .rows .row:first-child,#nx .HomeView .rows .row.pressed:first-child
+#NX .HomeView .rows .row:first-child,#NX .HomeView .rows .row.pressed:first-child
 	{
 	border-top-left-radius: 0 0;
 	border-top-right-radius: 0 0;
 	-webkit-box-shadow: 0px 0 0 #aaa;
 }
 
-#nx .chats .rows .row:first-child,#nx .chats .rows .row.pressed:first-child
+#NX .chats .rows .row:first-child,#NX .chats .rows .row.pressed:first-child
 	{
 	border-top-left-radius: 0 0;
 	border-top-right-radius: 0 0;
 	-webkit-box-shadow: 0px 0 0 #aaa;
 }
 
-#nx .chats .rows .row:last-child,#nx .chats .rows .row.pressed:last-child
+#NX .chats .rows .row:last-child,#NX .chats .rows .row.pressed:last-child
 	{
 	border-bottom-left-radius: 0 0;
 	border-bottom-right-radius: 0 0;
@@ -3367,21 +3367,21 @@
 }
 */
 /*
-#nx .xpopupOverlay.IntroView {
+#NX .xpopupOverlay.IntroView {
 	z-index: 1;
 }
 
-#nx .xpopupOverlay.IntroView .xpopup {
+#NX .xpopupOverlay.IntroView .xpopup {
 	background-color: #FFF;
 }
 
-#nx .xpopupOverlay.IntroView .header {
+#NX .xpopupOverlay.IntroView .header {
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#68E8FF),
 		to(#01C0E3) );
 	position: relative;
 }
 
-#nx .xpopupOverlay.IntroView .lblGames {
+#NX .xpopupOverlay.IntroView .lblGames {
 	position: absolute;
 	top: 50px;
 	left: 10px;
@@ -3389,19 +3389,19 @@
 	font-weight: bold;
 }
 
-#nx .xpopupOverlay.IntroView .lblCommunity {
+#NX .xpopupOverlay.IntroView .lblCommunity {
 	color: #FFF;
 	font-weight: bold;
 	margin: 20px 0 5px 10px;
 }
 
-#nx .xpopupOverlay.IntroView .header .ximage {
+#NX .xpopupOverlay.IntroView .header .ximage {
 	margin: -14px 0 0 20px;
 	top: 50%;
 	position: absolute;
 }
 
-#nx .xpopupOverlay.IntroView .header .startBtn {
+#NX .xpopupOverlay.IntroView .header .startBtn {
 	top: 50%;
 	right: 0;
 	color: #FFF;
@@ -3423,21 +3423,21 @@
 	border-bottom-left-radius: 6px;
 }
 
-#nx .xpopupOverlay.IntroView  .gamesView {
+#NX .xpopupOverlay.IntroView  .gamesView {
 	bottom: auto;
 	height: 160px;
 	top: 75px;
 	border: 0px solid;
 }
 
-#nx .xpopupOverlay.IntroView .gamesPanel {
+#NX .xpopupOverlay.IntroView .gamesPanel {
 	background-color: #fff;
 	padding: 10px;
 	border: 0px solid;
 	height: 160px;
 }
 
-#nx .xpopupOverlay.IntroView .tabs {
+#NX .xpopupOverlay.IntroView .tabs {
 	position: absolute;
 	top: 230px;
 	bottom: 0;
@@ -3445,132 +3445,132 @@
 	right: 0;
 }
 
-#nx .xpopupOverlay.IntroView .gamesView .cell {
+#NX .xpopupOverlay.IntroView .gamesView .cell {
 	float: left;
 	margin: 0 10px 0 0;
 }
 
-#nx .xpopupOverlay.IntroView .gamesView .cell .ximage {
+#NX .xpopupOverlay.IntroView .gamesView .cell .ximage {
 	border: 1px solid lightgray;
 	width: 190px;
 	height: 90px;
 }
 
-#nx .xpopupOverlay.IntroView .gamesView .cell .title {
+#NX .xpopupOverlay.IntroView .gamesView .cell .title {
 	font-weight: bold;
 }
 
-#nx .xpopupOverlay.IntroView .gamesView .cell .descr {
+#NX .xpopupOverlay.IntroView .gamesView .cell .descr {
 	font-size: .8em;
 	color: #999;
 	width: 190px;
 }
 
-#nx .xpopupOverlay.IntroView .greenPanel {
+#NX .xpopupOverlay.IntroView .greenPanel {
 	margin: 0;
 	position: relative;
 	background-image: url(images/landing0.jpg);
 	background-repeat: no-repeat;
 }
 
-#nx .xpopupOverlay.IntroView .grayPanel {
+#NX .xpopupOverlay.IntroView .grayPanel {
 	margin: 3px 0 0 0;
 	position: relative;
 	background-image: url(images/landing1.jpg);
 	background-repeat: no-repeat;
 }
 
-#nx .xpopupOverlay.IntroView .orangePanel {
+#NX .xpopupOverlay.IntroView .orangePanel {
 	margin: 3px 0 3px 0;
 	position: relative;
 	background-image: url(images/landing2.jpg);
 	background-repeat: no-repeat;
 }
 
-#nx.RETINA .xpopupOverlay.IntroView .greenPanel {
+#NX.RETINA .xpopupOverlay.IntroView .greenPanel {
 	background-image: url(images/landing0_2.jpg);
 }
 
-#nx.RETINA .xpopupOverlay.IntroView .grayPanel {
+#NX.RETINA .xpopupOverlay.IntroView .grayPanel {
 	background-image: url(images/landing1_2.jpg);
 }
 
-#nx.RETINA .xpopupOverlay.IntroView .orangePanel {
+#NX.RETINA .xpopupOverlay.IntroView .orangePanel {
 	background-image: url(images/landing2_2.jpg);
 }
 
-#nx.RETINA.ANDROID .xpopupOverlay.IntroView .greenPanel {
+#NX.RETINA.ANDROID .xpopupOverlay.IntroView .greenPanel {
 	background-image: url(images/landing0a.jpg);
 }
 
-#nx.RETINA.ANDROID .xpopupOverlay.IntroView .grayPanel {
+#NX.RETINA.ANDROID .xpopupOverlay.IntroView .grayPanel {
 	background-image: url(images/landing1a.jpg);
 }
 
-#nx.RETINA.ANDROID .xpopupOverlay.IntroView .orangePanel {
+#NX.RETINA.ANDROID .xpopupOverlay.IntroView .orangePanel {
 	background-image: url(images/landing2a.jpg);
 }
 
-#nx .xpopupOverlay.IntroView .selectionPanel {
+#NX .xpopupOverlay.IntroView .selectionPanel {
 	background-color: #35D4F1;
 }
 
-#nx .xpopupOverlay.IntroView .selectionPanel {
+#NX .xpopupOverlay.IntroView .selectionPanel {
 	position: absolute;
 	left: 0;
 	right: 0;
 }
 
-#nx .xpopupOverlay.IntroView .selectionPanel .selectionInner {
+#NX .xpopupOverlay.IntroView .selectionPanel .selectionInner {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
 
-#nx .xpopupOverlay.IntroView .selectionPanel.green .selectionInner .innerTitle
+#NX .xpopupOverlay.IntroView .selectionPanel.green .selectionInner .innerTitle
 	{
 	background-image: url(images/introLeftGames.png);
 }
 
-#nx .xpopupOverlay.IntroView .selectionPanel.gray .selectionInner .innerTitle
+#NX .xpopupOverlay.IntroView .selectionPanel.gray .selectionInner .innerTitle
 	{
 	background-image: url(images/introLeftCommunity.png);
 }
 
-#nx .xpopupOverlay.IntroView .selectionPanel.orange .selectionInner .innerTitle
+#NX .xpopupOverlay.IntroView .selectionPanel.orange .selectionInner .innerTitle
 	{
 	background-image: url(images/introLeftFriends.png);
 }
 
-#nx .xpopupOverlay.IntroView .selectionPanel .selectionInner .innerTitle
+#NX .xpopupOverlay.IntroView .selectionPanel .selectionInner .innerTitle
 	{
 	background-color: #29A9C2;
 	background-size: 40px 200px;
 }
 
-#nx.RETINA .xpopupOverlay.IntroView .selectionPanel.green .selectionInner .innerTitle
+#NX.RETINA .xpopupOverlay.IntroView .selectionPanel.green .selectionInner .innerTitle
 	{
 	background-image: url(images/introLeftGames_2.png);
 }
 
-#nx.RETINA .xpopupOverlay.IntroView .selectionPanel.gray .selectionInner .innerTitle
+#NX.RETINA .xpopupOverlay.IntroView .selectionPanel.gray .selectionInner .innerTitle
 	{
 	background-image: url(images/introLeftCommunity_2.png);
 }
 
-#nx.RETINA .xpopupOverlay.IntroView .selectionPanel.orange .selectionInner .innerTitle
+#NX.RETINA .xpopupOverlay.IntroView .selectionPanel.orange .selectionInner .innerTitle
 	{
 	background-image: url(images/introLeftFriends_2.png);
 }
 
-#nx .xpopupOverlay.IntroView .selectionInner .innerTitle {
+#NX .xpopupOverlay.IntroView .selectionInner .innerTitle {
 	background-repeat: no-repeat;
 	width: 40px;
 	height: 100%;
 	float: left;
 }
 
-#nx .xpopupOverlay.IntroView .selectionInner .innerContent {
+#NX .xpopupOverlay.IntroView .selectionInner .innerContent {
 	top: 10px;
 	right: 0;
 	bottom: 0;
@@ -3579,24 +3579,24 @@
 	position: absolute;
 }
 
-#nx .xpopupOverlay.IntroView .scrollPanel .rows {
+#NX .xpopupOverlay.IntroView .scrollPanel .rows {
 }
 
-#nx .xpopupOverlay.IntroView .scrollPanel {
+#NX .xpopupOverlay.IntroView .scrollPanel {
 	background-color: #F0F0F0;
 }
 
-#nx .xpopupOverlay.IntroView .scrollPanel .gameContent {
+#NX .xpopupOverlay.IntroView .scrollPanel .gameContent {
 	padding: 20px;
 }
 
-#nx .xpopupOverlay.IntroView .scrollPanel .gameContent .ximage {
+#NX .xpopupOverlay.IntroView .scrollPanel .gameContent .ximage {
 	width: 200px;
 	height: 120px;
 	margin-left: 10px;
 }
 
-#nx .xpopupOverlay.IntroView .scrollPanel .gameContent .title {
+#NX .xpopupOverlay.IntroView .scrollPanel .gameContent .title {
 	white-space: nowrap;
 	font-size: 20px;
 	font-weight: bold;
@@ -3604,7 +3604,7 @@
 	margin: 20px 0 0 0;
 }
 
-#nx .xpopupOverlay.IntroView .scrollPanel .gameContent .descr {
+#NX .xpopupOverlay.IntroView .scrollPanel .gameContent .descr {
 	font-size: 12px;
 	text-shadow: 0 1px 1px #FFF;
 	color: #4F5459;
@@ -3617,14 +3617,14 @@
 	margin: 20px 0;
 }
 
-#nx .IntroView .scrollPanel .cell {
+#NX .IntroView .scrollPanel .cell {
 	float: left;
 	width: 115px;
 	height: 130px;
 	text-align: center;
 }
 
-#nx .IntroView .scrollPanel .cell.pressed {
+#NX .IntroView .scrollPanel .cell.pressed {
 	border-top: 0 solid #1991EF;
 	border-bottom: 0 solid #004AB5;
 	background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#0087ef),
@@ -3634,7 +3634,7 @@
 	-webkit-border-radius: 4px;
 }
 
-#nx .IntroView .scrollPanel .cell .ximage {
+#NX .IntroView .scrollPanel .cell .ximage {
 	-webkit-box-shadow: 0 1px 2px #222;
 	width: 100px;
 	height: 100px;
@@ -3644,7 +3644,7 @@
 	background-color: #FFF;
 }
 
-#nx .IntroView .scrollPanel .cell .name {
+#NX .IntroView .scrollPanel .cell .name {
 	width: 90px;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -3656,15 +3656,15 @@
 	text-shadow: 0 1px 1px #FFF;
 }
 */
-#nx .optionPopup {
+#NX .optionPopup {
 	background: RGBA(0, 0, 0, 0);
 }
 
-#nx .optionPopup .xpopup {
+#NX .optionPopup .xpopup {
 	background: RGBA(0, 0, 0, 0);
 }
 
-#nx .optionPopup .xpopup .btns {
+#NX .optionPopup .xpopup .btns {
 	position: absolute;
 	width: 187px;
 	height: 89px;
@@ -3674,11 +3674,11 @@
 	background-size: 187px 89px;
 }
 
-#nx.RETINA .optionPopup .xpopup .btns {
+#NX.RETINA .optionPopup .xpopup .btns {
 	background-image: url(/images/friend-options_2.png);
 }
 
-#nx .optionPopup .xpopup .btns .optionText {
+#NX .optionPopup .xpopup .btns .optionText {
 	position: relative;
 	text-shadow: 0 -1px 0 RGBA(0, 149, 175, .9);
 	color: white;
@@ -3693,47 +3693,47 @@
 	background-size: 80px 650px;
 }
 
-#nx.RETINA .optionPopup .xpopup .btns .optionText {
+#NX.RETINA .optionPopup .xpopup .btns .optionText {
 	background-image: url(/images/_icons80_2.png);
 }
 
-#nx.RETINA .optionPopup .xpopup .btns .optionText.pressed {
+#NX.RETINA .optionPopup .xpopup .btns .optionText.pressed {
 	
 }
 
-#nx .optionPopup .xpopup .btns .optionText.btnFriend {
+#NX .optionPopup .xpopup .btns .optionText.btnFriend {
 	float: left;
 	background-position: 10px -35px;
 }
 
-#nx .optionPopup .xpopup .btns .optionText.btnUnfriend {
+#NX .optionPopup .xpopup .btns .optionText.btnUnfriend {
 	float: left;
 	background-position: 10px -157px;
 }
 
-#nx .optionPopup .xpopup .btns .optionText.btnBlock {
+#NX .optionPopup .xpopup .btns .optionText.btnBlock {
 	float: right;
 	margin: 5px 18px 0 5px;
 	background-position: 16px -97px;
 }
 
-#nx .optionPopup .xpopup .btns .optionText .text {
+#NX .optionPopup .xpopup .btns .optionText .text {
 	position: absolute;
 	bottom: 5px;
 	width: 100%;
 	text-align: center;
 }
 
-#nx .blackPopup {
+#NX .blackPopup {
 	background: RGBA(0, 0, 0, 0);
 }
 
-#nx .blackPopup .xpopup .circleBtn {
+#NX .blackPopup .xpopup .circleBtn {
 	position: absolute;
 	right: 25px;
 }
 
-#nx .blackPopup .xpopup {
+#NX .blackPopup .xpopup {
 	padding: 20px;
 	background-color: RGBA(0, 0, 0, .8);
 	-webkit-border-radius: 0;
@@ -3742,18 +3742,18 @@
 	box-shadow: RGBA(0, 0, 0, 0) 0 0 0;
 }
 
-#nx_notification {
+#NX_notification {
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 }
 
-#nx_notification .notifTable {
+#NX_notification .notifTable {
 	position: relative;
 }
 
-#nx_notification .title {
+#NX_notification .title {
 	position: absolute;
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DBF8FF),
 		color-stop(0.5, #C4F4FE), color-stop(0.5, #AAEFFE), to(#98ECFE) );
@@ -3765,7 +3765,7 @@
 	-webkit-box-shadow: 0 1px 2px RGBA(0, 0, 0, .4);
 }
 
-#nx_notification .title .titleText {
+#NX_notification .title .titleText {
 	font-family: "SanchezRegular";
 	font-size: 14px;
 	padding: 3px 0 0 65px;
@@ -3773,7 +3773,7 @@
 	text-shadow: 1px 1px RGBA(255, 255, 255, 1);
 }
 
-#nx_notification .ximage {
+#NX_notification .ximage {
 	position: absolute;
 	-webkit-border-radius: 5em;
 	border: 3px solid white;
@@ -3781,14 +3781,14 @@
 	margin: -10px 0 0 5px;
 }
 
-#nx .build {
+#NX .build {
 	font-family: "SanchezRegular";
 	font-size: 12px;
 	padding: 10px;
 	color: #DDD;
 }
 
-#nx .blackPopup .label {
+#NX .blackPopup .label {
 	color: #FFF;
 	text-shadow: RGBA(0, 0, 0, 1) 0 2px;
 	font-family: "SanchezRegular";
@@ -3800,30 +3800,30 @@
 	text-align: center;
 }
 
-#nx .blackPopup .label .code {
+#NX .blackPopup .label .code {
 	font-size: 12px;
 }
 
-#nx .blackPopup .label .code .small {
+#NX .blackPopup .label .code .small {
 	font-size: 10px;
 }
 
-#nx .blackPopup.dbg .warning .contentPanel {
+#NX .blackPopup.dbg .warning .contentPanel {
 	padding: 0;
 }
 
-#nx .blackPopup.dbg .label {
+#NX .blackPopup.dbg .label {
 	font-size: 12px;
 	margin: 0;
 	top: 10px;
 	text-align: left;
 }
 
-#nx .blackPopup.dbg .xpopup .circleBtn {
+#NX .blackPopup.dbg .xpopup .circleBtn {
 	display: none;
 }
 
-#nx .blackPopup.console .label {
+#NX .blackPopup.console .label {
 	font-size: 12px;
 	margin: 0;
 	top: 10px;
@@ -3831,46 +3831,46 @@
 	position: static;
 }
 
-#nx .blackPopup.console .btnTxt {
+#NX .blackPopup.console .btnTxt {
 	padding: 10px 50px;
 }
 
-#nx .anchor {
+#NX .anchor {
 	text-decoration: none;
 }
 
-#nx .SignView {
+#NX .SignView {
 	background-color: #E9E9E9;
 	z-index: 22222;
 }
 
-#nx .SignView .scrollPanel {
+#NX .SignView .scrollPanel {
 	top: 47px;
 	z-index: -1;
 }
 
-#nx.ANDROID .SignView .scrollPanel { /*
+#NX.ANDROID .SignView .scrollPanel { /*
 	top: -20px;	
 	position: relative;
 	*/
 	top: 85px;
 }
 
-#nx .SignView .forgotpass {
+#NX .SignView .forgotpass {
 	width: 80%;
 	padding: 20px 0;
 	margin-left: 7%;
 	text-align: left;
 }
 
-#nx .SignView .forgotpass a {
+#NX .SignView .forgotpass a {
 	font-weight: bold;
 	color: #4C536D;
 	text-shadow: 0 1px 0px RGBA(255, 255, 255, .5);
 	text-decoration: underline;
 }
 
-#nx .SignView .header {
+#NX .SignView .header {
 	height: 47px;
 	background-color: #01C0E3;
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#68E8FF),
@@ -3879,23 +3879,23 @@
 	-webkit-box-shadow: 0 1px 2px RGBA(0, 0, 0, .4);
 }
 
-#nx .SignView .header .ximage {
+#NX .SignView .header .ximage {
 	float: left;
 	margin: 8px 0 0 0;
 }
 
-#nx .SignView .header .ximage.logo {
+#NX .SignView .header .ximage.logo {
 	margin: 11px 0 0 10px;
 }
 
-#nx .SignView .header .title {
+#NX .SignView .header .title {
 	float: left;
 	font-family: "SanchezRegular";
 	padding: 13px;
 	color: #016D8C;
 }
 
-#nx .SignView.ForgotPassword .header .title {
+#NX .SignView.ForgotPassword .header .title {
 	background-image: url(/images/_icons20.png);
 	background-size: 20px 670px;
 	background-position: 0 -35px;
@@ -3904,19 +3904,19 @@
 	margin-left: 10px;
 }
 
-#nx.RETINA .SignView.ForgotPassword .header .title {
+#NX.RETINA .SignView.ForgotPassword .header .title {
 	background-image: url(/images/_icons20_2.png);
 }
 
-#nx .SignView .header .rightWidget {
+#NX .SignView .header .rightWidget {
 	float: right;
 }
 
-#nx .SignView .header .circleBtn {
+#NX .SignView .header .circleBtn {
 	margin-left: 10px;
 }
 
-#nx .SignView .footer {
+#NX .SignView .footer {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -3926,15 +3926,15 @@
 	padding-top: 2px;
 }
 
-#nx.ANDROID .SignView .footer {
+#NX.ANDROID .SignView .footer {
 	position: relative;
 }
 
-#nx.LANDSCAPE .SignView .footer {
+#NX.LANDSCAPE .SignView .footer {
 	display: none;
 }
 
-#nx .SignView .footer .circleBtn {
+#NX .SignView .footer .circleBtn {
 	position: absolute;
 	color: #3A3A3A;
 	white-space: nowrap;
@@ -3943,36 +3943,36 @@
 	color: #858183;
 }
 
-#nx .SignView .footer .circleBtn.pass {
+#NX .SignView .footer .circleBtn.pass {
 	left: 40px;
 }
 
-#nx .SignView .footer .circleBtn.contact {
+#NX .SignView .footer .circleBtn.contact {
 	left: 50%;
 	margin-left: -6px;
 }
 
-#nx .SignView .footer .circleBtn.terms {
+#NX .SignView .footer .circleBtn.terms {
 	right: 10px;
 }
 
-#nx .SignView .footer .circleBtn.pass div {
+#NX .SignView .footer .circleBtn.pass div {
 	margin: 30px 0 0 -35px;
 }
 
-#nx .SignView .footer .circleBtn.contact div {
+#NX .SignView .footer .circleBtn.contact div {
 	margin: 30px 0 0 -15px;
 }
 
-#nx .SignView .footer .circleBtn.terms div {
+#NX .SignView .footer .circleBtn.terms div {
 	margin: 30px 0 0 -3px;
 }
 
-#nx .SignView .loading {
+#NX .SignView .loading {
 	background-color: RGBA(190, 190, 190, .3);
 }
 
-#nx .SignView .loading .mobileInput,#nx .SignView .loading .mobileInput.ok
+#NX .SignView .loading .mobileInput,#NX .SignView .loading .mobileInput.ok
 	{
 	background-image: url(/images/loading3.gif);
 	background-size: 23px 16px;
@@ -3980,36 +3980,36 @@
 	background-position: center right;
 }
 
-#nx .SignView .formPanel {
+#NX .SignView .formPanel {
 	text-align: left;
 	padding: 0 0;
 }
 
-#nx .SignView .formPanel td.inputRow {
+#NX .SignView .formPanel td.inputRow {
 	padding: 0 50px;
 }
 
-#nx .SignView.NewDisplay .formPanel td.inputRow {
+#NX .SignView.NewDisplay .formPanel td.inputRow {
 	padding: 0 0;
 }
 
-#nx .SignView .formPanel td.buttonRow {
+#NX .SignView .formPanel td.buttonRow {
 	padding: 0 80px;
 }
 
-#nx .SignView.NewPassword .formPanel td.buttonRow {
+#NX .SignView.NewPassword .formPanel td.buttonRow {
 	padding: 0 70px;
 }
 
-#nx .SignView .lblPanel {
+#NX .SignView .lblPanel {
 	height: 40px;
 }
 
-#nx .SignView .lblPanel .mascot {
+#NX .SignView .lblPanel .mascot {
 	margin: 2px 0 0 -33px
 }
 
-#nx .SignView .lbl {
+#NX .SignView .lbl {
 	margin: 10px 0 10px 5px;
 	font-family: "SanchezRegular";
 	color: #3A3A3A;
@@ -4019,7 +4019,7 @@
 	float: left;
 }
 
-#nx .SignView .lbl .small {
+#NX .SignView .lbl .small {
 	font-family: "SanchezRegular";
 	color: #3A3A3A;
 	font-size: 12px;
@@ -4027,78 +4027,78 @@
 	text-shadow: 0 1px 0 RGBA(255, 255, 255, .8);
 }
 
-#nx .SignView.SignViewTerms .scrollPanel {
+#NX .SignView.SignViewTerms .scrollPanel {
 	
 }
 
-#nx .SignView.SignViewTerms .lbl {
+#NX .SignView.SignViewTerms .lbl {
 	margin: 0;
 }
 
-#nx .SignViewTerms .lbl div {
+#NX .SignViewTerms .lbl div {
 	font-family: serif;
 }
 
-#nx .SignViewTerms .lbl span.hh {
+#NX .SignViewTerms .lbl span.hh {
 	font-weight: bold;
 	line-height: 30px;
 }
 
-#nx .SignViewTerms .lbl span.h {
+#NX .SignViewTerms .lbl span.h {
 	font-weight: bold;
 	line-height: 30px;
 }
 
-#nx .smallLabel {
+#NX .smallLabel {
 	color: #858183;
 	font-size: 12px;
 	text-shadow: 0 1px 0 RGBA(255, 255, 255, .8);
 	margin: 10px;
 }
 
-#nx .smallLabel.dark {
+#NX .smallLabel.dark {
 	color: #474747;
 }
 
-#nx .smallLabel .strong {
+#NX .smallLabel .strong {
 	color: #3A3A3A;
 	font-weight: bold;
 	padding-bottom: 5px;
 }
 
-#nx .smallLabel .red {
+#NX .smallLabel .red {
 	color: #F32A4E;
 	font-weight: bold;
 	padding-bottom: 5px;
 }
 
-#nx .SignView .lbl .red {
+#NX .SignView .lbl .red {
 	color: #F3274C;
 	font-weight: bold;
 }
 
-#nx .SignView .lbl .title {
+#NX .SignView .lbl .title {
 	color: #3A3A3A;
 	display: inline;
 	font-weight: bold;
 }
 
-#nx .SignView .lblPanel .ximage {
+#NX .SignView .lblPanel .ximage {
 	float: left;
 }
 
-#nx .SignView.NewAvatar .lbl {
+#NX .SignView.NewAvatar .lbl {
 	width: 100%;
 	text-align: center;
 	margin: 19px 0 14px 0;
 }
 
-#nx .SignView.NewAvatar .faces {
+#NX .SignView.NewAvatar .faces {
 	display: table;
 	padding: 0 0 0 13px;
 }
 
-#nx .SignView.NewAvatar .faces .fc {
+#NX .SignView.NewAvatar .faces .fc {
 	float: left;
 	background-color: #FFF;
 	margin: 3px;
@@ -4109,66 +4109,66 @@
 	height: 87px;
 }
 
-#nx .SignView.NewAvatar .female.faces .fc .face {
+#NX .SignView.NewAvatar .female.faces .fc .face {
 	background-image: url(/images/_avatars/faces-f.png);
 }
 
-#nx .SignView.NewAvatar .male.faces .fc .face {
+#NX .SignView.NewAvatar .male.faces .fc .face {
 	background-image: url(/images/_avatars/faces-m.png);
 }
 
-#nx.RETINA .SignView.NewAvatar .female.faces .fc .face {
+#NX.RETINA .SignView.NewAvatar .female.faces .fc .face {
 	background-image: url(/images/_avatars/faces-f_2.png);
 }
 
-#nx.RETINA .SignView.NewAvatar .male.faces .fc .face {
+#NX.RETINA .SignView.NewAvatar .male.faces .fc .face {
 	background-image: url(/images/_avatars/faces-m_2.png);
 }
 
-#nx .SignView.NewAvatar .faces .fc .face {
+#NX .SignView.NewAvatar .faces .fc .face {
 	background-color: #E9E9E9;
 	background-size: 84px 746px;
 	width: 84px;
 	height: 74px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.nice .face {
+#NX .SignView.NewAvatar .faces .fc.nice .face {
 	background-position: 0 0;
 }
 
-#nx .SignView.NewAvatar .faces .fc.punk .face {
+#NX .SignView.NewAvatar .faces .fc.punk .face {
 	background-position: 0 -84px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.nerd .face {
+#NX .SignView.NewAvatar .faces .fc.nerd .face {
 	background-position: 0 -168px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.smooth .face {
+#NX .SignView.NewAvatar .faces .fc.smooth .face {
 	background-position: 0 -252px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.rough .face {
+#NX .SignView.NewAvatar .faces .fc.rough .face {
 	background-position: 0 -336px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.evil .face {
+#NX .SignView.NewAvatar .faces .fc.evil .face {
 	background-position: 0 -420px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.manic .face {
+#NX .SignView.NewAvatar .faces .fc.manic .face {
 	background-position: 0 -504px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.sleepy .face {
+#NX .SignView.NewAvatar .faces .fc.sleepy .face {
 	background-position: 0 -588px;
 }
 
-#nx .SignView.NewAvatar .faces .fc.phat .face {
+#NX .SignView.NewAvatar .faces .fc.phat .face {
 	background-position: 0 -672px;
 }
 
-#nx .SignView.NewAvatar .faces .fc .name {
+#NX .SignView.NewAvatar .faces .fc .name {
 	text-transform: capitalize;
 	font-size: 12px;
 	padding: 3px 0 0 0;
@@ -4181,23 +4181,23 @@
 	background-color: #FFF;
 }
 
-#nx .SignView.NewAvatarColor .btnTxt.btnSubmit {
+#NX .SignView.NewAvatarColor .btnTxt.btnSubmit {
 	padding: 8px 30px;
 }
 
-#nx .SignView.NewAvatarColor .lbl {
+#NX .SignView.NewAvatarColor .lbl {
 	width: 100%;
 	text-align: center;
 	margin: 19px 0 14px 0;
 }
 
-#nx .SignView.NewAvatarColor .colors {
+#NX .SignView.NewAvatarColor .colors {
 	height: 100px;
 	padding: 0 25px;
 	margin-top: 150px;
 }
 
-#nx .SignView.NewAvatarColor .colors .clr {
+#NX .SignView.NewAvatarColor .colors .clr {
 	float: left;
 	margin: 7px;
 	width: 30px;
@@ -4206,7 +4206,7 @@
 	-webkit-box-shadow: 2px 6px 2px RGBA(0, 0, 0, .3);
 }
 
-#nx .SignView.NewAvatarColor .colors .clr div {
+#NX .SignView.NewAvatarColor .colors .clr div {
 	width: 30px;
 	height: 30px;
 	border: 2px solid #FFF;
@@ -4214,7 +4214,7 @@
 	-webkit-box-shadow: inset 0 2px 2px RGBA(0, 0, 0, .3);
 }
 
-#nx .SignView.NewAvatarColor .colors .clr div.checked {
+#NX .SignView.NewAvatarColor .colors .clr div.checked {
 	background-image: url(/images/_icons20.png);
 	background-size: 20px 670px;
 	background-repeat: no-repeat;
@@ -4222,11 +4222,11 @@
 	border: 3px solid #0BC4E6;
 }
 
-#nx.RETINA .SignView.NewAvatarColor .colors .clr div.checked {
+#NX.RETINA .SignView.NewAvatarColor .colors .clr div.checked {
 	background-image: url(/images/_icons20_2.png);
 }
 
-#nx .SignView.NewAvatarColor .ximage.avatar {
+#NX .SignView.NewAvatarColor .ximage.avatar {
 	border: 3px solid #FFF;
 	border-radius: 5px;
 	-webkit-box-shadow: 0 2px 2px RGBA(0, 0, 0, .3);
@@ -4238,7 +4238,7 @@
 	-webkit-transition-duration: 300ms;
 }
 
-#nx .SignView.Landing .body {
+#NX .SignView.Landing .body {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -4246,7 +4246,7 @@
 	left: 0;
 }
 
-#nx .SignView.Landing .bg {
+#NX .SignView.Landing .bg {
 	background-image: url(/images/_landing/landing-bg.jpg);
 	background-repeat: no-repeat;
 	background-position-x: center;
@@ -4260,11 +4260,11 @@
 	z-index: 1;
 }
 
-#nx.RETINA .SignView.Landing .bg {
+#NX.RETINA .SignView.Landing .bg {
 	background-image: url(/images/_landing/landing-bg_2.jpg);
 }
 
-#nx .SignView.Landing .btnTxt {
+#NX .SignView.Landing .btnTxt {
 	padding: 8px 100px 0 100px;
 	margin-top: 310px;
 	z-index: 3;
@@ -4272,40 +4272,40 @@
 	bottom: 10%;
 }
 
-#nx .SignView.Landing .balloons {
+#NX .SignView.Landing .balloons {
 	z-index: 2;
 	position: absolute;
 	top: 0;
 	left: 50%;
 }
 
-#nx .SignView.Landing .sky {
+#NX .SignView.Landing .sky {
 	z-index: 0;
 	position: absolute;
 	top: 0;
 	left: 50%;
 }
 
-#nx .SignView .btnTxt {
+#NX .SignView .btnTxt {
 	text-align: center;
 	padding: 8px 4px 0 4px;
 }
 
-#nx .SignView .btnTxt.gray {
+#NX .SignView .btnTxt.gray {
 	margin-left: 15px;
 }
 
-#nx .SignView .mobileInput.defaultText {
+#NX .SignView .mobileInput.defaultText {
 	color: #AAA;
 	font-style: oblique;
 	font-weight: normal;
 }
 
-#nx .SignView .btnTxt.btnSubmit {
+#NX .SignView .btnTxt.btnSubmit {
 	margin-top: 0;
 }
 
-#nx .SignView .mobileInput {
+#NX .SignView .mobileInput {
 	width: 90%;
 	padding: 10px;
 	margin: 0 0 4px;
@@ -4317,7 +4317,7 @@
 	-webkit-box-shadow: inset 0 2px 2px #aaa;
 }
 
-#nx .SignView .mobileInput.ok {
+#NX .SignView .mobileInput.ok {
 	background-color: #E2FEE7;
 	background-image: url(/images/_icons-right.png);
 	background-repeat: no-repeat;
@@ -4325,15 +4325,15 @@
 	background-size: 20px 470px;
 }
 
-#nx.RETINA .SignView .mobileInput.ok {
+#NX.RETINA .SignView .mobileInput.ok {
 	background-image: url(/images/_icons-right_2.png);
 }
 
-#nx .SignView .mobileInput.error {
+#NX .SignView .mobileInput.error {
 	background-color: #FFE3EA;
 }
 
-#nx .SignView .avatarWrapper {
+#NX .SignView .avatarWrapper {
 	position: relative;
 	height: 200px;
 	margin: 20px 0;
@@ -4341,13 +4341,13 @@
 	border-radius: 4px;
 }
 
-#nx .SignView .avatarWrapper .imagesPanel {
+#NX .SignView .avatarWrapper .imagesPanel {
 	height: 700px;
 	background-color: #FFF;
 	border-radius: 4px;
 }
 
-#nx .SignView .imagesPanel .ximage {
+#NX .SignView .imagesPanel .ximage {
 	float: left;
 	margin: 8px;
 	border-radius: 2px;
@@ -4355,17 +4355,17 @@
 	background: #FFF;
 }
 
-#nx .SignView .signPanel {
+#NX .SignView .signPanel {
 	position: absolute;
 	right: 35px;
 }
 
-#nx .SignView.signin .signPanel {
+#NX .SignView.signin .signPanel {
 	position: absolute;
 	left: 50px;
 }
 
-#nx .SignView .signPanel div:first-child {
+#NX .SignView .signPanel div:first-child {
 	float: left;
 	color: #4D546E;
 	text-shadow: RGBA(255, 255, 255, .5) 0 1px;
@@ -4374,13 +4374,13 @@
 	font-weight: bold;
 }
 
-#nx .SignView .signPanel div:last-child {
+#NX .SignView .signPanel div:last-child {
 	float: left;
 	padding: 5px 5px 7px 5px;
 	font-size: 16px;
 }
 
-#nx .SignView.NewDisplay .mobileInput {
+#NX .SignView.NewDisplay .mobileInput {
 	color: #3A3A3A;
 	font-style: oblique;
 	border-radius: 0;
@@ -4393,7 +4393,7 @@
 	float: left;
 }
 
-#nx .SignView .header .xswitch {
+#NX .SignView .header .xswitch {
 	background-image: url(images/switch-sex.png);
 	height: 36px;
 	width: 90px;
@@ -4402,36 +4402,36 @@
 	background-size: 166px 36px;
 }
 
-#nx .SignView .header .agswitch {
+#NX .SignView .header .agswitch {
 	background-image: url(images/switch-bg.png);
 	height: 36px;
 	width: 103px;
 	background-size: 103px 36px;
 }
 
-#nx.RETINA .SignView .header .xswitch {
+#NX.RETINA .SignView .header .xswitch {
 	background-image: url(images/switch-sex_2.png);
 }
 
-#nx.RETINA .SignView .header .agswitch {
+#NX.RETINA .SignView .header .agswitch {
 	background-image: url(images/switch-bg_2.png);
 }
 
-#nx .SignView .header .xswitch.off {
+#NX .SignView .header .xswitch.off {
 	background-position: -68px 0;
 }
 
-#nx .SignView .header .agswitch {
+#NX .SignView .header .agswitch {
 	margin: 5px 10px 0 10px;
 }
 
-#nx .SignView.NewDisplay .inputPanel div {
+#NX .SignView.NewDisplay .inputPanel div {
 	float: left;
 	margin: 0 0 0 5px;
 }
 
 /*
-#nx .NotificationView {
+#NX .NotificationView {
 	background-color: RGBA(20, 20, 20, .9);
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -4440,26 +4440,26 @@
 	border-right: 1px solid RGBA(100, 100, 100, .2);
 }
 
-#nx .NotificationView .msg {
+#NX .NotificationView .msg {
 	color: #AAA;
 	border-bottom: 1px solid RGBA(100, 100, 100, .2);
 	padding: 5px 5px;
 	font-size: 12px;
 }
 
-#nx .NotificationView .msg:first-child {
+#NX .NotificationView .msg:first-child {
 	background-image: url(images/notif-close.png);
 	background-position: top right;
 	background-repeat: no-repeat;
 	padding-right: 25px;
 }
 
-#nx .NotificationView .msg img {
+#NX .NotificationView .msg img {
 	float: left;
 	margin: 0 10px 0 0;
 }
 */
-#nx .ChatViewParent {
+#NX .ChatViewParent {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -4471,16 +4471,16 @@
 	-webkit-transition-duration: 300ms;
 }
 
-#nx .ChatViewParent .DragPanel {
+#NX .ChatViewParent .DragPanel {
 	padding-bottom: 46px;
 }
 
 /*
-#nx .ChatViewParent .ChatView .scrollPanel.msgScroll {
+#NX .ChatViewParent .ChatView .scrollPanel.msgScroll {
 	top: 46px;
 }
 
-#nx.ANDROID .ChatViewParent .ChatView .scrollPanel.msgScroll {
+#NX.ANDROID .ChatViewParent .ChatView .scrollPanel.msgScroll {
 	top: 46px;
 }
 */
@@ -4488,14 +4488,14 @@
 /*************************************************/
 /*************************************************/
 /*************************************************/
-#nx .ChatViewParent .header .chatHeader {
+#NX .ChatViewParent .header .chatHeader {
 	position: relative;
 	height: 45px;
 	border-top-left-radius: 5px;
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
-#nx .ChatViewParent .header .quit {
+#NX .ChatViewParent .header .quit {
 	top: 50%;
 	padding-top: 11px;
 	padding-bottom: 11px;
@@ -4504,7 +4504,7 @@
 	border-right: 1px solid #d0d0d0;
 }
 
-#nx .ChatViewParent .header .avatar {
+#NX .ChatViewParent .header .avatar {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -4512,31 +4512,31 @@
 	margin-top: 2px;
 }
 
-#nx .ChatViewParent .background .hello .system {
+#NX .ChatViewParent .background .hello .system {
 	display: inline;
 	text-align: center;
 	font-family: "SanchezRegular";
 }
 
-#nx .ChatViewParent .background .hello .standard {
+#NX .ChatViewParent .background .hello .standard {
 	display: inline-block;
 	font-family: arial;
 	font-weight: bold;
 	text-align: center;
 }
 
-#nx .ChatViewParent .header .speech {
+#NX .ChatViewParent .header .speech {
 	top: 50%;
 	width: 100%;
 	text-align: center;
 	marign-top: 45px;
 }
 
-#nx .ChatViewParent .header .navBarItem {
+#NX .ChatViewParent .header .navBarItem {
 	margin: 7px 0 0 2px;
 }
 
-#nx .ChatViewParent .header .title {
+#NX .ChatViewParent .header .title {
 	position: absolute;
 	top: 16px;
 	color: #FFF;
@@ -4549,26 +4549,26 @@
 	right: 60px;
 }
 
-#nx .ChatViewParent .header .title .system {
+#NX .ChatViewParent .header .title .system {
 	display: inline;
 	text-align: center;
 	font-family: "SanchezRegular";
 }
 
-#nx .ChatViewParent .header .title .standard {
+#NX .ChatViewParent .header .title .standard {
 	display: inline-block;
 	font-family: arial;
 	font-weight: bold;
 	text-align: center;
 }
 
-#nx .ChatViewParent .footer {
+#NX .ChatViewParent .footer {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
 }
 
-#nx .ChatViewParent .inputPanel {
+#NX .ChatViewParent .inputPanel {
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -4580,7 +4580,7 @@
 	background-color: #717171;
 }
 
-#nx .ChatViewParent .inputPanel .left {
+#NX .ChatViewParent .inputPanel .left {
 	border: 0px solid;
 	position: absolute;
 	top: 5px;
@@ -4593,7 +4593,7 @@
 	background-repeat: no-repeat;
 }
 
-#nx .ChatViewParent .inputPanel .right {
+#NX .ChatViewParent .inputPanel .right {
 	border: 0px solid;
 	position: absolute;
 	top: 5px;
@@ -4606,7 +4606,7 @@
 	background-repeat: no-repeat;
 }
 
-#nx .ChatViewParent .inputPanel .center {
+#NX .ChatViewParent .inputPanel .center {
 	border: 0px solid;
 	position: absolute;
 	top: 5px;
@@ -4619,7 +4619,7 @@
 	background-repeat: repeat-x;
 }
 
-#nx .ChatViewParent .inputPanel .center input {
+#NX .ChatViewParent .inputPanel .center input {
 	width: 100%;
 	height: 26px;
 	border: 0px solid;
@@ -4633,11 +4633,11 @@
 /*************************************************/
 /*************************************************/
 /*************************************************/
-#nx .Anime {
+#NX .Anime {
 	background-color: #36A1E8;
 }
 
-#nx .Anime .logo {
+#NX .Anime .logo {
 	position: absolute;
 	top: 10%;
 	left: 40%;
@@ -4645,20 +4645,20 @@
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .aMiddle {
+#NX .Anime .aMiddle {
 	position: absolute;
 	top: 65%;
 	right: 0;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .aBottom {
+#NX .Anime .aBottom {
 	position: absolute;
 	bottom: 0;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .lblSkip {
+#NX .Anime .lblSkip {
 	position: absolute;
 	top: 10px;
 	left: 10px;
@@ -4670,80 +4670,80 @@
 	font-weight: bold;
 }
 
-#nx .Anime .aBG {
+#NX .Anime .aBG {
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .b1b {
+#NX .Anime .b1b {
 	position: absolute;
 	top: 45%;
 	left: 30%;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .b1a {
+#NX .Anime .b1a {
 	position: absolute;
 	top: 60%;
 	left: 0%;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .b1d {
+#NX .Anime .b1d {
 	position: absolute;
 	top: 80%;
 	left: 10%;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .b1g {
+#NX .Anime .b1g {
 	position: absolute;
 	top: 65%;
 	right: 10%;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .clogo {
+#NX .Anime .clogo {
 	position: absolute;
 	top: 10%;
 	left: 0%;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .Anime .c2 {
+#NX .Anime .c2 {
 	position: absolute;
 	top: 65%;
 	left: 10%;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .logoC0 {
+#NX .logoC0 {
 	position: absolute;
 	top: 50%;
 	left: 0%;
 }
 
-#nx .logoC1 {
+#NX .logoC1 {
 	position: absolute;
 	top: 50%;
 	left: 65px;
 }
 
-#nx .Anime .cow {
+#NX .Anime .cow {
 	position: absolute;
 	top: 30%;
 	left: 0;
 	-webkit-transition-timing-function: linear;
 }
 
-#nx .hide {
+#NX .hide {
 	visibility: hidden;
 }
 
-#nx .show {
+#NX .show {
 	visibility: visible;
 }
 
-#nx .FeedbackView textarea {
+#NX .FeedbackView textarea {
 	width: 90%;
 	height: 200px;
 	border: 3px solid #BCAA6F;
@@ -4756,6 +4756,6 @@
 	color: #3A3A3A;
 }
 
-#nx .FeedbackView .btnTxt {
+#NX .FeedbackView .btnTxt {
 	padding: 10px 30px 10px 30px;
 }

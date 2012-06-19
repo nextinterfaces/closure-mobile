@@ -7,17 +7,18 @@ goog.require('nx.DragTouchController');
 goog.require('nx.DragMouseController');
 goog.require('nx.DragEvent');
 goog.require('nx.SwipeEvent');
+goog.require('nx.Id');
 
 /**
  * @constructor
  */
 nx.DragController = function () {
-    log('nx.DragController::constructor ...');
+    log('nx.DragController::constructor');
     /**
      * @type {element}
      * @private
      */
-    this.sourceEle_ = goog.dom.getElement('nx');
+    this.sourceEle_ = goog.dom.getElement(nx.Id.ROOT);
 
     /**
      * @type {Array<nx.DragEventsHandler>}
@@ -79,7 +80,6 @@ nx.DragController = function () {
      * @private
      */
     this.startDragPos_ = new nx.Point(0, 0);
-    // private boolean _hasMoveStarted = false;
     /**
      * @type {nx.DragEvent.Type}
      * @private
@@ -107,8 +107,6 @@ nx.DragController = function () {
 };
 goog.addSingletonGetter(nx.DragController);
 
-
-//nx.DragController.prototype.testY = undefined;
 
 /**
  */

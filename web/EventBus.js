@@ -38,9 +38,7 @@ nx.EventBus.prototype.init = function (ctx, pubsub) {
         var ctx2 = ctx;
         new nx.HousePresenter(ctx2.getHouseView(), ctx2).init().render(ctx2.getRoot());
     });
-
 //  log('nx.Event.HOUSE_CLICK count ' + this.pubsub_.getCount(nx.Event.HOUSE_CLICK));
-
 };
 
 /**

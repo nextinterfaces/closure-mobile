@@ -21,6 +21,7 @@
         "web/Util.js",
         "web/Event.js",
         "web/EventBus.js",
+        "web/Id.js",
         "web/Ctx.js",
         "web/Main.js"
     ],

@@ -11,7 +11,7 @@ goog.require('nx.Util');
  * @constructor
  */
 nx.DragMouseController = function (sourceEle, dragController) {
-    log('nx.DragMouseController::constructor ...', sourceEle, dragController);
+    log('nx.DragMouseController::constructor', sourceEle, dragController);
     /**
      * @type {element}
      * @private
