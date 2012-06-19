@@ -325,7 +325,7 @@ nx.DragController.prototype.fireSwipeEvent = function (e) {
         while (ele != null) {
             for (var i = 0; this.swipeEventHandlers_.length; i++) {
                 var handler = this.swipeEventHandlers_[i];
-                if (ele.equals === handler.getElement()) {
+                if (ele === handler.getElement()) {
                     e.dispatch(handler);
                     count++;
                     if (e.getStopPropagation() || count == this.swipeEventHandlers_.length) {

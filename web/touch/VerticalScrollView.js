@@ -18,12 +18,8 @@ nx.VerticalScrollView = function (x, y) {
     this.widgetHeight_ = -1;
     this.panel_ = goog.dom.createDom('div', {'class':'scrollPanel'});
 
-
-    var dragCtrl = nx.DragController.getInstance();
-    dragCtrl.addDragEventsHandler(this);
-
-//    var dragCtrl = nx.DragController.getInstance();
-//    dragCtrl.addSwipeEventsHandler(this);
+    nx.DragController.getInstance().addDragEventsHandler(this);
+    nx.DragController.getInstance().addSwipeEventsHandler(this);
 };
 
 //////////////////
@@ -128,7 +124,7 @@ nx.VerticalScrollView.prototype.onDragStart = function (e) {
  * @inheritDoc
  */
 nx.VerticalScrollView.prototype.onDragMove = function (e) {
-    log('[[[[ VerticalScrollView ]]]] onDragMove', e);
+//    log('[[[[ VerticalScrollView ]]]] onDragMove', e);
     var currY = this.getScrollPositionY();
     if (currY > 0) {
         // exceed top boundary
@@ -156,13 +152,13 @@ nx.VerticalScrollView.prototype.onDragMove = function (e) {
  * @inheritDoc
  */
 nx.VerticalScrollView.prototype.onDragMoveHorizontal = function (e) {
-    log('[[[[ VerticalScrollView ]]]] onDragMoveHorizontal', e);
+//    log('[[[[ VerticalScrollView ]]]] onDragMoveHorizontal', e);
 };
 /**
  * @inheritDoc
  */
 nx.VerticalScrollView.prototype.onDragMoveVertical = function (e) {
-    log('[[[[ VerticalScrollView ]]]] onDragMoveVertical', e);
+//    log('[[[[ VerticalScrollView ]]]] onDragMoveVertical', e);
 };
 
 /**
@@ -188,16 +184,45 @@ nx.VerticalScrollView.prototype.onDragEnd = function (e) {
 //		FxUtil.debug(el());
 };
 
-///**
-// * @param {nx.SwipeEvent} e
-// */
-//nx.VerticalScrollView.prototype.onSwipeVertical = function (e) {
-//    log('[[[[ VerticalScrollView ]]]] onSwipeHorizontal', e);
-//};
-//
-///**
-// * @param {nx.SwipeEvent} e
-// */
-//nx.VerticalScrollView.prototype.onSwipeHorizontal = function (e) {
-//    log('[[[[ VerticalScrollView ]]]] onSwipeHorizontal', e);
-//};
+/**
+* @param {nx.SwipeEvent} e
+*/
+nx.VerticalScrollView.prototype.onSwipeVertical = function (e) {
+    log('[[[[ VerticalScrollView ]]]] onSwipeHorizontal', e);
+    var currY = this.getScrollPositionY();
+    // exceed top boundary
+    if ((currY >= 0) || (-currY + this.panelHeight_ >= this.widgetHeight_)) {
+        // exceed bottom boundary
+        return;
+    }
+
+    var speed = e.getSpeed();
+    var timeFactor = 2800;
+    var time = Math.abs(speed * timeFactor);
+    var dicstanceFactor = 0.24;
+    var distance = (speed * time * dicstanceFactor);
+    // Utils.Console("speed " + speed + " time " + time + " distance " +
+    // distance + " current " + current);
+    currY += distance;
+    if (currY > 0) {
+        // exceed top boundary
+        var timeAdj = 1 - currY / distance;
+        time = time * timeAdj;
+        currY = 0;
+    } else if (-currY + this.panelHeight_ > this.widgetHeight_) {
+        // exceed bottom boundary
+        var bottom = this.panelHeight_ - this.widgetHeight_;
+        var timeAdj = 1 - (currY - bottom) / distance;
+        time = time * timeAdj;
+        currY = bottom;
+    }
+    nx.Fx.setTransitionDuration(this.el(), time);
+    this.setScrollPositionY(currY);
+};
+
+/**
+* @param {nx.SwipeEvent} e
+*/
+nx.VerticalScrollView.prototype.onSwipeHorizontal = function (e) {
+    log('[[[[ VerticalScrollView ]]]] onSwipeHorizontal', e);
+};
