@@ -19,12 +19,12 @@ nx.Ctx = function () {
      */
     this.eventBus_ = new nx.EventBus(this);
 
-    log('nx.Ctx::constructor 1 ...');
-    /**
-     * @type {nx.DragController}
-     * @private
-     */
-    this.dragController_ = new nx.DragController(this.getRoot());
+//    log('nx.Ctx::constructor 1 ...');
+//    /**
+//     * @type {nx.DragController}
+//     * @private
+//     */
+//    this.dragController_ = new nx.DragController(this.getRoot());
 
     /**
      * @type {nx.HouseView}
@@ -37,6 +37,8 @@ nx.Ctx = function () {
      * @private
      */
     this.userView_;
+
+    this.getRoot();
 
     log('nx.Ctx::constructor END...');
 };
@@ -83,12 +85,12 @@ nx.Ctx.prototype.getRoot = function () {
 };
 
 
-/**
- * @return {nx.DragController}
- */
-nx.Ctx.prototype.getDragController = function () {
-    return this.dragController_;
-};
+///**
+// * @return {nx.DragController}
+// */
+//nx.Ctx.prototype.getDragController = function () {
+//    return this.dragController_;
+//};
 
 goog.exportSymbol('nx.Ctx', nx.Ctx);
 

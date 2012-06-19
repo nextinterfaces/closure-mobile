@@ -2,7 +2,7 @@ goog.provide('nx.HouseView');
 
 goog.require('goog.dom');
 goog.require('goog.ui.CustomButton');
-
+goog.require('nx.DragButton');
 
 /**
  * @constructor
@@ -17,8 +17,11 @@ nx.HouseView = function(){
 
     var wrapperDiv = goog.dom.createDom('div', {'id': this.getName()});
 
+    var dragBtn = new nx.DragButton();
+
     wrapperDiv.appendChild(headerDiv);
     wrapperDiv.appendChild(listDiv);
+    wrapperDiv.appendChild(dragBtn.getElement());
     wrapperDiv.appendChild(btnsDiv);
 
     this.wrapperDiv_ = wrapperDiv;

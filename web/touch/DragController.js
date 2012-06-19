@@ -9,16 +9,15 @@ goog.require('nx.DragEvent');
 goog.require('nx.SwipeEvent');
 
 /**
- * @param {element} sourceEle
  * @constructor
  */
-nx.DragController = function (sourceEle) {
+nx.DragController = function () {
     log('nx.DragController::constructor ...');
     /**
      * @type {element}
      * @private
      */
-    this.sourceEle_ = sourceEle;
+    this.sourceEle_ = goog.dom.getElement('nx');
 
     /**
      * @type {Array<nx.DragEventsHandler>}
@@ -106,6 +105,7 @@ nx.DragController = function (sourceEle) {
 //        dc.unregisterEvents();
 //    }, 5000);
 };
+goog.addSingletonGetter(nx.DragController);
 
 
 //nx.DragController.prototype.testY = undefined;
@@ -116,7 +116,7 @@ nx.DragController.prototype.registerEvents = function () {
     if (!goog.isDef(this.clickKey_)) {
         log('nx.DragController::registerEvents');
         var $this = this;
-        this.clickKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.CLICK, function(e){
+        this.clickKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.CLICK, function (e) {
             $this.onClick(e);
         }, true);
         this.implController_.registerEvents();
@@ -335,6 +335,35 @@ nx.DragController.prototype.fireSwipeEvent = function (e) {
             ele = nx.getNodeParentElement(ele);
         }
     }
+};
+
+/**
+ * @param {nx.DragEventsHandler} dragHandler
+ */
+nx.DragController.prototype.addDragEventsHandler = function (h) {
+//    this.dragEventHandlers_.add(h);
+    this.dragEventHandlers_.push(h);
+};
+
+/**
+ * @param {nx.SwipeEventsHandler} dragHandler
+ */
+nx.DragController.prototype.addSwipeEventsHandler = function (h) {
+    this.swipeEventHandlers_.push(h);
+};
+
+/**
+ * @param {nx.DragEventsHandler} h
+ */
+nx.DragController.prototype.removeDragEventsHandler = function (h) {
+    goog.array.remove(this.dragEventHandlers_, h);
+};
+
+/**
+ * @param {nx.SwipeEventsHandler} dragHandler
+ */
+nx.DragController.prototype.removeSwipeEventHandler = function (h) {
+    goog.array.remove(this.swipeEventHandlers_, h);
 };
 
 goog.exportSymbol('nx.DragController', nx.DragController);
