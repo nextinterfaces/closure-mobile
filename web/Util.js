@@ -66,3 +66,12 @@ nx.isTouch = function () {
 nx.getOffsetHeight = function (ele) {
     return this.offsetHeight || 0;
 };
+
+/**
+ * @param {*} obj
+ * @return {string}
+ */
+nx.getType = function (obj) {
+    if (obj === null)return "[object Null]"; // special case
+    return Object.prototype.toString.call(obj);
+}
