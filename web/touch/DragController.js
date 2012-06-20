@@ -108,14 +108,13 @@ nx.DragController = function () {
 goog.addSingletonGetter(nx.DragController);
 
 
-
 nx.DragController.prototype.suppressNextClick = function () {
     this.suppressNextClick_ = true;
 };
 
 nx.DragController.prototype.registerEvents = function () {
     if (!goog.isDef(this.clickKey_)) {
-        log('nx.DragController::registerEvents');
+//        log('nx.DragController::registerEvents');
         var $this = this;
         this.clickKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.CLICK, function (e) {
             $this.onClick(e);
@@ -231,7 +230,7 @@ nx.DragController.prototype.onEnd = function (e, p) {
 
     if (this.isDown_) {
         this.isDown_ = false;
-//			XLog.info("onEnd, p.X($1) p.Y($2) p.X()-_currDragPos.X() $3 p.Y()-_currDragPos.Y() $4 _currDragPos.X($5) _currDragPos.Y($6)" ,
+//			log("onEnd, p.X($1) p.Y($2) p.X()-_currDragPos.X() $3 p.Y()-_currDragPos.Y() $4 _currDragPos.X($5) _currDragPos.Y($6)" ,
 //					p.X(), p.Y(),
 //					p.X()-_currDragPos.X(), p.Y()-_currDragPos.Y(),
 //					_currDragPos.X(), _currDragPos.Y());
@@ -257,10 +256,10 @@ nx.DragController.prototype.onEnd = function (e, p) {
         } else if (speed < -4) {
             speed = -4;
         }
-        log("onEnd, speed is " + speed);
+//        log("onEnd, speed is " + speed);
 
         if (Math.abs(speed) > 0.2) {
-            log("onEnd, before swipeEvent .... speed is " + speed);
+//            log("onEnd, before swipeEvent .... speed is " + speed);
             var swipeEvent = new nx.SwipeEvent(e, swipeType, speed);
             this.fireSwipeEvent(swipeEvent);
         }
@@ -323,7 +322,7 @@ nx.DragController.prototype.fireSwipeEvent = function (e) {
         var ele = target;//Element.as(target);
         var count = 0;
         while (ele != null) {
-            for (var i = 0; this.swipeEventHandlers_.length; i++) {
+            for (var i = 0; i < this.swipeEventHandlers_.length; i++) {
                 var handler = this.swipeEventHandlers_[i];
                 if (ele === handler.getElement()) {
                     e.dispatch(handler);
@@ -366,7 +365,6 @@ nx.DragController.prototype.removeDragEventsHandler = function (h) {
 nx.DragController.prototype.removeSwipeEventHandler = function (h) {
     goog.array.remove(this.swipeEventHandlers_, h);
 };
-
 
 
 goog.exportSymbol('nx.DragController', nx.DragController);

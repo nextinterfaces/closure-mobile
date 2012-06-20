@@ -7,13 +7,13 @@ goog.require('nx.Util');
 
 /**
  * @param {Element} sourceEle
- * @param {nx.DragController} sourceEle
+ * @param {nx.DragController} dragController
  * @constructor
  */
 nx.DragMouseController = function (sourceEle, dragController) {
     log('nx.DragMouseController::constructor', sourceEle, dragController);
     /**
-     * @type {Element}
+     * @type {element}
      * @private
      */
     this.sourceEle_ = sourceEle;
@@ -39,11 +39,6 @@ nx.DragMouseController.prototype.registerEvents = function () {
         this.onUpKey__ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEUP, function(e){
             $this.onUpFn(e);
         },  true);
-
-//        var callBack = function(e) {
-//            //listener.@com.google.gwt.user.client.EventListener::onBrowserEvent(Lcom/google/gwt/user/client/Event;)(e);
-//        };
-//        this.sourceEle_.addEventListener('click', callBack, true);
     }
 };
 

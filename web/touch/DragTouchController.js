@@ -123,7 +123,9 @@ nx.DragTouchController.prototype.onUpFn = function (e) {
         this.fireClick(e);
     }
     this.touchMoving_ = false;
-    this.dragController_.onEnd(e, new nx.Point(e.changedTouches[0].clientX, e.changedTouches[0].clientY));
+    var x = e.changedTouches[0].clientX;
+    var y = e.changedTouches[0].clientY;
+    this.dragController_.onEnd(e, new nx.Point(x, y));
 };
 
 /**

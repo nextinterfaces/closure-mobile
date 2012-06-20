@@ -17,7 +17,6 @@ nx.DragEvent = function (nativeEvent, type, x, y, offsetX, offsetY) {
     this.Y = y;
     this.OffsetX = offsetX;
     this.OffsetY = offsetY;
-    //
     this.stopPropagation_ = false;
 };
 

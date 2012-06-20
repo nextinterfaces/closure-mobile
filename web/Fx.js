@@ -171,6 +171,15 @@ nx.Fx.getWidth = function (ele) {
         .getPropertyValue('width'));
 };
 
+/**
+ *
+ * @param {Element} ele
+ * @return {number}
+ */
+nx.Fx.getOffsetHeight = function (ele) {
+    return ele.offsetHeight || 0;
+};
+
 ////return double
 //nx.Fx.getStyleLeft = function(Element el) {
 //    Style style = el.getStyle();
