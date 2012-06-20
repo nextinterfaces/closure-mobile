@@ -95,7 +95,7 @@ nx.DragController = function () {
     if (nx.isTouch()) {
         this.implController_ = new nx.DragTouchController(this.sourceEle_, this);
     } else {
-        this.implController_ = new nx.DragTouchController(this.sourceEle_, this);
+        this.implController_ = new nx.DragMouseController(this.sourceEle_, this);
     }
 
     this.registerEvents();

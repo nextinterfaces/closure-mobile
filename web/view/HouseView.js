@@ -22,7 +22,7 @@ nx.HouseView = function(){
     /////
     var scrollView = new nx.VerticalScrollView();
     var textDiv = goog.dom.createDom('div', {'id': 'textDiv'});
-    textDiv.innerHTML = 'aaaa<br>bbbb<br>ccccc';
+    textDiv.innerHTML = '111111<br>2222<br>3333<br>';
     scrollView.add(textDiv);
     /////
 

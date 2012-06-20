@@ -36,37 +36,18 @@ nx.DragTouchController.prototype.registerEvents = function () {
     if (!goog.isDef(this.onDownKey_)) {
         log('nx.DragTouchController::registerEvents');
         var $this = this;
-//        this.onDownKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.TOUCHSTART, function (e) {
-//
-//            console.log("TOUCHSTART touches");
-//            console.log(e.touches);
-//
-//            console.log("target");
-//            console.log(e.target);
-//
-//            console.log("before stopPropagation");
-//            e.stopPropagation();
-//
-//            console.log("before onDownFn");
-//            $this.onDownFn(e);
-//        }, true);
-////        this.onMoveKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.TOUCHMOVE, function (e) {
-////            $this.onMoveFn(e);
-////        }, true);
-////        this.onUpKey__ = goog.events.listen(this.sourceEle_, goog.events.EventType.TOUCHEND, function (e) {
-////            $this.onUpFn(e);
-////        }, true);
 
-        this.onDownFnKey_ = function(e) {
+        this.onDownFnKey_ = function (e) {
             $this.onDownFn(e);
         };
-        this.onMoveFnKey_ = function(e) {
+        this.onMoveFnKey_ = function (e) {
             $this.onMoveFn(e);
         };
-        this.onEndFnKey_ = function(e) {
+        this.onEndFnKey_ = function (e) {
             $this.onUpFn(e);
         };
 
+        // using regular listeners as goog.events.listen fails to send TouchEvent with .touches .changedTouches
         this.sourceEle_.addEventListener('touchstart', this.onDownFnKey_, true);
         this.sourceEle_.addEventListener('touchmove', this.onMoveFnKey_, true);
         this.sourceEle_.addEventListener('touchend', this.onEndFnKey_, true);
@@ -78,9 +59,6 @@ nx.DragTouchController.prototype.registerEvents = function () {
 nx.DragTouchController.prototype.unregisterEvents = function () {
     log('nx.DragTouchController::unregisterEvents touch keys are ', this.onDownKey_, this.onMoveKey_, this.onUpKey__);
     if (goog.isDef(this.onDownFnKey_)) {
-//        goog.events.unlistenByKey(this.onDownKey_);
-//        goog.events.unlistenByKey(this.onMoveKey_);
-//        goog.events.unlistenByKey(this.onUpKey__);
         this.sourceEle_.removeEventListener('touchstart', this.onDownFnKey_, true);
         this.sourceEle_.removeEventListener('touchmove', this.onMoveFnKey_, true);
         this.sourceEle_.removeEventListener('touchend', this.onEndFnKey_, true);
@@ -99,7 +77,6 @@ nx.DragTouchController.prototype.onDownFn = function (e) {
     var isElement = new nx.isNodeElement(target);
 
     if (isElement) {
-//        Element ele = Element.as(target);
         // INPUT element will not get focus if default action is prevented.
         if (nx.isHtmlFormControl(target)) {
             target.focus();
@@ -110,7 +87,7 @@ nx.DragTouchController.prototype.onDownFn = function (e) {
         e.preventDefault(); // prevent default action of selecting text
         e.stopPropagation();
     }
-    // TODO: for multi-touch platforms.
+    // FIXME: for multi-touch platforms.
     this.dragController_.onStart(e, new nx.Point(e.touches[0].clientX, e.touches[0].clientY));
 };
 
