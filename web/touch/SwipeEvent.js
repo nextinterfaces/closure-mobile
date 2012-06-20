@@ -7,8 +7,7 @@ goog.provide('nx.SwipeEvent');
  * @constructor
  */
 nx.SwipeEvent = function (nativeEvent, type, speed) {
-    log('nx.SwipeEvent::constructor');
-
+//    log('nx.SwipeEvent::constructor');
     this.nativeEvent_ = nativeEvent;
     this.type_ = type;
     this.speed_ = speed;

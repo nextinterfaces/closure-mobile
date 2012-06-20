@@ -30,15 +30,15 @@ nx.DragMouseController.prototype.registerEvents = function () {
     if (!goog.isDef(this.onDownKey_)) {
         log('nx.DragMouseController::registerEvents');
         var $this = this;
-        this.onDownKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEDOWN, function(e){
+        this.onDownKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEDOWN, function (e) {
             $this.onDownFn(e);
         }, true);
-        this.onMoveKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEMOVE, function(e){
+        this.onMoveKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEMOVE, function (e) {
             $this.onMoveFn(e);
         }, true);
-        this.onUpKey__ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEUP, function(e){
+        this.onUpKey__ = goog.events.listen(this.sourceEle_, goog.events.EventType.MOUSEUP, function (e) {
             $this.onUpFn(e);
-        },  true);
+        }, true);
     }
 };
 

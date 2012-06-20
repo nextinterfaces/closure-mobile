@@ -23,11 +23,15 @@ goog.require('nx.HousePresenter');
  */
 nx.Main = function(){
 
+    if(!window.console){
+        return;
+    }
+
     // create log() utility instead of console.log
     if (nx.isTouch()) {
-        window.log = function(txt,a,b,c){console.log(txt,a,b,c)};
+        window.log = function(txt,a,b,c){window.console.log(txt,a,b,c)};
     } else {
-        window.log = console.log.bind(console);
+        window.log = window.console.log.bind(window.console);
     }
 
     // instantiate ctx

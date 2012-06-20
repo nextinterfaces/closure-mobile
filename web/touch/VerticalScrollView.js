@@ -7,6 +7,7 @@ goog.require('nx.Util');
 /**
  * @param {number} x
  * @param {number} y
+ * @implements {nx.Widget}
  * @implements {nx.DragEventsHandler}
  * @implements {nx.SwipeEventsHandler}
  * @constructor
@@ -18,11 +19,26 @@ nx.VerticalScrollView = function (x, y) {
     this.widgetHeight_ = -1;
     this.panel_ = goog.dom.createDom('div', {'class':'scrollPanel'});
 
+    this.onLoad();
+};
+
+/**
+ * @inheritDoc
+ */
+nx.VerticalScrollView.prototype.onLoad = function (e) {
+    log('[[[[ VerticalScrollView ]]]] onLoad', e);
     nx.DragController.getInstance().addDragEventsHandler(this);
     nx.DragController.getInstance().addSwipeEventsHandler(this);
 };
 
-//////////////////
+/**
+ * @inheritDoc
+ */
+nx.VerticalScrollView.prototype.onUnload = function (e) {
+    log('[[[[ VerticalScrollView ]]]] onUnload', e);
+    nx.DragController.getInstance().removeDragEventsHandler(this);
+    nx.DragController.getInstance().removeSwipeEventsHandler(this);
+};
 
 nx.VerticalScrollView.prototype.add = function (widget) {
     this.widgetElement_ = widget;

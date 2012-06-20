@@ -28,7 +28,8 @@ nx.HouseView = function(){
 
     wrapperDiv.appendChild(headerDiv);
     wrapperDiv.appendChild(listDiv);
-    wrapperDiv.appendChild(dragBtn.getElement());
+    dragBtn.attach(wrapperDiv);
+    //wrapperDiv.appendChild(dragBtn.getElement());
     wrapperDiv.appendChild(scrollView.getElement());
     wrapperDiv.appendChild(btnsDiv);
 

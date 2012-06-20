@@ -100,9 +100,9 @@ nx.Fx.getTranslateY = function (ele) {
  * @param {Element} ele
  */
 nx.Fx.debug = function (ele) {
-    console.log('ele.style.webkitTransitionProperty: ' + ele.style.webkitTransitionProperty);
-    console.log('ele.style.webkitTransitionDuration: ' + ele.style.webkitTransitionDuration);
-    console.log('ele.style.webkitTransitionTimingFunction: ' + ele.style.webkitTransitionTimingFunction);
+    log('ele.style.webkitTransitionProperty: ' + ele.style.webkitTransitionProperty);
+    log('ele.style.webkitTransitionDuration: ' + ele.style.webkitTransitionDuration);
+    log('ele.style.webkitTransitionTimingFunction: ' + ele.style.webkitTransitionTimingFunction);
 };
 
 /**
