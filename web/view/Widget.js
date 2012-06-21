@@ -163,14 +163,15 @@ nx.Widget.prototype.render = function (parentContainer) {
     if (!nx.isNode(parentContainer)) {
         throw new Error("nx.Widget:parentContainer Empty or null parentContainer");
     }
-
-    // clear container
-    while (parentContainer.hasChildNodes()) {
-        parentContainer.removeChild(parentContainer.lastChild);
-    }
-
-    // add to container
-    parentContainer.appendChild(this.getElement());
+//    // clear container
+//    while (parentContainer.hasChildNodes()) {
+//        parentContainer.removeChild(parentContainer.lastChild);
+//    }
+//
+//    // add to container
+//    parentContainer.appendChild(this.getElement());
+    goog.dom.removeChildren(parentContainer);
+    goog.dom.appendChild(parentContainer, this.getElement());
 
     if (!this.isAttached_) {
         this.onAttach();

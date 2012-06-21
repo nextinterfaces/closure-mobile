@@ -24,7 +24,7 @@ goog.inherits(nx.DragButton, nx.Widget);
 */
 nx.DragButton.prototype.onAttach = function () {
     log('[[[[ DragButton ]]]] onAttach');
-//    nx.DragController.getInstance().addDragEventsHandler(this);
+    nx.DragController.getInstance().addDragEventsHandler(this);
 };
 
 /**
@@ -32,7 +32,7 @@ nx.DragButton.prototype.onAttach = function () {
 */
 nx.DragButton.prototype.onDetach = function () {
     log('[[[[ DragButton ]]]] onDetach');
-//    nx.DragController.getInstance().removeDragEventsHandler(this);
+    nx.DragController.getInstance().removeDragEventsHandler(this);
 };
 
 /**
