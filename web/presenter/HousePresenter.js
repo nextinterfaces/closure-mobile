@@ -36,7 +36,7 @@ nx.HousePresenter.prototype.init = function(){
     //log('nx.HousePresenter::init do AJAX ... ');
     var house = new nx.House('12 Maple Ln address', 3, 7);
     this.house_ = house;
-    this.view_.getList().innerHTML = this.house_.getAddress();
+//    this.view_.getList().innerHTML = this.house_.getAddress();
 
     return this;
 };
@@ -45,14 +45,19 @@ nx.HousePresenter.prototype.init = function(){
  * @inheritDoc
  */
 nx.HousePresenter.prototype.render = function(container){
-    log('nx.HousePresenter::render container %o, view: %o', container, this.view_.get());
+    log('nx.HousePresenter::render container %o, view: %o', container, this.view_.getElement());
 
-    // clear container
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
+    if(this.view_ instanceof nx.Widget){
+        this.view_.render(container);
+
+    } else {
+        // clear container
+        while (container.hasChildNodes()) {
+            container.removeChild(container.lastChild);
+        }
+        // add to container
+        container.appendChild(this.view_.getElement());
     }
-    // add to container
-    container.appendChild(this.view_.get());
 };
 
 

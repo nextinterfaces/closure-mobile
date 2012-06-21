@@ -362,7 +362,7 @@ nx.DragController.prototype.removeDragEventsHandler = function (h) {
 /**
  * @param {nx.SwipeEventsHandler} dragHandler
  */
-nx.DragController.prototype.removeSwipeEventHandler = function (h) {
+nx.DragController.prototype.removeSwipeEventsHandler = function (h) {
     goog.array.remove(this.swipeEventHandlers_, h);
 };
 

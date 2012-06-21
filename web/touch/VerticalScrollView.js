@@ -18,8 +18,6 @@ nx.VerticalScrollView = function (x, y) {
     this.panelHeight_ = -1;
     this.widgetHeight_ = -1;
     this.panel_ = goog.dom.createDom('div', {'class':'scrollPanel'});
-
-    this.onLoad();
 };
 
 /**

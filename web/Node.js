@@ -46,7 +46,7 @@ nx.isNodeDom = function (o) {
  * @return {boolean}
  */
 nx.isNode = function(node) {
-    return goog.isDef(node) && (node.nodeType == nx.NodeType.ELEMENT_NODE);
+    return goog.isDefAndNotNull(node) && (node.nodeType == nx.NodeType.ELEMENT_NODE);
 };
 
 nx.isHtmlFormControl = function(ele) {

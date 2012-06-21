@@ -51,7 +51,7 @@ nx.Ctx.prototype.getEventBus = function () {
  */
 nx.Ctx.prototype.getHouseView = function () {
     if (!goog.isDef(this.houseView_)) {
-        this.houseView_ = new nx.HouseView();
+        this.houseView_ = new nx.HouseView(this.getRoot());
     }
     return this.houseView_;
 };

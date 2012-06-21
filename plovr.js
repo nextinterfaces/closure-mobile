@@ -14,6 +14,7 @@
         "web/model/House.js",
         "web/model/User.js",
         "web/view/Widget.js",
+        "web/view/WrapperWidget.js",
         "web/view/View.js",
         "web/view/HouseView.js",
         "web/view/UserView.js",
