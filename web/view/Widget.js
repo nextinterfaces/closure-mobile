@@ -43,13 +43,15 @@ nx.Widget = function (parent) {
  * invoked when widget is attached to DOM
  * @type {Function}
  */
-nx.Widget.prototype.onAttach = goog.abstractMethod;
+nx.Widget.prototype.onAttach = function () {
+};
 
 /**
  * invoked when widget is detached from DOM
  * @type {Function}
  */
-nx.Widget.prototype.onDetach = goog.abstractMethod;
+nx.Widget.prototype.onDetach = function () {
+};
 
 /**
  * @return {Element}

@@ -61,7 +61,7 @@ nx.Ctx.prototype.getHouseView = function () {
  */
 nx.Ctx.prototype.getUserView = function () {
     if (!goog.isDef(this.userView_)) {
-        this.userView_ = new nx.UserView();
+        this.userView_ = new nx.UserView(this.getRoot());
     }
     return this.userView_;
 };

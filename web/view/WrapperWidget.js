@@ -9,7 +9,6 @@ goog.require('nx.DragButton');
  * @extends {nx.Widget}
  */
 nx.WrapperWidget = function (parent) {
-//    nx.Widget.call(this, parent);
     goog.base(this, parent);
     var ele = goog.dom.createDom('div', {'id':'wrapper-widget',
         'style': 'margin: 30px; border: 2px solid #1AF; width: 50%; height: 100px;'});

@@ -34,12 +34,6 @@ nx.Presenter.prototype.render = function (container) {
         this.view_.render(container);
 
     } else {
-//        // clear container
-//        while (container.hasChildNodes()) {
-//            container.removeChild(container.lastChild);
-//        }
-//        // add to container
-////        container.appendChild(this.view_.getElement());
         goog.dom.removeChildren(container);
         goog.dom.appendChild(container, this.view_.getElement());
     }
