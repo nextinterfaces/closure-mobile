@@ -59,4 +59,4 @@ nx.isHtmlFormControl = function(ele) {
     var nodeName = ele.nodeName.toUpperCase();
     var contains = goog.string.contains("BUTTON INPUT SELECT TEXTAREA", nodeName);
     return contains || nx.isHtmlFormControl(nx.getNodeParentElement(ele));
-}
+};

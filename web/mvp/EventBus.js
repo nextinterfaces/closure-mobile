@@ -18,19 +18,13 @@ nx.EventBus = function (ctx) {
      * @private
      */
     this.pubsub_ = new goog.pubsub.PubSub();
-
-    this.events(ctx, this.pubsub_);
 };
-
-/**
- */
-nx.EventBus.prototype.init = goog.abstractMethod;
 
 /**
  * @param {string} event
  * @param {function} eventHandler
  */
-nx.EventBus.prototype.subscribe = function (event, eventHandlerFn) {
+nx.EventBus.prototype.onEvent = function (event, eventHandlerFn) {
     this.pubsub_.subscribe(event, eventHandlerFn);
 };
 
