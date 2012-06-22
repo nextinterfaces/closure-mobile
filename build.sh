@@ -30,7 +30,7 @@ echo "---------Compilation starts ---------"
   --namespace="nx.Main" \
   --output_mode=compiled \
   --compiler_jar=./compiler.jar \
-  --compiler_flags="--compilation_level=ADVANCED_OPTIMIZATIONS" \
+  --compiler_flags="--compilation_level=SIMPLE_OPTIMIZATIONS" \
   --compiler_flags="--define=goog.userAgent.ASSUME_WEBKIT=true" \
   --compiler_flags="--define=goog.userAgent.ASSUME_MOBILE_WEBKIT=true" \
   --compiler_flags="--version" \

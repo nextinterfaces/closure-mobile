@@ -1,6 +1,7 @@
 goog.provide('nx.MyEventBus');
 
 goog.require('nx.Event');
+goog.require('nx.EventBus');
 goog.require('nx.HousePresenter');
 goog.require('nx.UserPresenter');
 
