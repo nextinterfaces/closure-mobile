@@ -11,6 +11,7 @@
         "web/touch/SwipeEventsHandler.js",
         "web/touch/VerticalScrollView.js",
         "web/touch/Point.js",
+        "web/touch/Fx.js",
         "web/kitchensink/House.js",
         "web/kitchensink/User.js",
         "web/kitchensink/HousePresenter.js",
@@ -26,7 +27,6 @@
         "web/Event.js",
         "web/mvp/EventBus.js",
         "web/Id.js",
-        "web/Fx.js",
         "web/kitchensink/Main.js"
     ],
     "mode": "RAW", // RAW, WHITESPACE, SIMPLE, ADVANCED
