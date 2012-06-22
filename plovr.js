@@ -23,9 +23,10 @@
         "web/mvp/Widget.js",
         "web/mvp/View.js",
         "web/mvp/Presenter.js",
+        "web/mvp/EventBus.js",
+        "web/mvp/MyEventBus.js",
         "web/Util.js",
         "web/Event.js",
-        "web/mvp/EventBus.js",
         "web/Id.js",
         "web/kitchensink/Main.js"
     ],

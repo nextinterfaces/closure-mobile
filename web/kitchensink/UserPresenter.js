@@ -6,6 +6,8 @@ goog.require('nx.UserView');
 goog.require('nx.Event');
 
 /**
+ * @param {nx.View} view
+ * @param {nx.Ctx} ctx
  * @constructor
  * @extends {nx.Presenter}
  */

@@ -16,7 +16,7 @@ nx.Ctx = function () {
      * @type {nx.EventBus}
      * @private
      */
-    this.eventBus_ = new nx.EventBus(this);
+    this.eventBus_ = new nx.MyEventBus(this);
 
     /**
      * @type {nx.HouseView}

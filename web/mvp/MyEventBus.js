@@ -1,4 +1,4 @@
-goog.provide('nx.EventBus');
+goog.provide('nx.MyEventBus');
 
 goog.require('goog.pubsub.PubSub');
 goog.require('nx.Event');
@@ -9,8 +9,8 @@ goog.require('nx.UserPresenter');
  * @param {nx.Ctx} ctx
  * @constructor
  */
-nx.EventBus = function (ctx) {
-    log('nx.EventBus::constructor ');
+nx.MyEventBus = function (ctx) {
+    log('nx.MyEventBus::constructor ');
     /**
      * @type {nx.Ctx}
      * @private
@@ -27,7 +27,7 @@ nx.EventBus = function (ctx) {
 
 /**
  */
-nx.EventBus.prototype.init = function (ctx, pubsub) {
+nx.MyEventBus.prototype.init = function (ctx, pubsub) {
     this.subscribe(nx.Event.HOUSE_CLICK, function (valueObj) {
         log('nx.Event.HOUSE_CLICK %o', valueObj);
         var ctx2 = ctx;
@@ -46,7 +46,7 @@ nx.EventBus.prototype.init = function (ctx, pubsub) {
  * @param {nx.Event} event
  * @param {function} eventHandler
  */
-nx.EventBus.prototype.subscribe = function (event, eventHandlerFn) {
+nx.MyEventBus.prototype.subscribe = function (event, eventHandlerFn) {
     this.pubsub_.subscribe(event, eventHandlerFn);
 };
 
@@ -54,10 +54,10 @@ nx.EventBus.prototype.subscribe = function (event, eventHandlerFn) {
  * @param {nx.Event} event
  * @param {function} valueObj
  */
-nx.EventBus.prototype.fire = function (event, valueObj) {
+nx.MyEventBus.prototype.fire = function (event, valueObj) {
     this.pubsub_.publish(event, valueObj);
 };
 
-goog.exportSymbol('nx.EventBus', nx.EventBus);
+goog.exportSymbol('nx.MyEventBus', nx.MyEventBus);
 
 
