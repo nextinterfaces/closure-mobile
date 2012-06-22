@@ -19,7 +19,7 @@ goog.inherits(nx.MyEventBus, nx.EventBus);
 
 /**
  */
-nx.MyEventBus.prototype.init = function (ctx, pubsub) {
+nx.MyEventBus.prototype.events = function (ctx, pubsub) {
     this.subscribe(nx.Event.HOUSE_CLICK, function (valueObj) {
         log('nx.Event.HOUSE_CLICK %o', valueObj);
         var ctx2 = ctx;
