@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<project basedir="." default="init">
+
+
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <property name="build.root.dir" value="build"/>
+    <property name="build.js" value="build/js"/>
+    <property name="build.web.dir" value="build/web"/>
+    <property name="dist.dir" value="build/dist"/>
+    <property name="product.version" value="0"/>
+
+    <!-- ===================================================================
+           target: init
+   ==================================================================== -->
+    <target name="init" depends="clean, prepare, buildNumber">
+        <set.timestamp/>
+        <copy includeemptydirs="false" todir="${build.js}">
+            <fileset dir="web">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- ===================================================================
+             target: buildNumber
+     ==================================================================== -->
+    <target name="buildNumber">
+        <propertyfile file="buildnumber.txt">
+            <entry key="build.number" type="int" operation="+" default="1"/>
+        </propertyfile>
+        <property file="buildnumber.txt"/>
+        <echo message="Building version ${product.version}.${build.number}"/>
+    </target>
+
+    <!-- ===================================================================
+             macrodef: set.timestamp
+     ==================================================================== -->
+    <macrodef name="set.timestamp">
+        <sequential>
+            <tstamp>
+                <format property="current.time" pattern="MMddhhmm"/>
+            </tstamp>
+        </sequential>
+    </macrodef>
+
+    <!-- ===================================================================
+             target: clean
+     ==================================================================== -->
+    <target name="clean">
+        <delete dir="${build.root.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <!-- ===================================================================
+             target: prepare
+     ==================================================================== -->
+    <target name="prepare" description="creates output directories">
+        <mkdir dir="${build.js}"/>
+        <mkdir dir="${build.web.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+
+    <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
+             classpath="compiler.jar"/>
+
+    <target name="compile">
+
+        <jscomp compilationLevel="simple" warning="verbose"
+                debug="false" output="output/file.js">
+
+            <!--
+            <externs dir="${basedir}/src">
+                <file name="extern.js"/>
+            </externs>
+            -->
+
+            <sources dir="${basedir}/web/mvp">
+                <file name="simple1.js"/>
+                <file name="simple2.js"/>
+            </sources>
+
+        </jscomp>
+
+    </target>
+
+</project>

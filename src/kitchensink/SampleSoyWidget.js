@@ -1,7 +1,7 @@
 goog.provide('nx.SampleSoyWidget');
 
 goog.require('nx.Widget');
-//goog.require('nx.soy');
+goog.require('nx.soy');
 
 /**
  * @param {nx.Widget|Element} parent
@@ -15,11 +15,11 @@ nx.SampleSoyWidget = function (parent) {
 
     this.widget_ = ele;
 
-//    var data = {greeting: 'Hello from JS', year: new Date().getFullYear()};
-//    var soyHTML = nx.soy.hello(data);
-//    var eleSoy = goog.dom.createDom('div', {'id':'soy'});
-//    eleSoy.innerHTML = soyHTML;
-//    this.add(eleSoy);
+    var data = {greeting: 'Hello from KLM', year: new Date().getFullYear()};
+    var soyHTML = nx.soy.hello(data);
+    var eleSoy = goog.dom.createDom('div', {'id':'soy'});
+    eleSoy.innerHTML = soyHTML;
+    this.add(eleSoy);
 };
 goog.inherits(nx.SampleSoyWidget, nx.Widget);
 

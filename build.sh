@@ -17,16 +17,26 @@ echo
 echo "---------Dependency tree ---------"
 ./closure-library/closure/bin/build/closurebuilder.py \
   --root=./closure-library/ \
-  --root=./web/ \
+  --root=./closure-templates/ \
+  --root=./src/ \
   --namespace="nx.Main"
 
 echo
 echo
-  
+#echo "---------Generating soy.js..."
+#java -jar ./closure-templates/SoyToJsSrcCompiler.jar \
+#    --outputPathFormat ./web/simple.soy.js \
+#    --shouldGenerateJsdoc \
+#    --shouldProvideRequireSoyNamespaces ./web/soy/simple.soy
+
+echo
+echo
+
 echo "---------Compilation starts ---------"
 ./closure-library/closure/bin/build/closurebuilder.py \
   --root=./closure-library/ \
-  --root=./web/ \
+  --root=./closure-templates/ \
+  --root=./src/ \
   --namespace="nx.Main" \
   --output_mode=compiled \
   --compiler_jar=./compiler.jar \
