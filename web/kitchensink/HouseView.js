@@ -2,10 +2,10 @@ goog.provide('nx.HouseView');
 
 goog.require('goog.dom');
 goog.require('goog.ui.CustomButton');
-goog.require('nx.DragButton');
+goog.require('nx.SampleDragWidget');
 goog.require('nx.VerticalScrollView');
 goog.require('nx.Widget');
-goog.require('nx.WrapperWidget');
+goog.require('nx.SampleWidget');
 
 /**
  * @param {nx.Widget|Element} parent
@@ -30,10 +30,10 @@ nx.HouseView = function (parent) {
 
     this.listDiv_ = listDiv;
 
-    var dragBtn = new nx.DragButton(this);
+    var dragBtn = new nx.SampleDragWidget(this);
     this.add(dragBtn);
 
-    var wrappedWidg = new nx.WrapperWidget(this);
+    var wrappedWidg = new nx.SampleWidget(this);
     this.add(wrappedWidg);
 
     var scrollView = new nx.VerticalScrollView(this);

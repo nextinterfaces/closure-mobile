@@ -17,7 +17,7 @@
         "web/kitchensink/UserPresenter.js",
         "web/kitchensink/HouseView.js",
         "web/kitchensink/UserView.js",
-        "web/kitchensink/WrapperWidget.js",
+        "web/kitchensink/SampleWidget.js",
         "web/mvp/Ctx.js",
         "web/mvp/Widget.js",
         "web/mvp/View.js",

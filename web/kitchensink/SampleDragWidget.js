@@ -1,4 +1,4 @@
-goog.provide('nx.DragButton');
+goog.provide('nx.SampleDragWidget');
 
 goog.require('nx.Widget');
 goog.require('nx.DragController');
@@ -9,19 +9,19 @@ goog.require('nx.DragController');
  * @implements {nx.DragEventsHandler}
  * @extends {nx.Widget}
  */
-nx.DragButton = function (parent) {
+nx.SampleDragWidget = function (parent) {
 //    nx.Widget.call(this, parent);
     goog.base(this, parent);
-    var btn = goog.dom.createDom('div', {'style':'background-color:#FEE;border: 1px solid #CCC;margin:50px;padding: 10px;'}, 'Click me');
+    var btn = goog.dom.createDom('div', {'style':'background-color:#FEE;border: 1px solid #CCC;margin:50px;padding: 10px;'}, 'Touch area');
 
     this.widget_ = btn;
 };
-goog.inherits(nx.DragButton, nx.Widget);
+goog.inherits(nx.SampleDragWidget, nx.Widget);
 
 /**
 * @inheritDoc
 */
-nx.DragButton.prototype.onAttach = function () {
+nx.SampleDragWidget.prototype.onAttach = function () {
     log('[[[[ DragButton ]]]] onAttach');
     nx.DragController.getInstance().addDragEventsHandler(this);
 };
@@ -29,7 +29,7 @@ nx.DragButton.prototype.onAttach = function () {
 /**
 * @inheritDoc
 */
-nx.DragButton.prototype.onDetach = function () {
+nx.SampleDragWidget.prototype.onDetach = function () {
     log('[[[[ DragButton ]]]] onDetach');
     nx.DragController.getInstance().removeDragEventsHandler(this);
 };
@@ -37,41 +37,41 @@ nx.DragButton.prototype.onDetach = function () {
 /**
  * @inheritDoc
  */
-nx.DragButton.prototype.onDragStart = function (e) {
+nx.SampleDragWidget.prototype.onDragStart = function (e) {
     log('[[[[ DragButton ]]]] onDragStart', e);
 };
 
 /**
  * @inheritDoc
  */
-nx.DragButton.prototype.onDragMove = function (e) {
+nx.SampleDragWidget.prototype.onDragMove = function (e) {
     log('[[[[ DragButton ]]]] onDragMove', e);
 };
 
 /**
  * @inheritDoc
  */
-nx.DragButton.prototype.onDragMoveHorizontal = function (e) {
+nx.SampleDragWidget.prototype.onDragMoveHorizontal = function (e) {
     log('[[[[ DragButton ]]]] onDragMoveHorizontal', e);
 };
 
 /**
  * @inheritDoc
  */
-nx.DragButton.prototype.onDragMoveVertical = function (e) {
+nx.SampleDragWidget.prototype.onDragMoveVertical = function (e) {
     log('[[[[ DragButton ]]]] onDragMoveVertical', e);
 };
 
 /**
  * @inheritDoc
  */
-nx.DragButton.prototype.onDragEnd = function (e) {
+nx.SampleDragWidget.prototype.onDragEnd = function (e) {
     log('[[[[ DragButton ]]]] onDragEnd', e);
 };
 
 /**
  * @inheritDoc
  */
-nx.DragButton.prototype.getElement = function () {
+nx.SampleDragWidget.prototype.getElement = function () {
     return this.widget_;
 };
