@@ -1,6 +1,5 @@
 goog.provide('nx.Ctx');
 
-goog.require('nx.EventBus');
 goog.require('nx.House');
 goog.require('nx.HouseView');
 goog.require('nx.HousePresenter');

@@ -41,7 +41,6 @@ nx.HouseView = function (parent) {
     textDiv.innerHTML = '111111<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333<br>';
     scrollView.setWidget(textDiv);
     this.add(scrollView);
-//    wrapperDiv.appendChild(scrollView.getElement());
 
     var button = new goog.ui.CustomButton("Save");
     button.addClassName('xbtn');

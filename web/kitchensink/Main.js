@@ -37,7 +37,7 @@ nx.Main = function(){
     // instantiate ctx
     var ctx = nx.Ctx.getInstance();
 
-    // run the sample presenter
+    // run the sample mvp
     new nx.HousePresenter(ctx.getHouseView(), ctx)
         .init()
         .render(ctx.getRoot());
