@@ -12,15 +12,14 @@
         "web/touch/VerticalScrollView.js",
         "web/touch/Point.js",
         "web/touch/Fx.js",
+        "web/touch/Util.js",
+        "web/touch/Id.js",
 
         "web/mvp/Ctx.js",
         "web/mvp/Widget.js",
         "web/mvp/View.js",
         "web/mvp/Presenter.js",
         "web/mvp/EventBus.js",
-
-        "web/Util.js",
-        "web/Id.js",
 
         "web/kitchensink/Event.js",
         "web/kitchensink/House.js",
