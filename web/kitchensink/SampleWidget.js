@@ -11,7 +11,7 @@ goog.require('nx.SampleDragWidget');
 nx.SampleWidget = function (parent) {
     goog.base(this, parent);
     var ele = goog.dom.createDom('div', {'id':'wrapper-widget',
-        'style': 'margin: 30px; border: 2px solid #1AF; width: 50%; height: 100px;'});
+        'style':'margin: 30px; border: 2px solid #1AF; width: 50%; height: 100px;'});
 
     this.widget_ = ele;
 
@@ -19,25 +19,25 @@ nx.SampleWidget = function (parent) {
     this.add(dragBtn);
 
     var ele2 = goog.dom.createDom('div', {'id':'widget2',
-        'style': 'margin: 10px; border: 2px solid #A1F; width: 30px; height: 20px;'});
+        'style':'margin: 10px; border: 2px solid #A1F; width: 30px; height: 20px;'});
     this.add(ele2);
 
     var ele3 = goog.dom.createDom('div', {'id':'widget3',
-        'style': 'margin: 10px; border: 2px solid #F1A; width: 30px; height: 20px;'});
+        'style':'margin: 10px; border: 2px solid #F1A; width: 30px; height: 20px;'});
     this.add(ele3);
 };
 goog.inherits(nx.SampleWidget, nx.Widget);
 
 /**
-* @inheritDoc
-*/
+ * @inheritDoc
+ */
 nx.SampleWidget.prototype.onAttach = function () {
     log('[[[[ WrapperWidget ]]]] onAttach');
 };
 
 /**
-* @inheritDoc
-*/
+ * @inheritDoc
+ */
 nx.SampleWidget.prototype.onDetach = function () {
     log('[[[[ WrapperWidget ]]]] onDetach');
 };

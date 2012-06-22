@@ -6,6 +6,7 @@ goog.require('nx.SampleDragWidget');
 goog.require('nx.VerticalScrollView');
 goog.require('nx.Widget');
 goog.require('nx.SampleWidget');
+goog.require('nx.SampleSoyWidget');
 
 /**
  * @param {nx.Widget|Element} parent
@@ -36,9 +37,14 @@ nx.HouseView = function (parent) {
     var wrappedWidg = new nx.SampleWidget(this);
     this.add(wrappedWidg);
 
+    var soyWidg = new nx.SampleSoyWidget(this);
+    this.add(soyWidg);
+
     var scrollView = new nx.VerticalScrollView(this);
     var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-    textDiv.innerHTML = '111111<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333<br>';
+    textDiv.innerHTML = '111111<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333' +
+        '<br>2222<br>3333<br>44444444<br>55<br>6<br>7777777777<br>88<br>99<br>10';
+        '';
     scrollView.setWidget(textDiv);
 //    this.add(scrollView);
 
