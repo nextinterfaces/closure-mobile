@@ -20,9 +20,9 @@
         "web/mvp/EventBus.js",
 
         "web/Util.js",
-        "web/Event.js",
         "web/Id.js",
 
+        "web/kitchensink/Event.js",
         "web/kitchensink/House.js",
         "web/kitchensink/User.js",
         "web/kitchensink/HousePresenter.js",

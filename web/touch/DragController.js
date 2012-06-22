@@ -1,6 +1,5 @@
 goog.provide('nx.DragController');
 
-goog.require('nx.Event');
 goog.require('nx.Util');
 goog.require('nx.Point');
 goog.require('nx.DragTouchController');
