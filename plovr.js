@@ -12,6 +12,17 @@
         "web/touch/VerticalScrollView.js",
         "web/touch/Point.js",
         "web/touch/Fx.js",
+
+        "web/mvp/Ctx.js",
+        "web/mvp/Widget.js",
+        "web/mvp/View.js",
+        "web/mvp/Presenter.js",
+        "web/mvp/EventBus.js",
+
+        "web/Util.js",
+        "web/Event.js",
+        "web/Id.js",
+
         "web/kitchensink/House.js",
         "web/kitchensink/User.js",
         "web/kitchensink/HousePresenter.js",
@@ -19,15 +30,7 @@
         "web/kitchensink/HouseView.js",
         "web/kitchensink/UserView.js",
         "web/kitchensink/SampleWidget.js",
-        "web/mvp/Ctx.js",
-        "web/mvp/Widget.js",
-        "web/mvp/View.js",
-        "web/mvp/Presenter.js",
-        "web/mvp/EventBus.js",
-        "web/mvp/MyEventBus.js",
-        "web/Util.js",
-        "web/Event.js",
-        "web/Id.js",
+        "web/kitchensink/MyEventBus.js",
         "web/kitchensink/Main.js"
     ],
     "mode": "RAW", // RAW, WHITESPACE, SIMPLE, ADVANCED
