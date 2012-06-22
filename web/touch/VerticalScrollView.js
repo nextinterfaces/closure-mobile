@@ -3,28 +3,32 @@ goog.provide('nx.VerticalScrollView');
 goog.require('nx.DragController');
 goog.require('nx.Fx');
 goog.require('nx.Util');
+goog.require('nx.Widget');
 
 /**
- * @param {number} x
- * @param {number} y
- * @implements {nx.Widget}
+ * @param {nx.Widget|Element} parent
+ * @constructor
+ * @extends {nx.Widget}
  * @implements {nx.DragEventsHandler}
  * @implements {nx.SwipeEventsHandler}
- * @constructor
  */
-nx.VerticalScrollView = function (x, y) {
+nx.VerticalScrollView = function (parent) {
+    goog.base(this, parent);
+//    nx.Widget.call(this, parent);
+    log('VerticalScrollView constructor...');
     this.hasTextBox_ = false;
     this.widgetElement_ = undefined;
     this.panelHeight_ = -1;
     this.widgetHeight_ = -1;
     this.panel_ = goog.dom.createDom('div', {'class':'scrollPanel'});
 };
+goog.inherits(nx.VerticalScrollView, nx.Widget);
 
 /**
  * @inheritDoc
  */
-nx.VerticalScrollView.prototype.onLoad = function (e) {
-    log('[[[[ VerticalScrollView ]]]] onLoad', e);
+nx.VerticalScrollView.prototype.onAttach = function () {
+    log('[[[[ VerticalScrollView ]]]] onAttach');
     nx.DragController.getInstance().addDragEventsHandler(this);
     nx.DragController.getInstance().addSwipeEventsHandler(this);
 };
@@ -32,13 +36,13 @@ nx.VerticalScrollView.prototype.onLoad = function (e) {
 /**
  * @inheritDoc
  */
-nx.VerticalScrollView.prototype.onUnload = function (e) {
-    log('[[[[ VerticalScrollView ]]]] onUnload', e);
+nx.VerticalScrollView.prototype.onDetach = function () {
+    log('[[[[ VerticalScrollView ]]]] onDetach');
     nx.DragController.getInstance().removeDragEventsHandler(this);
     nx.DragController.getInstance().removeSwipeEventsHandler(this);
 };
 
-nx.VerticalScrollView.prototype.add = function (widget) {
+nx.VerticalScrollView.prototype.setWidget = function (widget) {
     this.widgetElement_ = widget;
     goog.dom.appendChild(this.panel_, widget);
 };
@@ -61,7 +65,6 @@ nx.VerticalScrollView.prototype.remove = function (widget) {
 //    return this.panel_.remove(w);
     goog.dom.removeNode(widget);
 };
-
 
 nx.VerticalScrollView.prototype.setScrollPositionY = function (pos) {
     if (this.hasTextBox_) {

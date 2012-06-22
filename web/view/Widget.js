@@ -14,7 +14,7 @@ nx.Widget = function (parent) {
         throw new Error("nx.Widget(): Empty parent widget.");
     }
 
-    if (!this.isWidgetOrEle_(parent)) {
+    if (!nx.isWidgetOrEle(parent)) {
         throw new Error("nx.Widget(): Parent must be {nx.Widget} or {Element} type.");
     }
 
@@ -74,28 +74,6 @@ nx.Widget.prototype.getChildren = function () {
 
 /**
  * @param {nx.Widget|Element} widget
- * @private
- * return {boolean}
- */
-nx.Widget.prototype.isWidgetOrEle_ = function (widget) {
-    if ((widget instanceof nx.Widget) || (widget instanceof Element)) {
-        return true;
-    } else {
-        return false;
-    }
-};
-
-/**
- * @param {nx.Widget|Element} widget
- * @private
- * return {boolean}
- */
-nx.Widget.prototype.isWidget = function (widget) {
-    return (widget instanceof nx.Widget);
-};
-
-/**
- * @param {nx.Widget|Element} widget
  */
 nx.Widget.prototype.add = function (widget) {
 //    parentEle.appendChild(this.getElement());
@@ -104,13 +82,13 @@ nx.Widget.prototype.add = function (widget) {
     if (!goog.isDefAndNotNull(widget)) {
         throw new Error("nx.Widget:add Empty widget");
     }
-    if (!this.isWidgetOrEle_(widget)) {
+    if (!nx.isWidgetOrEle(widget)) {
         throw new Error("nx.Widget:add Wrong type, not a Widget or Element");
     }
     // adding to array
     goog.array.insert(this.children_, widget);
 
-    if (this.isWidget(widget)) {
+    if (nx.isWidget(widget)) {
         log('------ nx.Widget:add THIS IS WIDGET attaching -----', this, widget);
         goog.dom.appendChild(this.getElement(), widget.getElement());
         if (!widget.isAttached_) {
@@ -135,7 +113,7 @@ nx.Widget.prototype.remove = function (widget) {
     if (!goog.isDefAndNotNull(widget)) {
         throw new Error("nx.Widget:remove Empty widget");
     }
-    if (!this.isWidgetOrEle_(widget)) {
+    if (!nx.isWidgetOrEle(widget)) {
         throw new Error("nx.Widget:remove Wrong type, not a Widget or Element");
     }
 
@@ -143,7 +121,7 @@ nx.Widget.prototype.remove = function (widget) {
 
     if (removed >= 0) {
         goog.dom.removeNode(widget.getElement());
-        if (this.isWidget(widget)) {
+        if (nx.isWidget(widget)) {
             log('------ nx.Widget:add THIS IS WIDGET detaching -----', this, widget);
             if (widget.isAttached_) {
                 widget.onDetach();
@@ -191,7 +169,7 @@ nx.Widget.prototype.removeFromParent = function () {
         throw new Error("nx.Widget:removeFromParent Empty parent_");
     }
 
-    if (this.isWidget(this.parent_)) {
+    if (nx.isWidget(this.parent_)) {
         log('------ nx.Widget:removeFromParent parent IS WIDGET -----', this, parent);
         this.parent_.remove(this);
 
@@ -209,7 +187,7 @@ nx.Widget.prototype.detachChildren = function (w, level) {
     if (!goog.isDefAndNotNull(w)) {
         return;
     }
-    if (!this.isWidget(w)) {
+    if (!nx.isWidget(w)) {
         return;
     }
 
@@ -235,7 +213,7 @@ nx.Widget.prototype.attachChildren = function (w, level) {
     if (!goog.isDefAndNotNull(w)) {
         return;
     }
-    if (!this.isWidget(w)) {
+    if (!nx.isWidget(w)) {
         return;
     }
 

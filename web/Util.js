@@ -65,4 +65,27 @@ nx.isTouch = function () {
 nx.getType = function (obj) {
     if (obj === null) return "[object Null]"; // special case
     return Object.prototype.toString.call(obj);
-}
+};
+
+
+/**
+ * @param {nx.Widget|Element} w
+ * @private
+ * return {boolean}
+ */
+nx.isWidgetOrEle = function (w) {
+    if ((w instanceof nx.Widget) || (w instanceof Element)) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+/**
+ * @param {nx.Widget|Element} w
+ * @private
+ * return {boolean}
+ */
+nx.isWidget = function (w) {
+    return (w instanceof nx.Widget);
+};

@@ -36,16 +36,12 @@ nx.HouseView = function (parent) {
     var wrappedWidg = new nx.WrapperWidget(this);
     this.add(wrappedWidg);
 
-//    var scrollView = new nx.VerticalScrollView();
-//    var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-//    textDiv.innerHTML = '111111<br>2222<br>3333<br>';
-//    scrollView.add(textDiv);
-//    /////
-//
+    var scrollView = new nx.VerticalScrollView(this);
+    var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
+    textDiv.innerHTML = '111111<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333<br>';
+    scrollView.setWidget(textDiv);
+    this.add(scrollView);
 //    wrapperDiv.appendChild(scrollView.getElement());
-//
-//    this.wrapperDiv_ = wrapperDiv;
-//    this.listDiv_ = listDiv;
 
     var button = new goog.ui.CustomButton("Save");
     button.addClassName('xbtn');

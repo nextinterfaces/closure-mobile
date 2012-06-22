@@ -8,7 +8,6 @@ goog.require('nx.DragController');
  * @constructor
  * @implements {nx.DragEventsHandler}
  * @extends {nx.Widget}
- * @return {Element}
  */
 nx.DragButton = function (parent) {
 //    nx.Widget.call(this, parent);
