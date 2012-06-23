@@ -8,6 +8,7 @@ goog.require('nx.Widget');
 goog.require('nx.SampleWidget');
 goog.require('nx.SampleSoyWidget');
 goog.require('nx.soy.first');
+goog.require('nx.NavigationContent');
 
 /**
  * @param {nx.Widget|Element} parent
@@ -22,15 +23,14 @@ nx.HouseView = function (parent) {
 
     this.widget_ = ele;
 
-    var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'}, 'House Title');
-    var listDiv = goog.dom.createDom('div', {'id':'list', 'class': 'xlabel Text'});
-    var btnsDiv = goog.dom.createDom('div', {'id':'btns'});
+    var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'});
+    headerDiv.innerHTML = '<div>House Title</div>';
+    var labelDiv = goog.dom.createDom('div', {'class': 'xlabel Text'});
+    var tabBar = goog.dom.createDom('div', {'class':'tabBar'});
 
     this.add(headerDiv);
-    this.add(listDiv);
-    this.add(btnsDiv);
 
-    this.listDiv_ = listDiv;
+    this.labelDiv_ = labelDiv;
 
 //    var dragBtn = new nx.SampleDragWidget(this);
 //    this.add(dragBtn);
@@ -41,24 +41,24 @@ nx.HouseView = function (parent) {
 //    var soyWidg = new nx.SampleSoyWidget(this);
 //    this.add(soyWidg);
 
-    var scrollWrapper = goog.dom.createDom('div', {id:'scrollWrapper'});
-    this.add(scrollWrapper);
+    var navigationContent = new nx.NavigationContent(this);
+    this.add(navigationContent);
 
     var scrollView = new nx.VerticalScrollView(this);
     var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
     textDiv.innerHTML = nx.soy.first.getList();
     scrollView.setWidget(textDiv);
-//    goog.dom.appendChild(scrollWrapper, scrollView.getElement());
+    navigationContent.add(scrollView);
 
-    this.add(scrollView);
-
-    var button = new goog.ui.CustomButton("Save");
-    button.addClassName('xbtn');
-    button.render(btnsDiv);
+    var button = goog.dom.createDom('div', {'class':'tabContent'}, "House");
+    tabBar.appendChild(button);
     goog.events.listen(
-        button.getContentElement(),
+        button,
         goog.events.EventType.CLICK,
         this.clickActionButton(), false, this);
+
+    this.add(labelDiv);
+    this.add(tabBar);
 };
 goog.inherits(nx.HouseView, nx.Widget);
 
@@ -84,10 +84,11 @@ nx.HouseView.prototype.getName = function () {
 };
 
 /**
+ * @param {nx.House} data
  * @return {Element}
  */
-nx.HouseView.prototype.getList = function(){
-    return this.listDiv_;
+nx.HouseView.prototype.setData = function(data){
+    this.labelDiv_.innerHTML = data.getAddress();
 };
 
 /**

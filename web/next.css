@@ -16,7 +16,8 @@ html, body {
     padding: 0;
 }
 
-p,div,span,td { /* This disables inputs and textarea */
+p, div, span, td {
+    /* This disables inputs and textarea */
     -webkit-user-select: none;
     user-select: none;
 }
@@ -35,9 +36,11 @@ code, pre, pre * {
 }
 
 .navigationContent {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 46px;
+    bottom: 50px;
+    right: 0;
+    left: 0;
 }
 
 .navigationContent {
@@ -46,9 +49,9 @@ code, pre, pre * {
 
 .navigationBar {
     width: 100%;
-    height: 100%;
+    height: 44px;
     background: #8195AF;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B0BCCD), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF), to(#6D84A2) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B0BCCD), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF), to(#6D84A2));
     border-top: 1px solid #CDD5DF;
     border-bottom: 1px solid #2D3642;
     z-index: 10;
@@ -59,7 +62,15 @@ code, pre, pre * {
     color: white;
     text-shadow: 0 -1px 1px #505965;
     text-align: center;
-    padding: 5px 0 10px;
+    position: relative;
+}
+
+.navigationBar div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -13px;
 }
 
 .navBarItem {
@@ -155,6 +166,7 @@ code, pre, pre * {
     right: 0;
     bottom: 0;
     left: 0;
+    height: 48px;
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-align: right;
@@ -163,8 +175,7 @@ code, pre, pre * {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     background: #151515;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434343), color-stop(0.01, #434343), color-stop(0.01, #2e2e2e), color-stop(0.5, #151515), color-stop(0.5, #000),
-    to(#000) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#434343), color-stop(0.01, #434343), color-stop(0.01, #2e2e2e), color-stop(0.5, #151515), color-stop(0.5, #000), to(#000));
     padding: 0 2px;
 }
 
@@ -174,7 +185,7 @@ code, pre, pre * {
 
 .tab.selected {
     background: #363636;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#494949), color-stop(0.5, #363636), color-stop(0.5, #252525), to(#252525) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#494949), color-stop(0.5, #363636), color-stop(0.5, #252525), to(#252525));
     border-radius: 3px;
 }
 
@@ -252,7 +263,7 @@ div.tableCell {
 
 .tableCell.selected {
     background: #0375ED;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6) );
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6));
 }
 
 .tableCell.chevron {
@@ -263,7 +274,7 @@ div.tableCell {
 
 .tableCell.selected.chevron {
     background-image: url("images/all/chevronSelected.png");
-    background-image: url("images/all/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6) );
+    background-image: url("images/all/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6));
 }
 
 .tableCellWestImage {
@@ -278,7 +289,7 @@ div.tableCell {
     right: 10px;
 }
 
-.tableCellTitle, .tableCell .gwt-Label{
+.tableCellTitle, .tableCell .gwt-Label {
     margin-left: 10px;
     color: #000;
     font-weight: bold;
@@ -320,7 +331,7 @@ div.tableCell {
 .xbutton.Navigation {
     border: 1px solid RGBA(48, 54, 62, .7);
     border-top: 1px solid RGBA(48, 54, 62, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7E8FA7), color-stop(0.05, #8EA4C1), color-stop(0.5, #5877A2), color-stop(0.5, #476999), color-stop(1, #4A6C9B) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7E8FA7), color-stop(0.05, #8EA4C1), color-stop(0.5, #5877A2), color-stop(0.5, #476999), color-stop(1, #4A6C9B));
     -webkit-border-radius: 7px;
     border-radius: 7px;
     -webkit-box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.3);
@@ -340,14 +351,14 @@ div.tableCell {
 .xbutton.Navigation.selected {
     border: 1px solid RGBA(43, 46, 54, .7);
     border-top: 1px solid RGBA(43, 46, 54, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F798F), color-stop(0.05, #7D88A5), color-stop(0.5, #3A4E78), color-stop(0.5, #253C6A), color-stop(1, #273F6D) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F798F), color-stop(0.05, #7D88A5), color-stop(0.5, #3A4E78), color-stop(0.5, #253C6A), color-stop(1, #273F6D));
     -webkit-box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.3);
 }
 
 .xbutton.Navigation.Red {
     border: 1px solid RGBA(67, 42, 44, .7);
     border-top: 1px solid RGBA(67, 42, 44, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B46B71), color-stop(0.05, #D1787F), color-stop(0.5, #B82E3A), color-stop(0.5, #B01825), color-stop(1, #B01825) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#B46B71), color-stop(0.05, #D1787F), color-stop(0.5, #B82E3A), color-stop(0.5, #B01825), color-stop(1, #B01825));
 }
 
 .xbutton.Navigation.Red .body {
@@ -357,25 +368,25 @@ div.tableCell {
 .xbutton.Navigation.Red.selected {
     border: 1px solid RGBA(56, 44, 45, .7);
     border-top: 1px solid RGBA(56, 44, 45, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#957174), color-stop(0.05, #AB7F83), color-stop(0.5, #7D3A3F), color-stop(0.5, #6F252B), color-stop(1, #6F252B) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#957174), color-stop(0.05, #AB7F83), color-stop(0.5, #7D3A3F), color-stop(0.5, #6F252B), color-stop(1, #6F252B));
 }
 
 .xbutton.Navigation.Blue {
     border: 1px solid RGBA(42, 53, 75, .7);
     border-top: 1px solid RGBA(42, 53, 75, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6E8AC8), color-stop(0.05, #7B9EEA), color-stop(0.5, #376FE0), color-stop(0.5, #2260DD), color-stop(1, #2463DE) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6E8AC8), color-stop(0.05, #7B9EEA), color-stop(0.5, #376FE0), color-stop(0.5, #2260DD), color-stop(1, #2463DE));
 }
 
 .xbutton.Navigation.Blue.selected {
     border: 1px solid RGBA(43, 46, 54, .7);
     border-top: 1px solid RGBA(43, 46, 54, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F798F), color-stop(0.05, #7D88A5), color-stop(0.5, #3A4E78), color-stop(0.5, #253C6A), color-stop(1, #273F6D) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6F798F), color-stop(0.05, #7D88A5), color-stop(0.5, #3A4E78), color-stop(0.5, #253C6A), color-stop(1, #273F6D));
 }
 
 .xbutton.Navigation.Black {
     border: 1px solid RGBA(36, 36, 36, .7);
     border-top: 1px solid RGBA(36, 36, 36, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#747474), color-stop(0.05, #838383), color-stop(0.5, #444), color-stop(0.5, #303030), color-stop(1, #333) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#747474), color-stop(0.05, #838383), color-stop(0.5, #444), color-stop(0.5, #303030), color-stop(1, #333));
 }
 
 .xbutton.Navigation.Black .body {
@@ -385,7 +396,7 @@ div.tableCell {
 .xbutton.Navigation.Black.selected {
     border: 1px solid RGBA(29, 29, 29, .7);
     border-top: 1px solid RGBA(29, 29, 29, .9);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5d5d5d), color-stop(0.05, #696969), color-stop(0.5, #363636), color-stop(0.5, #262626), color-stop(1, #292929) );
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5d5d5d), color-stop(0.05, #696969), color-stop(0.5, #363636), color-stop(0.5, #262626), color-stop(1, #292929));
 }
 
 /*****************************
@@ -411,7 +422,7 @@ div.tableCell {
 
 .xbutton.Rounded.selected {
     border: 1px solid #5987B0;
-    background: -webkit-gradient(linear, left top, left bottom, from(#058CF5), to(#015FE6) );
+    background: -webkit-gradient(linear, left top, left bottom, from(#058CF5), to(#015FE6));
 }
 
 .xbutton.Rounded.selected .body {
@@ -452,7 +463,7 @@ div.tableCell {
     font-weight: bold;
     color: #444;
     text-shadow: 0 1px 1px #F6F6F6;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(1, #EEE) );
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(1, #EEE));
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
     border-radius: 1em;
@@ -470,7 +481,7 @@ div.tableCell {
 
 .xbutton.Shadow.selected {
     border: 1px solid #5987B0;
-    background: -webkit-gradient(linear, left top, left bottom, from(#058CF5), to(#015FE6) );
+    background: -webkit-gradient(linear, left top, left bottom, from(#058CF5), to(#015FE6));
     text-shadow: 0 -1px 1px #333;
 }
 
@@ -570,7 +581,7 @@ div.tableCell {
     top: .4em;
     width: 100%;
     border-radius: .3em;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA), to(#fff) );
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA), to(#fff));
     border: 1px solid #B3B3B3;
     height: .5em;
     -webkit-background-clip: content !important;
@@ -581,7 +592,7 @@ div.tableCell {
     top: .4em;
     border-top-left-radius: .3em;
     border-bottom-left-radius: .3em;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA), to(#63A1F3) );
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA), to(#63A1F3));
     float: left;
     border: 1px solid #366094;
     height: .5em;
@@ -633,7 +644,7 @@ div.tableCell {
 /*****************************
  * Form CSS
  *****************************/
-input,textarea,select {
+input, textarea, select {
     padding: 0;
     margin: 0;
     border: none;
@@ -643,11 +654,11 @@ input,textarea,select {
     font-weight: bold;
 }
 
-h2,p,a,input,textarea,select {
+h2, p, a, input, textarea, select {
     outline: none;
 }
 
-input,input[type="password"],input[type="search"],isindex {
+input, input[type="password"], input[type="search"], isindex {
     -webkit-appearance: textfield;
     padding: 1px;
     background-color: white;
@@ -657,7 +668,7 @@ input,input[type="password"],input[type="search"],isindex {
     cursor: auto;
 }
 
-input,textarea,keygen,select,button,isindex,datagrid {
+input, textarea, keygen, select, button, isindex, datagrid {
     margin: 0em;
     font: -webkit-small-control;
     color: initial;
@@ -671,7 +682,7 @@ input,textarea,keygen,select,button,isindex,datagrid {
     text-align: -webkit-auto;
 }
 
-input::-webkit-input-placeholder,isindex::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, isindex::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: darkGray;
 }
 
@@ -757,7 +768,7 @@ input::-webkit-outer-spin-button {
     top: .4em;
     width: 100%;
     border-radius: .3em;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA), to(#fff) );
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#BABABA), to(#fff));
     border: 1px solid #B3B3B3;
     height: .5em;
     -webkit-background-clip: content !important;
@@ -767,7 +778,7 @@ input::-webkit-outer-spin-button {
     position: relative;
     top: .4em;
     border-radius: .3em;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ADC7EB), to(#2676D6) );
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ADC7EB), to(#2676D6));
     /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4570AA),
          to(#63A1F3) ); */
     float: left;
@@ -805,7 +816,7 @@ input::-webkit-outer-spin-button {
     font-weight: bold;
     color: #444;
     text-shadow: 0 1px 1px #F6F6F6;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(1, #EEE) );
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFDFD), color-stop(1, #EEE));
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
     border-radius: 1em;
@@ -857,19 +868,19 @@ input::-webkit-outer-spin-button {
 /*****************************
  * xcheckbox, xradioButton
  *****************************/
-.xcheckboxGroup,.xradioButtonGroup {
+.xcheckboxGroup, .xradioButtonGroup {
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     width: 100%;
 }
 
-.xcheckboxGroup>span,.xradioButtonGroup>span {
+.xcheckboxGroup>span, .xradioButtonGroup>span {
     -webkit-box-flex: 1;
     display: -webkit-box;
     -webkit-box-align: center;
     -webkit-box-pack: center;
     padding: .5em .1em;
-    background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#FCFCFC), to(#C8C8C8) );
+    background-image: -webkit-gradient(linear, 0% 0, 0% 100%, from(#FCFCFC), to(#C8C8C8));
     text-shadow: #fff 0px 1px 1px;
     color: #7F7F7F;
     font-size: 1.2em;
@@ -880,9 +891,8 @@ input::-webkit-outer-spin-button {
     border-bottom: 1px solid #999;
 }
 
-.xcheckboxGroup.horizontal>span.selected,.xradioButtonGroup.horizontal>span.selected {
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2655A6), color-stop(0.08, #336FD4), color-stop(0.08, #3571D9), color-stop(0.5, #3D81E9), color-stop(0.5, #498AEB),
-    to(#6EA9FB) );
+.xcheckboxGroup.horizontal>span.selected, .xradioButtonGroup.horizontal>span.selected {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2655A6), color-stop(0.08, #336FD4), color-stop(0.08, #3571D9), color-stop(0.5, #3D81E9), color-stop(0.5, #498AEB), to(#6EA9FB));
     border-top-color: #073E7D;
     border-left-color: #3871B2;
     border-right-color: #4082CB;
@@ -891,11 +901,11 @@ input::-webkit-outer-spin-button {
     text-shadow: #14519B 0px -1px 1px;
 }
 
-.xcheckboxGroup.horizontal>span>input,.xcheckboxGroup.horizontal>span>div,.xradioButtonGroup.horizontal>span>input,.xradioButtonGroup.horizontal>span>div {
+.xcheckboxGroup.horizontal>span>input, .xcheckboxGroup.horizontal>span>div, .xradioButtonGroup.horizontal>span>input, .xradioButtonGroup.horizontal>span>div {
     display: none;
 }
 
-.xcheckboxGroup>span:first-child,.xradioButtonGroup>span:first-child {
+.xcheckboxGroup>span:first-child, .xradioButtonGroup>span:first-child {
     border-bottom-left-radius: 0.6em 0.6em;
     border-top-left-radius: 0.6em 0.6em;
     border-right: 0px;
@@ -904,7 +914,7 @@ input::-webkit-outer-spin-button {
     border-left: 1px solid #B8B8B8;
 }
 
-.xcheckboxGroup>span:last-child,.xradioButtonGroup>span:last-child {
+.xcheckboxGroup>span:last-child, .xradioButtonGroup>span:last-child {
     border-bottom-right-radius: 0.6em 0.6em;
     border-top-right-radius: 0.6em 0.6em;
     border-left: 0px;
@@ -913,14 +923,14 @@ input::-webkit-outer-spin-button {
     border-right: 1px solid #B8B8B8;
 }
 
-.xcheckboxGroup>span:first-child.selected,.xradioButtonGroup>span:first-child.selected {
+.xcheckboxGroup>span:first-child.selected, .xradioButtonGroup>span:first-child.selected {
     border-right: 0px;
     border-top-color: #073E7D;
     border-bottom-color: #5077A2;
     border-left-color: #2F6FB8;
 }
 
-.xcheckboxGroup>span:last-child.selected,.xradioButtonGroup>span:last-child.selected {
+.xcheckboxGroup>span:last-child.selected, .xradioButtonGroup>span:last-child.selected {
     border-left: 0px;
     border-top-color: #073E7D;
     border-bottom-color: #5077A2;
@@ -928,11 +938,11 @@ input::-webkit-outer-spin-button {
 }
 
 /***** vertical *****/
-.xcheckboxGroup.vertical,.xradioButtonGroup.vertical {
+.xcheckboxGroup.vertical, .xradioButtonGroup.vertical {
     -webkit-box-orient: vertical;
 }
 
-.xcheckboxGroup.vertical>span,.xradioButtonGroup.vertical>span {
+.xcheckboxGroup.vertical>span, .xradioButtonGroup.vertical>span {
     -webkit-box-flex: 1;
     display: -webkit-box;
     -webkit-box-align: center;
@@ -951,7 +961,7 @@ input::-webkit-outer-spin-button {
     border-bottom: 0;
 }
 
-.xcheckboxGroup.vertical>span>input,.xradioButtonGroup.vertical>span>input {
+.xcheckboxGroup.vertical>span>input, .xradioButtonGroup.vertical>span>input {
     display: none;
 }
 
@@ -985,31 +995,31 @@ input::-webkit-outer-spin-button {
     padding-right: 10px;
 }
 
-.xcheckboxGroup.vertical>span:first-child,.xradioButtonGroup.vertical>span:first-child {
+.xcheckboxGroup.vertical>span:first-child, .xradioButtonGroup.vertical>span:first-child {
     border-bottom-left-radius: 0;
     border-top-right-radius: 0.6em 0.6em;
 }
 
-.xcheckboxGroup.vertical>span:last-child,.xradioButtonGroup.vertical>span:last-child {
+.xcheckboxGroup.vertical>span:last-child, .xradioButtonGroup.vertical>span:last-child {
     border-bottom-left-radius: 0.6em 0.6em;
     border-top-right-radius: 0;
 }
 
-.xcheckboxGroup.vertical>span:first-child.selected,.xradioButtonGroup.vertical>span:first-child.selected {
+.xcheckboxGroup.vertical>span:first-child.selected, .xradioButtonGroup.vertical>span:first-child.selected {
     border-bottom: 0;
     border-top: 1px solid #A8A8A8;
     border-left: 1px solid #A8A8A8;
     border-right: 1px solid #A8A8A8;
 }
 
-.xcheckboxGroup.vertical>span:last-child,.xradioButtonGroup.vertical>span:last-child {
+.xcheckboxGroup.vertical>span:last-child, .xradioButtonGroup.vertical>span:last-child {
     border-top: 1px solid #A8A8A8;
     border-bottom: 1px solid #A8A8A8;
     border-left: 1px solid #A8A8A8;
     border-right: 1px solid #A8A8A8;
 }
 
-.xcheckboxGroup.vertical>span:last-child.selected,.xradioButtonGroup.vertical>span:last-child.selected {
+.xcheckboxGroup.vertical>span:last-child.selected, .xradioButtonGroup.vertical>span:last-child.selected {
     border-color: #A8A8A8;
 }
 
@@ -1044,26 +1054,40 @@ input::-webkit-outer-spin-button {
     box-shadow: RGBA(0, 0, 0, 0.8) 0 0.2em 0.6em;
 }
 
-
-
 /*
- ************************************************
- Bellow is a custom DEMO CSS and should not be used
- ************************************************
- */
+************************************************
+Bellow is a custom DEMO CSS and should not be used
+************************************************
+*/
 
 .codeDemo {
     border: .3em solid #fff;
 }
+
 .codeDemo pre {
     text-align: left;
     color: #000;
 }
-.codeDemo .codeWord {	color: #2361DE; }
-.codeDemo .codeQuot {	color: #008200; }
-.codeDemo .codeJSNI {	color: #DD8261;	}
-.codeDemo .codeGray { color: #aaa; }
-.codeDemo .codePink { color: #FF1493; }
+
+.codeDemo .codeWord {
+    color: #2361DE;
+}
+
+.codeDemo .codeQuot {
+    color: #008200;
+}
+
+.codeDemo .codeJSNI {
+    color: #DD8261;
+}
+
+.codeDemo .codeGray {
+    color: #aaa;
+}
+
+.codeDemo .codePink {
+    color: #FF1493;
+}
 
 
 

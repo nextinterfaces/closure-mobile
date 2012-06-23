@@ -25,7 +25,7 @@ nx.UserView = function (parent) {
     this.add(listDiv);
     this.add(btnsDiv);
 
-    this.listDiv_ = listDiv;
+    this.labelDiv_ = listDiv;
 
     var button = new goog.ui.CustomButton("Save");
     button.addClassName('xbtn');
@@ -62,7 +62,7 @@ nx.UserView.prototype.getName = function () {
  * @return {Element}
  */
 nx.UserView.prototype.getList = function(){
-    return this.listDiv_;
+    return this.labelDiv_;
 };
 
 /**
