@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project basedir="." default="inject">
+<project basedir="." default="dist">
 
 
     <property name="build.root.dir" value="build"/>
@@ -173,6 +173,13 @@
             <arg line='--compiler_flags "--jscomp_error=uselessCode"' />
             <arg line='--compiler_flags "--jscomp_error=visibility"' />
         </exec>
+    </target>
+
+    <!-- ===================================================================
+             target: dist
+     ==================================================================== -->
+    <target name="dist" depends="compile, inject" description="archives the artifacts">
+        <zip destfile="${build.dist}/next.zip" basedir="${build.web}" />
     </target>
 
 
