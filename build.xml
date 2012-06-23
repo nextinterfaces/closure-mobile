@@ -21,6 +21,8 @@
         <copy includeemptydirs="false" todir="${build.src}">
             <fileset dir="src">
                 <exclude name="**/*.zip"/>
+                <exclude name="**/*.soy"/>
+                <exclude name="**/*.sh"/>
             </fileset>
         </copy>
         <copy includeemptydirs="false" todir="${build.web}">
@@ -108,6 +110,17 @@
     </target>
 
     <!-- ===================================================================
+           target: Compile Soy templates
+   ==================================================================== -->
+    <target name="compile.soy" description="python dep tree" depends="">
+        <java jar="${closure-templates.dir}/SoyToJsSrcCompiler.jar" fork='true'>
+            <arg line='--outputPathFormat ${build.src}/simple.soy.js' />
+            <arg line='--shouldGenerateJsdoc' />
+            <arg line='--shouldProvideRequireSoyNamespaces "src/soy/simple.soy"' />
+        </java>
+    </target>
+
+    <!-- ===================================================================
            target: Compile external libs
    ==================================================================== -->
     <target name="compile.ext" description="python dep tree" depends="">
@@ -122,7 +135,7 @@
     <!-- ===================================================================
            target: Dependency print
    ==================================================================== -->
-    <target name="dep" description="python dep tree" depends="init">
+    <target name="dep" description="python dep tree" depends="init, compile.soy">
         <exec executable="python"
               failonerror="true"
               logError="true"
@@ -139,7 +152,7 @@
     <!-- ===================================================================
            target: Closure Compile
    ==================================================================== -->
-    <target name="compile" description="python closure compile" depends="dep, compile.ext">
+    <target name="compile" description="python closure compile" depends="dep, compile.ext, compile.soy">
         <exec executable="python"
               failonerror="true"
               logError="true"

@@ -1,0 +1,22 @@
+{namespace nx.soy}
+
+/**
+ * @param greeting
+ * @param year
+ */
+{template .hello}
+  <h1 id="greeting">{$greeting}</h1>
+  The year is {$year}.
+{/template}
+
+/**
+ * @param? isTrue Optional .
+
+{template .testCondition}
+  {if not $isTrue}
+        <p style="color: green">It's true.</p>
+  {else}
+        <p style="color: red">False, my friend.</p>
+  {/if}
+{/template}
+ */
