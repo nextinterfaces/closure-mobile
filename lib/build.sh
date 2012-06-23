@@ -23,13 +23,11 @@ echo "---------Dependency tree ---------"
   --root=./build/src/ \
   --namespace="nx.Main"
 
-echo
-echo
 #echo "---------Generating soy.js..."
 #java -jar ./closure-templates/SoyToJsSrcCompiler.jar \
-#    --outputPathFormat ./web/simple.soy.js \
+#    --outputPathFormat ./web/first.soy.js \
 #    --shouldGenerateJsdoc \
-#    --shouldProvideRequireSoyNamespaces ./web/soy/simple.soy
+#    --shouldProvideRequireSoyNamespaces ./web/soy/first.soy
 
 echo
 echo

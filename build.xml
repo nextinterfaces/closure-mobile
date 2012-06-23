@@ -116,7 +116,10 @@
         <java jar="${closure-templates.dir}/SoyToJsSrcCompiler.jar" fork='true'>
             <arg line='--outputPathFormat ${build.src}/simple.soy.js' />
             <arg line='--shouldGenerateJsdoc' />
-            <arg line='--shouldProvideRequireSoyNamespaces "src/soy/simple.soy"' />
+            <arg line='--shouldProvideRequireSoyNamespaces' />
+            <arg line='src/soy/first.soy' />
+            <arg line='src/soy/second.soy' />
+            <arg line='src/soy/third.soy' />
         </java>
     </target>
 
