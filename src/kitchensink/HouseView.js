@@ -7,6 +7,7 @@ goog.require('nx.VerticalScrollView');
 goog.require('nx.Widget');
 goog.require('nx.SampleWidget');
 goog.require('nx.SampleSoyWidget');
+goog.require('nx.soy.first');
 
 /**
  * @param {nx.Widget|Element} parent
@@ -21,8 +22,8 @@ nx.HouseView = function (parent) {
 
     this.widget_ = ele;
 
-    var headerDiv = goog.dom.createDom('h2', {'style':'background-color:#EFE'}, 'HouseView Title');
-    var listDiv = goog.dom.createDom('div', {'id':'list'});
+    var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'}, 'House Title');
+    var listDiv = goog.dom.createDom('div', {'id':'list', 'class': 'xlabel Text'});
     var btnsDiv = goog.dom.createDom('div', {'id':'btns'});
 
     this.add(headerDiv);
@@ -31,20 +32,24 @@ nx.HouseView = function (parent) {
 
     this.listDiv_ = listDiv;
 
-    var dragBtn = new nx.SampleDragWidget(this);
-    this.add(dragBtn);
+//    var dragBtn = new nx.SampleDragWidget(this);
+//    this.add(dragBtn);
+//
+//    var wrappedWidg = new nx.SampleWidget(this);
+//    this.add(wrappedWidg);
+//
+//    var soyWidg = new nx.SampleSoyWidget(this);
+//    this.add(soyWidg);
 
-    var wrappedWidg = new nx.SampleWidget(this);
-    this.add(wrappedWidg);
-
-    var soyWidg = new nx.SampleSoyWidget(this);
-    this.add(soyWidg);
+    var scrollWrapper = goog.dom.createDom('div', {id:'scrollWrapper'});
+    this.add(scrollWrapper);
 
     var scrollView = new nx.VerticalScrollView(this);
     var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-    textDiv.innerHTML = 'yyyyy<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333' +
-        '<br>2222<br>3333<br>44444444<br>55<br>6<br>7777777777<br>88<br>99<br>10';
+    textDiv.innerHTML = nx.soy.first.getList();
     scrollView.setWidget(textDiv);
+//    goog.dom.appendChild(scrollWrapper, scrollView.getElement());
+
     this.add(scrollView);
 
     var button = new goog.ui.CustomButton("Save");

@@ -1,7 +1,6 @@
 goog.provide('nx.SampleSoyWidget');
 
 goog.require('nx.Widget');
-goog.require('nx.soy.first');
 goog.require('nx.soy.second');
 goog.require('nx.soy.third');
 
@@ -16,13 +15,6 @@ nx.SampleSoyWidget = function (parent) {
         'style':'margin: 30px; border: 2px solid #1AF; width: 50%; height: 100px;'}, 'Soy Widget');
 
     this.widget_ = ele;
-
-    var soy1 = goog.dom.createDom('div');
-    soy1.innerHTML = nx.soy.first.hello(
-        {   greeting:'Hello from Soy1',
-            year:new Date().getFullYear()}
-    );
-    this.add(soy1);
 
     var soy2 = goog.dom.createDom('div');
     soy2.innerHTML = nx.soy.second.helloSecond(
