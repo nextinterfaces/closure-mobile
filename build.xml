@@ -1,25 +1,30 @@
 <?xml version="1.0"?>
-<project basedir="." default="init">
+<project basedir="." default="inject">
 
 
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.6"/>
-    <property name="source" value="1.6"/>
     <property name="build.root.dir" value="build"/>
-    <property name="build.js" value="build/js"/>
-    <property name="build.web.dir" value="build/web"/>
-    <property name="dist.dir" value="build/dist"/>
-    <property name="product.version" value="0"/>
+    <property name="build.web" value="build/web"/>
+    <property name="build.src" value="build/src"/>
+    <property name="build.src.ext" value="build/src-ext"/>
+    <property name="build.dist" value="build/dist"/>
+    <property name="closure-library.dir" value="closure-library"/>
+    <property name="closure-templates.dir" value="closure-templates"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="compiled.file" value="build/web/next.min.js"/>
+    <property name="compiled.ext.file" value="build/src/compiled.ext.js"/>
 
     <!-- ===================================================================
            target: init
    ==================================================================== -->
     <target name="init" depends="clean, prepare, buildNumber">
         <set.timestamp/>
-        <copy includeemptydirs="false" todir="${build.js}">
+        <copy includeemptydirs="false" todir="${build.src}">
+            <fileset dir="src">
+                <exclude name="**/*.zip"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="${build.web}">
             <fileset dir="web">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
             </fileset>
         </copy>
     </target>
@@ -32,7 +37,7 @@
             <entry key="build.number" type="int" operation="+" default="1"/>
         </propertyfile>
         <property file="buildnumber.txt"/>
-        <echo message="Building version ${product.version}.${build.number}"/>
+        <echo message="Building version ${build.number}"/>
     </target>
 
     <!-- ===================================================================
@@ -51,40 +56,124 @@
      ==================================================================== -->
     <target name="clean">
         <delete dir="${build.root.dir}"/>
-        <delete dir="${dist.dir}"/>
     </target>
 
     <!-- ===================================================================
              target: prepare
      ==================================================================== -->
-    <target name="prepare" description="creates output directories">
-        <mkdir dir="${build.js}"/>
-        <mkdir dir="${build.web.dir}"/>
-        <mkdir dir="${dist.dir}"/>
+    <target name="prepare" description="creates build directories">
+        <mkdir dir="${build.web}"/>
+        <mkdir dir="${build.src}"/>
+        <mkdir dir="${build.dist}"/>
     </target>
 
+    <!-- ===================================================================
+             target: inject
+     ==================================================================== -->
+    <target name="inject" description="inject js and css into html file" depends="compile">
+        <echo>Injecting and compressing resources into index.html</echo>
 
-    <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask"
-             classpath="compiler.jar"/>
+        <replace file="${build.web}/index.html" value="&lt;script src='next.min.js'&gt;&lt;/script&gt;">
+            <replacetoken><![CDATA[<script src='http://localhost:9810/compile?id=next'></script>]]></replacetoken>
+        </replace>
 
-    <target name="compile">
+        <!-- Inject build.number -->
+        <replace file="${build.web}/index.html" value="${build.number}">
+            <replacetoken><![CDATA[buildNumber]]></replacetoken>
+        </replace>
 
-        <jscomp compilationLevel="simple" warning="verbose"
-                debug="false" output="output/file.js">
+        <!-- Inject next.css -->
+        <loadfile property="theCSS" srcfile="${build.web}/next.css">
+        </loadfile>
+        <replace file="${build.web}/index.html" value="&lt;style&gt;${theCSS}&lt;/style&gt;">
+            <replacetoken><![CDATA[<link type='text/css' rel='stylesheet' href='next.css'>]]></replacetoken>
+        </replace>
 
-            <!--
-            <externs dir="${basedir}/src">
-                <file name="extern.js"/>
-            </externs>
-            -->
+        <!-- Inject next.min.js -->
+        <loadfile property="theJS" srcfile="${build.web}/next.min.js">
+        </loadfile>
+        <replace file="${build.web}/index.html" value="&lt;script&gt;${theJS}&lt;/script&gt;">
+            <replacetoken><![CDATA[<script src='next.min.js'></script>]]></replacetoken>
+        </replace>
 
-            <sources dir="${basedir}/web/mvp">
-                <file name="simple1.js"/>
-                <file name="simple2.js"/>
-            </sources>
+        <!-- Inject compiled.ext JS too if needed -->
 
-        </jscomp>
+        <!-- Compressing HTML -->
+        <java jar="${lib.dir}/htmlcompressor-1.3.1.jar" fork='true'>
+            <arg line="--compress-css" />
+            <arg line="--remove-intertag-spaces" />
+            <arg line="-o ${build.web}/index.html ${build.web}/index.html" />
+        </java>
 
     </target>
+
+    <!-- ===================================================================
+           target: Compile external libs
+   ==================================================================== -->
+    <target name="compile.ext" description="python dep tree" depends="">
+        <concat destfile="${compiled.ext.file}">
+            <filelist dir="src-ext">
+                <file name="underscore-min.js" />
+                <file name="jquery-1.7.2.min.js" />
+            </filelist>
+        </concat>
+    </target>
+
+    <!-- ===================================================================
+           target: Dependency print
+   ==================================================================== -->
+    <target name="dep" description="python dep tree" depends="init">
+        <exec executable="python"
+              failonerror="true"
+              logError="true"
+                >
+            <arg value="${closure-library.dir}/closure/bin/build/closurebuilder.py" />
+            <!-- Double-quote file arguments in case they contain spaces. -->
+            <arg line='--root "${closure-library.dir}"' />
+            <arg line='--root "${closure-templates.dir}"' />
+            <arg line='--root "${build.src}"' />
+            <arg line='--namespace "nx.Main"' />
+        </exec>
+    </target>
+
+    <!-- ===================================================================
+           target: Closure Compile
+   ==================================================================== -->
+    <target name="compile" description="python closure compile" depends="dep, compile.ext">
+        <exec executable="python"
+              failonerror="true"
+              logError="true"
+              output="${compiled.file}"
+                >
+            <arg value="${closure-library.dir}/closure/bin/build/closurebuilder.py" />
+            <arg line='--root "${closure-library.dir}"' />
+            <arg line='--root "${closure-templates.dir}"' />
+            <arg line='--root "${build.src}"' />
+            <arg line='--namespace "nx.Main"' />
+            <arg line='--output_mode compiled' />
+            <arg line='--compiler_jar "${lib.dir}/compiler.jar"' />
+            <arg line='--compiler_flags "--compilation_level=ADVANCED_OPTIMIZATIONS"' />
+            <arg line='--compiler_flags "--define=goog.userAgent.ASSUME_WEBKIT=true"' />
+            <arg line='--compiler_flags "--define=goog.userAgent.ASSUME_MOBILE_WEBKIT=true"' />
+            <arg line='--compiler_flags "--version"' />
+            <arg line='--compiler_flags "--warning_level=QUIET"' />
+            <arg line='--compiler_flags "--jscomp_warning=checkTypes"' />
+            <arg line='--compiler_flags "--jscomp_error=accessControls"' />
+            <arg line='--compiler_flags "--jscomp_error=ambiguousFunctionDecl"' />
+            <arg line='--compiler_flags "--jscomp_error=checkTypes"' />
+            <arg line='--compiler_flags "--jscomp_error=constantProperty"' />
+            <arg line='--compiler_flags "--jscomp_error=duplicateMessage"' />
+            <arg line='--compiler_flags "--jscomp_error=globalThis"' />
+            <arg line='--compiler_flags "--jscomp_error=invalidCasts"' />
+            <arg line='--compiler_flags "--jscomp_error=missingProperties"' />
+            <arg line='--compiler_flags "--jscomp_error=nonStandardJsDocs"' />
+            <arg line='--compiler_flags "--jscomp_error=typeInvalidation"' />
+            <arg line='--compiler_flags "--jscomp_error=undefinedNames"' />
+            <arg line='--compiler_flags "--jscomp_error=unknownDefines"' />
+            <arg line='--compiler_flags "--jscomp_error=uselessCode"' />
+            <arg line='--compiler_flags "--jscomp_error=visibility"' />
+        </exec>
+    </target>
+
 
 </project>

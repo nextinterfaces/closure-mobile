@@ -10,7 +10,9 @@
     --compiler_flags="--jscomp_error=undefinedVars"
     --compiler_flags="--jscomp_error=checkVars"
 XXX
- 
+
+ant
+
 echo
 echo
 
@@ -18,7 +20,7 @@ echo "---------Dependency tree ---------"
 ./closure-library/closure/bin/build/closurebuilder.py \
   --root=./closure-library/ \
   --root=./closure-templates/ \
-  --root=./src/ \
+  --root=./build/src/ \
   --namespace="nx.Main"
 
 echo
@@ -36,7 +38,7 @@ echo "---------Compilation starts ---------"
 ./closure-library/closure/bin/build/closurebuilder.py \
   --root=./closure-library/ \
   --root=./closure-templates/ \
-  --root=./src/ \
+  --root=./build/src/ \
   --namespace="nx.Main" \
   --output_mode=compiled \
   --compiler_jar=./compiler.jar \
@@ -60,7 +62,7 @@ echo "---------Compilation starts ---------"
   --compiler_flags="--jscomp_error=unknownDefines" \
   --compiler_flags="--jscomp_error=uselessCode" \
   --compiler_flags="--jscomp_error=visibility" \
-  > z___next.min.js
+  > ./build/web/next.min.js
 
 
   

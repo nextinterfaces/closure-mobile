@@ -2,5 +2,5 @@
 <<XXX
 XXX
 
-java -jar plovr.jar serve plovr.js
+java -jar ./lib/plovr.jar serve plovr.js
 

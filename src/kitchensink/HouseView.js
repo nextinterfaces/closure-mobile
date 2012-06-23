@@ -42,11 +42,10 @@ nx.HouseView = function (parent) {
 
     var scrollView = new nx.VerticalScrollView(this);
     var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-    textDiv.innerHTML = '111111<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333' +
+    textDiv.innerHTML = 'yyyyy<br>2222<br>3333<br>2222<br>3333<br>2222<br>3333' +
         '<br>2222<br>3333<br>44444444<br>55<br>6<br>7777777777<br>88<br>99<br>10';
-        '';
     scrollView.setWidget(textDiv);
-//    this.add(scrollView);
+    this.add(scrollView);
 
     var button = new goog.ui.CustomButton("Save");
     button.addClassName('xbtn');
