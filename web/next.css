@@ -44,7 +44,7 @@ code, pre, pre * {
 }
 
 .navigationContent {
-    background: #C5CCD4 url(images/all/navigationContent.png);
+    background: #C5CCD4 url(images/navigationContent.png);
 }
 
 .navigationBar {
@@ -181,6 +181,9 @@ code, pre, pre * {
 
 .tab {
     margin: 2px 0 1px 0;
+
+    position: relative;
+    height: 45px;
 }
 
 .tab.selected {
@@ -189,9 +192,36 @@ code, pre, pre * {
     border-radius: 3px;
 }
 
-.tab .icon {
-    text-align: center;
+.tab .tabImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 35px 28px;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    background-position-x: center;
+}
+
+.tab .tabTitle {
+    position: absolute;
+    bottom: 1px;
+    margin: auto;
+    width: 100%;
+
     white-space: nowrap;
+    font-size: .7em;
+    font-weight: bold;
+    text-shadow: 0 -1px 1px black;
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    color: #999;
+}
+.tab.selected .tabTitle {
+    color: #FFF;
 }
 
 .tab .title {
@@ -203,6 +233,12 @@ code, pre, pre * {
     text-shadow: 0 -1px 1px #000;
     letter-spacing: 1px;
     padding-bottom: 2px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+    height: 45px;
 }
 
 .tab.selected .title {
@@ -267,14 +303,14 @@ div.tableCell {
 }
 
 .tableCell.chevron {
-    background-image: url("images/all/chevron.png");
+    background-image: url("images/chevron.png");
     background-repeat: no-repeat;
     background-position: right;
 }
 
 .tableCell.selected.chevron {
-    background-image: url("images/all/chevronSelected.png");
-    background-image: url("images/all/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6));
+    background-image: url("images/chevronSelected.png");
+    background-image: url("images/chevronSelected.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0, #058CF5), color-stop(1, #015EE6));
 }
 
 .tableCellWestImage {
@@ -538,7 +574,7 @@ div.tableCell {
  * xswitch
  *****************************/
 .xswitch {
-    background-image: url(images/all/xswitch.png);
+    background-image: url(images/xswitch.png);
     background-position: 0 0;
     background-repeat: no-repeat;
     width: 94px;
@@ -966,14 +1002,14 @@ input::-webkit-outer-spin-button {
 }
 
 .xcheckboxGroup.vertical>span {
-    background-image: url(images/all/xcheckbox.png);
+    background-image: url(images/xcheckbox.png);
     background-position: center right;
     background-repeat: no-repeat;
     padding-right: 10px;
 }
 
 .xradioButtonGroup.vertical>span {
-    background-image: url(images/all/xradiobutton.png);
+    background-image: url(images/xradiobutton.png);
     background-position: center right;
     background-repeat: no-repeat;
     padding-right: 10px;
@@ -981,7 +1017,7 @@ input::-webkit-outer-spin-button {
 
 .xcheckboxGroup.vertical>span.selected {
     background-color: #f0f0f0;
-    background-image: url(images/all/xcheckbox-selected.png);
+    background-image: url(images/xcheckbox-selected.png);
     background-position: center right;
     background-repeat: no-repeat;
     padding-right: 10px;
@@ -989,7 +1025,7 @@ input::-webkit-outer-spin-button {
 
 .xradioButtonGroup.vertical>span.selected {
     background-color: #f0f0f0;
-    background-image: url(images/all/xradiobutton-selected.png);
+    background-image: url(images/xradiobutton-selected.png);
     background-position: center right;
     background-repeat: no-repeat;
     padding-right: 10px;

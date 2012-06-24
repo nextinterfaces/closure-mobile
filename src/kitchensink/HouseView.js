@@ -25,21 +25,12 @@ nx.HouseView = function (parent) {
 
     var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'});
     headerDiv.innerHTML = '<div>House Title</div>';
-    var labelDiv = goog.dom.createDom('div', {'class': 'xlabel Text'});
+    var labelDiv = goog.dom.createDom('div', {'class':'xlabel Text'});
     var tabBar = goog.dom.createDom('div', {'class':'tabBar'});
 
     this.add(headerDiv);
 
     this.labelDiv_ = labelDiv;
-
-//    var dragBtn = new nx.SampleDragWidget(this);
-//    this.add(dragBtn);
-//
-//    var wrappedWidg = new nx.SampleWidget(this);
-//    this.add(wrappedWidg);
-//
-//    var soyWidg = new nx.SampleSoyWidget(this);
-//    this.add(soyWidg);
 
     var navigationContent = new nx.NavigationContent(this);
     this.add(navigationContent);
@@ -50,15 +41,33 @@ nx.HouseView = function (parent) {
     scrollView.setWidget(textDiv);
     navigationContent.add(scrollView);
 
-    var button = goog.dom.createDom('div', {'class':'tabContent'}, "House");
-    tabBar.appendChild(button);
+//    this.add(labelDiv);
+    this.add(tabBar);
+
+//    var dragBtn = new nx.SampleDragWidget(this);
+//    this.add(dragBtn);
+//
+//    var wrappedWidg = new nx.SampleWidget(this);
+//    this.add(wrappedWidg);
+//
+//    var soyWidg = new nx.SampleSoyWidget(this);
+//    this.add(soyWidg);
+
+    var btn1 = goog.dom.createDom('div', {'class':'tab selected', 'style': 'width: 50%'});
+    btn1.innerHTML = nx.soy.first.getTabButton(
+        {title:'Tab One', imgUrl:'images/tab0.png'}
+    );
+    tabBar.appendChild(btn1);
+
+    var btn2 = goog.dom.createDom('div', {'class':'tab', 'style': 'width: 50%'}, "Tab Two");
+    btn2.innerHTML = nx.soy.first.getTabButton(
+        {title:'Tab Two', imgUrl:'images/tab0.png'}
+    );
+    tabBar.appendChild(btn2);
     goog.events.listen(
-        button,
+        btn2,
         goog.events.EventType.CLICK,
         this.clickActionButton(), false, this);
-
-    this.add(labelDiv);
-    this.add(tabBar);
 };
 goog.inherits(nx.HouseView, nx.Widget);
 
@@ -87,7 +96,7 @@ nx.HouseView.prototype.getName = function () {
  * @param {nx.House} data
  * @return {Element}
  */
-nx.HouseView.prototype.setData = function(data){
+nx.HouseView.prototype.setData = function (data) {
     this.labelDiv_.innerHTML = data.getAddress();
 };
 
