@@ -44,15 +44,6 @@ nx.HouseView = function (parent) {
 //    this.add(labelDiv);
     this.add(tabBar);
 
-//    var dragBtn = new nx.SampleDragWidget(this);
-//    this.add(dragBtn);
-//
-//    var wrappedWidg = new nx.SampleWidget(this);
-//    this.add(wrappedWidg);
-//
-//    var soyWidg = new nx.SampleSoyWidget(this);
-//    this.add(soyWidg);
-
     var btn1 = goog.dom.createDom('div', {'class':'tab selected', 'style': 'width: 50%'});
     btn1.innerHTML = nx.soy.first.getTabButton(
         {title:'Tab One', imgUrl:'images/tab0.png'}
@@ -64,10 +55,7 @@ nx.HouseView = function (parent) {
         {title:'Tab Two', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn2);
-    goog.events.listen(
-        btn2,
-        goog.events.EventType.CLICK,
-        this.clickActionButton(), false, this);
+    goog.events.listen(btn2, goog.events.EventType.CLICK, this.onTabAction(), false, this);
 };
 goog.inherits(nx.HouseView, nx.Widget);
 
@@ -101,13 +89,11 @@ nx.HouseView.prototype.setData = function (data) {
 };
 
 /**
- * @param {Element} element
- * @param {string} target
- * @return {function(goog.events.Event)}
+ * @return {function(Event)}
  */
-nx.HouseView.prototype.clickActionButton = function () {
+nx.HouseView.prototype.onTabAction = function () {
     return function (e) {
-        log(e);
+        log('onTabAction', e);
         e.stopPropagation();
         this.presenter_.executeClick();
     };

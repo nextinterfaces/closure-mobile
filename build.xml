@@ -117,9 +117,9 @@
             <arg line='--outputPathFormat ${build.src}/simple.soy.js' />
             <arg line='--shouldGenerateJsdoc' />
             <arg line='--shouldProvideRequireSoyNamespaces' />
-            <arg line='src/soy/first.soy' />
-            <arg line='src/soy/second.soy' />
-            <arg line='src/soy/third.soy' />
+            <arg line='src/kitchensink/soy/first.soy' />
+            <arg line='src/kitchensink/soy/second.soy' />
+            <arg line='src/kitchensink/soy/third.soy' />
         </java>
     </target>
 
