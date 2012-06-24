@@ -1,0 +1,25 @@
+{namespace nx.soy.countries}
+
+/**
+ * @param countries
+ */
+{template .getHTML}
+
+{foreach $c in $countries}
+    <table class="tableCell">
+       <colgroup>
+          <col />
+       </colgroup>
+       <tbody>
+          <tr>
+             <td rowspan="1" align="left" style="vertical-align: middle; "></td>
+             <td width="99%">
+                <div>{$c}</div>
+             </td>
+             <td rowspan="1" align="right"></td>
+          </tr>
+       </tbody>
+    </table>
+{/foreach}
+
+{/template}

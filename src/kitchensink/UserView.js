@@ -2,6 +2,7 @@ goog.provide('nx.UserView');
 
 goog.require('goog.dom');
 goog.require('goog.ui.CustomButton');
+goog.require('nx.soy.countries');
 
 /**
  * @param {nx.Widget|Element} parent
@@ -10,34 +11,6 @@ goog.require('goog.ui.CustomButton');
  * @implements {nx.View}
  */
 nx.UserView = function (parent) {
-//    goog.base(this, parent);
-//    log('UserView constructor...');
-//    var ele = goog.dom.createDom('div', {'id':this.getName()});
-//
-//    this.widget_ = ele;
-//
-//    var headerDiv = goog.dom.createDom('h2', {'style': 'background-color:#EFE'}, 'UserView Title');
-//    var listDiv = goog.dom.createDom('div', {'id': 'list'});
-//    var btnsDiv = goog.dom.createDom('div', {'id': 'btns'});
-//
-//
-//    this.add(headerDiv);
-//    this.add(listDiv);
-//    this.add(btnsDiv);
-//
-//    this.labelDiv_ = listDiv;
-//
-//    var button = new goog.ui.CustomButton("Save");
-//    button.addClassName('xbtn');
-//    button.render(btnsDiv);
-//    goog.events.listen(
-//        button.getContentElement(),
-//        goog.events.EventType.CLICK,
-//        this.onTabAction(), false, this);
-
-
-
-    ////////////
     goog.base(this, parent);
     log('UserView constructor...');
     var ele = goog.dom.createDom('div', {'id':this.getName()});
@@ -45,7 +18,7 @@ nx.UserView = function (parent) {
     this.widget_ = ele;
 
     var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'});
-    headerDiv.innerHTML = '<div>House Title</div>';
+    headerDiv.innerHTML = '<div>Countries</div>';
     var labelDiv = goog.dom.createDom('div', {'class':'xlabel Text'});
     var tabBar = goog.dom.createDom('div', {'class':'tabBar'});
 
@@ -58,7 +31,19 @@ nx.UserView = function (parent) {
 
     var scrollView = new nx.VerticalScrollView(this);
     var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-    textDiv.innerHTML = nx.soy.first.getList();
+    textDiv.innerHTML = nx.soy.countries.getHTML(
+        {'countries': [
+            'Bulgaria',
+            'Croatia',
+            'Czech Republic',
+            'Denmark',
+            'Estonia',
+            'Finland',
+            'France',
+            'Germany',
+            'Hungary',
+            'Ireland']}
+    );
     scrollView.setWidget(textDiv);
     navigationContent.add(scrollView);
 
@@ -66,15 +51,15 @@ nx.UserView = function (parent) {
     this.add(tabBar);
 
     var btn1 = goog.dom.createDom('div', {'class':'tab', 'style': 'width: 50%'});
-    btn1.innerHTML = nx.soy.first.getTabButton(
-        {title:'Tab One', imgUrl:'images/tab0.png'}
+    btn1.innerHTML = nx.soy.widgets.getTabButton(
+        {title:'Widgets', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn1);
     goog.events.listen(btn1, goog.events.EventType.CLICK, this.onTabAction(), false, this);
 
     var btn2 = goog.dom.createDom('div', {'class':'tab selected', 'style': 'width: 50%'}, "Tab Two");
-    btn2.innerHTML = nx.soy.first.getTabButton(
-        {title:'Tab Two', imgUrl:'images/tab0.png'}
+    btn2.innerHTML = nx.soy.widgets.getTabButton(
+        {title:'Countries', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn2);
 };

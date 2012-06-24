@@ -114,12 +114,11 @@
    ==================================================================== -->
     <target name="compile.soy" description="python dep tree" depends="">
         <java jar="${closure-templates.dir}/SoyToJsSrcCompiler.jar" fork='true'>
-            <arg line='--outputPathFormat ${build.src}/simple.soy.js' />
+            <arg line='--outputPathFormat ${build.src}/generated-template.soy.js' />
             <arg line='--shouldGenerateJsdoc' />
             <arg line='--shouldProvideRequireSoyNamespaces' />
-            <arg line='src/kitchensink/soy/first.soy' />
-            <arg line='src/kitchensink/soy/second.soy' />
-            <arg line='src/kitchensink/soy/third.soy' />
+            <arg line='src/kitchensink/soy/widgets.soy' />
+            <arg line='src/kitchensink/soy/countries.soy' />
         </java>
     </target>
 

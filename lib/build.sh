@@ -25,9 +25,9 @@ echo "---------Dependency tree ---------"
 
 #echo "---------Generating soy.js..."
 #java -jar ./closure-templates/SoyToJsSrcCompiler.jar \
-#    --outputPathFormat ./web/first.soy.js \
+#    --outputPathFormat ./web/widgets.soy.js \
 #    --shouldGenerateJsdoc \
-#    --shouldProvideRequireSoyNamespaces ./web/soy/first.soy
+#    --shouldProvideRequireSoyNamespaces ./web/soy/widgets.soy
 
 echo
 echo

@@ -24,7 +24,7 @@ goog.inherits(nx.HousePresenter, nx.Presenter);
  */
 nx.HousePresenter.prototype.init = function () {
     //log('nx.HousePresenter::init do AJAX ... ');
-    var house = new nx.House('12 Maple Ln address', 3, 7);
+    var house = new nx.House('12 Maple Ln address', 1, 604);
 //    this.house_ = house;
     this.view_.setData(house);//.innerHTML = this.house_.getAddress();
     return this;
