@@ -3,7 +3,7 @@ goog.provide('nx.MyEventBus');
 goog.require('nx.Event');
 goog.require('nx.EventBus');
 goog.require('nx.CityPresenter');
-goog.require('nx.UserPresenter');
+goog.require('nx.CountryPresenter');
 
 /**
  * @param {nx.Ctx} ctx
@@ -25,7 +25,7 @@ nx.MyEventBus.prototype.events = function (ctx) {
     this.onEvent(nx.Event.CITY_TAB_CLICK, function (valueObj) {
         log('nx.Event.HOUSE_CLICK %o', valueObj);
         var ctx2 = ctx;
-        new nx.UserPresenter(ctx2.getUserView(), ctx2).init().render(ctx2.getRoot());
+        new nx.CountryPresenter(ctx2.getUserView(), ctx2).init().render(ctx2.getRoot());
     });
 
     this.onEvent(nx.Event.COUNTRY_TAB_CLICK, function (valueObj) {

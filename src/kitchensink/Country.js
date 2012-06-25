@@ -1,4 +1,4 @@
-goog.provide('nx.User');
+goog.provide('nx.Country');
 
 /**
  *
@@ -7,7 +7,7 @@ goog.provide('nx.User');
  * @param {string} phone
  * @constructor
  */
-nx.User = function(name, address, phone){
+nx.Country = function(name, address, phone){
     /**
      * @type {string}
      * @private
@@ -28,23 +28,23 @@ nx.User = function(name, address, phone){
 /**
  * @return {string}
  */
-nx.User.prototype.getName = function(){
+nx.Country.prototype.getName = function(){
     return this.name_;
 };
 
 /**
  * @return {string}
  */
-nx.User.prototype.getAddress = function(){
+nx.Country.prototype.getAddress = function(){
     return this.name_;
 };
 
 /**
  * @return {string}
  */
-nx.User.prototype.getPhone = function(){
+nx.Country.prototype.getPhone = function(){
     return this.phone_;
 };
 
-goog.exportSymbol('nx.User', nx.User);
+goog.exportSymbol('nx.Country', nx.Country);
 

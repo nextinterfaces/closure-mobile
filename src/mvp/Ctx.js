@@ -1,10 +1,7 @@
 goog.provide('nx.Ctx');
 
-goog.require('nx.City');
 goog.require('nx.CityView');
-goog.require('nx.CityPresenter');
-goog.require('nx.UserView');
-goog.require('nx.Util');
+goog.require('nx.CountryView');
 goog.require('nx.Id');
 goog.require('nx.MyEventBus');
 
@@ -26,7 +23,7 @@ nx.Ctx = function () {
     this.houseView_;
 
     /**
-     * @type {nx.UserView}
+     * @type {nx.CountryView}
      * @private
      */
     this.userView_;
@@ -57,11 +54,11 @@ nx.Ctx.prototype.getHouseView = function () {
 };
 
 /**
- * @return {nx.UserView}
+ * @return {nx.CountryView}
  */
 nx.Ctx.prototype.getUserView = function () {
     if (!goog.isDef(this.userView_)) {
-        this.userView_ = new nx.UserView(this.getRoot());
+        this.userView_ = new nx.CountryView(this.getRoot());
     }
     return this.userView_;
 };

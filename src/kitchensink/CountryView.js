@@ -1,7 +1,6 @@
-goog.provide('nx.UserView');
+goog.provide('nx.CountryView');
 
 goog.require('goog.dom');
-goog.require('goog.ui.CustomButton');
 goog.require('nx.soy.countries');
 
 /**
@@ -10,7 +9,7 @@ goog.require('nx.soy.countries');
  * @extends {nx.Widget}
  * @implements {nx.View}
  */
-nx.UserView = function (parent) {
+nx.CountryView = function (parent) {
     goog.base(this, parent);
     log('UserView constructor...');
     var ele = goog.dom.createDom('div', {'id':this.getName()});
@@ -62,40 +61,40 @@ nx.UserView = function (parent) {
     );
     tabBar.appendChild(btn2);
 };
-goog.inherits(nx.UserView, nx.Widget);
+goog.inherits(nx.CountryView, nx.Widget);
 
 /**
  * @inheritDoc
  */
-nx.UserView.prototype.getElement = function () {
+nx.CountryView.prototype.getElement = function () {
     return this.widget_;
 };
 
 /**
  * @inheritDoc
  */
-nx.UserView.prototype.setPresenter = function (presenter) {
+nx.CountryView.prototype.setPresenter = function (presenter) {
     this.presenter_ = presenter;
 };
 
 /**
  * @inheritDoc
  */
-nx.UserView.prototype.getName = function () {
+nx.CountryView.prototype.getName = function () {
     return "UserView";
 };
 
 /**
  * @return {Element}
  */
-nx.UserView.prototype.getList = function(){
+nx.CountryView.prototype.getList = function(){
     return this.labelDiv_;
 };
 
 /**
  * @return {function(Event)}
  */
-nx.UserView.prototype.onTabAction = function() {
+nx.CountryView.prototype.onTabAction = function() {
     return function (e) {
         log(e);
         e.stopPropagation();
@@ -103,5 +102,5 @@ nx.UserView.prototype.onTabAction = function() {
     };
 };
 
-goog.exportSymbol('nx.UserView', nx.UserView);
+goog.exportSymbol('nx.CountryView', nx.CountryView);
 
