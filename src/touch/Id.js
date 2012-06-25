@@ -6,6 +6,6 @@ goog.provide('nx.Id');
  */
 nx.Id = {
     ROOT: 'NX',
-    FOO: 'bar'
+    FOOBAR: 'bar'
 };
 

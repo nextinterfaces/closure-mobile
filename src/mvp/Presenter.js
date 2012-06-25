@@ -8,7 +8,7 @@ goog.require('goog.dom');
  * @constructor
  */
 nx.Presenter = function (view, ctx) {
-    log('nx.Presenter constructor');
+//    log('nx.Presenter constructor');
     /**
      * @type {nx.Ctx}
      * @private

@@ -98,14 +98,9 @@ nx.DragController = function () {
     }
 
     this.registerEvents();
-
-//    var dc = this;
-//    setTimeout(function(){
-//        dc.unregisterEvents();
-//    }, 5000);
 };
 goog.addSingletonGetter(nx.DragController);
-
+//--------
 
 nx.DragController.prototype.suppressNextClick = function () {
     this.suppressNextClick_ = true;
@@ -113,7 +108,7 @@ nx.DragController.prototype.suppressNextClick = function () {
 
 nx.DragController.prototype.registerEvents = function () {
     if (!goog.isDef(this.clickKey_)) {
-//        log('nx.DragController::registerEvents');
+//        log('nx.DragController::registerEvents', this);
         var $this = this;
         this.clickKey_ = goog.events.listen(this.sourceEle_, goog.events.EventType.CLICK, function (e) {
             $this.onClick(e);

@@ -6,7 +6,7 @@ nx.NodeType = {
     DOCUMENT_NODE:9
 };
 
-nx.isNodeElement = function(o) {
+nx.isNodeElement = function (o) {
     if (nx.isNodeDom(o)) {
         return nx.isNode(o);
     }
@@ -45,11 +45,11 @@ nx.isNodeDom = function (o) {
  * @param node
  * @return {boolean}
  */
-nx.isNode = function(node) {
+nx.isNode = function (node) {
     return goog.isDefAndNotNull(node) && (node.nodeType == nx.NodeType.ELEMENT_NODE);
 };
 
-nx.isHtmlFormControl = function(ele) {
+nx.isHtmlFormControl = function (ele) {
     if (!goog.isDef(ele) || ele == null) {
         return false;
     }
