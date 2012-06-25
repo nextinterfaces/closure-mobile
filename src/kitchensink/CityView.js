@@ -77,29 +77,15 @@ nx.CityView.prototype.getName = function () {
  * @return {Element}
  */
 nx.CityView.prototype.setData = function (data) {
-//    var data1 = {'cities':[
-//        'Andorra la Vella',
-//        'Budapest',
-//        'Baile Atha Cliath',
-//        'Danzig',
-//        'Den Haag',
-//        'Helsingfors',
-//        'Kobenhavn',
-//        'Letzebuerg',
-//        'Lisboa',
-//        'Podgorica',
-//        'Praha',
-//        'Saint-Tropez',
-//        'Sofia',
-//        'Tallinn',
-//        'Tinahely',
-//        'Wien'
-//    ]};
-//    log('CityView.data');
-////    log(data);
-//    log('CityView.data 1');
-////    log(data1);
-    this.textDiv_.innerHTML = nx.soy.cities.getHTML({'cities':[
+
+    log('CityView::setData');
+    log(data);
+    log('CityView::setData ---1');
+    log(data.cities);
+    log('CityView::setData ---2');
+    log(data['cities']);
+
+    var d = {'cities':[
         'Andorra la Vella',
         'Budapest',
         'Baile Atha Cliath',
@@ -116,7 +102,8 @@ nx.CityView.prototype.setData = function (data) {
         'Tallinn',
         'Tinahely',
         'Wien'
-    ]});
+    ]};
+    this.textDiv_.innerHTML = nx.soy.cities.getHTML(d);
 };
 
 /**
