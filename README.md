@@ -9,3 +9,5 @@ Based on Model-View-Presenter(MVP) pattern
 http://nextinterfaces.com/CLOSURE
 
 ==============
+
+Copyright (c) 2012 NEXTinterfaces, released under Apache License v.2.0
