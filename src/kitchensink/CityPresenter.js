@@ -22,8 +22,28 @@ goog.inherits(nx.CityPresenter, nx.Presenter);
  * @return {nx.Presenter}
  */
 nx.CityPresenter.prototype.init = function () {
-    var city = new nx.City('Sofia', 02, 234);
-    this.view_.setData(city);
+//    var city = new nx.City('Sofia', 02, 234);
+//    var data = {'cities':[
+//        'Andorra la Vella',
+//        'Budapest',
+//        'Baile Atha Cliath',
+//        'Danzig',
+//        'Den Haag',
+//        'Helsingfors',
+//        'Kobenhavn',
+//        'Letzebuerg',
+//        'Lisboa',
+//        'Podgorica',
+//        'Praha',
+//        'Saint-Tropez',
+//        'Sofia',
+//        'Tallinn',
+//        'Tinahely',
+//        'Wien'
+//    ]};
+//    log('CityPresenter.data');
+//    log(data);
+    this.view_.setData(null);
     return this;
 };
 

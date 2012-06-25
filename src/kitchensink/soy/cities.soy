@@ -1,9 +1,11 @@
 {namespace nx.soy.cities}
 
 /**
+ * @param cities
  */
 {template .getHTML}
 
+{foreach $c in $cities}
       <table class="tableCell chevron">
          <colgroup>
             <col />
@@ -14,172 +16,13 @@
                   <div style="width: 30px; height: 30px; background-image: url(images/i-list.png); "></div>
                </td>
                <td width="99%">
-                  <div>Lists</div>
+                  <div>{$c}</div>
                </td>
                <td rowspan="1" align="right"></td>
             </tr>
          </tbody>
       </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-slider.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Slider</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-radio.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Radio Button</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-button.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Buttons</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-picker.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Picker</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-switch.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Switch</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-form.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Form</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-progress.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Progress</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-checkbox.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>CheckBox</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-image.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Label and Image</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
-      <table class="tableCell chevron">
-         <colgroup>
-            <col />
-         </colgroup>
-         <tbody>
-            <tr>
-               <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-navigation.png); "></div>
-               </td>
-               <td width="99%">
-                  <div>Navigation</div>
-               </td>
-               <td rowspan="1" align="right"></td>
-            </tr>
-         </tbody>
-      </table>
+{/foreach}
 
 {/template}
 

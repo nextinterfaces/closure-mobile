@@ -21,23 +21,19 @@ nx.CityView = function (parent) {
 
     var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'});
     headerDiv.innerHTML = '<div>Cities</div>';
-    var labelDiv = goog.dom.createDom('div', {'class':'xlabel Text'});
     var tabBar = goog.dom.createDom('div', {'class':'tabBar'});
 
     this.add(headerDiv);
-
-    this.labelDiv_ = labelDiv;
 
     var navigationContent = new nx.NavigationContent(this);
     this.add(navigationContent);
 
     var scrollView = new nx.VerticalScrollView(this);
-    var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-    textDiv.innerHTML = nx.soy.cities.getHTML();
-    scrollView.setWidget(textDiv);
+    this.textDiv_ = goog.dom.createDom('div', {'id':'textDiv'});
+
+    scrollView.setWidget(this.textDiv_);
     navigationContent.add(scrollView);
 
-//    this.add(labelDiv);
     this.add(tabBar);
 
     var btn1 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'});
@@ -73,7 +69,7 @@ nx.CityView.prototype.setPresenter = function (presenter) {
  * @inheritDoc
  */
 nx.CityView.prototype.getName = function () {
-    return "HouseView";
+    return "CityView";
 };
 
 /**
@@ -81,7 +77,46 @@ nx.CityView.prototype.getName = function () {
  * @return {Element}
  */
 nx.CityView.prototype.setData = function (data) {
-    this.labelDiv_.innerHTML = data.getAddress();
+//    var data1 = {'cities':[
+//        'Andorra la Vella',
+//        'Budapest',
+//        'Baile Atha Cliath',
+//        'Danzig',
+//        'Den Haag',
+//        'Helsingfors',
+//        'Kobenhavn',
+//        'Letzebuerg',
+//        'Lisboa',
+//        'Podgorica',
+//        'Praha',
+//        'Saint-Tropez',
+//        'Sofia',
+//        'Tallinn',
+//        'Tinahely',
+//        'Wien'
+//    ]};
+//    log('CityView.data');
+////    log(data);
+//    log('CityView.data 1');
+////    log(data1);
+    this.textDiv_.innerHTML = nx.soy.cities.getHTML({'cities':[
+        'Andorra la Vella',
+        'Budapest',
+        'Baile Atha Cliath',
+        'Danzig',
+        'Den Haag',
+        'Helsingfors',
+        'Kobenhavn',
+        'Letzebuerg',
+        'Lisboa',
+        'Podgorica',
+        'Praha',
+        'Saint-Tropez',
+        'Sofia',
+        'Tallinn',
+        'Tinahely',
+        'Wien'
+    ]});
 };
 
 /**

@@ -31,7 +31,7 @@ nx.CountryView = function (parent) {
     var scrollView = new nx.VerticalScrollView(this);
     var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
     textDiv.innerHTML = nx.soy.countries.getHTML(
-        {'countries': [
+        {'countries':[
             'Bulgaria',
             'Croatia',
             'Czech Republic',
@@ -48,14 +48,14 @@ nx.CountryView = function (parent) {
 
     this.add(tabBar);
 
-    var btn1 = goog.dom.createDom('div', {'class':'tab', 'style': 'width: 50%'});
+    var btn1 = goog.dom.createDom('div', {'class':'tab', 'style':'width: 50%'});
     btn1.innerHTML = nx.soy.cities.getTabButton(
         {title:'Cities', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn1);
     goog.events.listen(btn1, goog.events.EventType.CLICK, this.onTabAction(), false, this);
 
-    var btn2 = goog.dom.createDom('div', {'class':'tab selected', 'style': 'width: 50%'}, "Tab Two");
+    var btn2 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'}, "Tab Two");
     btn2.innerHTML = nx.soy.cities.getTabButton(
         {title:'Countries', imgUrl:'images/tab0.png'}
     );
@@ -81,20 +81,20 @@ nx.CountryView.prototype.setPresenter = function (presenter) {
  * @inheritDoc
  */
 nx.CountryView.prototype.getName = function () {
-    return "UserView";
+    return "CountryView";
 };
 
 /**
  * @return {Element}
  */
-nx.CountryView.prototype.getList = function(){
+nx.CountryView.prototype.getList = function () {
     return this.labelDiv_;
 };
 
 /**
  * @return {function(Event)}
  */
-nx.CountryView.prototype.onTabAction = function() {
+nx.CountryView.prototype.onTabAction = function () {
     return function (e) {
         log(e);
         e.stopPropagation();
