@@ -4,7 +4,7 @@ goog.require('goog.dom');
 goog.require('goog.ui.CustomButton');
 goog.require('nx.VerticalScrollView');
 goog.require('nx.Widget');
-goog.require('nx.soy.widgets');
+goog.require('nx.soy.cities');
 goog.require('nx.NavigationContent');
 
 /**
@@ -33,7 +33,7 @@ nx.CityView = function (parent) {
 
     var scrollView = new nx.VerticalScrollView(this);
     var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-    textDiv.innerHTML = nx.soy.widgets.getHTML();
+    textDiv.innerHTML = nx.soy.cities.getHTML();
     scrollView.setWidget(textDiv);
     navigationContent.add(scrollView);
 
@@ -41,13 +41,13 @@ nx.CityView = function (parent) {
     this.add(tabBar);
 
     var btn1 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'});
-    btn1.innerHTML = nx.soy.widgets.getTabButton(
+    btn1.innerHTML = nx.soy.cities.getTabButton(
         {title:'Cities', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn1);
 
     var btn2 = goog.dom.createDom('div', {'class':'tab', 'style':'width: 50%'}, "Tab Two");
-    btn2.innerHTML = nx.soy.widgets.getTabButton(
+    btn2.innerHTML = nx.soy.cities.getTabButton(
         {title:'Countries', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn2);

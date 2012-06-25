@@ -49,14 +49,14 @@ nx.CountryView = function (parent) {
     this.add(tabBar);
 
     var btn1 = goog.dom.createDom('div', {'class':'tab', 'style': 'width: 50%'});
-    btn1.innerHTML = nx.soy.widgets.getTabButton(
+    btn1.innerHTML = nx.soy.cities.getTabButton(
         {title:'Cities', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn1);
     goog.events.listen(btn1, goog.events.EventType.CLICK, this.onTabAction(), false, this);
 
     var btn2 = goog.dom.createDom('div', {'class':'tab selected', 'style': 'width: 50%'}, "Tab Two");
-    btn2.innerHTML = nx.soy.widgets.getTabButton(
+    btn2.innerHTML = nx.soy.cities.getTabButton(
         {title:'Countries', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn2);
