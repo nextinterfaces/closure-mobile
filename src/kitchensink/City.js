@@ -1,22 +1,22 @@
-goog.provide('nx.House');
+goog.provide('nx.City');
 
 /**
  *
- * @param {string} address
- * @param {number=} numBaths
+ * @param {string} name
+ * @param {number=} phoneCode
  * @param {Array.<Object>=} itemsGarage
  * @constructor
  */
-nx.House = function(address, numBaths, itemsGarage){
+nx.City = function(name, phoneCode, itemsGarage){
 
     /**
      * @type {string}
      * @private
      */
-    this.address_ = address;
+    this.name_ = name;
 
-    if(goog.isDef(numBaths)){
-        this.numBaths_ = numBaths;
+    if(goog.isDef(phoneCode)){
+        this.phoneCode_ = phoneCode;
     }
 
     /**
@@ -30,63 +30,63 @@ nx.House = function(address, numBaths, itemsGarage){
  * @type {number}
  * @private
  */
-nx.House.prototype.numBaths_ = 1;
+nx.City.prototype.phoneCode_ = 1;
 
 /**
  * @type {boolean}
  * @private
  */
-nx.House.prototype.needsPaint_ = true;
+nx.City.prototype.needsPaint_ = true;
 
 
 /**
  * @return {string}
  */
-nx.House.prototype.getAddress = function(){
-    //log('nx.House getAddress ...');
-    return this.address_;
+nx.City.prototype.getAddress = function(){
+    //log('nx.City getAddress ...');
+    return this.name_;
 };
 
 /**
  * @return {number}
  */
-nx.House.prototype.getNumBaths = function(){
-    return this.numBaths_;
+nx.City.prototype.getNumBaths = function(){
+    return this.phoneCode_;
 };
 
 /**
  * @return {boolean}
  */
-nx.House.prototype.isNeedsPaint = function(){
+nx.City.prototype.isNeedsPaint = function(){
     return this.needsPaint_;
 };
 
 /**
  * @param {boolean} x
  */
-nx.House.prototype.setNeedsPaint = function(x){
+nx.City.prototype.setNeedsPaint = function(x){
     this.needsPaint_ = x;
 };
 
 /**
  * @param {string} color
  */
-nx.House.prototype.paint = function(color){
-    log('nx.House paint ... ' + color);
+nx.City.prototype.paint = function(color){
+    log('nx.City paint ... ' + color);
 };
 
 /**
  * @return {number}
  */
-nx.House.prototype.getNumItemsInGarage = function(){
+nx.City.prototype.getNumItemsInGarage = function(){
     return this.itemsGarage.length;
 };
 
 /**
  * Abstract method
  */
-nx.House.prototype.myAbstractMethod = goog.abstractMethod;
+nx.City.prototype.myAbstractMethod = goog.abstractMethod;
 
 
-goog.exportSymbol('nx.House', nx.House);
+goog.exportSymbol('nx.City', nx.City);
 

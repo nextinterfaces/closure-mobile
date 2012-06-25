@@ -16,7 +16,7 @@
 goog.provide('nx.Main');
 
 goog.require('nx.Ctx');
-goog.require('nx.HousePresenter');
+goog.require('nx.CityPresenter');
 
 /**
  * @constructor
@@ -38,7 +38,7 @@ nx.Main = function(){
     var ctx = nx.Ctx.getInstance();
 
     // run the sample mvp
-    new nx.HousePresenter(ctx.getHouseView(), ctx)
+    new nx.CityPresenter(ctx.getHouseView(), ctx)
         .init()
         .render(ctx.getRoot());
 

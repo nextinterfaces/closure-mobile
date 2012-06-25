@@ -1,4 +1,4 @@
-goog.provide('nx.HouseView');
+goog.provide('nx.CityView');
 
 goog.require('goog.dom');
 goog.require('goog.ui.CustomButton');
@@ -13,7 +13,7 @@ goog.require('nx.NavigationContent');
  * @extends {nx.Widget}
  * @implements {nx.View}
  */
-nx.HouseView = function (parent) {
+nx.CityView = function (parent) {
     goog.base(this, parent);
     var ele = goog.dom.createDom('div', {'id':this.getName()});
 
@@ -53,41 +53,41 @@ nx.HouseView = function (parent) {
     tabBar.appendChild(btn2);
     goog.events.listen(btn2, goog.events.EventType.CLICK, this.onTabAction(), false, this);
 };
-goog.inherits(nx.HouseView, nx.Widget);
+goog.inherits(nx.CityView, nx.Widget);
 
 /**
  * @inheritDoc
  */
-nx.HouseView.prototype.getElement = function () {
+nx.CityView.prototype.getElement = function () {
     return this.widget_;
 };
 
 /**
  * @inheritDoc
  */
-nx.HouseView.prototype.setPresenter = function (presenter) {
+nx.CityView.prototype.setPresenter = function (presenter) {
     this.presenter_ = presenter;
 };
 
 /**
  * @inheritDoc
  */
-nx.HouseView.prototype.getName = function () {
+nx.CityView.prototype.getName = function () {
     return "HouseView";
 };
 
 /**
- * @param {nx.House} data
+ * @param {nx.City} data
  * @return {Element}
  */
-nx.HouseView.prototype.setData = function (data) {
+nx.CityView.prototype.setData = function (data) {
     this.labelDiv_.innerHTML = data.getAddress();
 };
 
 /**
  * @return {function(Event)}
  */
-nx.HouseView.prototype.onTabAction = function () {
+nx.CityView.prototype.onTabAction = function () {
     return function (e) {
         log('onTabAction', e);
         e.stopPropagation();
@@ -96,5 +96,5 @@ nx.HouseView.prototype.onTabAction = function () {
 };
 
 
-goog.exportSymbol('nx.HouseView', nx.HouseView);
+goog.exportSymbol('nx.CityView', nx.CityView);
 

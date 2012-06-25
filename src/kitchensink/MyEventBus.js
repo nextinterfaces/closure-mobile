@@ -2,7 +2,7 @@ goog.provide('nx.MyEventBus');
 
 goog.require('nx.Event');
 goog.require('nx.EventBus');
-goog.require('nx.HousePresenter');
+goog.require('nx.CityPresenter');
 goog.require('nx.UserPresenter');
 
 /**
@@ -32,7 +32,7 @@ nx.MyEventBus.prototype.events = function (ctx) {
     this.onEvent(nx.Event.USER_CLICK, function (valueObj) {
         log('nx.Event.USER_CLICK %o', valueObj);
         var ctx2 = ctx;
-        new nx.HousePresenter(ctx2.getHouseView(), ctx2).init().render(ctx2.getRoot());
+        new nx.CityPresenter(ctx2.getHouseView(), ctx2).init().render(ctx2.getRoot());
     });
 //  log('nx.Event.HOUSE_CLICK count ' + this.pubsub_.getCount(nx.Event.HOUSE_CLICK));
 };

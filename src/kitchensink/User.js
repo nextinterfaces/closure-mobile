@@ -17,7 +17,7 @@ nx.User = function(name, address, phone){
      * @type {string}
      * @private
      */
-    this.address_ = address;
+    this.name_ = address;
     /**
      * @type {string}
      * @private
@@ -36,7 +36,7 @@ nx.User.prototype.getName = function(){
  * @return {string}
  */
 nx.User.prototype.getAddress = function(){
-    return this.address_;
+    return this.name_;
 };
 
 /**

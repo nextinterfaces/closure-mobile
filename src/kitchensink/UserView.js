@@ -47,12 +47,11 @@ nx.UserView = function (parent) {
     scrollView.setWidget(textDiv);
     navigationContent.add(scrollView);
 
-//    this.add(labelDiv);
     this.add(tabBar);
 
     var btn1 = goog.dom.createDom('div', {'class':'tab', 'style': 'width: 50%'});
     btn1.innerHTML = nx.soy.widgets.getTabButton(
-        {title:'Widgets', imgUrl:'images/tab0.png'}
+        {title:'Cities', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn1);
     goog.events.listen(btn1, goog.events.EventType.CLICK, this.onTabAction(), false, this);
