@@ -94,7 +94,3 @@ nx.CityView.prototype.onTabAction = function () {
         this.presenter_.executeClick();
     };
 };
-
-
-goog.exportSymbol('nx.CityView', nx.CityView);
-

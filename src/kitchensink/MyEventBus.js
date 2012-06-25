@@ -12,8 +12,7 @@ goog.require('nx.UserPresenter');
  */
 nx.MyEventBus = function (ctx) {
     goog.base(this, ctx);
-    log('nx.MyEventBus custom constructor ');
-
+    log('nx.MyEventBus constructor ');
     this.events(ctx);
 };
 goog.inherits(nx.MyEventBus, nx.EventBus);
@@ -23,14 +22,14 @@ goog.inherits(nx.MyEventBus, nx.EventBus);
  * @param {nx.Ctx} ctx
  */
 nx.MyEventBus.prototype.events = function (ctx) {
-    this.onEvent(nx.Event.HOUSE_CLICK, function (valueObj) {
+    this.onEvent(nx.Event.CITY_TAB_CLICK, function (valueObj) {
         log('nx.Event.HOUSE_CLICK %o', valueObj);
         var ctx2 = ctx;
         new nx.UserPresenter(ctx2.getUserView(), ctx2).init().render(ctx2.getRoot());
     });
 
-    this.onEvent(nx.Event.USER_CLICK, function (valueObj) {
-        log('nx.Event.USER_CLICK %o', valueObj);
+    this.onEvent(nx.Event.COUNTRY_TAB_CLICK, function (valueObj) {
+        log('nx.Event.COUNTRY_TAB_CLICK %o', valueObj);
         var ctx2 = ctx;
         new nx.CityPresenter(ctx2.getHouseView(), ctx2).init().render(ctx2.getRoot());
     });

@@ -23,12 +23,11 @@
 
         "src/kitchensink/Event.js",
         "src/kitchensink/City.js",
-        "src/kitchensink/User.js",
+        "src/kitchensink/Country.js",
         "src/kitchensink/CityPresenter.js",
-        "src/kitchensink/UserPresenter.js",
+        "src/kitchensink/CountryPresenter.js",
         "src/kitchensink/CityView.js",
-        "src/kitchensink/UserView.js",
-        "src/kitchensink/SampleWidget.js",
+        "src/kitchensink/CountryView.js",
         "src/kitchensink/MyEventBus.js",
         "src/kitchensink/Main.js"
     ],

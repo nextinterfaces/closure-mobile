@@ -32,7 +32,7 @@ nx.UserPresenter.prototype.init = function(){
 /**
  */
 nx.UserPresenter.prototype.executeClick = function(){
-    this.ctx_.getEventBus().fire(nx.Event.USER_CLICK, {'a':1});
+    this.ctx_.getEventBus().fire(nx.Event.COUNTRY_TAB_CLICK, {'a':1});
 };
 
 goog.exportSymbol('nx.UserPresenter', nx.UserPresenter);

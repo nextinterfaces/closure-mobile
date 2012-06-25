@@ -32,7 +32,5 @@ nx.CityPresenter.prototype.init = function () {
 nx.CityPresenter.prototype.executeClick = function () {
     log('nx.CityPresenter::executeClick >');
 
-    this.ctx_.getEventBus().fire(nx.Event.HOUSE_CLICK, {'b':1});
+    this.ctx_.getEventBus().fire(nx.Event.CITY_TAB_CLICK, {'b':1});
 };
-
-goog.exportSymbol('nx.CityPresenter', nx.CityPresenter);

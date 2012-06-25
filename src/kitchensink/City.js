@@ -87,6 +87,3 @@ nx.City.prototype.getNumItemsInGarage = function(){
  */
 nx.City.prototype.myAbstractMethod = goog.abstractMethod;
 
-
-goog.exportSymbol('nx.City', nx.City);
-

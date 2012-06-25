@@ -5,9 +5,9 @@ goog.provide('nx.Event');
  * @enum {string}
  */
 nx.Event = {
-    HOUSE_CLICK: '0',
-    USER_CLICK: '1',
-    THREE: '2',
-    MORE: '3'
+    CITY_TAB_CLICK: '0',
+    COUNTRY_TAB_CLICK: '1',
+    ANOTHER_ACTION: '2',
+    AND_ACTION_FOUR: '3'
 };
 
