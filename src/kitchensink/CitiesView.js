@@ -20,7 +20,7 @@ nx.HouseView = function (parent) {
     this.widget_ = ele;
 
     var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'});
-    headerDiv.innerHTML = '<div>Widgets</div>';
+    headerDiv.innerHTML = '<div>Cities</div>';
     var labelDiv = goog.dom.createDom('div', {'class':'xlabel Text'});
     var tabBar = goog.dom.createDom('div', {'class':'tabBar'});
 
@@ -42,7 +42,7 @@ nx.HouseView = function (parent) {
 
     var btn1 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'});
     btn1.innerHTML = nx.soy.widgets.getTabButton(
-        {title:'Widgets', imgUrl:'images/tab0.png'}
+        {title:'Cities', imgUrl:'images/tab0.png'}
     );
     tabBar.appendChild(btn1);
 
