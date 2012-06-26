@@ -18,32 +18,18 @@ nx.CountryView = function (parent) {
 
     var headerDiv = goog.dom.createDom('div', {'class':'navigationBar'});
     headerDiv.innerHTML = '<div>Countries</div>';
-    var labelDiv = goog.dom.createDom('div', {'class':'xlabel Text'});
     var tabBar = goog.dom.createDom('div', {'class':'tabBar'});
 
     this.add(headerDiv);
 
-    this.labelDiv_ = labelDiv;
 
     var navigationContent = new nx.NavigationContent(this);
     this.add(navigationContent);
 
     var scrollView = new nx.VerticalScrollView(this);
-    var textDiv = goog.dom.createDom('div', {'id':'textDiv'});
-    textDiv.innerHTML = nx.soy.countries.getHTML(
-        {'countries':[
-            'Bulgaria',
-            'Croatia',
-            'Czech Republic',
-            'Denmark',
-            'Estonia',
-            'Finland',
-            'France',
-            'Germany',
-            'Hungary',
-            'Ireland']}
-    );
-    scrollView.setWidget(textDiv);
+    this.textDiv_ = goog.dom.createDom('div', {'id':'textDiv'});
+
+    scrollView.setWidget(this.textDiv_);
     navigationContent.add(scrollView);
 
     this.add(tabBar);
@@ -85,10 +71,10 @@ nx.CountryView.prototype.getName = function () {
 };
 
 /**
- * @return {Element}
+ * @param {*} data
  */
-nx.CountryView.prototype.getList = function () {
-    return this.labelDiv_;
+nx.CountryView.prototype.setData = function (data) {
+    this.textDiv_.innerHTML = nx.soy.countries.getHTML(data);
 };
 
 /**

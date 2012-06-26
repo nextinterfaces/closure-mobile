@@ -3,47 +3,34 @@ goog.provide('nx.Country');
 /**
  *
  * @param {string} name
- * @param {string} address
- * @param {string} phone
+ * @param {string} flag
  * @constructor
  */
-nx.Country = function(name, address, phone){
+nx.Country = function (name, flag) {
     /**
      * @type {string}
      * @private
      */
-    this.name_ = name;
+    this.name = name;
     /**
      * @type {string}
      * @private
      */
-    this.name_ = address;
-    /**
-     * @type {string}
-     * @private
-     */
-    this.phone_ = phone;
+    this.flag = flag;
 };
 
 /**
  * @return {string}
  */
-nx.Country.prototype.getName = function(){
-    return this.name_;
+nx.Country.prototype.getName = function () {
+    return this.name;
 };
 
 /**
  * @return {string}
  */
-nx.Country.prototype.getAddress = function(){
-    return this.name_;
-};
-
-/**
- * @return {string}
- */
-nx.Country.prototype.getPhone = function(){
-    return this.phone_;
+nx.Country.prototype.getFlag = function () {
+    return this.flag;
 };
 
 goog.exportSymbol('nx.Country', nx.Country);

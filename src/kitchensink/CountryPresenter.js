@@ -13,7 +13,6 @@ goog.require('nx.Event');
  */
 nx.CountryPresenter = function (view, ctx) {
     goog.base(this, view, ctx);
-    log('nx.CountryPresenter custom constructor ');
 };
 goog.inherits(nx.CountryPresenter, nx.Presenter);
 //-----------
@@ -21,17 +20,26 @@ goog.inherits(nx.CountryPresenter, nx.Presenter);
 /**
  * @return {nx.Presenter}
  */
-nx.CountryPresenter.prototype.init = function(){
-    //log('nx.CountryPresenter::init do AJAX ... ');
-    var u = new nx.Country('Peter Gencha', '887 Botev Str', '604-123-2345');
-    this.user_ = u;
-    this.view_.getList().innerHTML = this.user_.getName();
+nx.CountryPresenter.prototype.init = function () {
+    var d = {countries:[
+        new nx.Country('Bulgaria', 'i-andorra.png'),
+        new nx.Country('Croatia', 'i-budapest.png'),
+        new nx.Country('Czech Republic', 'i-budapest.png'),
+        new nx.Country('Denmark', 'i-budapest.png'),
+        new nx.Country('Estonia', 'i-budapest.png'),
+        new nx.Country('Finland', 'i-budapest.png'),
+        new nx.Country('France', 'i-budapest.png'),
+        new nx.Country('Germany', 'i-budapest.png'),
+        new nx.Country('Hungary', 'i-budapest.png'),
+        new nx.Country('Ireland', 'i-budapest.png')
+    ]};
+    this.view_.setData(d);
     return this;
 };
 
 /**
  */
-nx.CountryPresenter.prototype.executeClick = function(){
+nx.CountryPresenter.prototype.executeClick = function () {
     this.ctx_.getEventBus().fire(nx.Event.COUNTRY_TAB_CLICK, {'a':1});
 };
 
