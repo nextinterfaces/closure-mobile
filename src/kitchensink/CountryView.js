@@ -57,7 +57,7 @@ nx.CountryView = function (parent) {
 
     var btn2 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'}, "Tab Two");
     btn2.innerHTML = nx.soy.cities.getTabButton(
-        {title:'Countries', imgUrl:'images/tab0.png'}
+        {title:'Countries', imgUrl:'images/tab1-selected.png'}
     );
     tabBar.appendChild(btn2);
 };

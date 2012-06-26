@@ -131,7 +131,7 @@ code, pre, pre * {
     right: 0;
     bottom: 0;
     left: 0;
-    background-size: 35px 28px;
+    background-size: 30px 30px;
     background-repeat: no-repeat;
     background-position-y: 2px;
     background-position-x: center;
@@ -184,6 +184,7 @@ div.tableCell {
     background-image: url("images/chevron.png");
     background-repeat: no-repeat;
     background-position: right;
+    background-size: 19px 13px;
 }
 
 .tableCell.selected.chevron {

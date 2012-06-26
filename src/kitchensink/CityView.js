@@ -38,13 +38,13 @@ nx.CityView = function (parent) {
 
     var btn1 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'});
     btn1.innerHTML = nx.soy.cities.getTabButton(
-        {title:'Cities', imgUrl:'images/tab0.png'}
+        {title:'Cities', imgUrl:'images/tab0-selected.png'}
     );
     tabBar.appendChild(btn1);
 
     var btn2 = goog.dom.createDom('div', {'class':'tab', 'style':'width: 50%'}, "Tab Two");
     btn2.innerHTML = nx.soy.cities.getTabButton(
-        {title:'Countries', imgUrl:'images/tab0.png'}
+        {title:'Countries', imgUrl:'images/tab1.png'}
     );
     tabBar.appendChild(btn2);
     goog.events.listen(btn2, goog.events.EventType.CLICK, this.onTabAction(), false, this);
@@ -77,33 +77,7 @@ nx.CityView.prototype.getName = function () {
  * @return {Element}
  */
 nx.CityView.prototype.setData = function (data) {
-
-    log('CityView::setData');
-    log(data);
-    log('CityView::setData ---1');
-    log(data.cities);
-    log('CityView::setData ---2');
-    log(data['cities']);
-
-    var d = {'cities':[
-        'Andorra la Vella',
-        'Budapest',
-        'Baile Atha Cliath',
-        'Danzig',
-        'Den Haag',
-        'Helsingfors',
-        'Kobenhavn',
-        'Letzebuerg',
-        'Lisboa',
-        'Podgorica',
-        'Praha',
-        'Saint-Tropez',
-        'Sofia',
-        'Tallinn',
-        'Tinahely',
-        'Wien'
-    ]};
-    this.textDiv_.innerHTML = nx.soy.cities.getHTML(d);
+    this.textDiv_.innerHTML = nx.soy.cities.getHTML(data);
 };
 
 /**

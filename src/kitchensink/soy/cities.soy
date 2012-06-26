@@ -13,10 +13,12 @@
          <tbody>
             <tr>
                <td rowspan="1" align="left" style="vertical-align: middle; ">
-                  <div style="width: 30px; height: 30px; background-image: url(images/i-list.png); "></div>
+                  <div style="background-image: url(images/{$c.image}); width: 30px; height: 30px; background-size: 30px;"></div>
                </td>
                <td width="99%">
-                  <div>{$c}</div>
+                  <div>{$c.name} <span style='color: #AAA;
+                                              float: right;
+                                              padding: 0 10px 0 0;'>+ {$c.phoneCode}</span></div>
                </td>
                <td rowspan="1" align="right"></td>
             </tr>
