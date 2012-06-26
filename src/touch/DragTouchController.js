@@ -110,7 +110,7 @@ nx.DragTouchController.prototype.onUpFn = function (e) {
     var isElement = new nx.isNodeElement(target);
 
     if (isElement) {
-        // fixing "iOS eats native SELECT event and propagates the dragEvent instead".
+        // fixing 'iOS eats native SELECT event and propagates the dragEvent instead'.
         if ('SELECT' === ('' + target.nodeName)) {
             return;
         }

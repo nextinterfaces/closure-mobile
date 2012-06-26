@@ -41,7 +41,7 @@ nx.CountryView = function (parent) {
     tabBar.appendChild(btn1);
     goog.events.listen(btn1, goog.events.EventType.CLICK, this.onTabAction(), false, this);
 
-    var btn2 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'}, "Tab Two");
+    var btn2 = goog.dom.createDom('div', {'class':'tab selected', 'style':'width: 50%'}, 'Tab Two');
     btn2.innerHTML = nx.soy.cities.getTabButton(
         {title:'Countries', imgUrl:'images/tab1-selected.png'}
     );
@@ -67,7 +67,7 @@ nx.CountryView.prototype.setPresenter = function (presenter) {
  * @inheritDoc
  */
 nx.CountryView.prototype.getName = function () {
-    return "CountryView";
+    return 'CountryView';
 };
 
 /**

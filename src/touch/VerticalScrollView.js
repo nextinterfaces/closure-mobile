@@ -219,7 +219,7 @@ nx.VerticalScrollView.prototype.onSwipeVertical = function (e) {
     var time = Math.abs(speed * timeFactor);
     var dicstanceFactor = 0.24;
     var distance = (speed * time * dicstanceFactor);
-    // log("speed " + speed + " time " + time + " distance " + distance + " current " + current);
+    // log('speed ' + speed + ' time ' + time + ' distance ' + distance + ' current ' + current);
     currY += distance;
     if (currY > 0) {
         // exceed top boundary

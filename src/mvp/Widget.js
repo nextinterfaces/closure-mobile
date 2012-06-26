@@ -9,11 +9,11 @@ goog.require('goog.dom');
 nx.Widget = function (parent) {
 //    log('------ nx.Widget CONSTRUCTOR -----');
     if (!goog.isDefAndNotNull(parent)) {
-        throw new Error("nx.Widget(): Empty parent widget.");
+        throw new Error('nx.Widget(): Empty parent widget.');
     }
 
     if (!nx.isWidgetOrEle(parent)) {
-        throw new Error("nx.Widget(): Parent must be {nx.Widget} or {Element} type.");
+        throw new Error('nx.Widget(): Parent must be {nx.Widget} or {Element} type.');
     }
 
     /**

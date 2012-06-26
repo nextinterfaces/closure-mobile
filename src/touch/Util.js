@@ -1,7 +1,7 @@
 goog.provide('nx.Util');
 
 //nx.Util.prototype.isFunc = function(func) {
-//  return (func && typeof (func) === "function");
+//  return (func && typeof (func) === 'function');
 //};
 
 /**
@@ -19,7 +19,7 @@ nx.Util.startsWith = function (str, prefix) {
  * @return {boolean} True if {@code func} is a {@code function}.
  */
 nx.Util.isFunc = function (func) {
-    return (func && typeof (func) === "function");
+    return (func && typeof (func) === 'function');
 };
 
 /**
@@ -39,18 +39,18 @@ nx.stackTrace = function () {
  */
 nx.isTouch = function () {
     var ua = navigator.userAgent.toLowerCase();
-    if ((ua.indexOf("webkit") != -1 && ua.indexOf("mobile") != -1)
-        || ua.indexOf("playbook") != -1
-        || ua.indexOf("rim") != -1
-        || ua.indexOf("blackberry") != -1
-        || ua.indexOf("nokia") != -1
-        || ua.indexOf("bada") != -1
-        || ua.indexOf("webos") != -1
-        || ua.indexOf("android") != -1
-        || ua.indexOf("iphone") != -1
-        || ua.indexOf("ipad") != -1
-        || ua.indexOf("ipod") != -1
-        || ua.indexOf("meego") != -1) {
+    if ((ua.indexOf('webkit') != -1 && ua.indexOf('mobile') != -1)
+        || ua.indexOf('playbook') != -1
+        || ua.indexOf('rim') != -1
+        || ua.indexOf('blackberry') != -1
+        || ua.indexOf('nokia') != -1
+        || ua.indexOf('bada') != -1
+        || ua.indexOf('webos') != -1
+        || ua.indexOf('android') != -1
+        || ua.indexOf('iphone') != -1
+        || ua.indexOf('ipad') != -1
+        || ua.indexOf('ipod') != -1
+        || ua.indexOf('meego') != -1) {
         //alert('this is a mobile device');
         return true;
     }
@@ -63,7 +63,7 @@ nx.isTouch = function () {
  * @return {string}
  */
 nx.getType = function (obj) {
-    if (obj === null) return "[object Null]"; // special case
+    if (obj === null) return '[object Null]'; // special case
     return Object.prototype.toString.call(obj);
 };
 

@@ -30,6 +30,7 @@ nx.CityView = function (parent) {
 
     var scrollView = new nx.VerticalScrollView(this);
     this.textDiv_ = goog.dom.createDom('div', {'id':'textDiv'});
+//    this.textDiv_.innerHTML = '';
 
     scrollView.setWidget(this.textDiv_);
     navigationContent.add(scrollView);
@@ -42,7 +43,7 @@ nx.CityView = function (parent) {
     );
     tabBar.appendChild(btn1);
 
-    var btn2 = goog.dom.createDom('div', {'class':'tab', 'style':'width: 50%'}, "Tab Two");
+    var btn2 = goog.dom.createDom('div', {'class':'tab', 'style':'width: 50%'}, 'Tab Two');
     btn2.innerHTML = nx.soy.cities.getTabButton(
         {title:'Countries', imgUrl:'images/tab1.png'}
     );
@@ -69,7 +70,7 @@ nx.CityView.prototype.setPresenter = function (presenter) {
  * @inheritDoc
  */
 nx.CityView.prototype.getName = function () {
-    return "CityView";
+    return 'CityView';
 };
 
 /**

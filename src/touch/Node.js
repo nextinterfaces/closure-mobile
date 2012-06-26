@@ -30,7 +30,7 @@ nx.getNodeParentElement = function (node) {
  * <code>null</code> object will cause this method to return
  * <code>false</code>.
  * The try catch is needed for the firefox permission error:
- * "Permission denied to access property 'nodeType'"
+ * 'Permission denied to access property 'nodeType''
  */
 nx.isNodeDom = function (o) {
     try {
@@ -57,6 +57,6 @@ nx.isHtmlFormControl = function (ele) {
 //    log(ele);
 //    log(ele.nodeName);
     var nodeName = ele.nodeName.toUpperCase();
-    var contains = goog.string.contains("BUTTON INPUT SELECT TEXTAREA", nodeName);
+    var contains = goog.string.contains('BUTTON INPUT SELECT TEXTAREA', nodeName);
     return contains || nx.isHtmlFormControl(nx.getNodeParentElement(ele));
 };

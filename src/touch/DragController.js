@@ -138,7 +138,7 @@ nx.DragController.prototype.onClick = function (e) {
     if (this.suppressNextClick_) {
         e.stopPropagation();
         this.suppressNextClick_ = false;
-        log("click suppressed");
+        log('click suppressed');
     }
 };
 
@@ -172,7 +172,7 @@ nx.DragController.prototype.onMove = function (e, p) {
 
     if (this.isDown_) {
         if (p.equals(this.currDragPos_)) {
-            // log("NO movement onMove");
+            // log('NO movement onMove');
             return;
         }
         this.suppressNextClick_ = true;
@@ -194,12 +194,12 @@ nx.DragController.prototype.onMove = function (e, p) {
             var dragEvent = new nx.DragEvent(e, this.movedirection_, p.X(), p.Y(),
                 p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
             this.fireDragEvent(dragEvent);
-            // log("this.movedirection_ !!!! " + this.movedirection_ + " vertDelta=" + vertDelta + " horizDelta=" +horizDelta);
+            // log('this.movedirection_ !!!! ' + this.movedirection_ + ' vertDelta=' + vertDelta + ' horizDelta=' +horizDelta);
         }
 
-        // XLog.info("onMove _lastDragPos=" + (int) _lastDragPos.X() + " : " +
-        // (int) _lastDragPos.Y() + " curr="
-        // + (int) p.X() + " : " + (int) p.Y());
+        // XLog.info('onMove _lastDragPos=' + (int) _lastDragPos.X() + ' : ' +
+        // (int) _lastDragPos.Y() + ' curr='
+        // + (int) p.X() + ' : ' + (int) p.Y());
 
         var dragEvent = new nx.DragEvent(e, nx.DragEvent.Type.MOVE, p.X(), p.Y(),
             p.X() - this.currDragPos_.X(), p.Y() - this.currDragPos_.Y());
@@ -224,7 +224,7 @@ nx.DragController.prototype.onEnd = function (e, p) {
 
     if (this.isDown_) {
         this.isDown_ = false;
-//			log("onEnd, p.X($1) p.Y($2) p.X()-_currDragPos.X() $3 p.Y()-_currDragPos.Y() $4 _currDragPos.X($5) _currDragPos.Y($6)" ,
+//			log('onEnd, p.X($1) p.Y($2) p.X()-_currDragPos.X() $3 p.Y()-_currDragPos.Y() $4 _currDragPos.X($5) _currDragPos.Y($6)' ,
 //					p.X(), p.Y(),
 //					p.X()-_currDragPos.X(), p.Y()-_currDragPos.Y(),
 //					_currDragPos.X(), _currDragPos.Y());
@@ -250,10 +250,10 @@ nx.DragController.prototype.onEnd = function (e, p) {
         } else if (speed < -4) {
             speed = -4;
         }
-//        log("onEnd, speed is " + speed);
+//        log('onEnd, speed is ' + speed);
 
         if (Math.abs(speed) > 0.2) {
-//            log("onEnd, before swipeEvent .... speed is " + speed);
+//            log('onEnd, before swipeEvent .... speed is ' + speed);
             var swipeEvent = new nx.SwipeEvent(e, swipeType, speed);
             this.fireSwipeEvent(swipeEvent);
         }
