@@ -32,13 +32,11 @@ nx.DragController = function () {
     this.swipeEventHandlers_ = [];
 
     /**
-     *
      * @type {nx.DragEventsHandler}
      * @private
      */
     this.capturingDragEventsHandler_ = null;
     /**
-     *
      * @type {*}
      * @private
      */
@@ -271,7 +269,7 @@ nx.DragController.prototype.fireDragEvent = function (e) {
     }
     var target = e.getNativeEvent().target;
     var node = target;
-    if (nx.isNodeElement(target)) {
+    if (!nx.isNodeElement(target)) {
         node = nx.getNodeParentElement(target); // Text node this.parentNode
     }
     if (nx.isNodeElement(node)) {

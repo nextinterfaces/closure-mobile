@@ -30,7 +30,6 @@ nx.CityView = function (parent) {
 
     var scrollView = new nx.VerticalScrollView(this);
     this.textDiv_ = goog.dom.createDom('div', {'id':'textDiv'});
-//    this.textDiv_.innerHTML = '';
 
     scrollView.setWidget(this.textDiv_);
     navigationContent.add(scrollView);
