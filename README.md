@@ -5,7 +5,7 @@ A JavaScript touch/mobile library for Google's Closure framework.
 
 Based on Model-View-Presenter(MVP) pattern.
 
-iPhone, iOS, Android, BlackBerry10 ready
+iPhone, iOS, Android, BlackBerry10 ready.
 
 ### Demo (WebKit only):
 http://nextinterfaces.com/CLOSURE
