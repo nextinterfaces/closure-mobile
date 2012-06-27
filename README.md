@@ -28,7 +28,7 @@ Running the demo(compiled):
 * Run the included build script `ant`
 * On completion ANT will create `/closure-mobile/build` directory with `dist`, `src` and `web` subdirectories
 * Open your browser at  [http://locahost/closure-mobile/build/web](http://locahost/closure-mobile/build/web) to see the complied project
-* `dist` directory contains your build project wrapped into ZIP file
+* `dist` directory contains your built project wrapped into ZIP file
 
 ==============
 
