@@ -10,15 +10,17 @@ http://nextinterfaces.com/CLOSURE
 
 Running the demo on DEV mode(plovr):
 -----------------
-* Put closure-mobile on your web server. Let's assume the root URL is http://locahost
+* Put closure-mobile on your web server. Let's assume the URL is [http://locahost/closure-mobile](http://locahost/closure-mobile)
 * Run `./plovr.sh` or `java -jar ./lib/plovr.jar serve plovr.js`. This will start the plovr with the supplied plovr.js configuration
-* Open your browser at http://locahost/closure-mobile/web
+* Open your browser at  [http://locahost/closure-mobile/web](http://locahost/closure-mobile/web)
 
 Running the demo(compiled):
 -----------------
-* Put closure-mobile on your web server. Let's assume the root URL is http://locahost
+* Put closure-mobile on your web server. Let's assume the URL is [http://locahost/closure-mobile](http://locahost/closure-mobile)
 * Run the included build script `ant`
-* Open your browser at http://locahost/closure-mobile/build/web
+* On completion ANT will create `/closure-mobile/build` directory with `dist`, `src` and `web` subdirectories
+* Open your browser at  [http://locahost/closure-mobile/build/web](http://locahost/closure-mobile/build/web) to see the complied project
+* `dist` directory contains your build project wrapped into ZIP file
 
 ==============
 
