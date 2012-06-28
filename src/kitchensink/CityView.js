@@ -77,7 +77,13 @@ nx.CityView.prototype.getName = function () {
  * @return {Element}
  */
 nx.CityView.prototype.setData = function (data) {
-    this.textDiv_.innerHTML = nx.soy.cities.getHTML(data);
+    log('CityView.prototype.setData');
+    var html = '';
+    for (var i = 0; i < data.cities.length; i++) {
+        var c = data.cities[i];
+        html += nx.soy.cities.buildCityRow({city:c});
+    }
+    this.textDiv_.innerHTML = html;
 };
 
 /**

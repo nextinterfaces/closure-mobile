@@ -30,6 +30,30 @@
 
 
 /**
+ * @param city
+ */
+{template .buildCityRow}
+      <table class="tableCell chevron">
+         <colgroup>
+            <col />
+         </colgroup>
+         <tbody>
+            <tr>
+               <td rowspan="1" align="left" style="vertical-align: middle; ">
+                  <div style="background-image: url(images/{$city.image}); width: 30px; height: 30px; background-size: 30px;"></div>
+               </td>
+               <td width="99%">
+                  <div>{$city.name} <span style='color: #AAA;
+                                              float: right;
+                                              padding: 0 10px 0 0;'>+ {$city.phoneCode}</span></div>
+               </td>
+               <td rowspan="1" align="right"></td>
+            </tr>
+         </tbody>
+      </table>
+{/template}
+
+/**
  * @param title
  * @param imgUrl
  */
