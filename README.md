@@ -32,4 +32,4 @@ Running the demo(compiled):
 
 ==============
 
-Copyright (c) 2012 NEXTinterfaces, released under Apache License v.2.0
+Copyright (c) 2016 NEXTinterfaces, released under Apache License v.2.0
