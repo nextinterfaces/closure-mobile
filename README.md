@@ -1,14 +1,14 @@
 closure-mobile
 --------------
 
-A JavaScript touch/mobile library for Google's Closure framework.
+A JavaScript touch/mobile scaffolding project using Google Closure Library.
 
 Based on Model-View-Presenter(MVP) pattern.
 
 iPhone, iOS, Android, BlackBerry10 ready.
 
 ### Demo (WebKit only):
-http://nextinterfaces.com/CLOSURE
+http://nextinterfaces.com/demo
 
 Dependencies:
 -----------------
@@ -29,7 +29,3 @@ Running the demo(compiled):
 * On completion ANT will create `/closure-mobile/build` directory with `dist`, `src` and `web` subdirectories
 * Open your browser at  [http://locahost/closure-mobile/build/web](http://locahost/closure-mobile/build/web) to see the complied project
 * `dist` directory contains your built project wrapped into ZIP file
-
-==============
-
-Copyright (c) 2016 NEXTinterfaces, released under Apache License v.2.0
